@@ -70,7 +70,7 @@ def addIsoform(refseq, i, genes, goodGenes, proteins):
     :param genes: List of genes that code proteins of interest
     :param goodGenes: List of genes that code referencial proteins
     :param proteins: Dictionary for storing information about proteins
-    :return: "proteins" supplemented with single isoform
+    :return: "proteins" supplemented with single isoform, "goodGenes"
     '''
     if refseq in proteins:
         proteins[refseq].gene = next(iter(genes[i].values()))
@@ -83,7 +83,7 @@ def addIsoform(refseq, i, genes, goodGenes, proteins):
             refseq,
             False
         )
-    return proteins
+    return proteins, goodGenes
 
 def getIsoforms(proteins):
     ''' Getting isoforms for all proteins in tree
@@ -111,14 +111,14 @@ def getIsoforms(proteins):
         line = record.readline()
         genes.append({species : line.split(',')[0].split(': ')[1]})
     line = record.readline()
-
+    
     i = -1
     goodGenes = list()
     while line:
-        if 'Reference' in line:
+        if 'from: ' in line:
             i+=1
         if 'Exon table' in line:
-            proteins = addIsoform(
+            proteins, goodGenes = addIsoform(
                 line.split()[-1], 
                 i, 
                 genes, 
@@ -209,8 +209,9 @@ def createTemporaryArrays(blastDict, proteins):
 def writeHtml(
     species,
     gene,
-    reciprocalPercent,
-    forwardPercent,
+    reciprocalAll,
+    forwardFailed,
+    forwardAll,
     failedRecipr,
     forwardIsoforms,
     goodSpecies):
@@ -231,38 +232,44 @@ def writeHtml(
     htmlPart.write("""<details>
     <summary>{}</summary>
     <details>
-    \t<summary>&emsp;Gene id: {}</summary>
-    \t<details>
-    \t<summary>&emsp;&emsp;{} {}</summary>""".format(
+        <summary>&emsp;Gene id: {}</summary>
+        <details>
+        <summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
         species,
         gene,
-        'Percent of referencial proteins confirming orthology:',
-        reciprocalPercent
+        len(failedRecipr),
+        'of',
+        reciprocalAll,
+        'referencial proteins failed reciprocal BLAST:'
     ))
     for failed in failedRecipr:
-        htmlPart.write('\n&emsp;&emsp;&emsp;&emsp;{} [{}]<br>'.format(
+        htmlPart.write('\n\t\t\t\t&emsp;&emsp;&emsp;&emsp;{} [{}]<br>'.format(
             failed.refseq,
             failed.species
         ))        
     htmlPart.write("""\t\t\t</details>
-    \t\t<details>
-    \t\t<summary>&emsp;&emsp;{} {}</summary>""".format(
-        'Percent of isoforms finding reference:',
-        forwardPercent
+            <details>
+            <summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
+        forwardFailed,
+        'of',
+        forwardAll,
+        'isoforms failed to find all referencial proteins in first hit:'
     ))
     for isoform, fails in forwardIsoforms.items():
-        htmlPart.write('<details>')
-        htmlPart.write('<summary>&emsp;&emsp;&emsp;{}: {} {} </summary>'.format(
+        htmlPart.write('\t\t\t<details>')
+        htmlPart.write('\t\t\t\t<summary>&emsp;&emsp;&emsp;{}: {} {} {} {}</summary>'.format(
             isoform,
-            '{:.1%}'.format(1 - (len(fails)/len(goodSpecies))),
-            'of referencial species confirm orthology'
+            len(fails),
+            'of',
+            len(goodSpecies),
+            'referencial proteins not found:'
         ))
         for failed in fails:
-            htmlPart.write('\n&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>'.format(
+            htmlPart.write('\n\t\t\t\t&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>'.format(
                 failed
             ))
-        htmlPart.write('</details>')
-    htmlPart.write('</details></details></details>')
+        htmlPart.write('\t\t\t</details>')
+    htmlPart.write('\n\t\t</details>\n\t</details>\n</details>')
     return htmlPart.getvalue()
 
 def analyzeBlastDict(blastDict, proteins):
@@ -320,8 +327,9 @@ def analyzeBlastDict(blastDict, proteins):
             writeHtml(
                 isoformsSps,
                 gene,
-                '{:.1%}'.format(1 - (len(failedRecipr)/len(goodList))),
-                '{:.1%}'.format(1 - bad/len(isoforms)),
+                len(goodList),
+                bad,
+                len(isoforms),
                 failedRecipr,
                 forwardIsoforms,
                 goodSpecies
