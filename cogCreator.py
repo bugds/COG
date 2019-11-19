@@ -232,9 +232,9 @@ def writeHtml(
     htmlPart.write("""<details>
     <summary>{}</summary>
     <details>
-        <summary>&emsp;Gene id: {}</summary>
-        <details>
-        <summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
+    \t<summary>&emsp;Gene id: {}</summary>
+    \t<details>
+    \t<summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
         species,
         gene,
         len(failedRecipr),
@@ -243,21 +243,21 @@ def writeHtml(
         'referencial proteins failed reciprocal BLAST:'
     ))
     for failed in failedRecipr:
-        htmlPart.write('\n\t\t\t\t&emsp;&emsp;&emsp;&emsp;{} [{}]<br>'.format(
+        htmlPart.write('\n&emsp;&emsp;&emsp;&emsp;{} [{}]<br>'.format(
             failed.refseq,
             failed.species
         ))        
     htmlPart.write("""\t\t\t</details>
-            <details>
-            <summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
+    \t\t<details>
+    \t\t<summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
         forwardFailed,
         'of',
         forwardAll,
         'isoforms failed to find all referencial proteins in first hit:'
     ))
     for isoform, fails in forwardIsoforms.items():
-        htmlPart.write('\t\t\t<details>')
-        htmlPart.write('\t\t\t\t<summary>&emsp;&emsp;&emsp;{}: {} {} {} {}</summary>'.format(
+        htmlPart.write('<details>')
+        htmlPart.write('<summary>&emsp;&emsp;&emsp;{}: {} {} {} {}</summary>'.format(
             isoform,
             len(fails),
             'of',
@@ -265,11 +265,11 @@ def writeHtml(
             'referencial proteins not found:'
         ))
         for failed in fails:
-            htmlPart.write('\n\t\t\t\t&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>'.format(
+            htmlPart.write('\n&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>'.format(
                 failed
             ))
-        htmlPart.write('\t\t\t</details>')
-    htmlPart.write('\n\t\t</details>\n\t</details>\n</details>')
+        htmlPart.write('</details>')
+    htmlPart.write('</details></details></details>')
     return htmlPart.getvalue()
 
 def analyzeBlastDict(blastDict, proteins):
