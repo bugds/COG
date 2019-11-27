@@ -6,7 +6,7 @@ from Bio.Blast import NCBIWWW, NCBIXML
 
 rootFolder = sys.path[0]
 # 'rootFoler' is a directory that contains:
-# /Fasta        (pairs of fasta files (good, all) for each protein)
+# /Input        (pairs of input files (good, all) for each protein)
 # /Blast_XML    (search results in xml format)
 # /Results      (for output)
 
@@ -30,22 +30,19 @@ class ProteinClass():
         self.good = good
 
 def getSequences(seqFilename, proteins, good=True):
-    '''Gets accession numbers and species from a fasta
+    '''Gets accession numbers from corresponding file
 
-    :param seqFilename: Name of a fasta file
+    :param seqFilename: Name of a file with accession numbers
     :param proteins: Dictionary for storing information about proteins
     :param good: Boolean, True for referencial proteins
     :return: Dictionary supplemented with proteins information
     '''
-    path = rootFolder + '/Fasta/' + seqFilename
+    path = rootFolder + '/Input/' + seqFilename
     seqFile = open(path, 'r')
     line = seqFile.readline()
     while line:
-        if '>' in line:
-            refseq = line.split(' ')[0][1:]
-            if not (refseq in proteins):
-                species = line.split('[')[1][:-2]
-                proteins[refseq] = ProteinClass(species, None, refseq, good)
+        proteins[line.replace('\n', '')] = \
+            ProteinClass(None, None, line.replace('\n', ''), good)
         line = seqFile.readline()
     return proteins
 
@@ -73,6 +70,7 @@ def addIsoform(refseq, i, genes, goodGenes, proteins):
     :return: "proteins" supplemented with single isoform, "goodGenes"
     '''
     if refseq in proteins:
+        proteins[refseq].species = next(iter(genes[i].keys()))
         proteins[refseq].gene = next(iter(genes[i].values()))
         if proteins[refseq].good == True:
             goodGenes.append(proteins[refseq].gene)
