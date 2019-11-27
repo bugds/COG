@@ -1,0 +1,1312 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>NP_001278.1</BlastOutput_query-ID>
+  <BlastOutput_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</BlastOutput_query-def>
+  <BlastOutput_query-len>805</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>NP_001278.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>805</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>281.952</Hsp_bit-score>
+      <Hsp_score>720</Hsp_score>
+      <Hsp_evalue>8.2932e-83</Hsp_evalue>
+      <Hsp_query-from>76</Hsp_query-from>
+      <Hsp_query-to>795</Hsp_query-to>
+      <Hsp_hit-from>63</Hsp_hit-from>
+      <Hsp_hit-to>869</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>243</Hsp_identity>
+      <Hsp_positive>389</Hsp_positive>
+      <Hsp_gaps>133</Hsp_gaps>
+      <Hsp_align-len>830</Hsp_align-len>
+      <Hsp_qseq>PHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWV---ICALIGILTGLVACFIDIVVENLAGLKYRVIKGNI---------------------DKFTEKGG-----------LSFSLLLWA----TLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLK-RDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMA--------------YTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCL-QVIEAVLVAAVTATVAFVLIYSSRDCQP----LQGGSMSYPLQL---FCADGE--YNSMAAAFFNTPEKSVVSLF-HDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSL---TAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLL----------KHKVFVE------------------RSNL--------GLVQRRLRLKDFRDAYP-----RFPPIQSI-HVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKR</Hsp_qseq>
+      <Hsp_hseq>PHVFTAE----ERRRMDWYESIDYAEGQSLV-----HRVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSG--WHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPT-VMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFT-PCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGV----LFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFL--EAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEAL--TMTRHNAFPVVRVGKADQA--YEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEK</Hsp_hseq>
+      <Hsp_midline>PH F  E    E+     YES+DY   ++ +      R++ T   + + K W+   +  LIG+  G  +  +   ++ LA +K   ++G +                     +   E GG           LS+S LL      T+    + + S +   + P AAGSGIP +  +LNGV  P +  ++ LV+K    IL+V  GL VG EGPMIH GS+I AG+  GRS SL      +F+ FR   ++RDF+SAGAA G+++AF +P+GG+LF LEE A+ ++  L W +F + +   + +    S   G  W L     +  G      +A              YT   IP  + + V+ G+L   +   +   + +R R +    L +V+E  + A++ +T  +VL   +  C P    ++    +  ++L   FCA  E  ++ +A     +P   +  LF     G +   +L L   +Y   + +  G+ +S G  IPSLLIGA  GRL G+    L    +WAD G  AL+GAAA   GI R+T +L V+MME T++V++   +ML ++ AK + D      Y   +++++VPFL  EA  + H L   TAR++M++PVT L   + V  +V+ L  T + HN FPVV      Q    +G+I R+QL +LL            +V V+                  RS +        G +Q  +   + +  +      R P +  + H+        +DL  +++ S   V Q   + R +  FR LGLRHL V+D   +VVG++TR      RL ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>NP_506022.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein [Caenorhabditis elegans]</Iteration_query-def>
+  <Iteration_query-len>796</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>297.36</Hsp_bit-score>
+      <Hsp_score>760</Hsp_score>
+      <Hsp_evalue>9.17723e-87</Hsp_evalue>
+      <Hsp_query-from>59</Hsp_query-from>
+      <Hsp_query-to>649</Hsp_query-to>
+      <Hsp_hit-from>106</Hsp_hit-from>
+      <Hsp_hit-to>712</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>205</Hsp_identity>
+      <Hsp_positive>333</Hsp_positive>
+      <Hsp_gaps>72</Hsp_gaps>
+      <Hsp_align-len>635</Hsp_align-len>
+      <Hsp_qseq>TDSHEALSARYESLNYEI-----SENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFI----DIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWIL-SWFNGRS--GWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSS-KLGRLFECLLVAAV-SGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKG-------------EYSAVASLFFQNPEESVKSMF-HSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIF-----------VERLFPSVTG-IDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSR----NILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRI</Hsp_qseq>
+      <Hsp_hseq>TDSGSAGRTRY-SVSYPLGSMAESFARLQMDTAER---HVTL------RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYG-----IMASQRHRSIGNLQGLLYTV----IG-SVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATML-CFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYVLSL--VSPCAEL--HDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL---PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVVEAV</Hsp_hseq>
+      <Hsp_midline>TDS  A   RY S++Y +     S  RL  D  ++    +TL      RW +  LI +  G+VA  +    DI+  Y  ++ +      +++       G   G ++TV    IG + VLV IAA +V+Y  P A G GIP +  YLNG+ + + + L+T ++KA+   C+V GGL  G E P+IH GA  GAG++QG+S +LG    +F+ FRN++++RDF++AGAA GV+ AFGAPIGG+LF +EE +SFW+Q+   ++F + M+  FT + I+ S   GR   GW+S      F V      N+  I   L +GI+ G L A F   N  L ++R++ +   +  R  E +++ AV S  +  L++  +  C  +  +   T  +  Q W  +G              YS + +L   + + +++ +F       F V TL+++ + YF       G SV  G+ +P+++ GA +GRLFG+            V R + +    +DPG +AL GA A L G  RM++++  I++E + ++ + LP+M+ ++++K   D   E LY   + +  VP L   PP + +     + A  VM  +VV L  RER   ++  LR + HH FPVV+ +</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>38.1206</Hsp_bit-score>
+      <Hsp_score>87</Hsp_score>
+      <Hsp_evalue>0.00987082</Hsp_evalue>
+      <Hsp_query-from>722</Hsp_query-from>
+      <Hsp_query-to>785</Hsp_query-to>
+      <Hsp_hit-from>897</Hsp_hit-from>
+      <Hsp_hit-to>959</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>64</Hsp_align-len>
+      <Hsp_qseq>LDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNRE</Hsp_qseq>
+      <Hsp_hseq>LDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDGDT-VAGMITRKDLLVNSLRHRMKE</Hsp_hseq>
+      <Hsp_midline>LD+   ++  P  +P   +L   ++ FR +GLR++ VV+ D  + G+ITRKD+     R R +E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>3</Iteration_iter-num>
+  <Iteration_query-ID>NP_610798.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel-b [Drosophila melanogaster]</Iteration_query-def>
+  <Iteration_query-len>813</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>271.166</Hsp_bit-score>
+      <Hsp_score>692</Hsp_score>
+      <Hsp_evalue>2.20545e-77</Hsp_evalue>
+      <Hsp_query-from>130</Hsp_query-from>
+      <Hsp_query-to>690</Hsp_query-to>
+      <Hsp_hit-from>127</Hsp_hit-from>
+      <Hsp_hit-to>712</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>172</Hsp_identity>
+      <Hsp_positive>312</Hsp_positive>
+      <Hsp_gaps>39</Hsp_gaps>
+      <Hsp_align-len>593</Hsp_align-len>
+      <Hsp_qseq>EQRKRLTERFSLRKDIIRWIIFIQIGIITALIACTIDIIIEELSIRKYTFLYNSVKENVPLSDASDRDLLIPYLYWLLFSIVPVAFGAAMVTYIEPITAGSGIPQVKSYLNGVKIPRIVRIKTLAVKAIGVITSVVGGLAGGKEGPMIHAGAVVAAGISQGKSTTFLKDFRIFKAFRDDHEKRDFVLGGGAAGVSAAFGAPIGGMLFSLEEAASFWNQNLIWRTLVASIISVFTLNIVLSAYHG--LNDFTFTGLFNLGKFDTPLKFDYFELPIFMILGVTGGLLGAAWNSLNTKINKFRKRFI-PWKIGKVLEAVVVAMMGVTLACL-MIYFINDCRPLGNDPT-NNPVQLFCEDN-------------EYNAVAALWFQTPEATVRSLF-HDPPGSHKILTLALFTVVYYVLSCATFGLNVSLGVFIPTALVGAAWGRLLAMLTYYV-------FPQA-----EFLHPGKYALIGAAANLGGVLRMTISLSVILMETTGVETSFFFPLIIALISAKWVGDYFNEGIYDTQIQVNHVPMLTWEPL-PQYKGLKAREILSKPVICIKIRDSANYIYEMLKKCDHNGFPVVDDV</Hsp_qseq>
+      <Hsp_hseq>ESFARLQMDTAERHVTLRWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGLL----YTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIG--AVFSSCMYVLSLVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELS-AELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYLPPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVVEAV</Hsp_hseq>
+      <Hsp_midline>E   RL    + R   +RW++ + I +   ++A  +   ++ L   +   LY  +      S  + + LL    Y ++ S+V VA  A +V Y EP  +G GIP V +YLNGV + + + ++T   KAI  I +V GGL  G E P+IH GA+  AG++QG+S T      +F+AFR++ ++RDF+  G A GVS AFGAPIGG+LF +EE +SFW+Q+   +  +A+++      I+ S   G  L  +       L + +  +  +   +   + LG+  G L A +   N  + K+R+R + P++  + LE VV+    V  +C+ ++  ++ C  L +  T N  VQ +  +               Y+ +  L   + + T+R LF     G   ++TL ++ ++Y+  +C   G +VS G+ +P+ ++GA +GRL  +L +++        P+       ++ PG +ALIGA A L G  RM++++ VI++E +  E  +  P+++A++ +K   D+  E +Y   + ++ VP L    + P+++ L A ++++  V+ +++R+    +   L+   H+ FPVV+ V</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>48.1358</Hsp_bit-score>
+      <Hsp_score>113</Hsp_score>
+      <Hsp_evalue>7.8178e-06</Hsp_evalue>
+      <Hsp_query-from>751</Hsp_query-from>
+      <Hsp_query-to>811</Hsp_query-to>
+      <Hsp_hit-from>890</Hsp_hit-from>
+      <Hsp_hit-to>949</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>21</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>DEKINYTVDLSMFMNPSPIRVNPHDSVPRIFQIFRALGLRHLLVINHENRIAGIITRRDFI</Hsp_qseq>
+      <Hsp_hseq>ENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDGDT-VAGMITRKDLL</Hsp_hseq>
+      <Hsp_midline>+ ++   +DLS+ +N SP  + P  ++   +Q FR +GLRH++V++ +  +AG+ITR+D +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>4</Iteration_iter-num>
+  <Iteration_query-ID>XP_001627108.1</Iteration_query-ID>
+  <Iteration_query-def>predicted protein [Nematostella vectensis]</Iteration_query-def>
+  <Iteration_query-len>714</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>269.626</Hsp_bit-score>
+      <Hsp_score>688</Hsp_score>
+      <Hsp_evalue>9.23585e-78</Hsp_evalue>
+      <Hsp_query-from>36</Hsp_query-from>
+      <Hsp_query-to>687</Hsp_query-to>
+      <Hsp_hit-from>97</Hsp_hit-from>
+      <Hsp_hit-to>710</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>201</Hsp_identity>
+      <Hsp_positive>326</Hsp_positive>
+      <Hsp_gaps>116</Hsp_gaps>
+      <Hsp_align-len>691</Hsp_align-len>
+      <Hsp_qseq>DINGGISRNGFDMSPEDLKYEGTISRSTSIEPGSLQKISPKFESLDYDIPENSLFLKEQKSFTPEEIIKVDINRWIVMFIIGVITALIAAAIDICIGLLSKWK----YDIIKKNVELCTGNYCMAKPYALWVAI-DIFFVCIAACLVVYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKVKMGVNVLIKFWHLNCLLIFQIYLLIHQLLLAHLIDNFPLQTLVAKVVGVVFSVSGGLACGKEGPMIHSGAVVAAGVSQGRSTTFNRDFHIFESFRTDHEKRDFVSGGAAAGVAAAFGAPVGGVLFSLEEGASFWNQALTWRMFFGSIISTFTLNLVL-SIYKGEA--GDLSNPGLINFGTFTGNPYFGYELPLFLIMGVIGGLLGALFNAINHHLTIFRMRFVKR-KWLRVVEACIVAALTASSSFVLIYFNKDCNPLGAANVTEGLQFFCQDG-------------EYSSMGTLTFSTPEESIKNLF-HLPLGAFNTLSLFLFFCVYFFLSCWTYGLYVPSGLFVPCILIGATWGRMFATLLHSV------------FPTWSWSTPGRYALIGAAASLGGVVRMTLSLTVILMEATSNITYGLPMMLVLMIAKWVGDFFNEGIYDMHIKLQGVPLMGWDPPIMAT----GICANNIMSSPVVCFNTVERVGRIFDILKDPSSYHNGFPVVE</Hsp_qseq>
+      <Hsp_hseq>DVNGGISHE------TDSGSAGRTRYSVSYPLGSMAE---SFARLQMDTAERHVTL-----------------RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGL----LYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGV-----------------------------------------HLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATML-CFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYVLSLVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL---PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRD--STHHAFPVVE</Hsp_hseq>
+      <Hsp_midline>D+NGGIS         D    G    S S   GS+ +    F  L  D  E  + L                 RW++  +I +   ++A  +   + +L K++    Y I+        GN        L+  I  +  V IAA +VVY EP A+G GIP +  YLNGV                                         HL     L+T +AK +  + +V+GGL  G E P+IH GA+  AGV+QGRS T      +F++FR + ++RDF++ GAA GV+ AFGAP+GG+LF +EE +SFW+Q+   ++F  +++  FT + ++ SI +G    G +SN   + F      P     +   L +G++ G L A F   N  L  +R R ++  ++ R +E  ++ A+ +S  +VL   +          V E +Q +  +G              YS +GTL  ++ + +I++LF     G F  ++L ++F +YF  +C   G  V  GL VP +++GA +GR+F  L+  +                +W  PG +ALIGA A L G  RM++++ VI++E ++ + Y LP+M+ ++++K   D+  E +Y   + +  VP +   PP +       + A ++M+S VV     ER   +   L+D  S H+ FPVVE</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>5</Iteration_iter-num>
+  <Iteration_query-ID>XP_001742728.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein [Monosiga brevicollis MX1]</Iteration_query-def>
+  <Iteration_query-len>790</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>290.041</Hsp_bit-score>
+      <Hsp_score>741</Hsp_score>
+      <Hsp_evalue>3.44477e-84</Hsp_evalue>
+      <Hsp_query-from>70</Hsp_query-from>
+      <Hsp_query-to>615</Hsp_query-to>
+      <Hsp_hit-from>140</Hsp_hit-from>
+      <Hsp_hit-to>709</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>183</Hsp_identity>
+      <Hsp_positive>308</Hsp_positive>
+      <Hsp_gaps>38</Hsp_gaps>
+      <Hsp_align-len>577</Hsp_align-len>
+      <Hsp_qseq>HIAQRWALYFVIGVITAGIACSIDMAILKLSGLKFRWLANNIEHCVQHDCL--VSSFFLWIATDVALVTLAGALTVYYAPVAQGSGISEIKCFLNGIKMPEVVRLKTLLVKGFGVMCAVVGGMAVGKEGPMIHSGAVVAAGISQGKSTSISSLHTSWFSAFRNDVDKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGSSFWNQLLTWRIFFASMTATFTLNFLLSGVKGGD--WGALSNPGLLNFGQFDTMPYTIAEIPIFMLMGLIGGLSGAAFNGLNLYLTRFRMKFITSRKL-KLLEVSAIAAI--TVAVAFSMIFFSADCLPMGESPESSSP---------LQFFCADHQ-YSAMASLFFNTPEDSIKNLFHGKFAEIGSYNYETLALFALAYWLLGCMTYGLAIPSGLFVPTLLTGAAWGRLAGTIL----TAIFPG--------RAWTNPGKYSLIGAAANLGGVVRMTISLTVIVIEATGNVSYGLPIIIAVIVAKWVGDRFNEGIYDMHIELKHIPLLPWEPPVVSR--YHLTASDIMTRKIQCVRLHEKVGHIVDLLKESKHNAFPVI</Hsp_qseq>
+      <Hsp_hseq>HVTLRWLLHVLIALSVGVVATVVSYAVDILEKYRAEVL-YGIMASQRHRSIGNLQGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTL-GFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLC-FTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYVLSLVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTA--GEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYLP--PNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVV</Hsp_hseq>
+      <Hsp_midline>H+  RW L+ +I +    +A  +  A+  L   +   L   I    +H  +  +      +   V LV +A  + VY+ P A G GI ++  +LNG+ + + + L+T + K    +CAV GG+ VG E P+IH GA+  AG++QG+S ++    TS F AFRN+ D+RDF++ GAA GVS AFGAPIGG+LF +EE SSFW+Q    +IF A+M   FT + +++ +  G    G +SN   + F    T+P  +  I   + +G++ G   A F   NL L ++R + +   +  + LE   I A+  +     S++   A+   +G   E+                C   + YS + +L   + +++I++LF  + A  G +   TL ++ L Y+   CM  G ++  GL VP+L+ GA +GRL G ++     A  PG         AW +PG ++LIGA A L G  RM++++ VI++E +  + Y LP+++A++++K   D   E +Y   + +  +P LP  P +V      LTA+D+M  ++  +R+ E+   ++  L++S H+AFPV+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>46.595</Hsp_bit-score>
+      <Hsp_score>109</Hsp_score>
+      <Hsp_evalue>2.17891e-05</Hsp_evalue>
+      <Hsp_query-from>688</Hsp_query-from>
+      <Hsp_query-to>740</Hsp_query-to>
+      <Hsp_hit-from>897</Hsp_hit-from>
+      <Hsp_hit-to>948</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>33</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>53</Hsp_align-len>
+      <Hsp_qseq>LDIEAYYNKSPYSVRWNNSLSRIFHLFRTMGLRHLAVVDIQNRLVGMITRKDI</Hsp_qseq>
+      <Hsp_hseq>LDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVD-GDTVAGMITRKDL</Hsp_hseq>
+      <Hsp_midline>LD+    N+SP+ +    +L   +  FR MGLRH+ VVD  + + GMITRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>6</Iteration_iter-num>
+  <Iteration_query-ID>XP_002109718.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein TRIADDRAFT_20821 [Trichoplax adhaerens]</Iteration_query-def>
+  <Iteration_query-len>687</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>286.189</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>7.07497e-84</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>667</Hsp_query-to>
+      <Hsp_hit-from>144</Hsp_hit-from>
+      <Hsp_hit-to>948</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>235</Hsp_identity>
+      <Hsp_positive>381</Hsp_positive>
+      <Hsp_gaps>187</Hsp_gaps>
+      <Hsp_align-len>828</Hsp_align-len>
+      <Hsp_qseq>RWIIMFLIGVSTACVAALIDVGINAISSVKYLCYFQDCLAQPY--------LIWLAL-SISLVFIAAALVVYLEPVAIGSGIPQIKCFLNGVNIQRCVRLKTLVAKAVGVLFSVAGGLPVGKEGPMIHSGAALAAAISNGKVTIGKCSFNIFHYFRSPVEKRDFVSAGAAAGVSAAFGSPVGGVLFSLEEGASFWYQSITWRIFFASMTSTFTLNVIRSFIHG--------------MPFNLSFP-GLLDFGDFKKGVTYYGYELPIFFLMGIVGGLLGALFNYINYKLSLHRMRNIRK-SYLKLLEAIVVIIVCTAAAFLAVSLNQGCQPKYE-----------AIQSELETFNFTSFKCGNGDYNTMATLFLNTPEKAIKNMF-HTPQGLYTIPTLIWFTVIFFFTACWTYGVNVPSGLFVPCILTGAAWGRILGEL-----INLIPG--------QEWSSPGRYALMGAAAMLAGVVRMTISITVILVEAIGDIAFGLPLMVVILISKLVGDYFNEGLYDIHVQLMKVPLLPWEPPDLSG----SLTVKDLTCESVITLRKTERVADIYTVIKDADLRHNGYPVVD-------------------------------DDGT--------------------------AATAN-NTNVKGRLIGLILLSELK---TILELQLY----KSNHPLKDYRLNGKDFDTF-----------KH-------------FYSKHDDFS-------------CEIPPED--------MNKTIDLTKFMNPSPYTVYENMSFPRLYRLFRGLGLRHIVVINSKNQVIGIITRVDL</Hsp_qseq>
+      <Hsp_hseq>RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSI-------------IPSLFL-GIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYV-LSLVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRT--YSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYH---QMLLMDSVPYLPPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDST--HHAFPVVEAVPIDDAAADGDDEKATSPRRGSASAFALRQQDGTKRGSGEASAPPVAPAGALAPRSAMNTSTTASAATQVRYKFVGLVTREDLQVYFTLPQLQEYSESLSTTSPMTAVPLTAKDSDGFGGRLAPCVQAIRHLSWTQWTWQKSRLFFRTSDRYEWVRTHMPDGIPGGAEVRAENDSLISENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDG-DTVAGMITRKDL</Hsp_hseq>
+      <Hsp_midline>RW++  LI +S   VA ++   ++ +   +    +    +Q +        L++  + S+ LV IAA +VVY EP A G GIP +  +LNGV++++ + L+T +AKA+  + +VAGGLPVG E P+IH GA   A ++ G+        ++F  FR+  ++RDF++AGAA GVS AFG+P+GG+LF +EE +SFW QS   +IF A+M       +I S + G                 N++ P  L+               +P  FL GIV G L A F   N  L   R R +R   + + LE +V+  V ++  ++ +SL   C   ++             +     FN T  K     Y+ + TL + + +  I+++F     G + + TLI + +I+F +AC   G +V  GL VP ++ GA +GR+ G L     +  IPG          W  PG +AL+GA A LAG  RM+++I VI+VE   ++ + LP+MV I++SK   D+  E LY    Q++ +  +P+ PP++       LT  D+    V+TLR  ER   +   ++D+   H+ +PVV+                                DGT                          + TA+  T V+ + +GL+   +L+   T+ +LQ Y     +  P+    L  KD D F           +H             F+   D +               E+  E+        +   +DL+  +N SP+ +    +    Y+ FR +GLRH+VV++  + V G+ITR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>7</Iteration_iter-num>
+  <Iteration_query-ID>XP_002595670.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein BRAFLDRAFT_200772 [Branchiostoma floridae]</Iteration_query-def>
+  <Iteration_query-len>718</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>256.529</Hsp_bit-score>
+      <Hsp_score>654</Hsp_score>
+      <Hsp_evalue>4.72244e-73</Hsp_evalue>
+      <Hsp_query-from>40</Hsp_query-from>
+      <Hsp_query-to>577</Hsp_query-to>
+      <Hsp_hit-from>144</Hsp_hit-from>
+      <Hsp_hit-to>710</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>185</Hsp_identity>
+      <Hsp_positive>305</Hsp_positive>
+      <Hsp_gaps>51</Hsp_gaps>
+      <Hsp_align-len>578</Hsp_align-len>
+      <Hsp_qseq>RWV----VMLMIGILTALVGVVIDILVHQLAGLKYSLLKSWIDSCVEDGCLAIPFALWVAIDAL-FVCFAAILVAYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKTLISKVIGVVFSVAGGLAVGKEGPMIHSGAVIAAGVSQGMSTTFKRDLKIFKYFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALTWRIFFCSVTTLFTLNIVLSVYFGRP--GELAYPGLLNFGRFTVLSYFWYEIPLFLLMGVAGGLSGALFNFVNHKICIFRMKYVYKP--FMQVVEAMMVAIVTATLAFVSIYVSRDCKPLGQDPS-EKPLQFFCSDG-------------EYSTMATMMFQTPEQSVKSLF-HDPPNSYNIGTLSVFCVIYFILACWTYGLSVPSGLFIPSLLCGAGWGRLFGIGVSHL----VPNI--------AWSAPGIYALMGAAAQLGGVVRMTISLTVILMEATGNVSYGLPLMLVLLIAKWVGDIFNEGLYDIHIRLMSVPILGWEPP----ATSTTISARLVMSHPVTTLQQVEKVGRIVEALKEPHSNHNGFPVVD</Hsp_qseq>
+      <Hsp_hseq>RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGN----LQGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRR-VLRPYQFRRFLEPVVIGAVFSSCMYVLSLVS-PCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL---PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRD--STHHAFPVVE</Hsp_hseq>
+      <Hsp_midline>RW+    + L +G++  +V   +DIL    A + Y ++ S     + +    +   L+  I ++  V  AA +V Y EP A+G GIP +  YLNGV +   + ++T I+K I  + +VAGGL VG E P+IH GA+  AGV+QG S T      +F+ FR + ++RDF++ GAA GVS AFGAP+GG+LF +EE +SFW+Q+   +IF  ++       I+ S+  GR   G ++    + F     +      I   L +G+  G   A F   N  +  +R + V +P  F + +E +++  V ++  +V   VS  C  L    +  + +Q + ++G              YS + T+   + + +++ LF       + + TL V+ +IYF  AC   G SV  GL +PSL+ GA +GRLFG+ + H+    +P +        AW  PG++AL+GA A L G  RM++++ VI++E +  + Y LP+M+ ++++K   D   E LY   + + SVP L   PP         ++A  VM+  V TL+  E+   ++ AL++  S H+ FPVV+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>46.9802</Hsp_bit-score>
+      <Hsp_score>110</Hsp_score>
+      <Hsp_evalue>1.85841e-05</Hsp_evalue>
+      <Hsp_query-from>637</Hsp_query-from>
+      <Hsp_query-to>706</Hsp_query-to>
+      <Hsp_hit-from>888</Hsp_hit-from>
+      <Hsp_hit-to>960</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>27</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>74</Hsp_align-len>
+      <Hsp_qseq>ISPEEMECSIDLRPYMNPAPYTVSEDASLHRVFRLFRALGLRHLVVVNKDNLVMGIVTRKDL----ARYRLVSL</Hsp_qseq>
+      <Hsp_hseq>ISENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDGDT-VAGMITRKDLLVNSLRHRMKEL</Hsp_hseq>
+      <Hsp_midline>IS   +   +DL   +N +P+ +    +L   ++ FR +GLRH+VVV+ D  V G++TRKDL     R+R+  L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>8</Iteration_iter-num>
+  <Iteration_query-ID>XP_004363664.1</Iteration_query-ID>
+  <Iteration_query-def>voltage gated chloride channel protein [Capsaspora owczarzaki ATCC 30864]</Iteration_query-def>
+  <Iteration_query-len>979</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>296.204</Hsp_bit-score>
+      <Hsp_score>757</Hsp_score>
+      <Hsp_evalue>6.47541e-85</Hsp_evalue>
+      <Hsp_query-from>63</Hsp_query-from>
+      <Hsp_query-to>661</Hsp_query-to>
+      <Hsp_hit-from>99</Hsp_hit-from>
+      <Hsp_hit-to>709</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>191</Hsp_identity>
+      <Hsp_positive>326</Hsp_positive>
+      <Hsp_gaps>56</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>DGDLRNFQSANMANSVRKLRSSKVTSISTKFESLDYDILENDIYVKDQAKIDRKHYVRLEAARWL----VMFFVGVLTAVVAFLIDYCLTQISSVKFGWISDSITRCVDDECLDQSVLLWMGIDIFLVSIACLLVLFVEPIAQGSGIPEIKCYLNGIKIPHVVRFKALLTKTVGVLFSVSGGLACGKEGPMIHTGSVIAAGISQGKSTTFNIDLNLFKAFRTDHEKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGASFWNQALTWRIFFCSMIA---SFTLNVLLSGTKGTSWGAMSSPGLVNFGAFASANYNLFELPIFIAMGAVAGLFGALFNALNHRLTVFRFKYIYHSKALRFLEVILVAA--ATVIVSFTLI----------YFDDNCLPLGEKPGENPLEFFC-QEHTYNEIATMLFNTPEESIKNLF-HATRGDYSPETLSIFFLVMFCLSCWTYGISVPAGVFVPALLTGAAYGRLVGNLLYH-----------AFPDAD-WVDPGKYALIGAASMLGGIVRMTISLTVIVVEGTGNISYGLPLMLSIMAAKLVGDLFNEGIYDLHIHLRRVPILHWEAPLP-MQHFHASHVMSSNVVCIQEFDRVGRIVELLRTTTHNAFPVV</Hsp_qseq>
+      <Hsp_hseq>NGGISHETDSGSAGRTRYSVSYPLGSMAESFARLQMDTAERHVTL-----------------RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNL---QGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGW--VSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYVLSLVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYLPPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVV</Hsp_hseq>
+      <Hsp_midline>+G + +   +  A   R   S  + S++  F  L  D  E  + +                 RWL    +   VGV+  VV++ +D      + V +G ++    R + +    Q +L  +   + LV+IA  +V++ EP A G GIP++  YLNG+ +   +  +  + K +  + +V+GGL  G E P+IH G++  AG++QG+S T     ++F+AFR + ++RDF++ GAA GVS AFGAPIGG+LF +EE +SFW+Q+   +IF  +M+    S  +N ++ G +   W  +S+   V F    +   NL  +   + +G V G   A F   N  L  +R + +   +  RFLE +++ A  ++ +   +L+            ++     G + G       C +  TY+ + T+   + + +I++LF   T G++   TL ++FL+ F  +C   G SV  G+ VP+L+ GA +GRL G L++H            +  AD W+DPG +ALIGA + L G  RM++++ VI+VE +  + Y LP+M++I+ +K   D   E +Y   + +  VP L      P  +   A+ VM+S VV ++  +R   ++  LR +TH+AFPVV</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>44.669</Hsp_bit-score>
+      <Hsp_score>104</Hsp_score>
+      <Hsp_evalue>0.000110644</Hsp_evalue>
+      <Hsp_query-from>900</Hsp_query-from>
+      <Hsp_query-to>952</Hsp_query-to>
+      <Hsp_hit-from>897</Hsp_hit-from>
+      <Hsp_hit-to>948</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>33</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>53</Hsp_align-len>
+      <Hsp_qseq>MDLRPYLNPTPYTLKHAAPLSRVYRIFRGLGLRHLIITDRFNQVVGMITRKDL</Hsp_qseq>
+      <Hsp_hseq>LDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDG-DTVAGMITRKDL</Hsp_hseq>
+      <Hsp_midline>+DL   +N +P+ +     L   Y+ FR +GLRH+++ D  + V GMITRKDL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>9</Iteration_iter-num>
+  <Iteration_query-ID>XP_018668924.2</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7-like [Ciona intestinalis]</Iteration_query-def>
+  <Iteration_query-len>712</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>265.388</Hsp_bit-score>
+      <Hsp_score>677</Hsp_score>
+      <Hsp_evalue>1.3778e-77</Hsp_evalue>
+      <Hsp_query-from>15</Hsp_query-from>
+      <Hsp_query-to>697</Hsp_query-to>
+      <Hsp_hit-from>74</Hsp_hit-from>
+      <Hsp_hit-to>858</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>142</Hsp_gaps>
+      <Hsp_align-len>805</Hsp_align-len>
+      <Hsp_qseq>FSYLQALDYDTIENELHGEEERKMSSSDWK-WIQFQRWIICMLIGIMTGIVAVVINICILELTAVKMHVVEQAIIH-------------CVKNRC--------------LYVPLLLWIAIN---------VVLVTVASLLTVFVAPVAAGSGIPQIKCFLNGVKVPNVVRFKTLVTKVIGVIASVSGGLAVGKEGPMIHSGSVLAAGISQGRSISFNLN-TRFFKHFRNDREKRDFVCAGAAAGVSAAFGAPVGGVLFSLEEAASFWNQALTWRIFLCSILSSY---TLNFFMSIYH------HHPGDLAYPGLINF-----GKFSGSYEGFELPIFLLMAVFGGLSGAAFNAINHKITVFRLKYL-KAKYFKVLEVVFVAAVSATIAFVLIYWNPECKPLGQDPYVR----------LQFFCNDGE--YNTMAVLFFTPPEESVKSLFHDPLGALQPL-TIVIFVLPYFFLACWTYGLQVPSGLFIPSLLIGAAWGRLVGNCVNFIWPDDIWAQDLSKYALIGAAAQLGGTVRMTISLTVILIEATGNITYSLPLMAVLLLAKWVGDYFNHGIYDMHIHLNKVPILPWEPPA-LSTNIQAREVMGTPVVTLRTVPLVSDICSVLSDPRNCHSGYPIT---DSEGKFRGVILRTQLLILLKHKEFVERGGSSE-----------------------------------------------RIKLSVFRDSYP-----RYFPLSVINVSEGEQQCHVDLRPFLNPSPYTIQENASLPRIFRLFRALGLRHLVVLNDEYKVVGMISR</Hsp_qseq>
+      <Hsp_hseq>MDWYESIDYAEGQSLVHRVSTTRQSSTDAKGWL---RLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFTP-CVP--TPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIG--VLFQRP--VWA-DEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTR--HNAFPVVRVGKADQAYEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAI-------RSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTR</Hsp_hseq>
+      <Hsp_midline>  + +++DY   ++ +H     + SS+D K W+   R ++ +LIG+  G  ++++   +  L  VK+  V+  +               C+   C              + +  L W A+           VL+ + S L   V P AAGSGIP +  +LNGV  P +   + LV K +  I +VS GL VG EGPMIH GS++ AG+  GRS S   + T  F  FRN R++RDF+ AGAA G+++AF +P+GG+LF LEE A+ ++  L W +FL  +   +   T N F+S +H         GDL    +  F      + + S   +     +++AV  GL   A+   + + + +R + L     ++VLE    A++ +T  +VL  + P C P    P+VR             FC   E  ++ +A L  T P   ++ LF      L P  ++++ +  Y   + +  G+ +  G  IPSLLIGA  GRL+G  V F  P  +WA D    ALIGAAA   G  R+T +L V+++E T ++++   LM  +L+AK + D   H  Y   + +  VP L  +    L     AR++M +PV  L T+  V  +   L+  R  H+ +P+     ++  + G+I R QL +LL      E G +SE                                               R+   +F +  P      + PLS I       + ++DLRP+++ S   +Q+   + R +  FR LGLRHL VL+   +VVG+++R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>10</Iteration_iter-num>
+  <Iteration_query-ID>XP_643243.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel protein [Dictyostelium discoideum AX4]</Iteration_query-def>
+  <Iteration_query-len>757</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>291.197</Hsp_bit-score>
+      <Hsp_score>744</Hsp_score>
+      <Hsp_evalue>1.51045e-86</Hsp_evalue>
+      <Hsp_query-from>136</Hsp_query-from>
+      <Hsp_query-to>753</Hsp_query-to>
+      <Hsp_hit-from>191</Hsp_hit-from>
+      <Hsp_hit-to>858</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>210</Hsp_identity>
+      <Hsp_positive>330</Hsp_positive>
+      <Hsp_gaps>76</Hsp_gaps>
+      <Hsp_align-len>681</Hsp_align-len>
+      <Hsp_qseq>LQGEAFLTFLGINLLFVFLSCLMVIVAGPLASSSGIPEVKGILNGVKVREALGFRALLGKIVSLVLSFSSGLFVGPEGPMIHIGSAVGAAISQFKSSTMGFYP-SLFLSYRNDRDKRDFISIGAATGLAAAFGAPIGGVLFSIEEVSSFWSRQLTWRTFFTCVIAAF---TTNFLLQG---IGSSP----DMHDTGLLTFGF-----SRLYLFRYSELLCFCFLGLIGGLLGAFFVFLNIHLNKWRKEKLKQNPYLRLFEALFVSVVTSVVCYYASFIFDCRYQSNIVIETSVCEDQSNTEMVQFFC--PDGMYSELGSLLFGNPDQALRRLYS-RTNNMFTLPPLLVFTLISLFFSIWSSGLWVAGGLFVPMMMVGAGFGRLFGQTIS--MWFTNIDSSIYALVGSAAMMAGYCRMTVCIVVIMVELTEGTQYLVPIILAVMISKWVGDFFNESVYEHLMEQKSIPFLQSKPP-HSTNNIRISDVMSKNVVVLPEVCQVRLLVNILNSNNHNAFPVINSGPYDNQRLYRGIILRDHILVLLFYRVFYRGTGE--EIYLDENFDFDKFTTETSKSPPPLSEMNFDQFELD---------------------------------------SFIDLRPYMNSSGVTIHNTFSFVEAYKLFRNMGLRHLPVIDINNEVVGMVTR</Hsp_qseq>
+      <Hsp_hseq>LHGGVLYTMWGV--LMALLSSLCCLVM-PSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYT-FIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVREK---KEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQRPVW---ADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQA--YEGMITRAQ-LQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTR</Hsp_hseq>
+      <Hsp_midline>L G    T  G+  L   LS L  +V  P A+ SGIP+V   LNGV        R L+ K +S +L+ S+GL VG EGPMIH+GS +GA +   +S ++G    S+F  +RN RD+RDFIS GAA GL +AF +P+GG+LF +EE+++ +S +L W  F +C+   +   T N  L G   +  S     D+ +  +  F       + + L+ Y+  +    + ++ GLL   +   +I  ++WR   L      R+ E    + + S  CY       C      V E    ++  N E+   FC  P+  +  L +L   +P   LR L+S R+  +F    LL+   I +  S ++ G++++ G  +P +++GA  GRL G      +W    D  + AL+G+AA  AG  R+T  +VV+M+ELT    ++  ++L ++++K + D    S Y   +E K++PFL+++   H  +     D+M+  V VL  +  V  +V  L    HNAFPV+  G  D    Y G+I R   L LL + V+ R  G+  E+ +DE  D D        +    S M   Q + +                                       S+IDLRPY+++S   +        AY  FR++GLRHLPV+D    VVG++TR</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>11</Iteration_iter-num>
+  <Iteration_query-ID>XP_002506018.1</Iteration_query-ID>
+  <Iteration_query-def>chloride Carrier/Channel family [Micromonas commoda]</Iteration_query-def>
+  <Iteration_query-len>924</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>226.483</Hsp_bit-score>
+      <Hsp_score>576</Hsp_score>
+      <Hsp_evalue>1.27716e-61</Hsp_evalue>
+      <Hsp_query-from>110</Hsp_query-from>
+      <Hsp_query-to>703</Hsp_query-to>
+      <Hsp_hit-from>144</Hsp_hit-from>
+      <Hsp_hit-to>708</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>177</Hsp_identity>
+      <Hsp_positive>284</Hsp_positive>
+      <Hsp_gaps>69</Hsp_gaps>
+      <Hsp_align-len>614</Hsp_align-len>
+      <Hsp_qseq>RWAMSVLI----GVVMGFLAFTVDGLIKKFNGWKYGATTSSISPGGAGFGAWLVWVIISCLLASVAGGLVSYVEPLAAGSGIPELKTYLNGVHLRGLLRIKTLGAKLGGIAFSIGSGLIAGKEGPFVHGGGLVGGGLSAFGSHTLGFRTKKPSHFRNDADKRDFVAIGTAVGVAVAFGAPIGGMLFTVEEGASFHSTGMLWRGFLATCTGVLTTHWLDQLDFDAMDFAGAKFGVHRDFGLFTDDEANYSRVFWWYFWEVPIFAA-------IGCMGGLLGAAFVNINVKITMWRQRFIPVSDKYRRHAEVIFVCFVTATVLFIMMAASPCKPIPEAYRVAAATDGDGNGVSDELPGGVAKFEYGVETRRQIRDQYFRSLFCKADEYSSYGQLFFVPLADSLKLLLHLGEVYEQNGTDEFEQHLFTMDALIMYFVFMYALMTWTYGIGAPTGLFVPSLAVGAAGGQIVGRIVRAMVMS---------TGSEIVVDLHTYAVVGAAACLGGATRMTISITVLVMETTGSMQLIIPLMLTIFFAKAIGDKYSMGIYDTHIKIRGAPFLDEPEHAGVAVDKLKVAEVMADSLVTLRPVMRVRELVEVLTNTSHGAFPV</Hsp_qseq>
+      <Hsp_hseq>RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLAT-----------MLCFTFSTIINSIVEGRRLLGWVS----NAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVL-RPYQFRRFLEPVVIGAVFSSCMYVLSLVSPCAELHDIGTVNETVQ-----------------QWGTEGGWRL----FNNTCTKPRTYSPLGTLN---MASGKNTIRHL---FSRQTAGEFP-----VMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL-PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPV</Hsp_hseq>
+      <Hsp_midline>RW + VLI    GVV   +++ VD L K      YG   S            L  VI S +L ++A G+V Y EP A+G GIP++  YLNGVHLR  + ++T  AK      ++  GL  G E P +H G + G G++   S TLGF+T     FRN+ D+RDF+  G A GV+VAFGAPIGG+LF +EE +SF       + FLAT            L F       +     R  G  +    N + V +     +P+          +G + G L A F   N+ +  WR+R +    ++RR  E + +  V ++ ++++   SPC  + +   V                      ++G E   ++    F +   K   YS  G L    +A     + HL   + +    EF      +  LI+YF+  +A      G     GL VPSL +GA  G++ G ++  + ++           ++  +D   +A++GA A L G +RM+++I V+++E +  +  ++P+M+ I  +K   D     +Y   + +   P+L  P       ++L  A+VMA  +VTLR   R   ++  L +++H AFPV</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>49.2914</Hsp_bit-score>
+      <Hsp_score>116</Hsp_score>
+      <Hsp_evalue>4.99471e-06</Hsp_evalue>
+      <Hsp_query-from>778</Hsp_query-from>
+      <Hsp_query-to>880</Hsp_query-to>
+      <Hsp_hit-from>886</Hsp_hit-from>
+      <Hsp_hit-to>979</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>51</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>STLSRREMELSIDLTHFMQRHPFIVHADARLSRAYRLFRTMGLRHMYITPSKPQIIGVVTRKDLVEESAALTLGEKAADLSYEELTETERRASHDLPFLPYYT</Hsp_qseq>
+      <Hsp_hseq>SLISENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDGD-TVAGMITRKDLLVNSLRHRMKELSARLA------TADSAAPSLP--PSYT</Hsp_hseq>
+      <Hsp_midline>S +S   +   +DL+  + R P+++     L   Y+ FR MGLRHM +      + G++TRKDL+  S    + E +A L+      T   A+  LP  P YT</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>12</Iteration_iter-num>
+  <Iteration_query-ID>XP_002768858.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Iteration_query-def>
+  <Iteration_query-len>776</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>186.037</Hsp_bit-score>
+      <Hsp_score>471</Hsp_score>
+      <Hsp_evalue>5.37015e-49</Hsp_evalue>
+      <Hsp_query-from>151</Hsp_query-from>
+      <Hsp_query-to>651</Hsp_query-to>
+      <Hsp_hit-from>195</Hsp_hit-from>
+      <Hsp_hit-to>708</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>157</Hsp_identity>
+      <Hsp_positive>236</Hsp_positive>
+      <Hsp_gaps>59</Hsp_gaps>
+      <Hsp_align-len>537</Hsp_align-len>
+      <Hsp_qseq>LIWIAIGVPLICFIGWGVS-YMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEG--------VDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWV-----------------GDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYI---------EELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTI</Hsp_qseq>
+      <Hsp_hseq>LLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPY----QFRRFLEPVVIGAVFSSCMYVLSLVS-----PCAELHDIGTV-NETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFS-RQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYLPPNIVKPEFEQLTAADV--MASEVVTLRMR----------ERTEVVLAALRDSTHHAFPV</Hsp_hseq>
+      <Hsp_midline>L++  IG  ++  I  GV  Y  P A G GIPDV AYLNGV + K M     + + +  I  V  G   G E P+ HLGAI GA V Q  +R   F       F   K + +F++ GA  GV+ AF APIGG+LF +EE S++W +    + FL  ++    + +     + +     V+ A  + F        ++      + LGI  G + A F +       +RR     Y      RRF + V  G V    + +   VS      C  L     + N+ +Q    + G             Y+P   + +     +++ LFS R    EFP   L     I F    +  G ++  GL VP+++LGA FGRLFGL +                  D   +PGV+A++GA   +AG +RM++++ VI++EL  +L  L  VMV +V+SK  AD   +  Y  +  +   PY+         E+L+  D   MA   VT RM           E    +   L   TH+AF +</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>51.2174</Hsp_bit-score>
+      <Hsp_score>121</Hsp_score>
+      <Hsp_evalue>1.00603e-06</Hsp_evalue>
+      <Hsp_query-from>593</Hsp_query-from>
+      <Hsp_query-to>739</Hsp_query-to>
+      <Hsp_hit-from>793</Hsp_hit-from>
+      <Hsp_hit-to>949</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>49</Hsp_identity>
+      <Hsp_positive>77</Hsp_positive>
+      <Hsp_gaps>34</Hsp_gaps>
+      <Hsp_align-len>169</Hsp_align-len>
+      <Hsp_qseq>ELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLS-----GFGEVESLGRIQEVLSSCTHNAFTIQD-HSHRLLGVV------MRSNIVDWVKGQGGVVSANTRL-------NLLDLT---NRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIV</Hsp_qseq>
+      <Hsp_hseq>DLQVYFTLPQLQEYSE----SLSTTSPMTAVPLTAKDSDGFG-----GRLAPCVQAIRHLSWTQWTWQKSRLFFRTSDRYEWVRTHMPDGIPGGAEVRAENDSLISENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDGDT---VAGMITRKDLL</Hsp_hseq>
+      <Hsp_midline>+L+ Y  + +L  Y E        T  M+A PL+     GFG     GR+   + +  H ++T       RL          +R+++ D + G   V + N  L        +LDL+   NR+P ++     L   Y  FR + LRHM+VVD D    V G++TRKD++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>13</Iteration_iter-num>
+  <Iteration_query-ID>XP_003392724.1</Iteration_query-ID>
+  <Iteration_query-def>putative chloride channel protein [Leishmania infantum JPCM5]</Iteration_query-def>
+  <Iteration_query-len>885</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1813.89</Hsp_bit-score>
+      <Hsp_score>4697</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>885</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>885</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>885</Hsp_identity>
+      <Hsp_positive>885</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>885</Hsp_align-len>
+      <Hsp_qseq>MSAAYGNAGTSGTFDTPSATLRRREADAATAAWFHELVKEVEEAGDAEVNRARAPLFEKAHRPHVFTAEERRRMDWYESIDYAEGQSLVHRVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQAYEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEKVGTQPDEGFVDTDWRG</Hsp_qseq>
+      <Hsp_hseq>MSAAYGNAGTSGTFDTPSATLRRREADAATAAWFHELVKEVEEAGDAEVNRARAPLFEKAHRPHVFTAEERRRMDWYESIDYAEGQSLVHRVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQAYEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEKVGTQPDEGFVDTDWRG</Hsp_hseq>
+      <Hsp_midline>MSAAYGNAGTSGTFDTPSATLRRREADAATAAWFHELVKEVEEAGDAEVNRARAPLFEKAHRPHVFTAEERRRMDWYESIDYAEGQSLVHRVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQAYEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEKVGTQPDEGFVDTDWRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>14</Iteration_iter-num>
+  <Iteration_query-ID>XP_005828918.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein GUITHDRAFT_88279 [Guillardia theta CCMP2712]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>219.164</Hsp_bit-score>
+      <Hsp_score>557</Hsp_score>
+      <Hsp_evalue>1.74373e-60</Hsp_evalue>
+      <Hsp_query-from>51</Hsp_query-from>
+      <Hsp_query-to>691</Hsp_query-to>
+      <Hsp_hit-from>195</Hsp_hit-from>
+      <Hsp_hit-to>861</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>204</Hsp_identity>
+      <Hsp_positive>320</Hsp_positive>
+      <Hsp_gaps>100</Hsp_gaps>
+      <Hsp_align-len>704</Hsp_align-len>
+      <Hsp_qseq>IFFTMYNAGLVLIAGFLVVFLEPRAAADGISEIKAYLNGSNIPNCFSVQTIIVKLLGSIFASSAGLACGPEGPLIHIGAGIAHAVTAVDKIYTFLPWLPHSVLAQFHNDRDRREFIAAGAGAGIAAAFGAPIGGVLFALEEAASHLSPQLIWRILTSALVATFTLALIKSNGTGGDISLAGLLSFGTAISIGDAKERTLNSDGTDSVSALDAPIYVWELFLFIILGAVGGVFGGFFGAGFDFLTPR--RPRSRFLKMVEVLLISLATSYSVFFFASNY------------PVCRNDGSWTCKEADN---WGGWLGCPEGQYDELATLFFGSKEQSIVRMVTQAWPHEPFSNTS--LFITSILNLFLMLITYGSPLPAGYFM------PSWLVGASIGRLFGQLVKAYVGSSVYSGAYALAGAAAMLGGVQRTSISLVFIIVECTSNVHFLLPIVTTLMVANFVAQKFTKEGVFDISLRHHSLRFLPHHPDW-LMSLCTVSDVMANPVKCLHTVEKVGNIIDLLRNCHHNGFPVLSLEGSRDENCIPRDRLEGLILRSHLRHILGTRFMR----------------DGSTRDSLWSRITAARMSEVSLDGE---------IELVRRKGVL----LP--------PADDRERYVNLAAYMNAACYSVYSQCPLSRAYTIFRSLGLRHLPVVNQRFEVVGMLTRANF</Hsp_qseq>
+      <Hsp_hseq>VLYTMWGVLMALLSS-LCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRS--RSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWH------LVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVA----VLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVREK-----KEALNVELFTAFCAQPETTHHPLATLTMTSP-YNLLRLL--------FSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQRPVWAD--EGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCC-HSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRV-GKADQA------YEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSF</Hsp_hseq>
+      <Hsp_midline>+ +TM+   + L++  L   + P AA  GI ++ AYLNG   P  F+++ ++VK L  I A SAGL  G EGP+IH+G+ I   +         L     SV   F N RD+R+FI+AGA  G+ +AF +P+GG+LF LEE A+H S +L W +  S L   + +    S  +G        L   +A+++GD +E ++     D+V      +Y +     +++     V  G     +   + R  R RSR L    +  +     ++  F  + Y            P  R       KEA N   +  +   PE  +  LATL   S   +++R++        FS  S  LF    L L L +   GS    G F+      PS L+GA  GRL G L +  V +    G  AL GAAA   G+ R + +LV +++E T++V  +  ++  ++VA  +A K      +  SL   ++ FL       L+   T  D+M +PV  L T++ V ++++ L    HN FPV+ + G  D+        EG+I R+ L+ +L   ++R                DG+      +    + M+   +D E          EL R    L    LP        P      Y++L  Y++ +   V     +SRAY  FR LGLRHLPV+++   VVG+LTR +F</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>15</Iteration_iter-num>
+  <Iteration_query-ID>XP_006818446.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Iteration_query-def>
+  <Iteration_query-len>818</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>271.552</Hsp_bit-score>
+      <Hsp_score>693</Hsp_score>
+      <Hsp_evalue>1.99557e-77</Hsp_evalue>
+      <Hsp_query-from>138</Hsp_query-from>
+      <Hsp_query-to>673</Hsp_query-to>
+      <Hsp_hit-from>144</Hsp_hit-from>
+      <Hsp_hit-to>710</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>189</Hsp_identity>
+      <Hsp_positive>297</Hsp_positive>
+      <Hsp_gaps>53</Hsp_gaps>
+      <Hsp_align-len>578</Hsp_align-len>
+      <Hsp_qseq>RWFVMFLIGICTGLVACFINICIDQISAIKYSTVRHFTKMCRDEACMEYALLVWNGF-NVTFVTIAAFMVAYIAPVAAGSGIPQIKCYLNGVKVPFVVRIKTLITKVFGVTLSVAGGLSIGKEGPMIHSGAVIAAGVSQGKSTTFKIDGKVFEDFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQSLTWRIFFASMVS-TFT--LNVVLSYYNGDPWTLSNPGLVTFGKFTGQAYYGYEIPIFLLMGVAGGLLGALFNGLN-----YRLSVFRLKYVYLRLSCVTEAALVALVTTTISFTMIYFISDC---HPIGSNSSPEPLQFFCDDG-------------EFSATATLFFNTPEEALKSLF-HDPLGAYKPVTVGVFFCIYFCLACWTYGLGVPSGLFIPSLLTGAAWGRLVGIFVHYV-------FPGGH-----FSDPGKYALIGAAAQLGGIVRMTISLTVILIEATGDVTYGLPLMLVLMISKWVGDYFNLGLYDIHILLQSVPLLPWEPPAMA----HNISAHDVMSHPVVTLNTIETVGKIVDAMSHHHHNGFPVVD</Hsp_qseq>
+      <Hsp_hseq>RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGW-VSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLR-PYQFRRF---LEPVVIGAVFSSCMY-VLSLVSPCAELHDIGTVN--ETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL---PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVVE</Hsp_hseq>
+      <Hsp_midline>RW +  LI +  G+VA  ++  +D +   +   +       R  +      L++    +V  V IAA +V Y  P A+G GIP +  YLNGV +   + ++T I K      +VAGGL +G E P+IH GA+  AGV+QG+S T      +F+ FR + ++RDF++ GAA GVS AFGAP+GG+LF +EE +SFW+QS   +IF A+M+  TF+  +N ++       W +SN   V F            I   L +G+  G L A F   N     +R  V R  Y + R     E  ++  V ++  + ++  +S C   H IG+ +  E +Q +  +G              +S   TL   + +  ++ LF     G +  +T+ V+F IYF  AC   G  V  GL +PSL+ GA +GRL G+ + ++        P G+     + DPG +ALIGA A L G  RM++++ VI++E + ++ Y LP+M+ +++SK   D+    LY   +L+ SVP L   PP +       ++A DVM+  VVTL   E    ++ A+    H+ FPVV+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>43.8986</Hsp_bit-score>
+      <Hsp_score>102</Hsp_score>
+      <Hsp_evalue>0.000160666</Hsp_evalue>
+      <Hsp_query-from>745</Hsp_query-from>
+      <Hsp_query-to>809</Hsp_query-to>
+      <Hsp_hit-from>897</Hsp_hit-from>
+      <Hsp_hit-to>960</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>65</Hsp_align-len>
+      <Hsp_qseq>IDLRPFMNPTPYTVSQNSSLSRIFRLFRGLGLRHLVVVDDHSQVVGIVSRKDLARYRVFHHHFKL</Hsp_qseq>
+      <Hsp_hseq>LDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDGDT-VAGMITRKDLLVNSLRHRMKEL</Hsp_hseq>
+      <Hsp_midline>+DL   +N +P+ +    +L   ++ FR +GLRH+VVVD  + V G+++RKDL    + H   +L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>16</Iteration_iter-num>
+  <Iteration_query-ID>XP_009533702.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein PHYSODRAFT_520430 [Phytophthora sojae]</Iteration_query-def>
+  <Iteration_query-len>967</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>264.618</Hsp_bit-score>
+      <Hsp_score>675</Hsp_score>
+      <Hsp_evalue>4.20459e-74</Hsp_evalue>
+      <Hsp_query-from>204</Hsp_query-from>
+      <Hsp_query-to>769</Hsp_query-to>
+      <Hsp_hit-from>133</Hsp_hit-from>
+      <Hsp_hit-to>709</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>176</Hsp_identity>
+      <Hsp_positive>308</Hsp_positive>
+      <Hsp_gaps>69</Hsp_gaps>
+      <Hsp_align-len>606</Hsp_align-len>
+      <Hsp_qseq>QTESAVRSLNIARWVMTFGVGLGTALIACFVEFWTSLLSTFRTATMESLVAAEMDGSQAFGTGYLAYSMISVGFVAVASYCVAILCPVAGGSGISEIKATLNGIKIHRVVRLKTLFCKAFGILFSVSGGLPVGKEGPMIHSGSVIGAGLSQGKSSSFGLDTSWTKFKGFRNDKEKRDFISCGAAAGVAAAFGAPIGGVLFALEEGASFWHQNLTWRTFFCAMVSAFVLNYFMSFMEANESNGPTPDVEHVFIGGTLGTQTGTFTFGQFVGSKAYEV-LDVPIFIV-------MGMVGGLFGAGFNGANTVLTKFRKRYVT-HRFLRFGEALLIAFSMATASFWLSYYFGQCRDL--AGDYSDSLSRFYCPEG------------QYNDLASLFTVNYATSMKQLLHFTGDGSFTPFSLCMFFVVFYIFACWTYGIAVPSGLFVPSLLAGAAYGRICVMIVHYL------GFPVG--AQD-----GMFALIGSACMLGGMARMTISLTVIILECTGVIEWGLPIMVSLMAARWVGNSFNEGLYDIHIHLNHLPFLEFDPPYYAR----FLRALNIMSSPPTCVPQIAKVGEIYDVLKNCNHGGFPVI</Hsp_qseq>
+      <Hsp_hseq>QMDTAERHVTL-RWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGLLYTVIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTS--MFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGWVSNAAAVL----------------------FEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYVLS-LVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL---PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVV</Hsp_hseq>
+      <Hsp_midline>Q ++A R + + RW++   + L   ++A  V +   +L  +R   +  ++A++   S     G L   + SV  VA+A+  V    P A G GI ++ A LNG+ + + + L+T   KA   + +V+GGLPVG E P+IH G++ GAG++QG+S + G  TS   F+ FRN+K++RDFI+ GAA GV+ AFGAPIGG+LF +EE +SFW Q+   + F   M+         S +E     G   +   V                       +EV + +P+ +V       +G+V G   A F  AN +L K+R+R +  ++F RF E ++I    ++  + LS     C +L   G  ++++ ++    G             Y+ L +L   +   +++ L      G F   +L ++F++++  AC   G +V  GL VPSL+ GA +GR+  +++ ++      G P G  A D     G+FALIG+   L G +RM++++ VI++E +  + + LP+MV+++ ++   +   E LY   + ++ +P+L   PP   +     L A ++M+S    +    +   +   L++  H  FPV+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>43.5134</Hsp_bit-score>
+      <Hsp_score>101</Hsp_score>
+      <Hsp_evalue>0.000274553</Hsp_evalue>
+      <Hsp_query-from>854</Hsp_query-from>
+      <Hsp_query-to>932</Hsp_query-to>
+      <Hsp_hit-from>884</Hsp_hit-from>
+      <Hsp_hit-to>961</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>25</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>79</Hsp_align-len>
+      <Hsp_qseq>NDIQLDEEERDLWMDLTPYMNPTPHTVQEQTPVPRAFRLFRSLGLRHLIVLNRRNEVRGVITRKDLTPAHLKFCLESLS</Hsp_qseq>
+      <Hsp_hseq>NDSLISENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVD-GDTVAGMITRKDLLVNSLRHRMKELS</Hsp_hseq>
+      <Hsp_midline>ND  + E      +DL+  +N +P  +     +   ++ FR +GLRH++V++  + V G+ITRKDL    L+  ++ LS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>17</Iteration_iter-num>
+  <Iteration_query-ID>XP_011426744.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7 [Crassostrea gigas]</Iteration_query-def>
+  <Iteration_query-len>765</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>285.804</Hsp_bit-score>
+      <Hsp_score>730</Hsp_score>
+      <Hsp_evalue>6.2777e-83</Hsp_evalue>
+      <Hsp_query-from>76</Hsp_query-from>
+      <Hsp_query-to>613</Hsp_query-to>
+      <Hsp_hit-from>143</Hsp_hit-from>
+      <Hsp_hit-to>710</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>188</Hsp_identity>
+      <Hsp_positive>309</Hsp_positive>
+      <Hsp_gaps>48</Hsp_gaps>
+      <Hsp_align-len>577</Hsp_align-len>
+      <Hsp_qseq>LRWLVMFFVGLLTGLVASLIDFCV----IQSTDLKFSIIKKYVDKCVDNKCMEVPLLVWVGINGGLVIVASILTACFEPVAAGSGIPQIKCYLNGVKVPHVVRLKTIVVKVIGVIFSVAGGLIIGKEGPMIHSGAVIAAGISQGRSDTFRKFDLRIFEFFRSDTEKRDFVAGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALAWRIFFASMVSTFTLNVIQSYIKG---IPWDLSYPGLFNFGSFDTTSYSAFEIPIFILMGVLGGLFGALFNQLNYILTKFRRRYINKSR-DRVLEAMIVAIITATVGYISLYFNNSCSPMVQ-DTKDNTVQVYCNDG-------------QYSSTATILFQSPEDSVKSLF-HESKGMYSPSTLVVYCLCVFILACWTYGLYVPSGLFIPGLLVGAAWGRFVGLCLNYI----FPDV--------GWVDFGKYSLIGAAAQLGGIVRMTISLTVIIMEATGNITFGLPIMIVLIVAKWVGDIFNEGIYDMHIHIQGVPILGWEPSSVLT----NLSAKEVMSHPVSVFNMRESVGRVMEVLKTETHNGFPVVE</Hsp_qseq>
+      <Hsp_hseq>LRWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGN--LQGLLYTVIG-SVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTL-GFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATMLCFTFSTIINSIVEGRRLLGW-VSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVLRPYQFRRFLEPVVIGAVFSSCMYV-LSLVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYL---PPNIVKPEFEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPVVE</Hsp_hseq>
+      <Hsp_midline>LRWL+   + L  G+VA+++ + V        ++ + I+     + + N  ++  L   +G +  LV +A+ +   FEP A+G GIP +  YLNGV +   + L+T + K I  I +VAGGL +G E P+IH GA+  AG++QGRS T   F   +F+ FR++ ++RDF+  GAA GVS AFGAP+GG+LF +EE +SFW+Q+   +IF A+M+      +I S ++G   + W +S      F    T   +   I   + +G++ G   A F + N IL K+RRR +   +  R LE +++  + ++  Y+ L   + C+ +    T + TVQ +  +G              YS   T+   S +++++ LF  ++ G +   TL+VY L  F  AC   G  V  GL +P L++GA +GR  GL + +I     P V         W+D G ++LIGA A L G  RM++++ VI++E +  + + LP+M+ ++++K   D   E +Y   + +  VP L   P +++      L+A +VM+  V    MRE    V+  L+  TH+ FPVVE</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>39.6614</Hsp_bit-score>
+      <Hsp_score>91</Hsp_score>
+      <Hsp_evalue>0.00281614</Hsp_evalue>
+      <Hsp_query-from>714</Hsp_query-from>
+      <Hsp_query-to>743</Hsp_query-to>
+      <Hsp_hit-from>920</Hsp_hit-from>
+      <Hsp_hit-to>948</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>18</Hsp_identity>
+      <Hsp_positive>23</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>30</Hsp_align-len>
+      <Hsp_qseq>FKLFRALGLRHLVVVDKHHQVVGMVTRKDL</Hsp_qseq>
+      <Hsp_hseq>YQTFRMMGLRHMVVVDG-DTVAGMITRKDL</Hsp_hseq>
+      <Hsp_midline>++ FR +GLRH+VVVD    V GM+TRKDL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>18</Iteration_iter-num>
+  <Iteration_query-ID>XP_013760162.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel 7 [Thecamonas trahens ATCC 50062]</Iteration_query-def>
+  <Iteration_query-len>819</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462940.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462940</Hit_accession>
+  <Hit_len>1178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>275.404</Hsp_bit-score>
+      <Hsp_score>703</Hsp_score>
+      <Hsp_evalue>8.17589e-79</Hsp_evalue>
+      <Hsp_query-from>62</Hsp_query-from>
+      <Hsp_query-to>602</Hsp_query-to>
+      <Hsp_hit-from>139</Hsp_hit-from>
+      <Hsp_hit-to>708</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>190</Hsp_identity>
+      <Hsp_positive>308</Hsp_positive>
+      <Hsp_gaps>53</Hsp_gaps>
+      <Hsp_align-len>582</Hsp_align-len>
+      <Hsp_qseq>RERGLKWV----VALLVGMATALVAYTIDMFIRGVAGAKFTLIS----RLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVK-WGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWA--RFAEALFIAALSATVSFLFAFFIFECRP--EPTTVYE---------GITLRRFTCPEGE-YNDMATIFFTTQEEAIRQLFHNRDAFSYP--TLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHL----FPSIVH---------DPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLG---WEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPL</Hsp_qseq>
+      <Hsp_hseq>RHVTLRWLLHVLIALSVGVVATVVSYAVDILEKYRAEVLYGIMASQRHRSIGNLQGLLYT-----VIGSVVLVAIAAGVVVYFEPAASGGGIPDVMAYLNGVHLRKAMNLRTFIAKAISCICAVAGGLPVGLEAPLIHLGAITGAGVTQGRSRTLGFQTSMFQAFRNNKDRRDFITAGAACGVSVAFGAPIGGLLFVMEEVSSFWDQSSNGQIFLATML-CFTFSTIINSIVEGRRLLGWVSNAAAVLFEVNITIPLNLVSIIPSLFLGIVMGSLAAFFTKANLILIKWRRRVL---RPYQFRRFLEPVVIGAVFSSCMYVLS-LVSPCAELHDIGTVNETVQQWGTEGGWRLFNNTCTKPRTYSPLGTLNMASGKNTIRHLFSRQTAGEFPVMTLIVYFLIYFASACMASGTSVSGGLVVPSLVLGAVFGRLFGLLMFHIGVAKIPGVPRGYAAADAWMDPGVFALIGAGAFLAGTSRMSMAICVIMVELSAELHYLLPVMVAIVMSKTTADWLCEPLYHQMLLMDSVPYLPPNIVKPE--FEQLTAADVMASEVVTLRMRERTEVVLAALRDSTHHAFPV</Hsp_hseq>
+      <Hsp_midline>R   L+W+    +AL VG+   +V+Y +D+  +  A   + +++    R I +     ++     +  +V+LV++AA  V + EP A+G GIP++  YLNG  +   + L T + KA   + +VAGGL VG E P+IH GA+  AG++QG++ +L   + +F+ FRN+  +RDF+ +GAA GVS AFG+PIGG+LF +EE +S W+Q+   + F  TM+  FT + +++    G +  G+++    V F   +     +V I   + +G+V G   A F   N  L  +R R +   +P+   RF E + I A+ ++  ++ +  +  C    +  TV E         G  L   TC +   Y+ + T+   + +  IR LF  + A  +P  TL  +   YF  A +  G SV  GL VP ++ G  FGRL G  + H+     P +           DPG +AL+GA AFL G  RM++++ VI++E + ++ Y LPVM+ I++SK   D   E LY   + +  +P+L     +PE   E LTAAD+M++ V  L    R   V+  L  +TH AFP+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>43.5134</Hsp_bit-score>
+      <Hsp_score>101</Hsp_score>
+      <Hsp_evalue>0.000229858</Hsp_evalue>
+      <Hsp_query-from>657</Hsp_query-from>
+      <Hsp_query-to>760</Hsp_query-to>
+      <Hsp_hit-from>875</Hsp_hit-from>
+      <Hsp_hit-to>992</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>53</Hsp_positive>
+      <Hsp_gaps>18</Hsp_gaps>
+      <Hsp_align-len>120</Hsp_align-len>
+      <Hsp_qseq>PDIVDIRAD----IFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDKFHR------------DGSPRDVPWHNPHYQFGRDTPRSH</Hsp_qseq>
+      <Hsp_hseq>PGGAEVRAENDSLISENRLPPVLDLSLIVNRSPWVIPPFFNLQMTYQTFRMMGLRHMVVVDG-DTVAGMITRKDLL-VNSLRHRMKELSARLATADSAAPSLPPSYTKHGILGDQVQRSH</Hsp_hseq>
+      <Hsp_midline>P   ++RA+    I +  +   ++LS  +N +P    P       ++ FR +GLRHMVVVD    + G++TR DL+ +    HR              +P   P +  H   G    RSH</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>19</Iteration_iter-num>
+  <Iteration_query-ID>XP_016612789.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein SPPG_00455 [Spizellomyces punctatus DAOM BR117]</Iteration_query-def>
+  <Iteration_query-len>876</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_001462631.1|</Hit_id>
+  <Hit_def>putative CLC-type chloride channel [Leishmania infantum JPCM5]</Hit_def>
+  <Hit_accession>XP_001462631</Hit_accession>
+  <Hit_len>770</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>398.282</Hsp_bit-score>
+      <Hsp_score>1022</Hsp_score>
+      <Hsp_evalue>1.23683e-126</Hsp_evalue>
+      <Hsp_query-from>208</Hsp_query-from>
+      <Hsp_query-to>865</Hsp_query-to>
+      <Hsp_hit-from>84</Hsp_hit-from>
+      <Hsp_hit-to>736</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>240</Hsp_identity>
+      <Hsp_positive>371</Hsp_positive>
+      <Hsp_gaps>21</Hsp_gaps>
+      <Hsp_align-len>666</Hsp_align-len>
+      <Hsp_qseq>QAWILVFIVGAITGWLAAYIDVASEWASDLKEGYCKEGFYLNRKFCCWHVEANEECTEWATWSMTFNAQSGAAMWGAEYFMFTVFGTAFALASAVLVKVYAPYAAGSGIPEVKTILGGFVIRKFLGGWTLLIKCIGLCLSVASGLSLGKEGPLVHVACCVGNIFPRIFDKYAKNEAKKREILSASSAAGVSVAFGAPIGGVLFSLEEVSYYFPYKTMWRSFFCAMVAAISLQLVNPFRTGKLVLFAVEYKRAWHGFELPFFVLLGILGGLYGSFFIRMNIRVAAYRKSSWLRHWVIAEVGVVAILTALLSFAHPFLRVSTVELVANLFKECIDNETDFYGLCSDHE-NALASVVKYLFLAAGIKIFFTIFTFGIRVPAGIFIPSMAVGACVGRALGIGMQLWQMAYPNMWMFSSCKPHEQCVTPGTYAMVGAAAALGGVTRMTVSLTVIMFELTGALTYILPIMLTVMVSKWVGDALGKASIYDALIELNGYPFLDAKEEYTYSTTVGSVMTRVEDLEVICGSGCTLEALSELVQTTGFKGYPVVAGLDGMVLVGYAGSAELRYAIDQAHQNRCPPTTLCIF----TDLQQDTEDPFL--DFRPWTDQTPMTISPKFPMELVMELFKKMGLRYVLVVQDGRLVGIVTKKDLLRHVSWKRGDEN-ED</Hsp_qseq>
+      <Hsp_hseq>EAFFAAMACGIVLGCLGVFSDACAHWVSAFRSGICANFFWLGRNMCCVD---SRECGEYYSWGEFFLGRDNHVVAFVDFVMYVSFSTMAAVTAAYLCKTYAPYASGGGIAEVKTIVSGHHVKRYLGGWTLITKVVGMCFSTGSGLTVGKEGPFVHIGACVGGIISGALPSY-QQEAKERELITAGAGGGMAVAFGAPVGGVIFALEDVSTSYNFKALMAALICGVTAVLLQSRVDLWHTGRIVQFSVNYQHNWHFFELPMFAAIGCFGGFIGSTFSVVNLHVGRWRKRH-LRQWRIVEVAVVAAVTAVVNFLTPYGSGSMLELLGDCFQDCTPNGT--IEMCEDSDMRAFFS----LLVTATAKFAMFSYTVGTFLPAGILVPSLTIGALYGRAFGMMFRALQETYASSYIFTECYDQDLCVIPGVYAIVGAAAMLTGVTHMTICLAIIMFELTGSLEYMVPVIVGILCAKAAGEAVGVKGTYEIGIEENKLPYLDPKKEF-YLDFVAQNVYGNKQFTVLTAYGLQVRDINELVTKMNVTGFPVVESPSDMTLLGYAPAKKIVRAL-QVAAARNSDVNLNTYIRFKTTPSHSREATFLEVDLTNILESCLLQVEPECSVKKLLYLFKSLGTHHILVCRYSKFEGFISKKDFINFMRVKEREENMED</Hsp_hseq>
+      <Hsp_midline>+A+      G + G L  + D  + W S  + G C   F+L R  CC     + EC E+ +W   F  +    +   ++ M+  F T  A+ +A L K YAPYA+G GI EVKTI+ G  ++++LGGWTL+ K +G+C S  SGL++GKEGP VH+  CVG I       Y + EAK+RE+++A +  G++VAFGAP+GGV+F+LE+VS  + +K +  +  C + A +    V+ + TG++V F+V Y+  WH FELP F  +G  GG  GS F  +N+ V  +RK   LR W I EV VVA +TA+++F  P+   S +EL+ + F++C  N T    +C D +  A  S    L + A  K     +T G  +PAGI +PS+ +GA  GRA G+  +  Q  Y + ++F+ C   + CV PG YA+VGAAA L GVT MT+ L +IMFELTG+L Y++P+++ ++ +K  G+A+G    Y+  IE N  P+LD K+E+ Y   V   +   +   V+   G  +  ++ELV      G+PVV     M L+GYA + ++  A+ Q    R     L  +    T      E  FL  D     +   + + P+  ++ ++ LFK +G  ++LV +  +  G ++KKD +  +  K  +EN ED</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>20</Iteration_iter-num>
+  <Iteration_query-ID>NP_001330038.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>772</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>262.307</Hsp_bit-score>
+      <Hsp_score>669</Hsp_score>
+      <Hsp_evalue>6.66171e-76</Hsp_evalue>
+      <Hsp_query-from>111</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>184</Hsp_hit-from>
+      <Hsp_hit-to>871</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>189</Hsp_identity>
+      <Hsp_positive>330</Hsp_positive>
+      <Hsp_gaps>74</Hsp_gaps>
+      <Hsp_align-len>704</Hsp_align-len>
+      <Hsp_qseq>AIIQKSYFAGFIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWP-QLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTA----MGW-------CKSGICGHFGGGGFIIWDVSDGQDDYYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLPLLRKCSPCPESVPDSGIECPRPPGMYGNYVNFFC-KTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPVIDHTRSGETLVIGLVLRSHLLVLL------------QSKVDFQHSPLPCDPSARNIRHSFSEFAKPVSSKGLCIEDI---HLTSDDLEM--------------------------YIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITR----KDLLIEENG</Hsp_qseq>
+      <Hsp_hseq>ALSWSALLHGGVLYTMWGVLMALLSS-LCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPT-TLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVRE------KKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIG---VLFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQAYE-GMITRAQLQLLLWVVYLREVGDASEVLVDEEGD----DDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEKVG</Hsp_hseq>
+      <Hsp_midline>A+   +   G ++Y +  +++   S+ +     P+AAGSGIP++  YLNG+  P     R L+ K    I +V  GL +G EGP++H G+ I + L  G S     ++     LF++ RD+RD ++ G A G+ +AF +P+GG+LF LEE+ + +  +L W VF +      +++T      GW          G         F I  V +     Y    +P  ++ V+ GLL   +   ++  + WR   L       +++E C+ + + S   + LPL   C P P  V +      +   +       FC + +  ++ LAT+   +  + +R LFS ++   F A SLL  LA++   +    G  +  G  +P ++IG+  GRL+G   V F + +  +EG  AL+GAA++  G  R+T +L V+M+E+T ++  +  +ML +L++K++ D      Y     +K +P LE++   H+          +  V  L  +  V  V   L   +HN FPV+   ++ +    G++ R+ L +LL            +  VD +      D  A N+    ++    ++SK +  E     H+T+ +L+                           YIDL P+++ S   V + + +++ Y  FR LGLRHL V+ R  RV+G++TR     D L+E+ G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>21</Iteration_iter-num>
+  <Iteration_query-ID>NP_001107803.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform b [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>781</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>282.337</Hsp_bit-score>
+      <Hsp_score>721</Hsp_score>
+      <Hsp_evalue>4.48769e-83</Hsp_evalue>
+      <Hsp_query-from>52</Hsp_query-from>
+      <Hsp_query-to>771</Hsp_query-to>
+      <Hsp_hit-from>63</Hsp_hit-from>
+      <Hsp_hit-to>869</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>245</Hsp_identity>
+      <Hsp_positive>390</Hsp_positive>
+      <Hsp_gaps>133</Hsp_gaps>
+      <Hsp_align-len>830</Hsp_align-len>
+      <Hsp_qseq>PHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWV---ICALIGILTGLVACFIDIVVENLAGLKYRVIKGNI---------------------DKFTEKGG-----------LSFSLLLWA----TLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLK-RDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMA--------------YTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCL-QVIEAVLVAAVTATVAFVLIYSSRDCQP----LQGGSMSYPLQL---FCADGE--YNSMAAAFFNTPEKSVVSLF-HDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSL---TAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLL----------KHKVFVE------------------RSNL--------GLVQRRLRLKDFRDAYP-----RFPPIQSI-HVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKR</Hsp_qseq>
+      <Hsp_hseq>PHVFTAE----ERRRMDWYESIDY--AEGQSLVH---RVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSG--WHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPT-VMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFT-PCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGV----LFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFL--EAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEAL--TMTRHNAFPVVRVGKADQA--YEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEK</Hsp_hseq>
+      <Hsp_midline>PH F  E    E+     YES+DY  +E Q  +    R++ T   + + K W+   +  LIG+  G  +  +   ++ LA +K   ++G +                     +   E GG           LS+S LL      T+    + + S +   + P AAGSGIP +  +LNGV  P +  ++ LV+K    IL+V  GL VG EGPMIH GS+I AG+  GRS SL      +F+ FR   ++RDF+SAGAA G+++AF +P+GG+LF LEE A+ ++  L W +F + +   + +    S   G  W L     +  G      +A              YT   IP  + + V+ G+L   +   +   + +R R +    L +V+E  + A++ +T  +VL   +  C P    ++    +  ++L   FCA  E  ++ +A     +P   +  LF     G +   +L L   +Y   + +  G+ +S G  IPSLLIGA  GRL G+    L    +WAD G  AL+GAAA   GI R+T +L V+MME T++V++   +ML ++ AK + D      Y   +++++VPFL  EA  + H L   TAR++M++PVT L   + V  +V+ L  T + HN FPVV      Q    +G+I R+QL +LL            +V V+                  RS +        G +Q  +   + +  +      R P +  + H+        +DL  +++ S   V Q   + R +  FR LGLRHL V+D   +VVG++TR      RL ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>22</Iteration_iter-num>
+  <Iteration_query-ID>XP_011520656.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>747</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>281.567</Hsp_bit-score>
+      <Hsp_score>719</Hsp_score>
+      <Hsp_evalue>3.49984e-83</Hsp_evalue>
+      <Hsp_query-from>18</Hsp_query-from>
+      <Hsp_query-to>737</Hsp_query-to>
+      <Hsp_hit-from>63</Hsp_hit-from>
+      <Hsp_hit-to>869</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>245</Hsp_identity>
+      <Hsp_positive>390</Hsp_positive>
+      <Hsp_gaps>133</Hsp_gaps>
+      <Hsp_align-len>830</Hsp_align-len>
+      <Hsp_qseq>PHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWV---ICALIGILTGLVACFIDIVVENLAGLKYRVIKGNI---------------------DKFTEKGG-----------LSFSLLLWA----TLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLK-RDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMA--------------YTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCL-QVIEAVLVAAVTATVAFVLIYSSRDCQP----LQGGSMSYPLQL---FCADGE--YNSMAAAFFNTPEKSVVSLF-HDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSL---TAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLL----------KHKVFVE------------------RSNL--------GLVQRRLRLKDFRDAYP-----RFPPIQSI-HVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKR</Hsp_qseq>
+      <Hsp_hseq>PHVFTAE----ERRRMDWYESIDY--AEGQSLVH---RVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSG--WHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPT-VMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFT-PCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGV----LFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFL--EAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEAL--TMTRHNAFPVVRVGKADQA--YEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEK</Hsp_hseq>
+      <Hsp_midline>PH F  E    E+     YES+DY  +E Q  +    R++ T   + + K W+   +  LIG+  G  +  +   ++ LA +K   ++G +                     +   E GG           LS+S LL      T+    + + S +   + P AAGSGIP +  +LNGV  P +  ++ LV+K    IL+V  GL VG EGPMIH GS+I AG+  GRS SL      +F+ FR   ++RDF+SAGAA G+++AF +P+GG+LF LEE A+ ++  L W +F + +   + +    S   G  W L     +  G      +A              YT   IP  + + V+ G+L   +   +   + +R R +    L +V+E  + A++ +T  +VL   +  C P    ++    +  ++L   FCA  E  ++ +A     +P   +  LF     G +   +L L   +Y   + +  G+ +S G  IPSLLIGA  GRL G+    L    +WAD G  AL+GAAA   GI R+T +L V+MME T++V++   +ML ++ AK + D      Y   +++++VPFL  EA  + H L   TAR++M++PVT L   + V  +V+ L  T + HN FPVV      Q    +G+I R+QL +LL            +V V+                  RS +        G +Q  +   + +  +      R P +  + H+        +DL  +++ S   V Q   + R +  FR LGLRHL V+D   +VVG++TR      RL ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>23</Iteration_iter-num>
+  <Iteration_query-ID>NP_197996.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|339898939|ref|XP_003392724.1|</Hit_id>
+  <Hit_def>putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|321398584|emb|CBZ08921.1| putative chloride channel protein [Leishmania infantum JPCM5] &gt;gi|1444178923|emb|SUZ44928.1| chloride_channel_protein_-_putative [Leishmania infantum]</Hit_def>
+  <Hit_accession>XP_003392724</Hit_accession>
+  <Hit_len>885</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>262.307</Hsp_bit-score>
+      <Hsp_score>669</Hsp_score>
+      <Hsp_evalue>8.85342e-76</Hsp_evalue>
+      <Hsp_query-from>111</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>184</Hsp_hit-from>
+      <Hsp_hit-to>871</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>189</Hsp_identity>
+      <Hsp_positive>330</Hsp_positive>
+      <Hsp_gaps>74</Hsp_gaps>
+      <Hsp_align-len>704</Hsp_align-len>
+      <Hsp_qseq>AIIQKSYFAGFIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWP-QLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTA----MGW-------CKSGICGHFGGGGFIIWDVSDGQDDYYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLPLLRKCSPCPESVPDSGIECPRPPGMYGNYVNFFC-KTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPVIDHTRSGETLVIGLVLRSHLLVLL------------QSKVDFQHSPLPCDPSARNIRHSFSEFAKPVSSKGLCIEDI---HLTSDDLEM--------------------------YIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITR----KDLLIEENG</Hsp_qseq>
+      <Hsp_hseq>ALSWSALLHGGVLYTMWGVLMALLSS-LCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPT-TLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVRE------KKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIG---VLFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQAYE-GMITRAQLQLLLWVVYLREVGDASEVLVDEEGD----DDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEKVG</Hsp_hseq>
+      <Hsp_midline>A+   +   G ++Y +  +++   S+ +     P+AAGSGIP++  YLNG+  P     R L+ K    I +V  GL +G EGP++H G+ I + L  G S     ++     LF++ RD+RD ++ G A G+ +AF +P+GG+LF LEE+ + +  +L W VF +      +++T      GW          G         F I  V +     Y    +P  ++ V+ GLL   +   ++  + WR   L       +++E C+ + + S   + LPL   C P P  V +      +   +       FC + +  ++ LAT+   +  + +R LFS ++   F A SLL  LA++   +    G  +  G  +P ++IG+  GRL+G   V F + +  +EG  AL+GAA++  G  R+T +L V+M+E+T ++  +  +ML +L++K++ D      Y     +K +P LE++   H+          +  V  L  +  V  V   L   +HN FPV+   ++ +    G++ R+ L +LL            +  VD +      D  A N+    ++    ++SK +  E     H+T+ +L+                           YIDL P+++ S   V + + +++ Y  FR LGLRHL V+ R  RV+G++TR     D L+E+ G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>7968</Statistics_db-num>
+      <Statistics_db-len>5065420</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

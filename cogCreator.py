@@ -6,11 +6,11 @@ from Bio.Blast import NCBIWWW, NCBIXML
 
 rootFolder = sys.path[0]
 # 'rootFoler' is a directory that contains:
-# /Fasta        (pairs of fasta files (good, all) for each protein)
+# /Input        (pairs of fasta files (good, all) for each protein)
 # /Blast_XML    (search results in xml format)
 # /Results      (for output)
 
-hitlist_size = 700
+hitlist_size = 1
 email = 'bug.dmitrij@gmail.com'
 
 class ProteinClass():
@@ -30,22 +30,19 @@ class ProteinClass():
         self.good = good
 
 def getSequences(seqFilename, proteins, good=True):
-    '''Gets accession numbers and species from a fasta
+    '''Gets accession numbers from corresponding file
 
-    :param seqFilename: Name of a fasta file
+    :param seqFilename: Name of a file with accession numbers
     :param proteins: Dictionary for storing information about proteins
     :param good: Boolean, True for referencial proteins
     :return: Dictionary supplemented with proteins information
     '''
-    path = rootFolder + '/Fasta/' + seqFilename
+    path = rootFolder + '/Input/' + seqFilename
     seqFile = open(path, 'r')
     line = seqFile.readline()
     while line:
-        if '>' in line:
-            refseq = line.split(' ')[0][1:]
-            if not (refseq in proteins):
-                species = line.split('[')[1][:-2]
-                proteins[refseq] = ProteinClass(species, None, refseq, good)
+        proteins[line.replace('\n', '')] = \
+            ProteinClass(None, None, line.replace('\n', ''), good)
         line = seqFile.readline()
     return proteins
 
@@ -73,6 +70,7 @@ def addIsoform(refseq, i, genes, goodGenes, proteins):
     :return: "proteins" supplemented with single isoform, "goodGenes"
     '''
     if refseq in proteins:
+        proteins[refseq].species = next(iter(genes[i].keys()))
         proteins[refseq].gene = next(iter(genes[i].values()))
         if proteins[refseq].good == True:
             goodGenes.append(proteins[refseq].gene)
@@ -150,30 +148,36 @@ def blastSearch(query, species, filename, writeToFile=True):
     :param filename: Name of original fasta file for saving results of BLAST
     :param writeToFile: Boolean, whether to write to a file or not
     '''
-    records = NCBIWWW.qblast(
-        'blastp',
-        'refseq_protein',
-        query,
-        entrez_query = species,
-        hitlist_size = hitlist_size
-    )
-    xmlPath = rootFolder \
-        + '/Blast_XML/' \
-        + os.path.splitext(filename)[0] \
-        + '.xml'
-    xml = open(xmlPath, 'w')
-    xml.write(records.getvalue())
-    return SearchIO.parse(xmlPath, 'blast-xml')
+    blastDict = dict()
+    for q in query.split('\n'):
+        blastDict[q] = dict()
+    for s in species:
+        records = NCBIWWW.qblast(
+            'blastp',
+            'refseq_protein',
+            query,
+            entrez_query = s,
+            hitlist_size = hitlist_size
+        )
+        xmlPath = rootFolder \
+            + '/Blast_XML/' \
+            + os.path.splitext(filename)[0] \
+            + ' ' + s.replace(' ', '_') + '.xml'
+        xml = open(xmlPath, 'w')
+        xml.write(records.getvalue())
+        blastDict = createBlastDict(
+            blastDict, 
+            SearchIO.parse(xmlPath, 'blast-xml')
+        )
+    return blastDict
 
-def createBlastDict(blast):
+def createBlastDict(blastDict, blast):
     '''Create dictionary containing BLAST results
 
     :param blast: contents of the XML-file with BLAST results
     :return: Dictionary containing BLAST results
     '''
-    blastDict = {}
     for record in blast:
-        blastDict[record.id] = {}
         for hit in record:
             species = hit.description.split('[')[1][:-1]
             if not species in blastDict[record.id]:
@@ -339,7 +343,7 @@ def analyzeBlastDict(blastDict, proteins):
 
 def main():
     Entrez.email = email
-    for goodFilename in os.listdir(rootFolder + '/Fasta'):
+    for goodFilename in os.listdir(rootFolder + '/Input'):
         if '_good' in goodFilename:
             filename = goodFilename.replace('_good', '')
             shortName = os.path.splitext(filename)[0]
@@ -348,14 +352,15 @@ def main():
             proteins = getSequences(filename, proteins, False)
             proteins = getIsoforms(proteins)
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
-            blast = checkPreviousBlast(shortName)
+            blast = False
+            # blast = checkPreviousBlast(shortName)
             if not blast:
-                blast = blastSearch(
+                blastDict = blastSearch(
                     '\n'.join([p.refseq for p in proteins.values()]),
-                    ' OR '.join([p.species for p in proteins.values()]),
+                    [p.species for p in proteins.values()],
                     filename
                 )
-            blastDict = createBlastDict(blast)
+            
             htmlFull = analyzeBlastDict(blastDict, proteins)
             output.write(htmlFull.getvalue())
             output.close()

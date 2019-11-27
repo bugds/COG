@@ -1,0 +1,1217 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>NP_001278.1</BlastOutput_query-ID>
+  <BlastOutput_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</BlastOutput_query-def>
+  <BlastOutput_query-len>805</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>NP_001278.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>805</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>614.379</Hsp_bit-score>
+      <Hsp_score>1583</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>96</Hsp_query-from>
+      <Hsp_query-to>748</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>342</Hsp_identity>
+      <Hsp_positive>463</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>SLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKG-NIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKR-DFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFD-SEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT-----QPARLQGLILRSQLIVLLKHKVFVERSNLG--------LVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTV</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKYQVQFHIM-----DSDGENVTML----DRAYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLL--TREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>S++YD  EN  +L +E+   +       + +W++  LIG+ TG++A  I I VE L  LK  V+   +I+K  +   L     +W ++N   VL+   +V F  PVAAGSGIPQIKC+LNGVKIP+VV +KTLV K  GV +S+  GLAVGKEGPMIHSGSV+AAGISQ RS   K  DFK+F+YFR DTEKRDF+S GAAAGV++AFGAPVGGVLF+LEEGASFWNQ LTWRIFF SM+STF++N +LS  HG+  DL+ PGLI+FGRF  S+ + Y  +E+ VFI MG++GG+ GA+FN +N  +T+ R R+I+    +++E V+V  VT  VAF+LIY + DC  ++  + +Y ++      +++ M     ++  ++V  L      +YNP++L LF + YFFLACWTYGL V +G+FIPSLL GAAWGRL G+ ++ +    +   D GKYAL+GAAAQLGGI+RMT+SLTVI++EAT N+++G P+MLVLM A+ VG++F +GLYD+HI L  VP+L WEAP  S  + AREVM  PV  L   EKVG +VD+L  T   HNGFPVV+  ++         RL+GLILR QL VLL+HKVF++  ++          V ++L L DFRDAYPR+P I+ I ++ +ERE  + L+ FMNPSPY+V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>NP_506022.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein [Caenorhabditis elegans]</Iteration_query-def>
+  <Iteration_query-len>796</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>521.931</Hsp_bit-score>
+      <Hsp_score>1343</Hsp_score>
+      <Hsp_evalue>5.76114e-174</Hsp_evalue>
+      <Hsp_query-from>71</Hsp_query-from>
+      <Hsp_query-to>735</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>301</Hsp_identity>
+      <Hsp_positive>435</Hsp_positive>
+      <Hsp_gaps>36</Hsp_gaps>
+      <Hsp_align-len>680</Hsp_align-len>
+      <Hsp_qseq>SLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSL-GIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVF---ENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFP-SVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFY----------ECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRV</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQASGYKGVIKK-NLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDND------CLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKI--------LNSTYDVETEKYQVQFHIMDSDGENVTMLDRA----YNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVVDELEED-EQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNN-IPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>S+NY++ EN  Y   E+   ++  + + +  +W V FLIGVFTG++AA I I V     +K   +    ++KC +        C++     W+  N V V IA  LV++ +P+A GSGIPQIKCYLNG+ IP VV +KTLV KAVGVA S+  GL  GKEGPMIHSG+ V AGISQ +S     +DF LF+ FR D EKRDF+S GAAAGVA+AFGAP+GGVLF+LEEGASFWNQ LTWR+FF +M+S+F+VN ILS  +G  G L++ GL +FG F   +N  Y+ +E+ +F+L+GI+GG  GALFN++N ++T  R+++++++L ++ E ++V  V+  +AF+ I+  +DC  +          +N  +  + E   V      +  E+V  +  +    +   +L +F I YF L  WT+G+ VPSG+FIP++LTGAAWGRL G+ V  +   +V+ ID GKYAL GAAAQLGG++RMTISLT I++EAT +++FGLP+MLVLM+ +WVG+MFN+GLYD HI L  VP LGW  P MS  I A  VM   V+ L   E+V  +V++L   +H+GFPVVD +EE   +   ++GRLKG ILR QL  LL +++F +    N+ +P              + +D   +   + ++ +T  +    + + P+M+P P+ V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>3</Iteration_iter-num>
+  <Iteration_query-ID>NP_610798.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel-b [Drosophila melanogaster]</Iteration_query-def>
+  <Iteration_query-len>813</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>478.019</Hsp_bit-score>
+      <Hsp_score>1229</Hsp_score>
+      <Hsp_evalue>1.09107e-156</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>771</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>292</Hsp_identity>
+      <Hsp_positive>419</Hsp_positive>
+      <Hsp_gaps>39</Hsp_gaps>
+      <Hsp_align-len>677</Hsp_align-len>
+      <Hsp_qseq>SLDYEVCENTLF-QDEQRKRLTERFSLRKDIIRWIIFIQIGIITALIACTIDIIIEELSIRKYTFLYNSVKENVPLSDASDRDLL-IPYLYWLLFSIVPVAFGAAMVTYIEPITAGSGIPQVKSYLNGVKIPRIVRIKTLAVKAIGVITSVVGGLAGGKEGPMIHAGAVVAAGISQGKSTTFLK-DFRIFKAFRDDHEKRDFVLGGGAAGVSAAFGAPIGGMLFSLEEAASFWNQNLIWRTLVASIISVFTLNIVLSAYHGL-NDFTFTGLFNLGKFDTP--LKFDYFELPIFMILGVTGGLLGAAWNSLNTKINKFRKRFIPWKIGKVLEAVVVAMMGVTLACLMIYFINDCRPLGNDPTNNPVQLFCEDNEYNAVAALWFQTPE-ATVRSLFHDPPGSHKILTLALFTVVYYVLSCATFGLNVSLGVFIPTALVGAAWGRLLAML-TYYVFPQAEFLHPGKYALIGAAANLGGVLRMTISLSVILMETTGVETSFFFPLIIALISAKWVGDYFNEGIYDTQIQVNHVPMLTWEPLPQYKGLKAREILSKPVICIKIRDSANYIYEMLKKCDHNGFPVVDDVCGDRR---SEGRVCGIILRSQLIVILLKSLYVENK------RFWLPETS----IQTFRDLYPRFPSIKSVRKLDEKINYTVDLSMFMNPSPIRV</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQASGY--KGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSS-----DINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDV----ETEKYQVQFHIMDSDGENVTMLDRAYNP------VSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATG-NMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>S++Y+V EN  + +DEQ      +  ++K++ +W++   IG+ T +IA  I I +E+L   K   L +S      ++   D D L IP+  WL  +IV V    A+V +  P+ AGSGIPQ+K YLNGVKIP +V +KTL  KA+GV  S+  GLA GKEGPMIH+G+VVAAGISQ +S  F   DF++FK FR D EKRDF+ GG AAGV++AFGAP+GG+LF+LEE ASFWNQNL WR    S++S F++N++LSA HG   D  + GL + G+F     LK+D++EL +F+++G+ GGL GA +N +N +I   R+RFI  ++ K+LE VVV  +   +A ++IYF NDC  +    +   V    E  +Y     +     E  T+    ++P      ++LALF + Y+ L+C T+GL V  G+FIP+ L GAAWGRL+ ML    V      +  GKYALIGAAA LGG+LRMTISL+VIL+E TG   SF  P+++ L+ A+WVG+ FN+G+YD  I +N VP L WE  P    + ARE++  PVI +   +    + ++L +  HNGFPVVD++  D +   + GR+ G+ILR QL V+L   ++++        +  + E S    +  FRD YPR+P I+ +    E+    + L+ FMNPSP  V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>4</Iteration_iter-num>
+  <Iteration_query-ID>XP_001627108.1</Iteration_query-ID>
+  <Iteration_query-def>predicted protein [Nematostella vectensis]</Iteration_query-def>
+  <Iteration_query-len>714</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>553.903</Hsp_bit-score>
+      <Hsp_score>1426</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>30</Hsp_query-from>
+      <Hsp_query-to>712</Hsp_query-to>
+      <Hsp_hit-from>40</Hsp_hit-from>
+      <Hsp_hit-to>687</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>322</Hsp_identity>
+      <Hsp_positive>446</Hsp_positive>
+      <Hsp_gaps>73</Hsp_gaps>
+      <Hsp_align-len>702</Hsp_align-len>
+      <Hsp_qseq>DHEQREDINGGISRNGFDMSPEDLKYE-GTISRSTSIEPGSLQKISPKFE-----SLDYDIPENSLFLKEQKSFTPEEIIKVDINRWIVMFIIGVITALIAAAIDICIGLLSKWKYDIIKK-NVELCTGNYCMAKPYALWVAIDIFFVCIAACLVVYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKVKMGVNVLIKFWHLNCLLIFQIYLLIHQLLLAHLIDNFPLQTLVAKVVGVVFSVSGGLACGKEGPMIHSGAVVAAGVSQGRSTTFNR-DFHIFESFRTDHEKRDFVSGGAAAGVAAAFGAPVGGVLFSLEEGASFWNQALTWRMFFGSIISTFTLNLVLSIYKGEAGDLSNPGLINFGTFTGNP---YFGYELPLFLIMGVIGGLLGALFNAINHHLTIFRMRFVKRKWLRVVEACIVAALTASSSFVLIYFNKDCNPLGAANVTEGLQFFCQDGEYSSMGTLTFSTPEESIKNLFHLPLGAFNTLSLFLFFCVYFFLSCWTYGLYVPSGLFVPCILIGATWGRMFATLLHS-VFPTWSWSTPGRYALIGAAASLGGVVRMTLSLTVILMEATSNITYGLPMMLVLMIAKWVGDFFNEGIYDMHIKLQGVPLMGWDPPIMATGICANNIMSSPVVCFNTVERVGRIFDILKDPSSYHNGFPVVEPTQ-------QFGVFRGIILRSQLIILLKHKV</Hsp_qseq>
+      <Hsp_hseq>DKDFEEGTGNGSTRN--HLSPSDNIQELNELSVRSYTELLPTERSAPGTSDGVKGSVNYDVIENDPYLRDEQASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMK-----------------------------------------TLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVE--------TEKYQVQFHIMDSDGENVTMLDR-AYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLT--REIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKV</Hsp_hseq>
+      <Hsp_midline>D +  E    G +RN   +SP D   E   +S  +  E    ++ +P        S++YD+ EN  +L+++++   + +IK ++ +W+VMF+IGV T +IAA I I +  L   K  ++   ++  C  N C+  P+ +W++++I  V IA  LVV+G PVAAGSGIPQIKCYLNGVK+P+VV +K                                         TLV K VGV  S+S GLA GKEGPMIHSG+VVAAG+SQ RS  F   DF +F+ FR D EKRDF+SGGAAAGVA+AFGAPVGGVLF+LEEGASFWNQ LTWR+FF S++STF++N++LS   G  GDL+ PGLI+FG F+ +    Y  YEL +F++MG++GGL GALFN IN  +TI R RF+  +  +++E  +V  +T   +F+LIYF  DC+ +   N T  ++        +    + F   +   +N+  L   A+N +SL LFF  YFFL+CWTYGL VPSG+F+P +L GA WGR+   L++S V  T S    G+YALIGAAA LGG++RMT+SLTVIL+EAT N+++GLP+MLVLM+A+WVG+ FN+G+YD+HI L GVP +GW+ P M+  I A  +M +PV+  +TVE+VG + D+L      HNGFPVV+  +         G  +G+ILR QL +LL+HKV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>5</Iteration_iter-num>
+  <Iteration_query-ID>XP_001742728.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein [Monosiga brevicollis MX1]</Iteration_query-def>
+  <Iteration_query-len>790</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>505.368</Hsp_bit-score>
+      <Hsp_score>1300</Hsp_score>
+      <Hsp_evalue>1.23847e-167</Hsp_evalue>
+      <Hsp_query-from>29</Hsp_query-from>
+      <Hsp_query-to>701</Hsp_query-to>
+      <Hsp_hit-from>76</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>305</Hsp_identity>
+      <Hsp_positive>433</Hsp_positive>
+      <Hsp_gaps>63</Hsp_gaps>
+      <Hsp_align-len>706</Hsp_align-len>
+      <Hsp_qseq>LPPTKRHF--KQQAVYEGLDYEETESE----IEQALRRKETEQQNNFHIAQRWALYFVIGVITAGIACSIDMAILKLSGLKFRWL-ANNIEHCVQHDCLVSSFFLWIATDVALVTLAGALTVYYAPVAQGSGISEIKCFLNGIKMPEVVRLKTLLVKGFGVMCAVVGGMAVGKEGPMIHSGAVVAAGISQGKSTSISSLHTSWFSAFRNDVDKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGSSFWNQLLTWRIFFASMTATFTLNFLLSGVKGGDWGALSNPGLLNFGQFD---TMPYTIAEIPIFMLMGLIGGLSGAAFNGLNLYLTRFRMKFITSRKLKLLEVSAIAAITVAVAFSMIFFSADCLPMG------ESPESSSPLQFFCADHQYSAMASLFFNTPEDSIKNLFHGKFAEIGSYNYETLALFALAYWLLGCMTYGLAIPSGLFVPTLLTGAAWGRLAGTILTAIFPGRAWT-NPGKYSLIGAAANLGGVVRMTISLTVIVIEATGNVSYGLPIIIAVIVAKWVGDRFNEGIYDMHIELKHIPLLPWEPPVVSRYHLTASDIMTRKIQC---VRLH--EKVGHIVDLLKESKHNAFPVISWPDGDDTQL---GIFEGQVLRSTLIVLLKEKAYG--------PKLRNSIKGRKLTVQEIRKYYPRWPTASSLRVSAGDREKFLDIEAYYNKSPYSV</Hsp_qseq>
+      <Hsp_hseq>LLPTERSAPGTSDGVKGSVNYDVIENDPYLRDEQASGYKGVIKKN----LAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHP-GDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKYQVQFHIMDSDGENVTML-------------------DRAYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMS------AKIFAREVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>L PT+R        V   ++Y+  E++     EQA   K   ++N      +W + F+IGV T  IA  I + + +L  LK   L +++I  CV +DCL   FF+W++ ++  V +AGAL V+ +PVA GSGI +IKC+LNG+K+P VV +KTL+ K  GV  ++  G+AVGKEGPMIHSG+VVAAGISQ +S    SL    F  FR D +KRDF+SGGAAAGV++AFGAP+GGVLF+LEEG+SFWNQ LTWRIFF SM +TF++N +LS V G   G L+ PGL++FG+F     + Y   E+ +F+LMG++GGL+GA FN +N  +T  R +FI +R  K+LEV  +  +T  VAF +I+F+ DC  M       +       +QF   D     +  L                     +YN  +LALF + Y+ L C TYGL +PSG+F+P+LLTGAAWGRL G ++ ++        + GKY+LIGAAA LGG++RMTISLTVI+IEATGN+S+GLP+++ +++A+WVG+ FN+G+YD+HI L  +P L WE P +S      + I  R++ C   + LH  EKVG +VDLL    HN FPV+   + D+      G  +G +LR  L VLL+ K +         P+       +KLT+ + R  YPR+P    + ++  +RE  + +  + N SPYSV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>6</Iteration_iter-num>
+  <Iteration_query-ID>XP_002109718.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein TRIADDRAFT_20821 [Trichoplax adhaerens]</Iteration_query-def>
+  <Iteration_query-len>687</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>498.819</Hsp_bit-score>
+      <Hsp_score>1283</Hsp_score>
+      <Hsp_evalue>1.9993e-166</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>675</Hsp_query-to>
+      <Hsp_hit-from>120</Hsp_hit-from>
+      <Hsp_hit-to>783</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>305</Hsp_identity>
+      <Hsp_positive>421</Hsp_positive>
+      <Hsp_gaps>59</Hsp_gaps>
+      <Hsp_align-len>699</Hsp_align-len>
+      <Hsp_qseq>NIQRWIIMFLIGVSTACVAALIDVGINAISSVKYL---------CYFQDCLAQPYLIWLALSISLVFIAAALVVYLEPVAIGSGIPQIKCFLNGVNIQRCVRLKTLVAKAVGVLFSVAGGLPVGKEGPMIHSGAALAAAISNGKVTIGKC-SFNIFHYFRSPVEKRDFVSAGAAAGVSAAFGSPVGGVLFSLEEGASFWYQSITWRIFFASMTSTFTLNVIRSFIHGMPFNLSFPGLLDFGDF--KKGVTYYGYELPIFFLMGIVGGLLGALFNYINYKLSLHRMRNIRKSYLKLLEAIVVIIVCTAAAFLAVSLNQGCQP-KYEAIQSELETFNFT-SFKCGNGDYNTMATLFLNTPEKAIKNMFHTPQGLYTIPTLIWFTVIFFFTACWTYGVNVPSGLFVPCILTGAAWGRILGELINLIPGQEWSS--PGRYALMGAAAMLAGVVRMTISITVILVEAIGDIAFGLPLMVVILISKLVGDYFNEGLYDIHVQLMKVPLLPWEPPDLSGSLTVKDLTCESVITLRKTERVADIYTVIKDADLRHNGYPVVDDDGTAATANNTNVKGRLIGLILLSELKTILELQLY-----KSNHP--LKDYRLNGKDFDTFKHFYSKHDDFS-CEIPPEDMNKTIDLTKFMNPSPYTVYENMSFPRLYRLFRGLGLRHIVVINSKNQVIGIITRVDLARYRHSQA</Hsp_qseq>
+      <Hsp_hseq>NLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKYQVQFHIMDSDGENVTML-----DRA-----------YNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLTRE--IHNGFPVVDELEEDEQLEGNH--GRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSVVE---------------VRNIKVDKRINEVVNRLNKTKEERHPDLQA</Hsp_hseq>
+      <Hsp_midline>N+ +W++MFLIGV T  +AA I + +  + S+K           C   DCL  P+ IWL+++I  V IA ALVV+  PVA GSGIPQIKC+LNGV I   V +KTLV KAVGV  S++ GL VGKEGPMIHSG+ +AA IS  +    K   F +F YFR   EKRDF+S GAAAGV++AFG+PVGGVLF+LEEGASFW Q++TWRIFF SM STF++NVI S +HG P +L++PGL+ FG F   K + Y  YEL +F LMGI+GGL GALFN+IN ++++ R R I     K+LE +VV  V T  AF+ +     C   K      ++ET  +   F   + D   +  L     ++A           Y   +L  F + +FF ACWTYG+ VPSG+F+P +LTGAAWGR++G L+N +     S+   G+YAL+GAAA L G++RMTIS+TVIL+EA G+++FGLP+M+V+++++ VG+ FN+GLYDIH+ L  VP L WE P +S  +  +++ C  VITL   E+V D+  ++      HNG+PVVD+          +  GRL GLIL  +L  +L  +++      +N P  L D          F+  Y ++       I PE+    I LT FMNPSPY+V E               +R+I V    N+V+  + +    R+   QA</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>7</Iteration_iter-num>
+  <Iteration_query-ID>XP_002595670.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein BRAFLDRAFT_200772 [Branchiostoma floridae]</Iteration_query-def>
+  <Iteration_query-len>718</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>648.277</Hsp_bit-score>
+      <Hsp_score>1671</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>679</Hsp_query-to>
+      <Hsp_hit-from>94</Hsp_hit-from>
+      <Hsp_hit-to>778</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>358</Hsp_identity>
+      <Hsp_positive>479</Hsp_positive>
+      <Hsp_gaps>57</Hsp_gaps>
+      <Hsp_align-len>705</Hsp_align-len>
+      <Hsp_qseq>LDYDLVENSLFVK-EAAANNKKLIRININRWVVMLMIGILTALVGVVIDILVHQLAGLKYSLLKSW-IDSCVEDGCLAIPFALWVAIDALFVCFAAILVAYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKTLISKVIGVVFSVAGGLAVGKEGPMIHSGAVIAAGVSQGMSTTFKR-DLKIFKYFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALTWRIFFCSVTTLFTLNIVLSVYFGRPGELAYPGLLNFGRFTV---LSYFWYEIPLFLLMGVAGGLSGALFNFVNHKICIFRMKYVYKPFMQVVEAMMVAIVTATLAFVSIYVSRDCKPL-------GQDPSEKPLQFFC--SDGEYSTMATMMFQTPEQSVKSLFHDPPNSYNIGTLSVFCVIYFILACWTYGLSVPSGLFIPSLLCGAGWGRLFGIGVSHLVPNIAWSAP-GIYALMGAAAQLGGVVRMTISLTVILMEATGNVSYGLPLMLVLLIAKWVGDIFNEGLYDIHIRLMSVPILGWEPPATSTTISARLVMSHPVTTLQQVEKVGRIVEALKEPHSNHNGFPVVDTDQV------TSGRFRGLILRSHLLVLIKRKMFLERGQTGAI--------RRNLEMKDFREAYPRFPSIHELNISPEEMECSIDLRPYMNPAPYTVSE------DASLHRVF-RLFRALGLRH</Hsp_qseq>
+      <Hsp_hseq>VNYDVIENDPYLRDEQASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKYQVQFHIMDSDGENVTMLD------------------RAYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLT--REIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSVVEVRNIKVDKRINEVVNRLNKTKEERH</Hsp_hseq>
+      <Hsp_midline>++YD++EN  +++ E A+  K +I+ N+ +W+VM +IG+ T ++   I I V QL  LK ++L S  I+ CV++ CL IPF +W++++ + V  A  LV +G PVAAGSGIPQIKCYLNGVK+P+VV +KTL+ K +GV  S++ GLAVGKEGPMIHSG+V+AAG+SQ  S  FK  D K+FKYFR DTEKRDF+SGGAAAGV++AFGAPVGGVLF+LEEGASFWNQ LTWRIFFCS+ + F++N++LS   G PG+L YPGL++FGRF+V   L Y WYE+ +F+LMG+ GGL+GALFNF+N +I I R +++     +++E ++V  VT  +AF+ IY + DC  +         +  +  +QF    SDGE  TM                     +YN  +L++F + YF LACWTYGL VPSG+FIPSLL GA WGRL G+ V+ +V +   +   G YAL+GAAAQLGG++RMTISLTVIL+EATGN+S+GLP+MLVL++A+WVG++FN+GLYDIHI L  VP LGWE P  S  I AR VM  PV TL  VEKVG +V+ L      HNGFPVVD  +         GR +GLILR  L VL++ K+FL+      I         + L + DFR+AYPR+P I ++ I+PEE E  I L P+MNP+PY+V E      D  ++ V  RL +    RH</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>8</Iteration_iter-num>
+  <Iteration_query-ID>XP_004363664.1</Iteration_query-ID>
+  <Iteration_query-def>voltage gated chloride channel protein [Capsaspora owczarzaki ATCC 30864]</Iteration_query-def>
+  <Iteration_query-len>979</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>546.584</Hsp_bit-score>
+      <Hsp_score>1407</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>93</Hsp_query-from>
+      <Hsp_query-to>663</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>305</Hsp_identity>
+      <Hsp_positive>394</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>594</Hsp_align-len>
+      <Hsp_qseq>FESLDYDILENDIYVKDQAKIDRKHYVRLEAARWLVMFFVGVLTAVVAFLIDYCLTQISSVKFGWISDSITRCVDDECLDQSVLLWMGIDI-FLVSIACLLVLFVEPIAQGSGIPEIKCYLNGIKIPHVVRFKALLTKTVGVLFSVSGGLACGKEGPMIHTGSVIAAGISQGKSTTFNIDLNLFKAFRTDHEKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGASFWNQALTWRIFFCSMIASFTLNVLLSGTKGTSWGAMSSPGLVNFGAFASANYN------LFELPIFIAMGAVAGLFGALFNALNHRLTVFRFKYI-YHSKALRFLEVILVAAATVIVSFTL---------------IYFDDNCLPLGEKPGENPLEFFCQEHTYNEIATMLFNTPEESIKNLFHATRGDYSPETLSIFFLVMFCLSCWTYGISVPAGVFVPALLTGAAYGRLVGNLLYHAFPDADWVDPGKYALIGAASMLGGIVRMTISLTVIVVEGTGNISYGLPLMLSIMAAKLVGDLFNEGIYDLHIHLRRVPILHWEAPLPMQHFHASHVMSSNVVCIQEFDRVGRIVELLRTTTHNAFPVVTD</Hsp_qseq>
+      <Hsp_hseq>YESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHGCLVLSLLLLIAFNGGFVLISSCLVAL--EPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQRWGALSQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPDANSTFVDNNTYTISEIE-ESVRTFFCDDGYYNDMATLFFNPQETAIKQLFHQD-GAFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVL-KRYLGYHHIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPGMESLRAHEVMDTNIVYIYPHTRVQSIVSILRTTRHNAYPVVTE</Hsp_hseq>
+      <Hsp_midline>+ESL+YD+  ND+Y +     ++K    L+  +W+  F +GV T +VAF IDY +  ++  KF  +  S+  C    CL  S+LL +  +  F++  +CL+ L  EP+A GSGIPEIKCYLNGIKIPH+VR K LL+K VGVLFSV+GGL  GKEGPMIH+G++I AGI Q KS TF      F  FRTD +KRDFVSGGAAAGV+AAFGAPIGGVLFSLEEGASFWNQ+LTWR FFCSM A+ TLN  LSG     WGA+S PGL++FG F     N        +L IFI MG V GL GALFN+LN  L+  R KY+   S+ +R +E + VA  T  ++F                  + D+N   + E   E+   FFC +  YN++AT+ FN  E +IK LFH   G +S  +L IFF++ + L+CWTYGI VP+G+FVP+LL GAAYGR VG +L   +     +  G +ALIGAA+ LGG+VRMTISLTVI++E T  ISYG P+M+++M AK VGDLFN GIYD+HI L+++P+L WEAP  M+   A  VM +N+V I    RV  IV +LRTT HNA+PVVT+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>108.997</Hsp_bit-score>
+      <Hsp_score>271</Hsp_score>
+      <Hsp_evalue>3.7643e-24</Hsp_evalue>
+      <Hsp_query-from>825</Hsp_query-from>
+      <Hsp_query-to>953</Hsp_query-to>
+      <Hsp_hit-from>724</Hsp_hit-from>
+      <Hsp_hit-to>847</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>54</Hsp_identity>
+      <Hsp_positive>72</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>129</Hsp_align-len>
+      <Hsp_qseq>PLVNEHSYGTLCGIILRSQLITILKERAFGPRVVNAQGEHSVQAKVLTVDDFRASYPRYPSIDTISTTAYENEQFMDLRPYLNPTPYTLKHAAPLSRVYRIFRGLGLRHLIITDRFNQVVGMITRKDLT</Hsp_qseq>
+      <Hsp_hseq>PLEEEYKAVTFHGLILRSQLVTLLNNRIYYP-----ESTMSSCQPHLTYDDLTEDYPRYPDIYDLDLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDLT</Hsp_hseq>
+      <Hsp_midline>PL  E+   T  G+ILRSQL+T+L  R + P     +   S     LT DD    YPRYP I  +  T       MD+ PY+NP PYT+    P+  VY +FR +GLRH+I+     +++GMITR DLT</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>9</Iteration_iter-num>
+  <Iteration_query-ID>XP_018668924.2</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7-like [Ciona intestinalis]</Iteration_query-def>
+  <Iteration_query-len>712</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>613.224</Hsp_bit-score>
+      <Hsp_score>1580</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>663</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>753</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>333</Hsp_identity>
+      <Hsp_positive>460</Hsp_positive>
+      <Hsp_gaps>43</Hsp_gaps>
+      <Hsp_align-len>674</Hsp_align-len>
+      <Hsp_qseq>ALDYDTIENELHGEEERKMSSSDWKWI---QFQRWIICMLIGIMTGIVAVVINICILELTAVKMHVVEQAIIH-CVKNRCLYVPLLLWIAINVVLVTVASLLTVFVAPVAAGSGIPQIKCFLNGVKVPNVVRFKTLVTKVIGVIASVSGGLAVGKEGPMIHSGSVLAAGISQGRSISF-NLNTRFFKHFRNDREKRDFVCAGAAAGVSAAFGAPVGGVLFSLEEAASFWNQALTWRIFLCSILSSYTLNFFMSIYHHHPGDLAYPGLINFGKFSGS----YEGFELPIFLLMAVFGGLSGAAFNAINHKITVFRLKYLKAKYFKVLEVVFVAAVSATIAFVLIYWNPECKPLGQDPYVRLQFFCNDGEYNTMAVLFFTPPEESVKSLFHDPLGALQPLTIVIFVLPYFFLACWTYGLQVPSGLFIPSLLIGAAWGRLVGNCVNFIWPDDIWAQDLSKYALIGAAAQLGGTVRMTISLTVILIEATGNITYSLPLMAVLLLAKWVGDYFNHGIYDMHIHLNKVPILPWEPPALSTNIQAREVMGTPVVTLRTVPLVSDICSVLSDPRNCHSGYPIT----------DSEGKFRGVILRTQLLILLKHKEFVERGGS-----------SERIKLSVFRDSYPRYFPLSVINVSEGEQQCHVDLRPFLNPSPYTIQE</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQ---ASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSM------KILNSTYDVETEKYQVQFHIMDSDGENVTMLDR--AYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLT--REIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSVVE</Hsp_hseq>
+      <Hsp_midline>+++YD IEN+ +  +E+   +S +K +      +W++  LIG+ TG++A  I I + +L ++K+ V+  + I+ CV N CLY+P  +W+++N+V V +A  L VF +PVAAGSGIPQIKC+LNGVK+PNVV  KTLV K +GV  S+S GLAVGKEGPMIHSGSV+AAGISQ RS  F +L+ + FK+FR D EKRDF+  GAAAGV++AFGAPVGGVLF+LEE ASFWNQ LTWRIF CS++S++++N  +S  H HPGDL YPGLI+FG+FS S    Y+ +EL +F+LM + GGL+GA FN IN +IT+ R +++  +  K+LEVV V  V+  +AF+LIY+  +C  +      ++     D E     V F     +       D   A  P+++ +F + YFFLACWTYGL VPSG+FIPSLL GAAWGRL+G  VN +  D +   D+ KYALIGAAAQLGG +RMTISLTVILIEATGN+++ LP+M VL++A+WVG+ FN G+YD+HI LN VP L WE P +S  I AREVM  PV+TL TV  V D+  +L+  R  H+G+P+            + G+ +G+ILR QL +LL+HK F++               S+++ L+ FRD+YPRY  +  I ++  E++  + L PF+NPSPY++ E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>10</Iteration_iter-num>
+  <Iteration_query-ID>XP_643243.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel protein [Dictyostelium discoideum AX4]</Iteration_query-def>
+  <Iteration_query-len>757</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>362.844</Hsp_bit-score>
+      <Hsp_score>930</Hsp_score>
+      <Hsp_evalue>3.53335e-113</Hsp_evalue>
+      <Hsp_query-from>61</Hsp_query-from>
+      <Hsp_query-to>633</Hsp_query-to>
+      <Hsp_hit-from>41</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>220</Hsp_identity>
+      <Hsp_positive>341</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>593</Hsp_align-len>
+      <Hsp_qseq>KNIQSLNFSVNDNLLQREEYEKTTKGLHLKKTFGKWIICLFLGVIVGCIAYVIKMVVQLLQGLKFHYTNHYV----SNGLQGEAFLTFLGINLLFVFLSCLMVIVAGPLASSSGIPEVKGILNGVKVREALGFRALLGKIVSLVLSFSSGLFVGPEGPMIHIGSAVGAAISQFKSSTMGFYPSLFLSYRNDRDKRDFISIGAATGLAAAFGAPIGGVLFSIEEVSSFWSRQLTWRTFFTCVIAAFTTNFLLQGIG-------SSPDMHDTGLLTF-GFSRLYLFRYSELLCFCFLGLIGGLLGAFFVFLNIHLNKWRKEKLK-QNPYLRLFEALFVSVVTSVVCYYASFIF-DCR----YQSNIVIETSVCEDQSNTEMVQFFCPDGMYSELGSLLFGNPDQALRRLYSRTNNMFTLPPLLVFTLISLFFSIWSSGLWVAGGLFVPMMMVGAGFGRLFGQTISMW--FTNIDSSIYALVGSAAMMAGYCRMTVCIVVIMVELTEGTQYLVPIILAVMISKWVGDFFNESVYEHLMEQKSIPFLQSKPPHSTNNIRISDVMSKNVVVLPEVCQVRLLVNILNSNNHNAFPVINS</Hsp_qseq>
+      <Hsp_hseq>KDYESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHGCLVLSLLLLIAFNGGFVLISSCLVALE-PVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQRWGALSQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPDANSTFVDNNTYTISEIEESVRTFFCDDGYYNDMATLFFNPQETAIKQLFHQ-DGAFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYLGYHHIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPGMESLRAHEVMDTNIVYIYPHTRVQSIVSILRTTRHNAYPVVTE</Hsp_hseq>
+      <Hsp_midline>K+ +SLN+ +  N +  +  E   K       F KWI    +GV  G +A+ I   V+LL   KF      V     +G    + L  +  N  FV +S  +V +  P+A+ SGIPE+K  LNG+K+   +  + LL K V ++ S + GLFVG EGPMIH G+ +GA I QFKS T       F  +R DRDKRDF+S GAA G+AAAFGAPIGGVLFS+EE +SFW++ LTWRTFF  + A  T NF L G+        S P + D G+    G ++  L+ + +LL F  +G++GGLLGA F  LN  L+K R + +  ++  +R+ EA+FV++VT+ + + A+    +C+      S  V   +    +    +  FFC DG Y+++ +L F   + A+++L+ + +  F+LP L +F ++  F + W+ G+ V  GLFVP ++ GA +GR  G  +  +  + +I S  +AL+G+AA + G  RMT+ + VI++E T    Y  PI++ +M++KWVGD FN  +Y+  ++ K IP L  + P    ++R  +VM  N+V +    +V+ +V+IL +  HNA+PV+  </Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>5.06195e-11</Hsp_evalue>
+      <Hsp_query-from>635</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>719</Hsp_hit-from>
+      <Hsp_hit-to>846</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>64</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>130</Hsp_align-len>
+      <Hsp_qseq>PYDNQRL--------YRGIILRDHILVLLFYRVFYRGTGEEIYLDENFDFDKFTTETSKSPPPLSEMNFDQFELDSFIDLRPYMNSSGVTIHNTFSFVEAYKLFRNMGLRHLPVIDINNEVVGMVTRNDL</Hsp_qseq>
+      <Hsp_hseq>PDDNRPLEEEYKAVTFHGLILRSQLVTLLNNRIYYPESTMS-SCQPHLTYDDLTEDYPRYPD-IYDLDLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDL</Hsp_hseq>
+      <Hsp_midline>P DN+ L        + G+ILR  ++ LL  R++Y  +        +  +D  T +  + P  + +++  Q      +D+ PYMN    T+         Y LFR MGLRH+ VI    E++GM+TR+DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>11</Iteration_iter-num>
+  <Iteration_query-ID>XP_002506018.1</Iteration_query-ID>
+  <Iteration_query-def>chloride Carrier/Channel family [Micromonas commoda]</Iteration_query-def>
+  <Iteration_query-len>924</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>379.407</Hsp_bit-score>
+      <Hsp_score>973</Hsp_score>
+      <Hsp_evalue>1.1903e-117</Hsp_evalue>
+      <Hsp_query-from>78</Hsp_query-from>
+      <Hsp_query-to>845</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>850</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>280</Hsp_identity>
+      <Hsp_positive>426</Hsp_positive>
+      <Hsp_gaps>148</Hsp_gaps>
+      <Hsp_align-len>862</Hsp_align-len>
+      <Hsp_qseq>FDSHDYDPADNDLEEDARRARKRADYKAEEQWRWAMSVLIGVVMGFLAFTVDGLIKKFNGWKYGATTSSISPGGA------------GFGAWLVWVIISCLLASVAGGLVSYVEPLAAGSGIPELKTYLNGVHLRGLLRIKTLGAKLGGIAFSIGSGLIAGKEGPFVHGGGLVGGGLSAFGSHTLGFRTKKPSHFRNDADKRDFVAIGTAVGVAVAFGAPIGGMLFTVEEGASFHSTGMLWRGFLATCTGVLTTH-WLDQLDFDAMDFAGAKFGVHRDFGLFTDDEANYSRVFWWYFWEVPIFAAIGCMGGLLGAAFVNINVKITMWRQRFIPVSDKYRRHAEVIFVCFVTATVLFI-MMAASPCKPIPEAYRVAAATDGDGNGVSDELPGGVAKFEYGVETRRQIRDQYFRSLFCKADEYSSYGQLFFVPLADSLKLLLHLGEVYEQNGTDEFEQHLFTMDALIMYFVFMYALMTWTYGIGAPTGLFVPSLAVGAAGGQIVGRIVRAMVMSTGSEIVVDLHTYAVVGAAACLGGATRMTISITVLVMETTGSMQLIIPLMLTIFFAKAIGDKYSMGIYDTHIKIRGAPFLDEPEHAGVAVDKLKVAEVMADSLVTLRPVMRVRELVEVLTNTSHGAFPVTITDVGEGHN--------AGDPIELH--GSITRNILLKMLTHRVSMFD---------------------PEEPREVLYENS----------EDRDALLEKLKQIPF-----KSPGVEMI-------ASTLSRREMELS----------------IDLTH-----------FMQRHPFIVHADARLSRAYRLFRTMGLRHMYITPSKPQIIGVVTRKDLVEES</Hsp_qseq>
+      <Hsp_hseq>YESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHGCLVLSLLLLIAFNGGFV-LISSCLVA---------LEPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQRWG-ALSQPGL-IDFGVFKCEGENQCNL--WTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPD----ANSTFVDNNTYT------ISEIEESV-----------RTFFCDDGYYNDMATLFFNPQETAIKQLFH------QDGA-------FSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYL---GYHHIYS-GTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPG--MESLRAHEVMDTNIVYIYPHTRVQSIVSILRTTRHNAYPVVTECVGKSAERTIRSNTLASHNIEYRRGSTLTRAAEVKRRTFSQSSLELRRSNSVNSQTGIRRSNSDLTPEESINNLLLDSRPEPYKAYYPDDNRPLEEEYKAVTFHGLILRSQLVTLLNNRIYYPESTMSSCQPHLTYDDLTEDYPRYPDIYDLDLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDLTDDN</Hsp_hseq>
+      <Hsp_midline>++S +YD   ND+       R +   K  +  +W  + LIGV  G +AF +D  +K  N WK+ +  +S+   G              F    V +I SCL+A         +EP+AAGSGIPE+K YLNG+ +  ++R+KTL +K  G+ FS+  GL  GKEGP +H G ++G G+  F S T         +FR D DKRDFV+ G A GVA AFGAPIGG+LF++EEGASF +  + WR F  + +  LT + +L  +D+     A ++ G+  DFG+F  +  N   +  W F ++ IF  +G +GGLLGA F ++N  ++  R +++    +  R  E +FV  VT T+ F+  M    CK IP+    A +T  D N  +      +++ E  V           R+ FC    Y+    LFF P   ++K L H      Q+G        F++ +L ++F+  Y L  WTYGI  P+GLFVPSL  GAA G+ VG +++  +   G   +    T+A++GAAA LGG  RMTIS+TV+++E+T  +    P+M+T+  AK +GD ++ GIYD HI+++  P L      G  ++ L+  EVM  ++V + P  RV+ +V +L  T H A+PV    VG+           A   IE     ++TR   +K  T   S  +                     PEE    L  +S          +D   L E+ K + F     +S  V ++        ST+S  +  L+                +DLT            +M   P+ V A   +   Y LFRTMGLRH+ +  S  +I+G++TR DL +++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>12</Iteration_iter-num>
+  <Iteration_query-ID>XP_002768858.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Iteration_query-def>
+  <Iteration_query-len>776</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>230.72</Hsp_bit-score>
+      <Hsp_score>587</Hsp_score>
+      <Hsp_evalue>1.95136e-64</Hsp_evalue>
+      <Hsp_query-from>171</Hsp_query-from>
+      <Hsp_query-to>600</Hsp_query-to>
+      <Hsp_hit-from>145</Hsp_hit-from>
+      <Hsp_hit-to>581</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>158</Hsp_identity>
+      <Hsp_positive>241</Hsp_positive>
+      <Hsp_gaps>35</Hsp_gaps>
+      <Hsp_align-len>451</Hsp_align-len>
+      <Hsp_qseq>MSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLP-FSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEG------SCVNLAGGMQFPNADESYFHVWEFA---CFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACK--PLDGQSYIPNDGIQAAMCDEGV-----DMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGL----WVGDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYI</Hsp_qseq>
+      <Hsp_hseq>LEPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSAT----LTLNFFLSGVDYQRWGALSQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVN------TRSRCVRVVEAVFVAMVTTTLAF-VAAMTLGECKEIPDANSTFVDNNTYTISEIEESVRTFFCDDGYYNDMATLFFNPQETAIKQLFHQ---DGAFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYLGYHHIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLL</Hsp_hseq>
+      <Hsp_midline>+ P+A GSGIP++K YLNG+ +P ++R   ++ + +G +  V  G + G EGPM H GAI+GA + Q  +      K   P F T + K +FVS GA  GVA AF APIGG+LF++EE +++W + L WR F   + A+    LT  +F   V+       S   L     F    E+  ++W F     FIL+G+  GL+GA F         +R  + +       R R  +VVEA  V ++T  LA+ V+   +G CK  P    +++ N+    +  +E V     D GYYN  A +    ++T++K LF     +  F    L     + +FL   TYG+ +P+GLFVP+++ GA +GR  G     ++G      G +A++GAA  + G  RMTISLTVI+IE   ++     +MVT++V+K V D+FN G YDI  +L+  P +</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>41.9726</Hsp_bit-score>
+      <Hsp_score>97</Hsp_score>
+      <Hsp_evalue>0.0011708</Hsp_evalue>
+      <Hsp_query-from>681</Hsp_query-from>
+      <Hsp_query-to>740</Hsp_query-to>
+      <Hsp_hit-from>789</Hsp_hit-from>
+      <Hsp_hit-to>848</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>63</Hsp_align-len>
+      <Hsp_qseq>NTRLNLLDLT---NRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVE</Hsp_qseq>
+      <Hsp_hseq>NPRM-IMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISS--IGEILGMITRHDLTD</Hsp_hseq>
+      <Hsp_midline>N R+ ++D+T   N  P  VS  TP+   Y +FR + LRH+IV+       ++G++TR D+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>13</Iteration_iter-num>
+  <Iteration_query-ID>XP_003392724.1</Iteration_query-ID>
+  <Iteration_query-def>putative chloride channel protein [Leishmania infantum JPCM5]</Iteration_query-def>
+  <Iteration_query-len>885</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002739329.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride channel protein D-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002739329</Hit_accession>
+  <Hit_len>862</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>351.673</Hsp_bit-score>
+      <Hsp_score>901</Hsp_score>
+      <Hsp_evalue>1.46985e-107</Hsp_evalue>
+      <Hsp_query-from>39</Hsp_query-from>
+      <Hsp_query-to>871</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>841</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>273</Hsp_identity>
+      <Hsp_positive>435</Hsp_positive>
+      <Hsp_gaps>144</Hsp_gaps>
+      <Hsp_align-len>888</Hsp_align-len>
+      <Hsp_qseq>KEVEEAGDAEVNRARAPLFEKAHRPHVFTAEERRRMDWYESIDYAEGQSLVHRVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCL------FPTTLYRVLEPCVFASLFSTACYVLPLFTPCVPTPPHVREKKEALNVELFTAFC------AQPETT-----------------------HHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLF---------QRPVWA--DEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMH-------LLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGK-ADQAYEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASK-QVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEKVG</Hsp_qseq>
+      <Hsp_hseq>NETTESAETTGFFARGRDYESAYINHHYSKAERELLGTYESLDYLPPHSQAYKNWLRKQPAR--LDWDRWVMMGMIGFIVGIIGFLIHQCIDVISDFKWDRAEELIQ----------------------------DDE----IMKA--WGFVL----IYSLGFVLLASLP--VVYLRPSATGSGIPELIGYLNGTMVGKIFNVKTLVVKIWSCICAVGSGMPVGPEGPMIHIGSLVGAGLSQFKSDTLGFKL-PYFTRFRNSEDRRNFISAGAAAGVASAFGAPVGGLLFSMEEVSSFWNLKLSWMTFFCCIISTFTTDLFDSAFSGFQYTGYFGMFSA---EKNI-MFQV----RKGLDVNLWLFIPTVILGIIGGLLGALFVFINLKLARLRRLVMRKLAKIWKQNIAKWIEPCIIMIIFATLTVFLPALFSCSPFTCYLQGEK--VSPDTYSPNCLTTPTEIEPEPTVSIYNCEPGVKFKNETSQWSNASYSELATLMFVTGEEAISHLFSRETHLEFNYPSLLTMLVVYYPLSCWTAGTAMSTGLVVPMLLIGALYGRIIGLIMVSIFGVQTEENPYWAWMDPGALALIGSASFFGGVSRLTMSLSVIMMEITNDIQFLLPIMVAIVVSKWVGDFFTHPIYHALLEFKCIPFLDHEPIIYDEHNKAVNLELHYARDAMVSPVLVLHTRETVHKLASLLRDTKHGGFPIVKSDENGDRRFLGLITRTELCVLLKQEDLFEA-------VEEPSDDAPELT----PLEYQELIVDKIPIGMEDVLDELCNNEQNQNL-------------------------YLNLAPYYNQSASCVHENFSLHRTYIIYRTMGLRHLTVVDRHNQVVGFLTRKDLMGFQLEETMA</Hsp_hseq>
+      <Hsp_midline> E  E+ +     AR   +E A+  H ++  ER  +  YES+DY    S  ++    +Q +     W R +M  +IG  VG    L+ Q +D +++ K D  + +++                            DD     +++A  W  +L    +Y++  VL+A L      + PSA GSGIP+++ YLNG M  +IFN++ LVVK  SCI AV +G+PVG EGPMIH+GSL+GAGL   +S +LG      F  FRN  D+R+FISAGAA G+ SAF +P+GG+LF +EE+++ ++++L+W+ F  C+   +     +S  SG+       M      E +I MF +       + +  + FIPTV++ ++ GLL   +   +++ +R R   +      +   + + +EPC+   +F+T    LP    C P   +++ +K  ++ + ++  C       +PE T                       +  LATL   +    +  LFSR +   F   SLL  L +Y   S +  G  +S G V+P LLIGA+ GR+IG++          + P WA  D G +ALIG+A++F G+SRLT +L V+MME+T D+  +  +M+ I+V+K + D   H  YHA LE K +PFL+ +  ++        L+ + ARD M SPV VL T +TV  +   L  T+H  FP+V+  +  D+ + G+ITR +L +LL    L E        V+E  DD           + +  +  K  +  E  L       + + +                         Y++L PY + SA  V +   + R Y  +R +GLRHL V+DR  +VVG LTR   +G +L E + </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>14</Iteration_iter-num>
+  <Iteration_query-ID>XP_005828918.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein GUITHDRAFT_88279 [Guillardia theta CCMP2712]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>273.863</Hsp_bit-score>
+      <Hsp_score>699</Hsp_score>
+      <Hsp_evalue>6.4983e-80</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>652</Hsp_query-to>
+      <Hsp_hit-from>123</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>228</Hsp_identity>
+      <Hsp_positive>339</Hsp_positive>
+      <Hsp_gaps>65</Hsp_gaps>
+      <Hsp_align-len>672</Hsp_align-len>
+      <Hsp_qseq>RWILTVVIGVSVAASAQVVQSLISLLIGFRNQMLQSLFDQRRTEADIL-----IFFTMYNAGLVLIAGFLVVFLEPRAAADGISEIKAYLNGSNIPNCFSVQTIIVKLLGSIFASSAGLACGPEGPLIHIG----AGIAHAVTAVDKIYTFLPWLPHSVLAQFHNDRDRREFIAAGAGAGIAAAFGAPIGGVLFALEEAASHLSPQLIWRILTSALVATFTLALIKS--NGTGGDISLAGLLSFGTAISIGDAKERTLNSDGTDSVSALDAPIYVW-ELFLFIILGAVGGVFGGFFGAGFDFLTPRRPR---SRFLKMVEVLLISLATSYSVFFFASNYPVCRNDGSWTCKEADNWGGWLGCPEGQYDELATLFFGSKEQSIVRMVTQAWPHEPFSNTSLFITSILNLFLMLITYGSPLPAGYFMPSWLVGASIGRLFGQLVKAYVGSSVYS---GAYALAGAAAMLGGVQRTSISLVFIIVECTSNVHFLLPIVTTLMVANFVAQKFTKEGVFDISLRHHSLRFLPHHPDWLMSLCTVSDVMANPVKCLHTVEKVGNIIDLLRNCHHNGFPVLSLEGSRDENCIPRDRLEGLILRSHLRHILGTRFMRDGSTRDSLWSRITAARMSEVSL----DGEIELVRRKGVLLPPADDRERYVNLAAYMNAACYSV</Hsp_qseq>
+      <Hsp_hseq>KWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVG-VLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDF------KLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLK-------------------YDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLI----YFTND----CHSMKILNSTYDVETEKYQVQFHIMDSDGEN--VTMLDRAY--NPVSLALFFICY---FFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNK-GLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITP-EEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>+W++  +IGV     A  +   +  L+  +  +L S    +  + D L     I+ +M   G VLIAG LVVF  P AA  GI +IK YLNG  IPN  +++T++ K +G   + SAGLA G EGP+IH G    AGI+ A +   K   F       +   F  D ++R+FI+ GA AG+A+AFGAP+GGVLF LEE AS  +  L WRI   ++V+TF++ +I S  +G  GD++  GL+SFG      + K                   Y W EL +FI++G +GG+ G  F      +T  R R   +R  KM+EV+++   T+   F          ND    C               +Y     +     E   V M+ +A+   P S    FI      FL   TYG P+P+G F+PS L GA+ GRL G LV + V  +V +   G YAL GAAA LGG+ R +ISL  I++E T N+ F LP++  LM+A +V   F K G++DI +  + + +L      + +     +VM  PV  LHTVEKVG+++DLL    HNGFPV+      ++      RL+GLILR  L  +L  +        +++   +      +++L    D        + +++ P ++RE  + L  +MN + YSV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>15</Iteration_iter-num>
+  <Iteration_query-ID>XP_006818446.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Iteration_query-def>
+  <Iteration_query-len>818</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>615.535</Hsp_bit-score>
+      <Hsp_score>1586</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>135</Hsp_query-from>
+      <Hsp_query-to>760</Hsp_query-to>
+      <Hsp_hit-from>120</Hsp_hit-from>
+      <Hsp_hit-to>753</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>337</Hsp_identity>
+      <Hsp_positive>447</Hsp_positive>
+      <Hsp_gaps>26</Hsp_gaps>
+      <Hsp_align-len>643</Hsp_align-len>
+      <Hsp_qseq>QVKRWFVMFLIGICTGLVACFINICIDQISAIKYSTVRHFT-KMCRDEACMEYALLVWNGFNVTFVTIAAFMVAYIAPVAAGSGIPQIKCYLNGVKVPFVVRIKTLITKVFGVTLSVAGGLSIGKEGPMIHSGAVIAAGVSQGKSTTFK-IDGKVFEDFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQSLTWRIFFASMVSTFTLNVVLSYYNGDPWTLSNPGLVTFGKFT---GQAYYGYEIPIFLLMGVAGGLLGALFNGLNYRLSVFRLKYVYLRLSCVTEAALVALVTTTISFTMIYFISDCHPIGSNSSPEPLQFFCDDGEFSATATLFFNTPEEALKSLFHDPLGAYKPVTVGVFFCIYFCLACWTYGLGVPSGLFIPSLLTGAAWGRLVGIFVHYVFPGGHFS-DPGKYALIGAAAQLGGIVRMTISLTVILIEATGDVTYGLPLMLVLMISKWVGDYFNLGLYDIHILLQSVPLLPWEPPAMAHNISAHDVMSHPVVTLNTIETVGKIVDAMSHHHHNGFPVVDPNEVTDRSFGTY---RGLILRSQLIVLLKKEVFNETVG--------VTSLRQRIRLKDFRDEYPRYPGIKDIKVKPEHRQYHIDLRPFMNPTPYTVSQ</Hsp_qseq>
+      <Hsp_hseq>NLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTY-------DVETEKYQVQFHIMDSDGENVTMLDR--AYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSVVE</Hsp_hseq>
+      <Hsp_midline> + +W VMFLIG+ TG++A  I I ++Q+ ++K + +       C D  C+     +W   N+  V IA  +V + +PVAAGSGIPQIKCYLNGVK+P VV +KTL+ K  GV +S++ GL++GKEGPMIHSG+V+AAG+SQ +S  FK +D K+F+ FR DTEKRDF+SGGAAAGV++AFGAPVGGVLF+LEEGASFWNQ+LTWRIFF SMVSTF++NV+LS  +G P  L+ PGL++FG+F+      Y  YE+ +F+LMG+ GGL GALFN +N R+++ R +++  RLS + E  +V  VTT ++F +IYF +DCH +   +S         D E       F     +       D   AY PV++ +FF  YF LACWTYGL VPSG+FIPSLLTGAAWGRL+G+ V+ +      + D GKYALIGAAAQLGGI+RMTISLTVILIEATG++++GLP+MLVLM+++WVG+ FN GLYDIHI L  VP L WE P M+  I A +VM  PV+TL+T+E VG +VD ++   HNGFPVVD  E  ++  G +   +GLILR QL VLL+ +VF +           V  + Q++ L DFRD YPRYP I+DI + PE R+  I L PFMNP+PY+V +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>16</Iteration_iter-num>
+  <Iteration_query-ID>XP_009533702.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein PHYSODRAFT_520430 [Phytophthora sojae]</Iteration_query-def>
+  <Iteration_query-len>967</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>490.345</Hsp_bit-score>
+      <Hsp_score>1261</Hsp_score>
+      <Hsp_evalue>2.22849e-159</Hsp_evalue>
+      <Hsp_query-from>172</Hsp_query-from>
+      <Hsp_query-to>925</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>852</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>324</Hsp_identity>
+      <Hsp_positive>465</Hsp_positive>
+      <Hsp_gaps>120</Hsp_gaps>
+      <Hsp_align-len>848</Hsp_align-len>
+      <Hsp_qseq>EKDKEKRAKAQHRESFNYDFFESRVNMQHDQEQTESAVRSLNIARWVMTFGVGLGTALIACFVEFWTSLLSTFRTATMESLVAA--EMDGSQAFGTGYLAYSMISVGFVAVASYCVAILCPVAGGSGISEIKATLNGIKIHRVVRLKTLFCKAFGILFSVSGGLPVGKEGPMIHSGSVIGAGLSQGKSSSFGLDTSWTKFKGFRNDKEKRDFISCGAAAGVAAAFGAPIGGVLFALEEGASFWHQNLTWRTFFCAMVSAFVLNYFMSFMEANESNGPTPDVEHVFIGGTLGTQTGTFTFGQFVGS-----KAYEVLDVPIFIVMGMVGGLFGAGFNGANTVLTKFRKRYVT--HRFLRFGEALLIAFSMATASFWLSYYFGQCRDL--------------AGDYSDSLSRFYCPEGQYNDLASLFTVNYATSMKQLLHFTGDGSFTPFSLCMFFVVFYIFACWTYGIAVPSGLFVPSLLAGAAYGR-ICVMIVHYLGFPVGAQDGMFALIGSACMLGGMARMTISLTVIILECTGVIEWGLPIMVSLMAARWVGNSFNEGLYDIHIHLNHLPFLEFDPPYYARFLRALNIMSSPPTCVPQIAKVGEIYDVLKNCNHGGFPVIVPRSQDAAGGGHRPN-LGAKRISPRFAGTIYRHHLAVLLQRKDF------------------------------------FIEKPEPFVRTPAGDTTLLYNDQYALSYRDM------------EGSYPR--------YPSINDIQLDEEER-DLW-MDLTP-----YMNPTP------HTVQEQTPVPRAFRLFRSLGLRHLIVLNRRNEVRGVITRKDLTPAHLK</Hsp_qseq>
+      <Hsp_hseq>NREEQGSLPQKDYESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHGCLVLSLLLLIAFNG---GFVLISS-CLVALEPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITF--KRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQR-------------WGAL-SQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPDANSTFVDNNTYTISEIEESVRTFFCDDGYYNDMATLFFNPQETAIKQLFH--QDGAFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYLGYH-HIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPGMESLRAHEVMDTNIVYIYPHTRVQSIVSILRTTRHNAYPVVTECVGKSAERTIRSNTLASHNIEYRRGSTLTR---AAEVKRRTFSQSSLELRRSNSVNSQTGIRRSNSDLTPEESINNLLLDSRPEPYKAYYPDDNRPLEEEYKAVTFHGLILRSQLVTLLNNRIYYPESTMSSCQPHLTYDDLTEDYPRYPDIYDLDLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDLTDDNLK</Hsp_hseq>
+      <Hsp_midline> ++++     +  ES NYD   + V  Q  + + +   ++L+  +W+ TF +G+ T ++A F++++  LL+ ++ +++E+ V A  +           +A++    GFV ++S C+  L PVA GSGI EIK  LNGIKI  +VRLKTL  KA G+LFSV+GGL VGKEGPMIHSG++IGAG+ Q KS +F        F  FR D++KRDF+S GAAAGVAAAFGAPIGGVLF+LEEGASFW+Q+LTWRTFFC+M +   LN+F+S ++                 G L +Q G   FG F          +  +D+ IFI+MG+VGGL GA FN  NT L+K R +YV    R +R  EA+ +A    T +F  +   G+C+++                +  +S+  F+C +G YND+A+LF     T++KQL H   DG+F+  SL +FF++FY  ACWTYGI VPSGLFVPSLL GAAYGR +  ++  YLG+      G FALIG+A  LGG+ RMTISLTVI++E T  I +G PIMV+LM A+WVG+ FN G+YDIHI L  +P L ++ P     LRA  +M +    +    +V  I  +L+   H  +PV+      +A    R N L +  I  R   T+ R   A  ++R+ F                                       +PEP+      D   L  +  A+++  +               YP         + + +D+  D     D++ +DLT       M+ TP      +TV   TPVP  + LFR++GLRH+IV++   E+ G+ITR DLT  +LK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>17</Iteration_iter-num>
+  <Iteration_query-ID>XP_011426744.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7 [Crassostrea gigas]</Iteration_query-def>
+  <Iteration_query-len>765</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>610.142</Hsp_bit-score>
+      <Hsp_score>1572</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>706</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>753</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>331</Hsp_identity>
+      <Hsp_positive>456</Hsp_positive>
+      <Hsp_gaps>35</Hsp_gaps>
+      <Hsp_align-len>678</Hsp_align-len>
+      <Hsp_qseq>SLDYDVCENDLYQLEERKKSVKEIMIIEMLRWLVMFFVGLLTGLVASLIDFCVIQSTDLKFSIIKKY-VDKCVDNKCMEVPLLVWVGINGGLVIVASILTACFEPVAAGSGIPQIKCYLNGVKVPHVVRLKTIVVKVIGVIFSVAGGLIIGKEGPMIHSGAVIAAGISQGRSDTFRKFDLRIFEFFRSDTEKRDFVAGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALAWRIFFASMVSTFTLNVIQSYIKGIPWDLSYPGLFNFGSFDTT---SYSAFEIPIFILMGVLGGLFGALFNQLNYILTKFRRRYINKSRDRVLEAMIVAIITATVGYISLYFNNSCSPM--VQDTKDNTVQVYCNDGQYSSTATILFQSPEDSVKSLFHESKGMYSPSTLVVYCLCVFILACWTYGLYVPSGLFIPGLLVGAAWGRFVGLCLNYIFPD-VGWVDFGKYSLIGAAAQLGGIVRMTISLTVIIMEATGNITFGLPIMIVLIVAKWVGDIFNEGIYDMHIHIQGVPILGWEPSSVLTNLSAKEVMSHPVSVFNMRESVGRVMEVLKTETHNGFPVVEDYIPNPLDSSINEEMSFGTYRGLILRSQLIVLLKQRVF-----GDNIDQFY------NLSTKDFRDAYPKFTPIRQIHVSQYERDNCEINLEPYMNPAAYCVTD</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKY-------QVQFHIMDSDGENVTML----DRAYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVVDELEEDEQLEG-----NHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMV-IVLTPFMNPSPYSVVE</Hsp_hseq>
+      <Hsp_midline>S++YDV END Y  +E+    K ++   + +WLVMF +G+ TG++A+ I   V Q   LK +++    ++KCVDN C+ +P  +W+ +N   V++A  L     PVAAGSGIPQIKCYLNGVK+P+VV +KT+V K +GV  S++ GL +GKEGPMIHSG+V+AAGISQ RS  F+  D ++F++FR DTEKRDF++GGAAAGV++AFGAPVGGVLF+LEEGASFWNQ L WRIFF SMVSTF++NVI S + G P DL+YPGL +FG F  +    Y  +E+ +FILMG++GGL GALFN +N  +T  R+R+IN    ++LE ++V  +T  V ++ +YF N C  M  +  T D   + Y            +  S  ++V  L       Y+P +L ++ +C F LACWTYGL VPSG+FIP LL GAAWGR +G+ +N +  D V  +D GKY+LIGAAAQLGGI+RMTISLTVI++EATGN++FGLP+M+VL++A+WVG++FN+G+YD+HI + GVP LGWE   +   + A+EVM  PV   +  E VG V+++L  E HNGFPVV++   +          + G  +GLILR QL VLL+ +VF      +NI Q         L+  DFRDAYP++  I  I ++  ER+   I L P+MNP+ Y V +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>18</Iteration_iter-num>
+  <Iteration_query-ID>XP_013760162.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel 7 [Thecamonas trahens ATCC 50062]</Iteration_query-def>
+  <Iteration_query-len>819</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>526.554</Hsp_bit-score>
+      <Hsp_score>1355</Hsp_score>
+      <Hsp_evalue>4.19036e-175</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>602</Hsp_query-to>
+      <Hsp_hit-from>40</Hsp_hit-from>
+      <Hsp_hit-to>628</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>290</Hsp_identity>
+      <Hsp_positive>390</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>591</Hsp_align-len>
+      <Hsp_qseq>QDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDN--CFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQS------YTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEP---TTVYEGIT---------LRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPL</Hsp_qseq>
+      <Hsp_hseq>QKDYESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHGCLVLSLLLLIAFNGGFVLISSCLVA-LEPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQ-RWGALSQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPDANSTFVDNNTYTISEIEESVRTFFCDDGYYNDMATLFFNPQETAIKQLFHQDGAFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYLGYHHIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPGMESLRAHEVMDTNIVYIYPHTRVQSIVSILRTTRHNAYPV</Hsp_hseq>
+      <Hsp_midline>Q D +SL+Y++  N V+   + +++         +KW+   L+G+ T +VA+ ID F++ +   KF+ +   ++ C    C     L  IA N   V +++  VA +EPVAAGSGIPEIKCYLNG KIPH+VRL TLL KA GV+FSVAGGL VG+EGPMIHSGA++ AGI Q K+ +       F  FR D  KRDFV+ GAAAGV+AAFG+PIGGVLFSLEEGAS WNQ+LTWRTFFC+M ++ TLN  LSG     +WG L+QPGL+DFG F  +       +T V++  F+++GVVGGL GA FN++NT L+  R++++       R  EA+F+A ++ T++F+ A  + EC+  P   +T  +  T         +R F C +G YNDMAT+FF  QE AI+QLFH   AFS P+L  F   ++ LA  TYG  VPSGLFVP +L G A+GR  G  L+          GT+AL+GAAAFLGGVVRMTISLTVI++ESTN+ISYG P+M+T+MV+K VGDLFN G+YDIHI +K IP LGWE    ME+L A ++M T +  +    RV+ +V +L +  H A+P+</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>97.4413</Hsp_bit-score>
+      <Hsp_score>241</Hsp_score>
+      <Hsp_evalue>1.05674e-20</Hsp_evalue>
+      <Hsp_query-from>615</Hsp_query-from>
+      <Hsp_query-to>736</Hsp_query-to>
+      <Hsp_hit-from>734</Hsp_hit-from>
+      <Hsp_hit-to>859</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>49</Hsp_identity>
+      <Hsp_positive>79</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>128</Hsp_align-len>
+      <Hsp_qseq>FVGIILRHEIITLLKRRAFVDYA--NAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLV--HLEDK--FHR</Hsp_qseq>
+      <Hsp_hseq>FHGLILRSQLVTLLNNRIYYPESTMSSCQPHLTYDDLTEDYPRYPDIYDL--DLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDLTDDNLKEKLRLHR</Hsp_hseq>
+      <Hsp_midline>F G+ILR +++TLL  R +   +  ++ + H+ + D  +DYPRYPDI D+  D+   +    M+++PYMNP P T         V+ LFR +GLRH++V+  +  I+G++TRHDL   +L++K   HR</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>19</Iteration_iter-num>
+  <Iteration_query-ID>XP_016612789.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein SPPG_00455 [Spizellomyces punctatus DAOM BR117]</Iteration_query-def>
+  <Iteration_query-len>876</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>212.616</Hsp_bit-score>
+      <Hsp_score>540</Hsp_score>
+      <Hsp_evalue>1.02833e-57</Hsp_evalue>
+      <Hsp_query-from>195</Hsp_query-from>
+      <Hsp_query-to>751</Hsp_query-to>
+      <Hsp_hit-from>112</Hsp_hit-from>
+      <Hsp_hit-to>654</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>176</Hsp_identity>
+      <Hsp_positive>285</Hsp_positive>
+      <Hsp_gaps>92</Hsp_gaps>
+      <Hsp_align-len>596</Hsp_align-len>
+      <Hsp_qseq>GVRGTLRKAYDACQAWILVFIVGAITGWLAAYIDVASEWASDLKEGYCKEGFYLNRKFCCWHVEANEECTEWATWSMTFNAQSGAAMWGAEYFMFTVFGTAFALASAVLVKVYAPYAAGSGIPEVKTILGGFVIRKFLGGWTLLIKCIGLCLSVASGLSLGKEGPLVH----VACCVGNIFPRIFD-------KYAKNEAKKREILSASSAAGVSVAFGAPIGGVLFSLEEVSYYFPYKTMWRSFFCAMVAAISLQLVNPFRTGK-----------LVLFAVEYKRAWHGFELPFFVLLGILGGLYGSFFIRMNIRVAAYRKSSWLRHWVIAEVGVVAILTALLSFAHPFLRVSTVELVANLFKECIDNETD-----FYGLCSDHENALASVVKYLFLAAGIKIFFTIF------TFGIRVPAGIFIPSMAVGACVGRALGIGMQLWQMAYPNMWMFSSCKPHEQCVTPGTYAMVGAAAALGGVTRMTVSLTVIMFELTGALTYILPIMLTVMVSKWVGDALGKASIYDALIELNGYPFLDAKEEYTYSTTVGSVMTRVEDLEVICGSGCTLEALS------ELVQTTGFKGYPVV</Hsp_qseq>
+      <Hsp_hseq>GYKGVIKKN---LAKWLVMFLIGVFTGVIAACIGITVEQLVSLK-------------VAVLNSSDINKCVDNDCLYIPF-------------FIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQR-FINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKYQVQFHIMDSDGENV--TMLDRAYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIG------------MLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKG-LYDIHISLNGVPYLG----WEAPPMSAKIFAR----EVMCAPVITLHTVEKVGDVVDLLTREIHNGFPVV</Hsp_hseq>
+      <Hsp_midline>G +G ++K       W+++F++G  TG +AA I +  E    LK                 +     +C +     + F             F++        L +  LV   +P AAGSGIP++K  L G  I   +   TL+ K +G+ +S+++GL++GKEGP++H    VA  +     R F        KY + + +KR+ +S  +AAGV+ AFGAP+GGVLF+LEE + ++     WR FFC+MV+  S+ ++     G               F+V     +  +EL  F+L+GI+GGL G+ F  +N R+   R+  ++ + +   + VV + T     A   +  +       +     D ET+     F+ + SD EN   +++   +    + +FF  +      T+G+ VP+GIFIPS+  GA  GR +G            M + S        +  G YA++GAAA LGG+ RMT+SLTVI+ E TG +++ LP+ML +M+++WVG+   K  +YD  I LNG P+L     +        +  R    EV+C    TL  +       +L+      G+PVV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>20</Iteration_iter-num>
+  <Iteration_query-ID>NP_001330038.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>772</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>347.821</Hsp_bit-score>
+      <Hsp_score>891</Hsp_score>
+      <Hsp_evalue>2.22045e-107</Hsp_evalue>
+      <Hsp_query-from>25</Hsp_query-from>
+      <Hsp_query-to>641</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>649</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>351</Hsp_positive>
+      <Hsp_gaps>30</Hsp_gaps>
+      <Hsp_align-len>639</Hsp_align-len>
+      <Hsp_qseq>DTSTDDITLLNSHRDGDGGV-----NSLDYEVIENYAYREEQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAIIQKSYFAGFIVYLLINLVLVFSSAYII-----TQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWCKSGICGHFGGGGFIIWDV--SDGQDD---YYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLPL-LRKCSPCPES----VPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPVIDHT--RSGETLVIGLVLRSH</Hsp_qseq>
+      <Hsp_hseq>DDNTEEMTVLGANREEQGSLPQKDYESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHG-CLVLSLLLLIAFNGGFVLISSCLVALEPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQRWGALSQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPDANSTFVDNNTYTISE---IEESVRTFFCD-DGYYNDMATLFFNPQETAIKQLFHQDG--AFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYLGYHHIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPGMESLRAHEVMDTNIVYIYPHT-RVQSIVSILRTTRHNAYPVVTECVGKSAERTIRSNTLASH</Hsp_hseq>
+      <Hsp_midline>D +T+++T+L ++R+  G +      SL+Y++  N  Y +    R K        +KW  + LIG+ TG+ A FI+  V+    WKF+     +      G  + L + L++ F+  +++         P AAGSGIPEIK YLNGI IP  +  +TL+ K  G + SV GGL +GKEGP++H+GA I + + Q  S  +         F++DRD+RD V+ G AAGVAAAF AP+GGVLF+LEE  S+W   L WR FF S    + +   +        G     G I + V   +G++    + F +LL   ++GV+GGLLGALFN L   ++  R   ++ +   V+++EA  ++ +T+ ++F   + L +C   P++    V ++         +  +   FFC  D  YND+AT+FFN Q+ AI+ LF       FS  SL  F  +FY LA  T+G  VP+G FVP ++ G+ YGR VG  + R+    +I  GT+AL+GAA+FLGG +RMT+SL VI++E TN +     IM+ L+++K VGD FN G+Y++  +LK IPLL       M  + A E   +  V   P   RV  + SIL + +HN +PV+     +S E  +    L SH</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>77.0258</Hsp_bit-score>
+      <Hsp_score>188</Hsp_score>
+      <Hsp_evalue>1.93839e-14</Hsp_evalue>
+      <Hsp_query-from>635</Hsp_query-from>
+      <Hsp_query-to>750</Hsp_query-to>
+      <Hsp_hit-from>736</Hsp_hit-from>
+      <Hsp_hit-to>846</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>65</Hsp_positive>
+      <Hsp_gaps>11</Hsp_gaps>
+      <Hsp_align-len>119</Hsp_align-len>
+      <Hsp_qseq>GLVLRSHLLVLLQSKVDFQHSPLP-CDP--SARNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDL</Hsp_qseq>
+      <Hsp_hseq>GLILRSQLVTLLNNRIYYPESTMSSCQPHLTYDDLTEDYPRYPD--------IYDLDLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDL</Hsp_hseq>
+      <Hsp_midline>GL+LRS L+ LL +++ +  S +  C P  +  ++   +  +          I D+ LT  +  M +D+ P++NP PY V     +  VYNLFR +GLRH+ V+     ++G+ITR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>21</Iteration_iter-num>
+  <Iteration_query-ID>NP_001107803.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform b [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>781</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>614.764</Hsp_bit-score>
+      <Hsp_score>1584</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>72</Hsp_query-from>
+      <Hsp_query-to>724</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>342</Hsp_identity>
+      <Hsp_positive>463</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>SLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKG-NIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKR-DFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFD-SEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT-----QPARLQGLILRSQLIVLLKHKVFVERSNLG--------LVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTV</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVETEKYQVQFHIM-----DSDGENVTML----DRAYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLL--TREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>S++YD  EN  +L +E+   +       + +W++  LIG+ TG++A  I I VE L  LK  V+   +I+K  +   L     +W ++N   VL+   +V F  PVAAGSGIPQIKC+LNGVKIP+VV +KTLV K  GV +S+  GLAVGKEGPMIHSGSV+AAGISQ RS   K  DFK+F+YFR DTEKRDF+S GAAAGV++AFGAPVGGVLF+LEEGASFWNQ LTWRIFF SM+STF++N +LS  HG+  DL+ PGLI+FGRF  S+ + Y  +E+ VFI MG++GG+ GA+FN +N  +T+ R R+I+    +++E V+V  VT  VAF+LIY + DC  ++  + +Y ++      +++ M     ++  ++V  L      +YNP++L LF + YFFLACWTYGL V +G+FIPSLL GAAWGRL G+ ++ +    +   D GKYAL+GAAAQLGGI+RMT+SLTVI++EAT N+++G P+MLVLM A+ VG++F +GLYD+HI L  VP+L WEAP  S  + AREVM  PV  L   EKVG +VD+L  T   HNGFPVV+  ++         RL+GLILR QL VLL+HKVF++  ++          V ++L L DFRDAYPR+P I+ I ++ +ERE  + L+ FMNPSPY+V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>22</Iteration_iter-num>
+  <Iteration_query-ID>XP_011520656.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>747</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_006818357.1|</Hit_id>
+  <Hit_def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_006818357</Hit_accession>
+  <Hit_len>846</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>613.994</Hsp_bit-score>
+      <Hsp_score>1582</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>38</Hsp_query-from>
+      <Hsp_query-to>690</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>751</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>342</Hsp_identity>
+      <Hsp_positive>461</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>670</Hsp_align-len>
+      <Hsp_qseq>SLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKG-NIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKR-DFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFD-SEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT-----QPARLQGLILRSQLIVLLKHKVFVERSNLG--------LVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTV</Hsp_qseq>
+      <Hsp_hseq>SVNYDVIENDPYLRDEQASGYKGVIKKNLAKWLVMFLIGVFTGVIAACIGITVEQLVSLKVAVLNSSDINKCVDNDCLYIPFFIWLSMNIVGVLIAGALVVFGSPVAAGSGIPQIKCYLNGVKIPNVVAMKTLVCKAVGVAMSMSAGLAVGKEGPMIHSGSVVAAGISQARSRRFKSLDFKLFKYFRCDTEKRDFISGGAAAGVASAFGAPVGGVLFTLEEGASFWNQNLTWRIFFCSMVSTFSVNVILSAVHGHPGDLNYPGLISFGRFSVSKNLKYDWYELLVFILMGIMGGLTGALFNFINRRITILRQRFINNRLSKMLEVVVVCTVTTIVAFMLIYFTNDCHSMKILNSTYDVET-----EKYQVQFHIMDSDGENVTMLDR----AYNPVSLALFFICYFFLACWTYGLPVPSGIFIPSLLTGAAWGRLIGMLVNSMVDDTVSNIDVGKYALIGAAAQLGGILRMTISLTVILIEATGNMSFGLPVMLVLMMAQWVGNMFNKGLYDIHISLNGVPYLGWEAPPMSAKIFAREVMCAPVITLHTVEKVGDVVDLL--TREIHNGFPVVDELEEDEQLEGNHGRLKGLILREQLSVLLRHKVFLKVDDMNNIPQHLVDEVSQKLTLTDFRDAYPRYPHIEDIVITPEEREMVIVLTPFMNPSPYSV</Hsp_hseq>
+      <Hsp_midline>S++YD  EN  +L +E+   +       + +W++  LIG+ TG++A  I I VE L  LK  V+   +I+K  +   L     +W ++N   VL+   +V F  PVAAGSGIPQIKC+LNGVKIP+VV +KTLV K  GV +S+  GLAVGKEGPMIHSGSV+AAGISQ RS   K  DFK+F+YFR DTEKRDF+S GAAAGV++AFGAPVGGVLF+LEEGASFWNQ LTWRIFF SM+STF++N +LS  HG+  DL+ PGLI+FGRF  S+ + Y  +E+ VFI MG++GG+ GA+FN +N  +T+ R R+I+    +++E V+V  VT  VAF+LIY + DC  ++  + +Y ++      E   +     ++  ++V  L      +YNP++L LF + YFFLACWTYGL V +G+FIPSLL GAAWGRL G+ ++ +    +   D GKYAL+GAAAQLGGI+RMT+SLTVI++EAT N+++G P+MLVLM A+ VG++F +GLYD+HI L  VP+L WEAP  S  + AREVM  PV  L   EKVG +VD+L  T   HNGFPVV+  ++         RL+GLILR QL VLL+HKVF++  ++          V ++L L DFRDAYPR+P I+ I ++ +ERE  + L+ FMNPSPY+V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>23</Iteration_iter-num>
+  <Iteration_query-ID>NP_197996.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002740900.1|</Hit_id>
+  <Hit_def>PREDICTED: chloride transport protein 6 [Saccoglossus kowalevskii]</Hit_def>
+  <Hit_accession>XP_002740900</Hit_accession>
+  <Hit_len>863</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>348.591</Hsp_bit-score>
+      <Hsp_score>893</Hsp_score>
+      <Hsp_evalue>2.28907e-107</Hsp_evalue>
+      <Hsp_query-from>25</Hsp_query-from>
+      <Hsp_query-to>641</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>649</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>351</Hsp_positive>
+      <Hsp_gaps>30</Hsp_gaps>
+      <Hsp_align-len>639</Hsp_align-len>
+      <Hsp_qseq>DTSTDDITLLNSHRDGDGGV-----NSLDYEVIENYAYREEQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAIIQKSYFAGFIVYLLINLVLVFSSAYII-----TQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWCKSGICGHFGGGGFIIWDV--SDGQDD---YYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLPL-LRKCSPCPES----VPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPVIDHT--RSGETLVIGLVLRSH</Hsp_qseq>
+      <Hsp_hseq>DDNTEEMTVLGANREEQGSLPQKDYESLNYDLCHNDVYAQMIETRNKKTAKTLDFMKWITTFLIGVFTGMVAFFIDYFVKLLNKWKFSSVETSVLACGQHG-CLVLSLLLLIAFNGGFVLISSCLVALEPVAAGSGIPEIKCYLNGIKIPHIVRLKTLLSKAVGVLFSVAGGLFVGKEGPMIHSGAIIGAGIPQFKSITFKRCKCNFPYFRTDRDKRDFVSGGAAAGVAAAFGAPIGGVLFSLEEGASFWNQSLTWRTFFCSMSATLTLNFFLSGVDYQRWGALSQPGLIDFGVFKCEGENQCNLWTFVDLLIFILMGVVGGLLGALFNSLNTALSKHRLKYVNTRSRCVRVVEAVFVAMVTTTLAFVAAMTLGECKEIPDANSTFVDNNTYTISE---IEESVRTFFCD-DGYYNDMATLFFNPQETAIKQLFHQDG--AFSLPSLGIFFILFYFLACWTYGIMVPSGLFVPSLLCGAAYGRFVGTVLKRYLGYHHIYSGTFALIGAAAFLGGVVRMTISLTVILIESTNEISYGFPIMVTLMVAKWVGDLFNHGIYDIHIQLKKIPLLGWEAPPGMESLRAHEVMDTNIVYIYPHT-RVQSIVSILRTTRHNAYPVVTECVGKSAERTIRSNTLASH</Hsp_hseq>
+      <Hsp_midline>D +T+++T+L ++R+  G +      SL+Y++  N  Y +    R K        +KW  + LIG+ TG+ A FI+  V+    WKF+     +      G  + L + L++ F+  +++         P AAGSGIPEIK YLNGI IP  +  +TL+ K  G + SV GGL +GKEGP++H+GA I + + Q  S  +         F++DRD+RD V+ G AAGVAAAF AP+GGVLF+LEE  S+W   L WR FF S    + +   +        G     G I + V   +G++    + F +LL   ++GV+GGLLGALFN L   ++  R   ++ +   V+++EA  ++ +T+ ++F   + L +C   P++    V ++         +  +   FFC  D  YND+AT+FFN Q+ AI+ LF       FS  SL  F  +FY LA  T+G  VP+G FVP ++ G+ YGR VG  + R+    +I  GT+AL+GAA+FLGG +RMT+SL VI++E TN +     IM+ L+++K VGD FN G+Y++  +LK IPLL       M  + A E   +  V   P   RV  + SIL + +HN +PV+     +S E  +    L SH</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>77.0258</Hsp_bit-score>
+      <Hsp_score>188</Hsp_score>
+      <Hsp_evalue>2.05859e-14</Hsp_evalue>
+      <Hsp_query-from>635</Hsp_query-from>
+      <Hsp_query-to>750</Hsp_query-to>
+      <Hsp_hit-from>736</Hsp_hit-from>
+      <Hsp_hit-to>846</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>65</Hsp_positive>
+      <Hsp_gaps>11</Hsp_gaps>
+      <Hsp_align-len>119</Hsp_align-len>
+      <Hsp_qseq>GLVLRSHLLVLLQSKVDFQHSPLP-CDP--SARNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDL</Hsp_qseq>
+      <Hsp_hseq>GLILRSQLVTLLNNRIYYPESTMSSCQPHLTYDDLTEDYPRYPD--------IYDLDLTQINPRMIMDVTPYMNPCPYTVSAHTPVPHVYNLFRTMGLRHIIVISSIGEILGMITRHDL</Hsp_hseq>
+      <Hsp_midline>GL+LRS L+ LL +++ +  S +  C P  +  ++   +  +          I D+ LT  +  M +D+ P++NP PY V     +  VYNLFR +GLRH+ V+     ++G+ITR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>21768</Statistics_db-num>
+      <Statistics_db-len>10805580</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

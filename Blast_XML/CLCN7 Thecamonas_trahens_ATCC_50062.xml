@@ -1,0 +1,1122 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>NP_001278.1</BlastOutput_query-ID>
+  <BlastOutput_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</BlastOutput_query-def>
+  <BlastOutput_query-len>805</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>NP_001278.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>805</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>579.326</Hsp_bit-score>
+      <Hsp_score>1492</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>95</Hsp_query-from>
+      <Hsp_query-to>787</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>336</Hsp_identity>
+      <Hsp_positive>471</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>705</Hsp_align-len>
+      <Hsp_qseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLS-IYHGNMWD-LSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYI--HRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQP-----LQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPA-RLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIH--VSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDL</Hsp_qseq>
+      <Hsp_hseq>QSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPF--LSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQ--SYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLR---RFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYP-TLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLF-PSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLE--SNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYAN--AVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>+SLDY+ +EN ++       ++ A+      +WV+  L+G+ T LVA  ID+ +  +AG K+ +I   I          F  L +  +N   V V +  VAFIEPVAAGSGIP+IKC+LNG KIPHVVRL TL+ K  GV+ SV GGLAVG+EGPMIHSG+V+AAGISQG++TSL  D  +F+ FR D  KRDFV++GAAAGVSAAFG+P+GGVLFSLEEGAS WNQ LTWR FF +MIS+FTLN +LS    G  W  L+ PGL++FG F ++  +YT+ EIP F+ +GVVGG+ GA FNA+N  LT+FR+R+I   +P  +  EA+ +AA++ATV+F+  +   +C+P      +G ++    +  C +GEYN MA  FF T E+++  LFH+      P TL  F   YF LA  TYG +V +G+F+P +L G A+GRL G +L +L   +I  DPG YAL+GAAA LGG+VRMT+SLTVI++E+T++++YG P+ML +M +KIVGD+F EGLYD+HI ++ +PFL WE      +LTA ++MSTPV  L    +V  +V +L   ++ H  FP+    ++  P+ +  G+ILR ++I LLK + FV+ +N   V+  +   DF D YPR+P I  I   +  ++ +  M+LS +MNP+P T    A+   VF+LFR LGLRH+VVVD   +++G+VTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>NP_506022.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein [Caenorhabditis elegans]</Iteration_query-def>
+  <Iteration_query-len>796</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>576.244</Hsp_bit-score>
+      <Hsp_score>1484</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>780</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>733</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>341</Hsp_identity>
+      <Hsp_positive>469</Hsp_positive>
+      <Hsp_gaps>37</Hsp_gaps>
+      <Hsp_align-len>756</Hsp_align-len>
+      <Hsp_qseq>ARQRRRLEEELLFSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNR---WFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNG--RSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKY--VSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQIN--QMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIF-EEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESC--FLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRER</Hsp_qseq>
+      <Hsp_hseq>ARVRHKARRAMSGTEWEHLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSN----WAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISR-LIVDCDN--------CFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRP---EPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNR-DAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVH-DPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCG-IDEN---GLPS-DQFVGIILRHEIITLLKRRAFVDYANAVRSHV--DWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDK</Hsp_hseq>
+      <Hsp_midline>AR R +    +  +     + R+  H +     +SL+YE++EN ++R      S+    W  SR R   W V  L+G+ T LVA  ID+ +      KF  I + L+  C          C W+  +++I  N +LV++AA  V ++ P+A GSGIP+IKCYLNG  IP VVRL TL+ KA GV  SV GGL  G+EGPMIHSGA + AGISQGK+ SL +D GLF+ FRND  KRDFV++GAAAGV+AAFG+PIGGVLFSLEEGAS WNQALTWR FF  MISSFT+N +LS  +   + G+L+  GL +FG F  + Y + EIP F++IG++GG  GA FN +NTKLT FR ++  VS    R  E L +AA+S  ++FL  F I +C+P    PT     I   +  C +GEY+ +A++FF   EE+++ +FH+  ++F   TL  F   YF L + T+G SVPSG+F+P ILTG A+GRL G  +E LFPS+   DPG YAL GAAA LGGVVRMTISLT II+E+T DI++GLP+ML +MV+K VGD+FNEGLYD HID+  +P LGW P ++  N+ A  +M   V  L    RV  +V +L S  H  FP+   I+E+    LP   +  G ILR ++  LL+ R F +   A  S +  D+ +  DD  +   + ++    FDE    F+++ PYM+P P       +   +FRLFRGLGLR++ VV+    + G++TR D+    ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>3</Iteration_iter-num>
+  <Iteration_query-ID>NP_610798.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel-b [Drosophila melanogaster]</Iteration_query-def>
+  <Iteration_query-len>813</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>507.679</Hsp_bit-score>
+      <Hsp_score>1306</Hsp_score>
+      <Hsp_evalue>6.94458e-169</Hsp_evalue>
+      <Hsp_query-from>103</Hsp_query-from>
+      <Hsp_query-to>812</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>729</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>299</Hsp_identity>
+      <Hsp_positive>440</Hsp_positive>
+      <Hsp_gaps>46</Hsp_gaps>
+      <Hsp_align-len>731</Hsp_align-len>
+      <Hsp_qseq>RSRTAAASTPNYESLDYEVCENTLFQDEQRKRLTERFSLRKDIIRWIIFIQIGIITALIACTIDIIIEELSIRKYTFLYNSVKENVPLSDASDRDLLIPYLYWLLFSIVPVAFGAAMVTYIEPITAGSGIPQVKSYLNGVKIPRIVRIKTLAVKAIGVITSVVGGLAGGKEGPMIHAGAVVAAGISQGKSTTFLKDFRIFKAFRDDHEKRDFVLGGGAAGVSAAFGAPIGGMLFSLEEAASFWNQNLIWRTLVASIISVFTLNIVLSA------YHGLNDFTFTGLFNLGKFDTPLKFDYFELPIFMILGVTGGLLGAAWNSLNTKINKFRKRFI----PWKIGKVLEAVVVAMMGVTLACLMIYFINDCRPLGNDPTN-----NPVQLFCEDNEYNAVAALWFQTPEATVRSLFHDPPGSHKILTLALFTVVYYVLSCATFGLNVSLGVFIPTALVGAAWGRLLAMLTYYVFPQAEFLH-PGKYALIGAAANLGGVLRMTISLSVILMETTGVETSFFFPLIIALISAKWVGDYFNEGIYDTQIQVNHVPMLTWEPLPQYKGLKAREILSKPVICIKIRDSANYIYEMLKKCDHNGFPVVDDVCG---DRRSEGRVCGIILRSQLIVILLKSLYVENKRFWLPETSIQTFRDLYPRFPSIKSVRK--LDEKINYTVDLSMFMNPSPIRVNPHDSVPRIFQIFRALGLRHLLVINHENRIAGIITRRDFIY</Hsp_qseq>
+      <Hsp_hseq>RSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYS-RERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVD-------CDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQ---PGLVDFGEF-VAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPW--ARFAEALFIAALSATVSFLFAFFIFECRP---EPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHN-RDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPS--IVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTN-DISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFP----LCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVH</Hsp_hseq>
+      <Hsp_midline>RS    +   + +SLDYEV EN +++     +    +S R+  ++W++ + +G+ TAL+A TID+ I  ++  K+T +   + +        D     P+L ++  +++ V+  A  V +IEP+ AGSGIP++K YLNG KIP +VR+ TL  KA GV+ SV GGLA G+EGPMIH+GAV+AAGISQGK+T+   D  +FK FR+DH KRDFV  G AAGVSAAFG+PIGG+LFSLEE AS WNQ L WRT   ++IS FTLN++LS       +  LN     GL + G+F     +   E+P F+I+GV GGL GAA+N++NTK+  FR RFI    PW   +  EA+ +A +  T++ L  +FI +CRP   +PT         +  C + EYN +A ++F T E  +R LFH+   +    TLA F   Y+ L+  T+G +V  G+F+P  L G A+GRL      ++FP    +H PG YAL+GAAA LGGV+RMTISL+VI++E+T  + S+  P+++ ++ +K VGD FNEG+YD  I + H+P L WEP    + L A +I+S PV  +        +  +L+   H  FP    +CG   +     +  GIILR ++I +L +  +V+             F D YPR+P I  +R    DE ++  ++LS +MNP+PI   P  +   +F++FR LGLRH++V++   RI GI+TR D ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>4</Iteration_iter-num>
+  <Iteration_query-ID>XP_001627108.1</Iteration_query-ID>
+  <Iteration_query-def>predicted protein [Nematostella vectensis]</Iteration_query-def>
+  <Iteration_query-len>714</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>508.064</Hsp_bit-score>
+      <Hsp_score>1307</Hsp_score>
+      <Hsp_evalue>2.04464e-170</Hsp_evalue>
+      <Hsp_query-from>78</Hsp_query-from>
+      <Hsp_query-to>711</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>631</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>298</Hsp_identity>
+      <Hsp_positive>412</Hsp_positive>
+      <Hsp_gaps>64</Hsp_gaps>
+      <Hsp_align-len>647</Hsp_align-len>
+      <Hsp_qseq>ESLDYDIPENSLFLKEQKSFTPEEIIKVDINRWIVMFIIGVITALIAAAIDICIGLLSKWKYDIIKKNVELCTGNYCMAKPYALWVAIDIFFVCIAACLVVYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKVKMGVNVLIKFWHLNCLLIFQIYLLIHQLLLAHLIDNFPLQTLVAKVVGVVFSVSGGLACGKEGPMIHSGAVVAAGVSQGRSTTFNRDFHIFESFRTDHEKRDFVSGGAAAGVAAAFGAPVGGVLFSLEEGASFWNQALTWRMFFGSIISTFTLNLVLSIYKG--EAGDLSNPGLINFGTFTGNPYFGYELPLFLIMGVIGGLLGALFNAINHHLTIFRMRF--VKRKWLRVVEACIVAALTASSSFVLIYFNKDCNPLGAANVTEGL---QFFCQDGEYSSMGTLTFSTPEESIKNLFHLPLGAFNTLSLFLFFCVYFFLSCWTYGLYVPSGLFVPCILIGATWGRMFATLLHSVFPTWSWSTPGRYALIGAAASLGGVVRMTLSLTVILMEATSNITYGLPMMLVLMIAKWVGDFFNEGIYDMHIKLQGVPLMGWDPPIMATGICANNIMSSPVVCFNTVERVGRIFDILKDPSSYHNGFPVVE------PTQQFGVFRGIILRSQLIILLKHK</Hsp_qseq>
+      <Hsp_hseq>QSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVR-----------------------------------------LSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRP-EPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFH-NRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIV-HDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLE--SNTHGAFPLCGIDENGLPSDQ---FVGIILRHEIITLLKRR</Hsp_hseq>
+      <Hsp_midline>+SLDY++ EN ++     S +     +    +W+V  ++G+ TAL+A  ID+ I  ++  K+ +I + +  C  + C   P+  ++A+++  V +AA  V + EPVAAGSGIP+IKCYLNG K+PHVVR                                         L TL+ K  GV+FSV+GGLA G+EGPMIHSGAV+AAG+SQG++T+   D  +F++FR DH KRDFV+ GAAAGV+AAFG+P+GGVLFSLEEGAS WNQALTWR FF ++IS+FTLNL+LS      + G L+ PGL++FG F    Y   E+P F+I+GV+GGL GA FNAIN  LT+FRMRF  V + W R  EA  +AAL+A+ SF+  +F  +C P     V EG+   +F C +GEY+ M T+ F+T EE+I+ LFH    AF+  +L  F   YF L+  TYG  VPSGLFVPCIL G  +GR+    L  +FP+     PG YAL+GAAA LGGVVRMT+SLTVI++E+T++I+YGLP+ML +M++K VGD FNEG+YD+HI ++ +P +GW+P  +   + A +IMS+PV       RV  +  +L+  S+ H  FP+        P+ Q   F GIILR ++I LLK +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>5</Iteration_iter-num>
+  <Iteration_query-ID>XP_001742728.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein [Monosiga brevicollis MX1]</Iteration_query-def>
+  <Iteration_query-len>790</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>583.948</Hsp_bit-score>
+      <Hsp_score>1504</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>27</Hsp_query-from>
+      <Hsp_query-to>750</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>737</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>332</Hsp_identity>
+      <Hsp_positive>474</Hsp_positive>
+      <Hsp_gaps>18</Hsp_gaps>
+      <Hsp_align-len>730</Hsp_align-len>
+      <Hsp_qseq>HVLPPTKRHFKQQAVYEGLDYEETESEIEQALRRKETEQQNNFHIAQRWALYFVIGVITAGIACSIDMAILKLSGLKFRWLANNIEHCVQHDCLVSSFFLWIATDVALVTLAGALTVYYAPVAQGSGISEIKCFLNGIKMPEVVRLKTLLVKGFGVMCAVVGGMAVGKEGPMIHSGAVVAAGISQGKSTSISSLHTSWFSAFRNDVDKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGSSFWNQLLTWRIFFASMTATFTLNFLLSGVKGG-DWGALSNPGLLNFGQFDTMPYTIAEIPIFMLMGLIGGLSGAAFNGLNLYLTRFRMKFITSRK--LKLLEVSAIAAITVAVAFSMIFFSADCLPMGESP-ESSSPLQFFCADHQYSAMASLFFNTPEDSIKNLFHGKFAEIGSYNYETLALFALAYWLLGCMTYGLAIPSGLFVPTLLTGAAWGRLAGTILTAIFPGRAWTNPGKYSLIGAAANLGGVVRMTISLTVIVIEATGNVSYGLPIIIAVIVAKWVGDRFNEGIYDMHIELKHIPLLPWEPPVVSRYHLTASDIMTRKIQCVRLHEKVGHIVDLLKESKHNAFPVISWPDGDDTQLGIFEGQVLRSTLIVLLKEKAYGPKLRNSIKGRKLTVQEIRKYYPRWPTASSLR--VSAGDREKFLDIEAYYNKSPYSVRWNNSLSRIFHLFRTMGLRHLAVVDIQNRLVGMITRKDIANIHANMTRE</Hsp_qseq>
+      <Hsp_hseq>HLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSL-PLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDA----FSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIV-HDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLME-NLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGI-DENGLPSDQFVGIILRHEIITLLKRRAF-VDYANAVRSH-VDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDKFHRD</Hsp_hseq>
+      <Hsp_midline>H+L  +  H  +Q   + LDYE  E+ + +A    ++    +     +W +  ++G+ TA +A +IDM I  ++G KF  ++  I  C   +C  S F  +IA +V LV++A     +  PVA GSGI EIKC+LNG K+P VVRL TLL K  GVM +V GG+AVG+EGPMIHSGAV+AAGISQGK+TS+  L +  F  FRND  KRDFV+ GAAAGVSAAFG+PIGGVLFSLEEG+S WNQ LTWR FF +M ++FTLN LLSG   G  WG L+ PGL++FG+F    YT+ EIP F+++G++GGLSGAAFN +N  LT FRM+FI   K   +  E   IAA++  V+F   FF  +C P   +  E  +  +F C + +Y+ MA++FF T E++I+ LFH + A    ++Y TLA F  AY+ L  +TYG ++PSGLFVP +LTG A+GRLAG  L  +FP     +PG Y+L+GAAA LGGVVRMTISLTVI++E+T ++SYGLP+++ ++V+K VGD FNEG+YD+HI++KHIP L WEP  +   +LTA+DIM+  +  +    +V  +V LL+ + H AFP+    D +      F G +LR  +I LLK +A+     N+++   +   +    YPR+P    +R  +   D +KF+++  Y N +P + +   + + +F LFR +GLRH+ VVD   R++G++TR D+ ++     R+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>6</Iteration_iter-num>
+  <Iteration_query-ID>XP_002109718.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein TRIADDRAFT_20821 [Trichoplax adhaerens]</Iteration_query-def>
+  <Iteration_query-len>687</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>505.753</Hsp_bit-score>
+      <Hsp_score>1301</Hsp_score>
+      <Hsp_evalue>6.69692e-170</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>667</Hsp_query-to>
+      <Hsp_hit-from>67</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>297</Hsp_identity>
+      <Hsp_positive>424</Hsp_positive>
+      <Hsp_gaps>27</Hsp_gaps>
+      <Hsp_align-len>676</Hsp_align-len>
+      <Hsp_qseq>RWIIMFLIGVSTACVAALIDVGINAISSVKY------LCYFQDCLAQPYLIWLALSISLVFIAAALVVYLEPVAIGSGIPQIKCFLNGVNIQRCVRLKTLVAKAVGVLFSVAGGLPVGKEGPMIHSGAALAAAISNGKVTIGKCSFNIFHYFRSPVEKRDFVSAGAAAGVSAAFGSPVGGVLFSLEEGASFWYQSITWRIFFASMTSTFTLNVIRSFIH-GMPFN-LSFPGLLDFGDFKKGVTYYGYELPIFFLMGIVGGLLGALFNYINYKLSLHRMR--NIRKSYLKLLEAIVVIIVCTAAAFLAVSLNQGCQPKYEAIQSELETFNFTSFKCGNGDYNTMATLFLNTPEKAIKNMFHTPQGLYTIPTLIWFTVIFFFTACWTYGVNVPSGLFVPCILTGAAWGRILGELINLIPGQEWSSPGRYALMGAAAMLAGVVRMTISITVILVEAIGDIAFGLPLMVVILISKLVGDYFNEGLYDIHVQLMKVPLLPWEPPDLSGSLTVKDLTCESVITLRKTERVADIYTVIKDADLRHNGYPV--VDDDGTAATANNTNVKGRLIGLILLSELKTILELQLYKSNHPLKDYRLNGKDFDTFKHFYSKHDDFSCEIPPEDMNKTIDLTKFMNPSPYTVYENMSFPRLYRLFRGLGLRHIVVINSKNQVIGIITRVDL</Hsp_qseq>
+      <Hsp_hseq>KWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEF-VAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTV---YEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHN-RDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNT--HGAFPLCGIDENGLPSD--------QFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>+W++  L+G++TA VA  ID+ I  ++  K+      +    +C   P+L ++A+++ LV +AA  V ++EPVA GSGIP+IKC+LNG  I   VRL TL+ KA GV+FSVAGGL VG+EGPMIHSGA LAA IS GK T       +F  FR+   KRDFV++GAAAGVSAAFGSP+GGVLFSLEEGAS W Q++TWR FF +M S+FTLN++ S    G+ +  L+ PGL+DFG+F    +Y   E+P F ++G+VGGL GA FN IN KL+L RMR   + K + +  EA+ +  +    +FL       C+P+   +    E      F C  G+YN MAT+F  T E+AI+ +FH  +  ++ PTL +F   +F  A  TYG +VPSGLFVPCILTG A+GR+ G  +  +       PG YAL+GAAA L GVVRMTIS+TVI++E+  DI++GLP+M+ I++SK+VGD FNEGLYDIH+ +  +P L WEP  L  +LT  D+    V  L    RV D+  +++     H  +P+  +D++G  +         + +G+IL  E+ T+L+ + +          ++  DF      Y    D   +I  EDM+K ++L+ +MNP+P T     +   ++RLFRGLGLRH+VV++   +++GI+TR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>7</Iteration_iter-num>
+  <Iteration_query-ID>XP_002595670.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein BRAFLDRAFT_200772 [Branchiostoma floridae]</Iteration_query-def>
+  <Iteration_query-len>718</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>624.009</Hsp_bit-score>
+      <Hsp_score>1608</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>698</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>346</Hsp_identity>
+      <Hsp_positive>479</Hsp_positive>
+      <Hsp_gaps>19</Hsp_gaps>
+      <Hsp_align-len>700</Hsp_align-len>
+      <Hsp_qseq>QGLDYDLVENSLFVKE-AAANNKKLIRININRWVVMLMIGILTALVGVVIDILVHQLAGLKYSLLKSWIDSCVEDGCLAIPFALWVAIDALFVCFAAILVAYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKTLISKVIGVVFSVAGGLAVGKEGPMIHSGAVIAAGVSQGMSTTFKRDLKIFKYFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALTWRIFFCSVTTLFTLNIVLSVYFG--RPGELAYPGLLNFGRFTVLSYFWYEIPLFLLMGVAGGLSGALFNFVNHKICIFRMKY--VYKPFMQVVEAMMVAIVTATLAFVSIYVSRDCKPLGQDPSE--KPLQFFCSDGEYSTMATMMFQTPEQSVKSLFHDPPNSYNIGTLSVFCVIYFILACWTYGLSVPSGLFIPSLLCGAGWGRLFGIGVSHLVPNIAWSAPGIYALMGAAAQLGGVVRMTISLTVILMEATGNVSYGLPLMLVLLIAKWVGDIFNEGLYDIHIRLMSVPILGWEPPATSTTISARLVMSHPVTTLQQVEKVGRIVEALKEPHSNHNGFPV--VDTDQVTSGRFRGLILRSHLLVLIKRKMFLERGQTGAIRRNLEMKDFREAYPRFPSIHEL--NISPEEMECSIDLRPYMNPAPYTVSEDASLHRVFRLFRALGLRHLVVVNKDNLVMGIVTRKDL</Hsp_qseq>
+      <Hsp_hseq>QSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHN-RDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHD-PGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLES--NTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYAN--AVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>Q LDY++ EN ++    A+ +N    R    +WVV L++G+ TALV   ID+ +  +AG K++L+   I  C  D C   PF  ++A++ L V  AA  VA+ EPVAAGSGIP+IKCYLNG K+PHVVR+ TL+ K  GV+FSVAGGLAVG+EGPMIHSGAV+AAG+SQG +T+   D  +FK FR D  KRDFV+ GAAAGVSAAFG+P+GGVLFSLEEGAS WNQALTWR FFC++ + FTLN++LS      + G L  PGL++FG F   SY   EIP F+++GV GGLSGA FN +N K+ +FRM++  V KP+ +  EA+ +A ++AT++F+  +   +C+P      E     +F C +GEY+ MAT+ F T E++++ LFH+  ++++  TL+ F   YF LA  TYG SVPSGLF+P +L G  +GRL G  + HL P+I    PG YAL+GAAA LGGVVRMTISLTVI++E+T ++SYGLP+ML ++++K VGD+FNEGLYDIHI +  +P LGWEP      ++A  +MS PV  L    +V  +V  L+   + H  FP+  +D + + S +F G+ILR  ++ L+KR+ F++     A+R +++  DF + YPR+P I ++  +I  E+M+  ++L PYMNPAP T    A+   VFRLFR LGLRH+VVV++   +MGIVTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>8</Iteration_iter-num>
+  <Iteration_query-ID>XP_004363664.1</Iteration_query-ID>
+  <Iteration_query-def>voltage gated chloride channel protein [Capsaspora owczarzaki ATCC 30864]</Iteration_query-def>
+  <Iteration_query-len>979</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>556.599</Hsp_bit-score>
+      <Hsp_score>1433</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>82</Hsp_query-from>
+      <Hsp_query-to>664</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>606</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>306</Hsp_identity>
+      <Hsp_positive>396</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>587</Hsp_align-len>
+      <Hsp_qseq>RSSKVTSISTKFESLDYDILENDIYVKDQAKIDRKHYVRLEAARWLVMFFVGVLTAVVAFLIDYCLTQISSVKFGWISDSITRCVDDECLDQSVLLWMGIDIFLVSIACLLVLFVEPIAQGSGIPEIKCYLNGIKIPHVVRFKALLTKTVGVLFSVSGGLACGKEGPMIHTGSVIAAGISQGKSTTFNIDLNLFKAFRTDHEKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGASFWNQALTWRIFFCSMIASFTLNVLLSGTK-GTSWGAMSSPGLVNFGAFASANYNLFELPIFIAMGAVAGLFGALFNALNHRLTVFRFKYIYHSKAL-RFLEVILVAAATVIVSFTLIYFDDNCLPLGEK--PGENPLEFFCQEHTYNEIATMLFNTPEESIKNLFHATRGDYSPETLSIFFLVMFCLSCWTYGISVPAGVFVPALLTGAAYGRLVGNLLYHAFPDADWVDPGKYALIGAASMLGGIVRMTISLTVIVVEGTGNISYGLPLMLSIMAAKLVGDLFNEGIYDLHIHLRRVPILHWEAPLPMQHFHASHVMSSNVVCIQEFDRVGRIVELLRTTTHNAFPVVTDD</Hsp_qseq>
+      <Hsp_hseq>RSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFH-NRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVH-DPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGID</Hsp_hseq>
+      <Hsp_midline>RS    S     +SLDY++ EN ++    A      Y R    +W+V   VG+ TA+VA+ ID  +  ++  KF  IS  I  C  D C     L ++ +++ LVS+A   V F+EP+A GSGIPEIKCYLNG KIPHVVR   LL K  GV+FSV+GGLA G+EGPMIH+G+V+AAGISQGK+T+  +D  LFK FR DH KRDFV+ GAAAGVSAAFG+PIGGVLFSLEEGAS WNQALTWR FFC+MI+SFTLN+LLSGT  G  WG ++ PGLV+FG F + +Y + E+P F+ +G V GL GA FNA+N +LT+FR ++I  SK   RF E + +AA +  VSF   +F   C P       G     F C E  YN++AT+ F T EE+I+ LFH  R  +S  TL+ F    F L+  TYG SVP+G+FVP +LTG A+GRL G+ L H FP     DPG YAL+GAA+ LGG+VRMTISLTVI++E T +ISYGLP+ML+IM +K+VGDLFNEG+YD+HI ++ +P L WE    M++  A+ +MS+ V  +  F RV  +V LL + TH AFP+   D</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>102.064</Hsp_bit-score>
+      <Hsp_score>253</Hsp_score>
+      <Hsp_evalue>1.88828e-22</Hsp_evalue>
+      <Hsp_query-from>835</Hsp_query-from>
+      <Hsp_query-to>956</Hsp_query-to>
+      <Hsp_hit-from>615</Hsp_hit-from>
+      <Hsp_hit-to>731</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>54</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>126</Hsp_align-len>
+      <Hsp_qseq>LCGIILRSQLITILKERAFGPRVVNAQGEHSVQAKVLTVD--DFRASYPRYPSIDTISTTAYENE--QFMDLRPYLNPTPYTLKHAAPLSRVYRIFRGLGLRHLIITDRFNQVVGMITRKDLTRFE</Hsp_qseq>
+      <Hsp_hseq>FVGIILRHEIITLLKRRAF-VDYANAVRSH--------VDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLE</Hsp_hseq>
+      <Hsp_midline>  GIILR ++IT+LK RAF     NA   H        VD  DF   YPRYP I  I    ++ +  +FM+L PY+NP P T +  A  + V+R+FRGLGLRH+++ DR  +++G++TR DL   E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>9</Iteration_iter-num>
+  <Iteration_query-ID>XP_018668924.2</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7-like [Ciona intestinalis]</Iteration_query-def>
+  <Iteration_query-len>712</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>572.007</Hsp_bit-score>
+      <Hsp_score>1473</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>18</Hsp_query-from>
+      <Hsp_query-to>706</Hsp_query-to>
+      <Hsp_hit-from>35</Hsp_hit-from>
+      <Hsp_hit-to>733</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>319</Hsp_identity>
+      <Hsp_positive>465</Hsp_positive>
+      <Hsp_gaps>32</Hsp_gaps>
+      <Hsp_align-len>710</Hsp_align-len>
+      <Hsp_qseq>LQALDYDTIENELHGEEERKMSSSDWKWIQFQ--RWIICMLIGIMTGIVAVVINICILELTAVKMHVVEQAIIHCVKNRCLYVPLLLWIAINVVLVTVASLLTVFVAPVAAGSGIPQIKCFLNGVKVPNVVRFKTLVTKVIGVIASVSGGLAVGKEGPMIHSGSVLAAGISQGRSISFNLNTRFFKHFRNDREKRDFVCAGAAAGVSAAFGAPVGGVLFSLEEAASFWNQALTWRIFLCSILSSYTLNFFMSIYHHHP----GDLAYPGLINFGKF-SGSYEGFELPIFLLMAVFGGLSGAAFNAINHKITVFRLKYL--KAKYFKVLEVVFVAAVSATIAFVLIYWNPECKPLGQDPYVRL---QFFCNDGEYNTMAVLFFTPPEESVKSLFHDPLGALQPLTIVIFVLPYFFLACWTYGLQVPSGLFIPSLLIGAAWGRLVGNCVNFIWPDDIWAQDLSKYALIGAAAQLGGTVRMTISLTVILIEATGNITYSLPLMAVLLLAKWVGDYFNHGIYDMHIHLNKVPILPWEPPALSTNIQAREVMGTPVVTLRTVPLVSDICSVLSDPRNCHSGYPIT--DSEG----KFRGVILRTQLLILLKHKEFVERGGS-SERIKLSVFRDSYPRYFPLSVI--NVSEGEQQCHVDLRPFLNPSPYTIQENASLPRIFRLFRALGLRHLVVLNDEYKVVGMISRKDIWKWEHK</Hsp_qseq>
+      <Hsp_hseq>VQSLDYEVNENMVW--RAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLS--GTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYP-TLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIV--HDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPY--FVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDK</Hsp_hseq>
+      <Hsp_midline>+Q+LDY+  EN +        S S+W + + +  +W++ +L+G+ T +VA  I++ I  +   K  ++ + I+ C  + C + P L +IA+NV+LV+VA+    F+ PVAAGSGIP+IKC+LNG K+P+VVR  TL+ K  GV+ SV+GGLAVG+EGPMIHSG+VLAAGISQG++ S  L++  FK FRND  KRDFV +GAAAGVSAAFG+P+GGVLFSLEE AS WNQALTWR F C+++SS+TLN  +S     P    G L  PGL++FG+F + SY   E+P F+++ V GGLSGAAFNAIN K+T+FR++++     + +  E +F+AA+SAT++F+  ++  EC+P     Y  +   +F C +GEYN MA +FFT  EE+++ LFH+      P T+  F+  YF LA  TYG  VPSGLF+P +L G A+GRL G+ +  ++P  +   D   YAL+GAAA LGG VRMTISLTVI++E+T +I+Y LP+M  ++++K VGD FN G+YD+HI +  +P L WEP  L  N+ A ++M TPV  L     V     V+    N H  +P+   D  G    +F G+ILR +++ LLK + FV+   +    +    F D YPRY  +  I  ++ + +    ++L P++NP+P T Q  A+   +FRLFR LGLRH+VV++   +++G+++R D+   E K</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>10</Iteration_iter-num>
+  <Iteration_query-ID>XP_643243.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel protein [Dictyostelium discoideum AX4]</Iteration_query-def>
+  <Iteration_query-len>757</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>415.231</Hsp_bit-score>
+      <Hsp_score>1066</Hsp_score>
+      <Hsp_evalue>5.17386e-134</Hsp_evalue>
+      <Hsp_query-from>53</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>25</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>255</Hsp_identity>
+      <Hsp_positive>407</Hsp_positive>
+      <Hsp_gaps>35</Hsp_gaps>
+      <Hsp_align-len>721</Hsp_align-len>
+      <Hsp_qseq>SPLEKQKMKNIQSLNFSVNDNLLQREEYEKTTKGLHLKKTFGKWIICLFLGVIVGCIAYVIKMVVQLLQGLKFHYTNHYV--SNGLQGEAFLTFLGINLLFVFLSCLMVIVAGPLASSSGIPEVKGILNGVKVREALGFRALLGKIVSLVLSFSSGLFVGPEGPMIHIGSAVGAAISQFKSSTMGFYPSLFLSYRNDRDKRDFISIGAATGLAAAFGAPIGGVLFSIEEVSSFWSRQLTWRTFFTCVIAAFTTNFLLQGIGSSPD-----MHDTGLLTFGFSRLYLFRYSELLCFCFLGLIGGLLGAFFVFLNIHLNKWRKEKLK-QNPYLRLFEALFVSVVTSVVCY-YASFIFDCRYQSNIVIETSVCEDQSNTEMVQFFCPDGMYSELGSLLFGNPDQALRRLYSRTNNMFTLPPLLVFTLISLFFSIWSSGLWVAGGLFVPMMMVGAGFGRLFGQTISMWFTNI--DSSIYALVGSAAMMAGYCRMTVCIVVIMVELTEGTQYLVPIILAVMISKWVGDFFNESVYEHLMEQKSIPFLQSKPPHSTNNIRISDVMSKNVVVLPEVCQVRLLVNILNSNNHNAFPVI----NSGPYDNQRLYRGIILRDHILVLLFYRVFYRGTGEEIYLDENFDFDKFTTETSKSPPPLSEMNFDQF--ELDSFIDLRPYMNSSGVTIHNTFSFVEAYKLFRNMGLRHLPVIDINNEVVGMVTRNDL</Hsp_qseq>
+      <Hsp_hseq>SHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLS--GTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYE--------GITLRRFTCPEGEYNDMATIFFTTQEEAIRQLF-HNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQ---FVGIILRHEIITLLKRRAFVDYANA---VRSHVDWLDFVDDYPRY-PDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>S +   +  ++QSL++ VN+N++ R      +   + ++   KW++ L +G+    +AY I M ++ + G KF   +  +   +      FL+++ +N+L V ++   V    P+A+ SGIPE+K  LNG K+   +    LL K   ++ S + GL VG EGPMIH G+ + A ISQ K++++     LF ++RND  KRDF++ GAA G++AAFG+PIGGVLFS+EE +S W++ LTWRTFF  +I++FT N LL   G+SP      ++  GL+ FG      +   E+  F  +G++GGL GA F  +N  L  +R   +    P+ R  EALF++ +++ V + +A FIF+CR +   V E           + +F CP+G Y+++ ++ F   ++A+R+L+    + F+ P L  F       ++ + G  V  GLFVP ++ G  FGRL G  +   F +I  D   YALVG+AA + G  RMT+ + VI++E T    Y +P++L +M+SK VGD FNE +Y+  ++ K IPFL  +P     N+  +D+MS  V VLP   +VR +V +L SN H AFP+     N  P D    + GIILR  I+ LL  R F         +  + D+  F  +  +  P + ++  D F  ++D F++L PYMN + +T     +    ++LFR +GLRH+ V+D    ++G+VTR+DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>11</Iteration_iter-num>
+  <Iteration_query-ID>XP_002506018.1</Iteration_query-ID>
+  <Iteration_query-def>chloride Carrier/Channel family [Micromonas commoda]</Iteration_query-def>
+  <Iteration_query-len>924</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>355.91</Hsp_bit-score>
+      <Hsp_score>912</Hsp_score>
+      <Hsp_evalue>1.24941e-109</Hsp_evalue>
+      <Hsp_query-from>45</Hsp_query-from>
+      <Hsp_query-to>843</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>729</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>263</Hsp_identity>
+      <Hsp_positive>403</Hsp_positive>
+      <Hsp_gaps>90</Hsp_gaps>
+      <Hsp_align-len>808</Hsp_align-len>
+      <Hsp_qseq>SRSIHKERAEMLGGAIDTAQADKAHARLKRMAAFDSHDYDPADNDLEEDARRARKRADYKAEEQWRWAMSVLIGVVMGFLAFTVDGLIKKFNGWKYGATTSSISPGGAGF-GAWLVWVIISCLLASVAGGLVSYVEPLAAGSGIPELKTYLNGVHLRGLLRIKTLGAKLGGIAFSIGSGLIAGKEGPFVHGGGLVGGGLSAFGSHTLGFRTKKPSHFRNDADKRDFVAIGTAVGVAVAFGAPIGGMLFTVEEGASFHSTGMLWRGFLATCTGVLTTHWLDQLDFDAMDFAGAKFGVHR-----DFGLFTDDEANYSRVFWWYFWEVPIFAAIGCMGGLLGAAFVNINVKITMWRQRFIPVSDKYRRHAEVIFVCFVTATVLFIM-MAASPCKPIPEAYRVAAATDGDGNGVSDELPGGVAKFEYGVETRRQIRDQYFRSLFCKADEYSSYGQLFFVPLADSLKLLLHLGEVYEQNGTDEFEQHLFTMDALIMYFVFMYALMTWTYGIGAPTGLFVPSLAVGAAGGQIVGRIVRAMVMSTGSEIVVDLHTYAVVGAAACLGGATRMTISITVLVMETTGSMQLIIPLMLTIFFAKAIGDKYSMGIYDTHIKIRGAPFLD-EPEHAGVAVDKLKVAEVMADSLVTLRPVMRVRELVEVLTNTSHGAFPVTITDVGEGHNAGDPIELHGSITRNILLKMLTHRVSMFDPEEPREVLYENS-EDRDALLEKLKQIPFKSPGVEMIASTLSRREMELSIDLTHFMQRHPFIVHADARLSRAYRLFRTMGLRHMYITPSKPQIIGVVTRKDLVE</Hsp_qseq>
+      <Hsp_hseq>ARVRHKARRAMSGTEWEHL-LQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLL-----LSGTSPGVKWGYLNQPGLVDFGEFV--AQSYTVV------EIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTV-----------------------YE-GITLRR---------FTCPEGEYNDMATIFFTTQEEAIRQLFH-------------NRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPS----IVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPER---LMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLC----GIDENGLPSDQFVGIILRHEIITLLKRRAF---------VDYANAVRSHVDWLDFVDDYP-RYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVH</Hsp_hseq>
+      <Hsp_midline>+R  HK R  M G   +     ++H          S DY+  +N +      ++    Y  E   +W +++L+G+    +A+T+D  I+   G K+   +  I      F   +L ++ ++ LL SVA   V+++EP+AAGSGIPE+K YLNG  +  ++R+ TL  K GG+ FS+  GL  G+EGP +H G ++  G+S   + +L   +     FRND  KRDFVA G A GV+ AFG+PIGG+LF++EEGAS  +  + WR F  T     T + L      +    G K+G        DFG F     +Y+ V      E+P F  IG +GGL GAAF  IN K+T++R RFIPVS  + R AE +F+  ++ATV F+       C+P P                          +E G+  RR           C   EY+    +FF    ++++ L H              +  F+   L  +    + L   TYG   P+GLFVP +  G A G++ G  +  +  S    IV D  TYA+VGAAA LGG  RMTIS+TV+++E+T  +   +P+MLTI  +K +GD ++ G+YD HI I+  PFL  EPE     ++ L  A++M+  +  L   +RVR++V +L + +HGAFP+     G   N     +  G I R+ ++ +L  R           V Y N+       L+ +   P + P +  I + +   +M+  ++L+ +M   P      A  +  +RLFR +GLRHM +     +I+G+VTR DLV </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>12</Iteration_iter-num>
+  <Iteration_query-ID>XP_002768858.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Iteration_query-def>
+  <Iteration_query-len>776</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>253.062</Hsp_bit-score>
+      <Hsp_score>645</Hsp_score>
+      <Hsp_evalue>4.23162e-73</Hsp_evalue>
+      <Hsp_query-from>103</Hsp_query-from>
+      <Hsp_query-to>754</Hsp_query-to>
+      <Hsp_hit-from>66</Hsp_hit-from>
+      <Hsp_hit-to>742</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>212</Hsp_identity>
+      <Hsp_positive>339</Hsp_positive>
+      <Hsp_gaps>83</Hsp_gaps>
+      <Hsp_align-len>706</Hsp_align-len>
+      <Hsp_qseq>VKWILTIVEG---AVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGC---AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLP-FSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVE-AGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGI--QAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDW----ASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFT---IQDH---SHRLLGVVMRSNIVDWVKGQGGVVSANTR------LNLLDLTNRTPTIVS-------------------------ELTPLAQA---YTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVESMEDAAEDYNRSKD</Hsp_qseq>
+      <Hsp_hseq>LKWVVALLVGMATALVAYTIDMFIRG----VAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPV---SKPWARFAEALFIAALSATVSFLFAFFIF-----ECRPEPTTVY---EGITLRRFTCPE----GEYNDMATIFFTTQEEAIRQLFHNR---DAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIM----STPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDR--MRRIMGIVTRHDLVH-LEDKFHRDGSPRD</Hsp_hseq>
+      <Hsp_midline>+KW++ ++ G   A++     + + G    + G    +I  L  D   C     L +IA+ V L+    + V+++ P+A GSGIP++K YLNG  +P ++R   ++ +  G +  V  G   G EGPM H GA++ A ++Q  A +      L   F    +K +FV+ GA  GV+ AF +PIGG+LF++EE +++W + L WR F   +I+S+   L        V+   +N  G + F       + V E   F+++G+  GL GA F         +R  F  +    K   RF + +  A L   ++ L A+ +       C+P     Y   +GI  +   C E    G YN  A +  T ++ +++ LF  R     F    LA   F  F L ++TYG ++P+GLFVP I+ G  FGRL G  +         +PG YA++GAA  + G  RMTISLTVI++E   D+     VM+T++VSK V D+FN+G YDI  +++  P++         N+   D+     + P++       +  +  +L S TH AF    I ++   S + +G+++R  I+  +K +  V  AN        L+ +D   R P IV                             P+A A   + +FR L LRHM+VVD+    R++GIVTR D+V  +ED        +D</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>13</Iteration_iter-num>
+  <Iteration_query-ID>XP_003392724.1</Iteration_query-ID>
+  <Iteration_query-def>putative chloride channel protein [Leishmania infantum JPCM5]</Iteration_query-def>
+  <Iteration_query-len>885</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>244.588</Hsp_bit-score>
+      <Hsp_score>623</Hsp_score>
+      <Hsp_evalue>2.75127e-69</Hsp_evalue>
+      <Hsp_query-from>61</Hsp_query-from>
+      <Hsp_query-to>862</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>728</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>232</Hsp_identity>
+      <Hsp_positive>377</Hsp_positive>
+      <Hsp_gaps>132</Hsp_gaps>
+      <Hsp_align-len>820</Hsp_align-len>
+      <Hsp_qseq>HRPHVFTAEERRRMDWYESIDYAEGQSLVHRVSTTRQSS---TDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLC-CLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIP-TVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLY-RVLEPCVFASLFSTACYVLPLFT-PCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLH----LAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQR---PVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRV---GKADQAYEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYT-FRHLGLRHLPVLDRTQRVVGILTRVSFV</Hsp_qseq>
+      <Hsp_hseq>QRSHVHHSEQ----DDVQSLDYEVNENMVWRAHVASKSNWAYSRERG-LKWVVALLVGMATA----LVAYTIDMF-------IRGVAGAKFTL-----ISRLIVD--CDN-----------------CFWSPFLS----YIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLD-SGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSF---TLNLLLSG----TSPGVKWGYLNQPGLVDF-----GEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTV---YEGITLRRFTC----PEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPC------ILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPE-RLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPD-IVDIRADIFDEDMD-----------------------------------------KFMNLSPYM-NPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLV</Hsp_hseq>
+      <Hsp_midline> R HV  +E+    D  +S+DY   +++V R     +S+   +  +G L+ ++ +L+G+A      LV  T+D         ++GV  ++ +       SR+ +   C++                   WS  L     Y    VL+  +++     + P AAGSGIP++  YLNG   P +  +  L+ K    + +V+ GL VG EGPMIH G+++ AG+  G++ SL    + +F  FRN   +RDF+++GAA G+++AF SP+GG+LF LEE A+H++  L W  F   +   +   T N  LSG        +  G L +  +  F      E     YT   IP  V++ V+ GL   A+   + + + +R R +  +  + R  E    A+L +T  ++   F   C P P  V    E + +  FT     PE  ++ +AT+  T+    +R LF  R A  +P  +  +     LA+   G+S   G+F+ C      +L G   GRL G   +     +  D G  AL+GAAA+  G+ R+T +L V+++E T D+S+   +ML I+V+K + D      Y   +++K +PFL  +    L++  TA DIM++PV VL     V  VV  L    H AFP+  +   G     + G+I R ++  LL      +  +A    VD     D      D   D R+ +  + +D                                          +++L PY+ N AP   Q V  + A +  FR LGLRH+ V+DR +R++GI+TR   V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>14</Iteration_iter-num>
+  <Iteration_query-ID>XP_005828918.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein GUITHDRAFT_88279 [Guillardia theta CCMP2712]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>307.375</Hsp_bit-score>
+      <Hsp_score>786</Hsp_score>
+      <Hsp_evalue>8.8155e-93</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>690</Hsp_query-to>
+      <Hsp_hit-from>67</Hsp_hit-from>
+      <Hsp_hit-to>726</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>231</Hsp_identity>
+      <Hsp_positive>369</Hsp_positive>
+      <Hsp_gaps>64</Hsp_gaps>
+      <Hsp_align-len>706</Hsp_align-len>
+      <Hsp_qseq>RWILTVVIGVSVAASAQVVQSLISLLIGFRNQMLQSLF-DQRRTEADILIFFTMYNAGLVLIAGFLVVFLEPRAAADGISEIKAYLNGSNIPNCFSVQTIIVKLLGSIFASSAGLACGPEGPLIHIGAGIAHAVTAVDKIYTFLPWLPHSVLAQFHNDRDRREFIAAGAGAGIAAAFGAPIGGVLFALEEAASHLSPQLIWRILTSALVATFTLALIKSNGTG----GDISLAGLLSFGTAISIGDAKERTLNSDGTDSVSALDAPIYVWELFLFIILGAVGGVFGGFFGA--------GFDFLTPRRPRSRFLKMVEVLLISLATSYSVFFFASNYPVCRNDGSWTCKEADNWGGWLGCPEGQYDELATLFFGSKEQSIVRMVTQAWPHEPFSNTSLFITSILNLFLMLITYGSPLPAGYFMPSWLVGASIGRLFGQLVKAYVGSSVYS-GAYALAGAAAMLGGVQRTSISLVFIIVECTSNVHFLLPIVTTLMVANFVAQKFTKEGVFDISLRHHSLRFLPHHPDWLMSLCTVSDVMANPVKCLHTVEKVGNIIDLLRNCHHNGFPVLSLEGSRDENCIPRDRLEGLILRSHLRHILGTRFMRDGSTRDSLWSRITAARMSEVSLDGEIELVRRKGVLLPPAD----DRERYVNLAAYMNAACYSVYSQCPLSRAYTIFRSLGLRHLPVVNQRFEVVGMLTRAN</Hsp_qseq>
+      <Hsp_hseq>KWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKA--TSLP-LDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVA--------------QSYTVVEIP-------FFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARF---AEALFIAALSATVSFLFAFFIFECRPEPT-TVYEGITLRRFT-CPEGEYNDMATIFFTTQEEAIRQLFHN---RDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLF-NEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGI----DENGLPSDQFVGIILRHEIITLLKRRAFVDYA---------NAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHD</Hsp_hseq>
+      <Hsp_midline>+W++ +++G++ A  A  +   I  + G +  ++  L  D         + +   N  LV +A F V F+EP AA  GI EIK YLNG  IP+   + T++ K  G +F+ + GLA G EGP+IH GA +A  ++      T LP L   +   F ND  +R+F+A+GA AG++AAFG+PIGGVLF+LEE ASH +  L WR     ++++FTL L+ S  +     G ++  GL+ FG  ++               S + ++ P        F+I+G VGG+ G  F A           F+   +P +RF    E L I+  ++   F FA     CR + + T  E      +  CPEG+Y+++AT+FF ++E++I ++       + FS  +L         L ++TYG+ +P+G F+P  L G + GRL G  ++    S V+  G YAL GAAA LGGV R +ISL  II+E T+++ + LP++ T+MV+  V   F  EG++DI +    + FL   P+ LM   T +D+M+ PV  L    +V +++ LL +  H  FP+  +    DEN +P D+  G+ILR  +  +L  R   D +          A R     LD   +  R   ++   AD    D ++++NL+ YMN A  +       +  + +FR LGLRH+ VV++   ++G++TR +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>15</Iteration_iter-num>
+  <Iteration_query-ID>XP_006818446.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Iteration_query-def>
+  <Iteration_query-len>818</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>593.964</Hsp_bit-score>
+      <Hsp_score>1530</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>94</Hsp_query-from>
+      <Hsp_query-to>797</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>335</Hsp_identity>
+      <Hsp_positive>464</Hsp_positive>
+      <Hsp_gaps>46</Hsp_gaps>
+      <Hsp_align-len>721</Hsp_align-len>
+      <Hsp_qseq>ESLDYDQVENTFTVNVLIHCLLKAFTNSQNKWKKLSNVQCMQVKRWFVMFLIGICTGLVACFINICIDQISAIKYSTVRHFTKMCRDEACMEYALLVWNGFNVTFVTIAAFMVAYIAPVAAGSGIPQIKCYLNGVKVPFVVRIKTLITKVFGVTLSVAGGLSIGKEGPMIHSGAVIAAGVSQGKSTTFKIDGKVFEDFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQSLTWRIFFASMVSTFTLNVVLSYYN-GDPWT-LSNPGLVTFGKFTGQAYYGYEIPIFLLMGVAGGLLGALFNGLNYRLSVFRLKYVYLR--LSCVTEAALVALVTTTISFTMIYFISDCHPIGSNSSPEPL---------QFFCDDGEFSATATLFFNTPEEALKSLFHDPLGAYKPVTVGVFFCIYFCLACWTYGLGVPSGLFIPSLLTGAAWGRLVGIFVHYVFPGGHFSDPGKYALIGAAAQLGGIVRMTISLTVILIEATGDVTYGLPLMLVLMISKWVGDYFNLGLYDIHILLQSVPLLPWEPPAMAHNISAHDVMSHPVVTLNTIETVGKIVDAMSHHHHNGFPV--VDPNEVTDRSFGTYRGLILRSQLIVLLKKEVFNETVGVTSLRQRIRLKDFRDEYPRYPGIKDIKVK--PEHRQYHIDLRPFMNPTPYTVSQNSSLSRIFRLFRGLGLRHLVVVDDHSQVVGIVSRKDL</Hsp_qseq>
+      <Hsp_hseq>QSLDYEVNENM---------VWRAHVASKSNWAYSRE----RGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECR-------PEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHN-RDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFP-SIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQF---VGIILRHEIITLLKRRAFVDY--ANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>+SLDY+  EN          + +A   S++ W         +  +W V  L+G+ T LVA  I++ I  ++  K++ +      C  + C     L +   NV  V++AAF VA+I PVAAGSGIP+IKCYLNG K+P VVR+ TL+ K  GV  SVAGGL++G+EGPMIHSGAV+AAG+SQGK+T+  +D  +F+ FR D  KRDFV+ GAAAGVSAAFG+P+GGVLFSLEEGAS WNQ+LTWR FF +M+S+FTLN++LS  + G  W  L+ PGLV FG+F  Q+Y   EIP F+++GV GGL GA FN +N +L++FR++++ +    +   EA  +A ++ T+SF   +FI +C        PEP          +F C +GE++  AT+FF T EEA++ LFH+   A+   T+  F   YF LA  TYG  VPSGLF+P +LTG A+GRL G  + ++FP     DPG YAL+GAAA LGG+VRMTISLTVI++E+T D++YGLP+ML +M+SK VGD FN GLYDIHI ++ +P L WEP  +  N++A D+MS PV  L     V  +V  +  + H  FP+  +D N +    F    G+ILR ++I LLK+  F +     ++R  +   DF D+YPRYP I DI+     E     ++L P+MNP P T    ++ + +FRLFRGLGLRH+VVVD   +++GIV+R DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>16</Iteration_iter-num>
+  <Iteration_query-ID>XP_009533702.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein PHYSODRAFT_520430 [Phytophthora sojae]</Iteration_query-def>
+  <Iteration_query-len>967</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>538.11</Hsp_bit-score>
+      <Hsp_score>1385</Hsp_score>
+      <Hsp_evalue>9.95813e-179</Hsp_evalue>
+      <Hsp_query-from>153</Hsp_query-from>
+      <Hsp_query-to>926</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>734</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>322</Hsp_identity>
+      <Hsp_positive>466</Hsp_positive>
+      <Hsp_gaps>58</Hsp_gaps>
+      <Hsp_align-len>781</Hsp_align-len>
+      <Hsp_qseq>LKGKGRNPFSAASRKQQMKEKDKEKRAKAQHRESFNYDFFESRVNMQHDQEQTESAVRSLNIARWVMTFGVGLGTALIACFVEFWTSLLSTFRTATMESLVAAEMDGSQAFGTGYLAYSMISVGFVAVASYCVAILCPVAGGSGISEIKATLNGIKIHRVVRLKTLFCKAFGILFSVSGGLPVGKEGPMIHSGSVIGAGLSQGKSSSFGLDTSWTKFKGFRNDKEKRDFISCGAAAGVAAAFGAPIGGVLFALEEGASFWHQNLTWRTFFCAMVSAFVLNYFMSFMEANESNGPTPDVEHVFIGGTLGTQTGTFTFGQFVGSKAYEVLDVPIFIVMGMVGGLFGAGFNGANTVLTKFRKRY--VTHRFLRFGEALLIAFSMATASFWLSYYFGQCRDLAGDYSD--SLSRFYCPEGQYNDLASLFTVNYATSMKQLLHFTGDGSFTPFSLCMFFVVFYIFACWTYGIAVPSGLFVPSLLAGAAYGRICVMIVHYLGFPVGAQD-GMFALIGSACMLGGMARMTISLTVIILECTGVIEWGLPIMVSLMAARWVGNSFNEGLYDIHIHLNHLPFLEFDPPYYARFLRALNIMSSPPTCVPQIAKVGEIYDVLKNCNHGGFPVIVPRSQDAAGGGHRPNLGAKRISPRFAGTIYRHHLAVLLQRKDFFIEKPEPFVRTPAGDTTLLYNDQYALSYRDMEGSYPRYPSINDIQLD--EEERDLWMDLTPYMNPTPHTVQEQTPVPRAFRLFRSLGLRHLIVLNRRNEVRGVITRKDLTPAHLKF</Hsp_qseq>
+      <Hsp_hseq>VRHKARRAMSG-TEWEHLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLI---VDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGL--FKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLS--------GTSPGVKWGYL-----NQPGLVDFGEFV-AQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFH--NRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHL-FPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLC---GIDENG----------LPSDQFVGIILRHEIITLLKRRAFVDYANA--VRS-------------HVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDKF</Hsp_hseq>
+      <Hsp_midline>++ K R   S  +  + + ++     ++    +S +Y+  E+ V   H   ++  A       +WV+   VG+ TAL+A  ++ +   ++  +   +  L+   +D    F + +L+Y  ++V  V+VA++ VA + PVA GSGI EIK  LNG KI  VVRL TL CKA G++FSV+GGL VG+EGPMIHSG+V+ AG+SQGK++S  LD+    FK FRND  KRDF++ GAAAGV+AAFG+PIGGVLF+LEEGAS W+Q LTWRTFFC M+S+F LN  +S        G +P V+  ++      Q G   FG+FV +++Y V+++P F+++G+VGGL GA FN  NT LT FR R+  V+  + RF EAL IA   AT SF  +++  +CR       +  +L RF CPEG+YND+A++F      +++QL H     +F+  +L  F   ++  A  TYG +VPSGLFVP +L G A+GR+    + +L FP    D G +AL+G+A  LGG+ RMTISLTVIILE T  I +GLP+M+++M ++ VG+ FNEGLYDIHI + H+PFL ++P      L A +IMS+P   +P   +V ++  +L++  HG FP+      D  G            S +F G I RH +  LL+R+ F        VR+              + + D    YPRYP I DI+ D  +E+ D +M+L+PYMNP P T Q        FRLFR LGLRH++V++R   + G++TR DL     KF</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>17</Iteration_iter-num>
+  <Iteration_query-ID>XP_011426744.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7 [Crassostrea gigas]</Iteration_query-def>
+  <Iteration_query-len>765</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>581.252</Hsp_bit-score>
+      <Hsp_score>1497</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>743</Hsp_query-to>
+      <Hsp_hit-from>14</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>334</Hsp_identity>
+      <Hsp_positive>469</Hsp_positive>
+      <Hsp_gaps>31</Hsp_gaps>
+      <Hsp_align-len>734</Hsp_align-len>
+      <Hsp_qseq>SMEEEESDSEENKANVSEKILSGDYESLDYDVCENDLYQLEERKKSVKEIMIIEMLRWLVMFFVGLLTGLVASLIDFCVIQSTDLKFSIIKKYVDKCVDNKCMEVPLLVWVGINGGLVIVASILTACFEPVAAGSGIPQIKCYLNGVKVPHVVRLKTIVVKVIGVIFSVAGGLIIGKEGPMIHSGAVIAAGISQGRSDTFRKFDLRIFEFFRSDTEKRDFVAGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALAWRIFFASMVSTFTLNVIQSYIK-GIPWD-LSYPGLFNFGSFDTTSYSAFEIPIFILMGVLGGLFGALFNQLNYILTKFRRRYINKSRD--RVLEAMIVAIITATVGYISLYFNNSCSPMVQDTKDNTV--QVYCNDGQYSSTATILFQSPEDSVKSLFHESKGMYSPSTLVVYCLCVFILACWTYGLYVPSGLFIPGLLVGAAWGRFVGLCLNYIFPDVGWVDFGKYSLIGAAAQLGGIVRMTISLTVIIMEATGNITFGLPIMIVLIVAKWVGDIFNEGIYDMHIHIQGVPILGWEPSSVLTNLSAKEVMSHPVSVFNMRESVGRVMEVLKTETHNGFPVV---EDYIPNPLDSSINEEMSFGTYRGLILRSQLIVLLKQRVFGDNIDQFY-NLSTKDFRDAYPKFTPIRQIHVSQYERDNCE-INLEPYMNPAAYCVTDNALFPRIFKLFRALGLRHLVVVDKHHQVVGMVTRKDL</Hsp_qseq>
+      <Hsp_hseq>SGTEWEHLLQRSHVHHSEQ---DDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDC--DNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSL-PLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFH-NRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVH-DPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPS------------DQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>S  E E   + +  + SE+    D +SLDY+V EN +++     KS         L+W+V   VG+ T LVA  ID  +      KF++I + +  C  + C   P L ++ +N  LV VA+   A  EPVAAGSGIP+IKCYLNG K+PHVVRL T++ K  GV+FSVAGGL +G+EGPMIHSGAV+AAGISQG++ +    D  +F+ FR+D  KRDFVA GAAAGVSAAFG+P+GGVLFSLEEGAS WNQAL WR FF +M+S+FTLN++ S    G+ W  L+ PGL +FG F   SY+  EIP F+++GV+GGL GA FN +N  LT FR R+I  S+   R  EA+ +A ++ATV ++  +F   C P      +     +  C +G+Y+  ATI F + E++++ LFH ++  +S  TL  +    F LA  TYG  VPSGLF+P +L G A+GR  G  L ++FP +   D G Y+L+GAAA LGG+VRMTISLTVII+E+T +I++GLP+M+ ++V+K VGD+FNEG+YD+HI I+ +P LGWEP  ++ NL+A ++MS PV+V      V  V+ +L++ TH  FP+    E+ +P+              + G+ILR ++I LLK+R F D  +    ++   DF D YP++  I  I    ++ D  + +NL PYMNPA       A    +F+LFR LGLRH+VVVD+  +++G+VTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>18</Iteration_iter-num>
+  <Iteration_query-ID>XP_013760162.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel 7 [Thecamonas trahens ATCC 50062]</Iteration_query-def>
+  <Iteration_query-len>819</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1682.54</Hsp_bit-score>
+      <Hsp_score>4356</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>819</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>819</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>819</Hsp_identity>
+      <Hsp_positive>819</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>819</Hsp_align-len>
+      <Hsp_qseq>MPARVRHKARRAMSGTEWEHLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDKFHRDGSPRDVPWHNPHYQFGRDTPRSHEASIAHLYGSTDSKDTSSITSLPRSSATPVQSVAELLASIPGSNVDPQASPTLQRSGIQ</Hsp_qseq>
+      <Hsp_hseq>MPARVRHKARRAMSGTEWEHLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDKFHRDGSPRDVPWHNPHYQFGRDTPRSHEASIAHLYGSTDSKDTSSITSLPRSSATPVQSVAELLASIPGSNVDPQASPTLQRSGIQ</Hsp_hseq>
+      <Hsp_midline>MPARVRHKARRAMSGTEWEHLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLEDKFHRDGSPRDVPWHNPHYQFGRDTPRSHEASIAHLYGSTDSKDTSSITSLPRSSATPVQSVAELLASIPGSNVDPQASPTLQRSGIQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>19</Iteration_iter-num>
+  <Iteration_query-ID>XP_016612789.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein SPPG_00455 [Spizellomyces punctatus DAOM BR117]</Iteration_query-def>
+  <Iteration_query-len>876</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>227.639</Hsp_bit-score>
+      <Hsp_score>579</Hsp_score>
+      <Hsp_evalue>2.29497e-63</Hsp_evalue>
+      <Hsp_query-from>300</Hsp_query-from>
+      <Hsp_query-to>853</Hsp_query-to>
+      <Hsp_hit-from>129</Hsp_hit-from>
+      <Hsp_hit-to>729</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>199</Hsp_identity>
+      <Hsp_positive>305</Hsp_positive>
+      <Hsp_gaps>111</Hsp_gaps>
+      <Hsp_align-len>633</Hsp_align-len>
+      <Hsp_qseq>SAVLVKVYAPYAAGSGIPEVKTILGGFVIRKFLGGWTLLIKCIGLCLSVASGLSLGKEGPLVHVACCV------GNIFPRIFD----KYAKNEAKKREILSASSAAGVSVAFGAPIGGVLFSLEEVSYYFPYKTMWRSFFCAMVAAISLQLV----NP------FRTGKLVLFAVEYKRAWHGFELPFFVLLGILGGLYGSFFIRMNIRVAAYR------KSSWLRHWVIAEVGVVAILTALLSFAHPFLRVSTVELVANLFKECIDNETDFYG-------LCSDHE-NALASV--------VKYLF----------LAAGIKIFF--TIFTFGIRVPAGIFIPSMAVGACVGRALGIGMQLWQMAYPNMWMFSSCKPHEQCVTPGTYAMVGAAAALGGVTRMTVSLTVIMFELTGALTYILPIMLTVMVSKWVGDALGKASIYDALIELNGYPFLD-AKEEYTYSTTVGSVMTRVEDLEVICGSGCTLEALSELVQTTGFKGYPVVA----GLDGMVLVGYAGSAEL------RYAIDQAHQNRCP-------------PTTLCIFTDLQQDTEDPFLDFRPWTDQTPMTISPKFPMELVMELFKKMGLRYVLVVQD-GRLVGIVTKKDLLR</Hsp_qseq>
+      <Hsp_hseq>AAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWAR---FAEALFIAALSATVSF-----------LFAFFIFECRPEPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALE---------HLFPSIV-HD----PGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEG-LYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVN---VLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVH</Hsp_hseq>
+      <Hsp_midline>+A  V    P AAGSGIPE+K  L G+ I   +   TLL K  G+  SVA GL++G+EGP++H    +      G       D    K  +N+  KR+ +++ +AAGVS AFG+PIGGVLFSLEE + ++     WR+FFC M+++ +L L+    +P           LV F     +++   E+PFFV++G++GGL G+ F  +N ++  +R         W R    AE   +A L+A +SF           L A    EC    T  Y         C + E N +A++        ++ LF          LA  +  +F   + T+G  VP+G+F+P +  G   GR  G  ++          +F S   H+    PGTYA+VGAAA LGGV RMT+SLTVI+ E T  ++Y LP+MLT+MVSK VGD   +  +YD  I++   PFL    E    + T   +M+   +   +      +  +  L+++     +P+      GL     VG     E+      R  +D A+  R               P  + I  D+  +  D F++  P+ +  P+T  P      V  LF+ +GLR+++VV    R++GIVT+ DL+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>20</Iteration_iter-num>
+  <Iteration_query-ID>NP_001330038.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>772</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>410.994</Hsp_bit-score>
+      <Hsp_score>1055</Hsp_score>
+      <Hsp_evalue>3.32774e-132</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>755</Hsp_query-to>
+      <Hsp_hit-from>28</Hsp_hit-from>
+      <Hsp_hit-to>732</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>269</Hsp_identity>
+      <Hsp_positive>405</Hsp_positive>
+      <Hsp_gaps>56</Hsp_gaps>
+      <Hsp_align-len>740</Hsp_align-len>
+      <Hsp_qseq>HRDGDGGVNSLDYEVIENYAYREEQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAII---QKSYFAGFIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWCKSGI-CGHFGGGGFIIWDVSDGQDDYYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLP-LLRKCSPCPESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPV--IDHTRSGETLVIGLVLRSHLLVLLQSKVDFQHSPLPCDPSARNIRHSFSEFAKPVSS------------KGLCIEDIH--LTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDLLIEEN</Hsp_qseq>
+      <Hsp_hseq>HHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQ-SYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYE-GITLRR-----------FTCPEGEYNDMATIFFTTQEEAIRQLFHNRD--AFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAAD-IMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLK-------------------RRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLED</Hsp_hseq>
+      <Hsp_midline>H      V SLDYEV EN  +R   A +          +KW  +LL+G+ T L A  I++ +   AG KF L   +I      +++ F+ Y+ +N++LV  +A+ +    P AAGSGIPEIK YLNG  IP  +   TL+ K  G + SV GGLA+G+EGP++H+GA +A+ + QG +T   L+S   + F++D  +RD V  G AAGV+AAF +P+GGVLF+LEE  S W   L WR FF + I +  +   +     G+  G+    G + +     Q  Y   E+    +IGV+GGL GA FN +   +T +R   +       +  EA  I+ +++ +SF     + +C P P +V + GI   R           F   + EYND+ATIFF TQ++AIR LF  +    FS  +L  F+  ++ LAVVT+G +VP+G FVP I+ G  +GRL G  +   +  +  + GTYAL+GAA+FLGG +RMT+SL VI++E TN++     +ML +++SK VGD FNEGLY++   +K IP L   P+  M  + A +   S  V  LP  +RV DV  +L SN H  FP+  ID         +G++LR  ++ LL+                   R +F ++A  V S            +   I DI   +  +D++ +++L+P++NP+P       + T V+ LFR LGLRH+ VV R  R++G++TR DL+  E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>21</Iteration_iter-num>
+  <Iteration_query-ID>NP_001107803.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform b [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>781</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>579.326</Hsp_bit-score>
+      <Hsp_score>1492</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>71</Hsp_query-from>
+      <Hsp_query-to>763</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>336</Hsp_identity>
+      <Hsp_positive>471</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>705</Hsp_align-len>
+      <Hsp_qseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLS-IYHGNMWD-LSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYI--HRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQP-----LQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPA-RLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIH--VSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDL</Hsp_qseq>
+      <Hsp_hseq>QSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPF--LSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQ--SYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLR---RFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYP-TLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLF-PSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLE--SNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYAN--AVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>+SLDY+ +EN ++       ++ A+      +WV+  L+G+ T LVA  ID+ +  +AG K+ +I   I          F  L +  +N   V V +  VAFIEPVAAGSGIP+IKC+LNG KIPHVVRL TL+ K  GV+ SV GGLAVG+EGPMIHSG+V+AAGISQG++TSL  D  +F+ FR D  KRDFV++GAAAGVSAAFG+P+GGVLFSLEEGAS WNQ LTWR FF +MIS+FTLN +LS    G  W  L+ PGL++FG F ++  +YT+ EIP F+ +GVVGG+ GA FNA+N  LT+FR+R+I   +P  +  EA+ +AA++ATV+F+  +   +C+P      +G ++    +  C +GEYN MA  FF T E+++  LFH+      P TL  F   YF LA  TYG +V +G+F+P +L G A+GRL G +L +L   +I  DPG YAL+GAAA LGG+VRMT+SLTVI++E+T++++YG P+ML +M +KIVGD+F EGLYD+HI ++ +PFL WE      +LTA ++MSTPV  L    +V  +V +L   ++ H  FP+    ++  P+ +  G+ILR ++I LLK + FV+ +N   V+  +   DF D YPR+P I  I   +  ++ +  M+LS +MNP+P T    A+   VF+LFR LGLRH+VVVD   +++G+VTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>22</Iteration_iter-num>
+  <Iteration_query-ID>XP_011520656.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>747</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>579.711</Hsp_bit-score>
+      <Hsp_score>1493</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>729</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>727</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>336</Hsp_identity>
+      <Hsp_positive>470</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>705</Hsp_align-len>
+      <Hsp_qseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLS-IYHGNMWD-LSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYI--HRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQP-----LQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPA-RLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVS--QDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDL</Hsp_qseq>
+      <Hsp_hseq>QSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPF--LSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQ--SYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLR---RFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYP-TLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLF-PSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLE--SNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYAN--AVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_hseq>
+      <Hsp_midline>+SLDY+ +EN ++       ++ A+      +WV+  L+G+ T LVA  ID+ +  +AG K+ +I   I          F  L +  +N   V V +  VAFIEPVAAGSGIP+IKC+LNG KIPHVVRL TL+ K  GV+ SV GGLAVG+EGPMIHSG+V+AAGISQG++TSL  D  +F+ FR D  KRDFV++GAAAGVSAAFG+P+GGVLFSLEEGAS WNQ LTWR FF +MIS+FTLN +LS    G  W  L+ PGL++FG F ++  +YT+ EIP F+ +GVVGG+ GA FNA+N  LT+FR+R+I   +P  +  EA+ +AA++ATV+F+  +   +C+P      +G ++    +  C +GEYN MA  FF T E+++  LFH+      P TL  F   YF LA  TYG +V +G+F+P +L G A+GRL G +L +L   +I  DPG YAL+GAAA LGG+VRMT+SLTVI++E+T++++YG P+ML +M +KIVGD+F EGLYD+HI ++ +PFL WE      +LTA ++MSTPV  L    +V  +V +L   ++ H  FP+    ++  P+ +  G+ILR ++I LLK + FV+ +N   V+  +   DF D YPR+P I  I      ++ +  M+LS +MNP+P T    A+   VF+LFR LGLRH+VVVD   +++G+VTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>23</Iteration_iter-num>
+  <Iteration_query-ID>NP_197996.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|923133393|ref|XP_013760162.1|</Hit_id>
+  <Hit_def>chloride channel 7 [Thecamonas trahens ATCC 50062] &gt;gi|906553646|gb|KNC46889.1| chloride channel 7 [Thecamonas trahens ATCC 50062]</Hit_def>
+  <Hit_accession>XP_013760162</Hit_accession>
+  <Hit_len>819</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>410.994</Hsp_bit-score>
+      <Hsp_score>1055</Hsp_score>
+      <Hsp_evalue>5.63978e-132</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>755</Hsp_query-to>
+      <Hsp_hit-from>28</Hsp_hit-from>
+      <Hsp_hit-to>732</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>269</Hsp_identity>
+      <Hsp_positive>405</Hsp_positive>
+      <Hsp_gaps>56</Hsp_gaps>
+      <Hsp_align-len>740</Hsp_align-len>
+      <Hsp_qseq>HRDGDGGVNSLDYEVIENYAYREEQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAII---QKSYFAGFIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWCKSGI-CGHFGGGGFIIWDVSDGQDDYYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLP-LLRKCSPCPESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPV--IDHTRSGETLVIGLVLRSHLLVLLQSKVDFQHSPLPCDPSARNIRHSFSEFAKPVSS------------KGLCIEDIH--LTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDLLIEEN</Hsp_qseq>
+      <Hsp_hseq>HHSEQDDVQSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQ-SYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYE-GITLRR-----------FTCPEGEYNDMATIFFTTQEEAIRQLFHNRD--AFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAAD-IMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLK-------------------RRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDLVHLED</Hsp_hseq>
+      <Hsp_midline>H      V SLDYEV EN  +R   A +          +KW  +LL+G+ T L A  I++ +   AG KF L   +I      +++ F+ Y+ +N++LV  +A+ +    P AAGSGIPEIK YLNG  IP  +   TL+ K  G + SV GGLA+G+EGP++H+GA +A+ + QG +T   L+S   + F++D  +RD V  G AAGV+AAF +P+GGVLF+LEE  S W   L WR FF + I +  +   +     G+  G+    G + +     Q  Y   E+    +IGV+GGL GA FN +   +T +R   +       +  EA  I+ +++ +SF     + +C P P +V + GI   R           F   + EYND+ATIFF TQ++AIR LF  +    FS  +L  F+  ++ LAVVT+G +VP+G FVP I+ G  +GRL G  +   +  +  + GTYAL+GAA+FLGG +RMT+SL VI++E TN++     +ML +++SK VGD FNEGLY++   +K IP L   P+  M  + A +   S  V  LP  +RV DV  +L SN H  FP+  ID         +G++LR  ++ LL+                   R +F ++A  V S            +   I DI   +  +D++ +++L+P++NP+P       + T V+ LFR LGLRH+ VV R  R++G++TR DL+  E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>6723</Statistics_db-num>
+      <Statistics_db-len>4316558</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

@@ -1,0 +1,1141 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>NP_001278.1</BlastOutput_query-ID>
+  <BlastOutput_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</BlastOutput_query-def>
+  <BlastOutput_query-len>805</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>NP_001278.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>805</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1650.57</Hsp_bit-score>
+      <Hsp_score>4273</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>805</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>805</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>805</Hsp_identity>
+      <Hsp_positive>805</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>805</Hsp_align-len>
+      <Hsp_qseq>MANVSKKVSWSGRDRDDEEAAPLLRRTARPGGGTPLLNGAGPGAARQSPRSALFRVGHMSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_qseq>
+      <Hsp_hseq>MANVSKKVSWSGRDRDDEEAAPLLRRTARPGGGTPLLNGAGPGAARQSPRSALFRVGHMSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_hseq>
+      <Hsp_midline>MANVSKKVSWSGRDRDDEEAAPLLRRTARPGGGTPLLNGAGPGAARQSPRSALFRVGHMSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>NP_506022.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein [Caenorhabditis elegans]</Iteration_query-def>
+  <Iteration_query-len>796</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>635.18</Hsp_bit-score>
+      <Hsp_score>1637</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>18</Hsp_query-from>
+      <Hsp_query-to>785</Hsp_query-to>
+      <Hsp_hit-from>47</Hsp_hit-from>
+      <Hsp_hit-to>798</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>370</Hsp_identity>
+      <Hsp_positive>509</Hsp_positive>
+      <Hsp_gaps>50</Hsp_gaps>
+      <Hsp_align-len>785</Hsp_align-len>
+      <Hsp_qseq>EDPVSGLERVMSNSNLEHVARQRRRLEEELL---------FSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWR-ISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKD--YNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTL--HHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDD---QMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNRE</Hsp_qseq>
+      <Hsp_hseq>QSPRSALFRVGHMSSVE--------LDDELLDPDMDPPHPFPKEI-----PHNEKLLSLKYESLDYDNSENQLFLEEERRINH--TAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVI-------KGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPL---QLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT------QPARLQGLILRSQLIVLLKHKVFVER--SNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLE</Hsp_hseq>
+      <Hsp_midline>+ P S L RV   S++E        L++ELL         F +++       + + LS +YESL+Y+ SEN+L+ + E++ +H  T +R +   RW +C LIG+ TGLVA FIDI+V     +K+  I        G   + T  G +   ++ W   N   V + +++V ++ P+A GSGIPQIKC+LNG+ IP VVRLKTLV K  GV  SV GGL  GKEGPMIHSG+ + AGISQG+S SL  DF +F  FR D EKRDFVSAGAAAGV+AAFGAP+GGVLFSLEEGASFWNQ LTWR+FF++MIS+FT+N++LS ++G    LS  GL NFG F+++   Y I EIP+F+ +G++GG LGA+FN LN  LT FR +Y+     ++ E +LVAAV+  +AF+ I++  DCQP+     +      Q++C  GEY+++A+ FF  PE+SV S+FH P  S+   TL +F + YF L  WT+G++V +GVFIP++L GAAWGRLFGI +  L  +    DPGKYAL GAAAQLGG+VRMT+SLT I+MEAT ++T+G PIMLVLM  K VGD+F EGLYD HI L  VP L W  P  S ++ A  VM   V  L RRE+V  IV++L  T   H+GFPVV+  +++         RL+G ILRSQL  LL++++F E   SN  L       +D  D   +   +  + ++  +  C +D+  +M+P P+ VP   SLP +F+LFR LGLR+L VV++ N + G++TRKD+AR+R  +R  E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>3</Iteration_iter-num>
+  <Iteration_query-ID>NP_610798.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel-b [Drosophila melanogaster]</Iteration_query-def>
+  <Iteration_query-len>813</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>645.58</Hsp_bit-score>
+      <Hsp_score>1664</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>113</Hsp_query-from>
+      <Hsp_query-to>810</Hsp_query-to>
+      <Hsp_hit-from>93</Hsp_hit-from>
+      <Hsp_hit-to>787</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>355</Hsp_identity>
+      <Hsp_positive>480</Hsp_positive>
+      <Hsp_gaps>15</Hsp_gaps>
+      <Hsp_align-len>704</Hsp_align-len>
+      <Hsp_qseq>NYESLDYEVCENTLFQDEQRKRLTERFSLRKDIIRWIIFIQIGIITALIACTIDIIIEELSIRKYTFLYNSVKENVPLSDASDRDLLIPYLYWLLFSIVPVAFGAAMVTYIEPITAGSGIPQVKSYLNGVKIPRIVRIKTLAVKAIGVITSVVGGLAGGKEGPMIHAGAVVAAGISQGKSTTFLKDFRIFKAFRDDHEKRDFVLGGGAAGVSAAFGAPIGGMLFSLEEAASFWNQNLIWRTLVASIISVFTLNIVLSAYHG-LNDFTFTGLFNLGKFDT-PLKFDYFELPIFMILGVTGGLLGAAWNSLNTKINKFRKRFIPWKIGKVLEAVVVAMMGVTLACLMIYFINDCRPLGNDPTNNPVQLFCEDNEYNAVAALWFQTPEATVRSLFHDPPGSHKILTLALFTVVYYVLSCATFGLNVSLGVFIPTALVGAAWGRLLAMLTYYVFPQAEFLHPGKYALIGAAANLGGVLRMTISLSVILMETTGVETSFFFPLIIALISAKWVGDYFNEGIYDTQIQVNHVPMLTWEPLPQYKGLKAREILSKPVICIKIRDSANYIYEMLKK--CDHNGFPVVDDVCGDRRSEGRVCGIILRSQLIVILLKSLYVENKRFWLPET--SIQTFRDLYPRFPSIKSVRKLDEKINYTVDLSMFMNPSPIRVNPHDSVPRIFQIFRALGLRHLLVINHENRIAGIITRRDF</Hsp_qseq>
+      <Hsp_hseq>KYESLDYDNSENQLFLEEER-RINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKF-----TEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATS-NVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEH--ADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDL</Hsp_hseq>
+      <Hsp_midline> YESLDY+  EN LF +E+R R+        +I RW+I   IGI+T L+AC IDI++E L+  KY  +  ++ +           L    L W   +   V  G+ +V +IEP+ AGSGIPQ+K +LNGVKIP +VR+KTL +K  GVI SVVGGLA GKEGPMIH+G+V+AAGISQG+ST+  +DF+IF+ FR D EKRDFV  G AAGVSAAFGAP+GG+LFSLEE ASFWNQ L WR   AS+IS FTLN VLS YHG + D +  GL N G+FD+  + +   E+P+F+ +GV GG+LGA +N+LN  +  FR R+I     +V+EAV+VA +  T+A ++IY   DC+PL     + P+QLFC D EYN++AA +F TPE +V SLFHDPPGS+  LTL LFT+VY+ L+C T+GL VS GVFIP+ L+GAAWGRL  +   Y+   A +  PGKYAL+GAAA LGG++RMT+SL+VI+ME T    ++ FP+++ L++AK VGD F EG+YD  IQ+  VP L WE       L ARE++S PV C++ R+    I ++L     +HNGFPVV+    D     R+ G+ILRSQLIV+L   ++VE     L +    ++ FRD YPRFP I+S+    ++   T+DLS FMNPSP  V    S+PR+F++FRALGLRHL+V+++ N++ G++TR+D </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>4</Iteration_iter-num>
+  <Iteration_query-ID>XP_001627108.1</Iteration_query-ID>
+  <Iteration_query-def>predicted protein [Nematostella vectensis]</Iteration_query-def>
+  <Iteration_query-len>714</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>659.062</Hsp_bit-score>
+      <Hsp_score>1699</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>67</Hsp_query-from>
+      <Hsp_query-to>712</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>634</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>356</Hsp_identity>
+      <Hsp_positive>456</Hsp_positive>
+      <Hsp_gaps>45</Hsp_gaps>
+      <Hsp_align-len>650</Hsp_align-len>
+      <Hsp_qseq>PGSLQKISPKFESLDYDIPENSLFLKEQKSFTPEEIIKVDINRWIVMFIIGVITALIAAAIDICIGLLSKWKYDIIKKNVELCTGNYCMAKPYALWVAIDIFFVCIAACLVVYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKVKMGVNVLIKFWHLNCLLIFQIYLLIHQLLLAHLIDNFPLQTLVAKVVGVVFSVSGGLACGKEGPMIHSGAVVAAGVSQGRSTTFNRDFHIFESFRTDHEKRDFVSGGAAAGVAAAFGAPVGGVLFSLEEGASFWNQALTWRMFFGSIISTFTLNLVLSIYKGEAGDLSNPGLINFGTFTGNP--YFGYELPLFLIMGVIGGLLGALFNAINHHLTIFRMRFVKRKWLRVVEACIVAALTASSSFVLIYFNKDCNPLGAANVTEGLQFFCQDGEYSSMGTLTFSTPEESIKNLFHLPLGAFNTLSLFLFFCVYFFLSCWTYGLYVPSGLFVPCILIGATWGRMFATLLHSVFPTWSWSTPGRYALIGAAASLGGVVRMTLSLTVILMEATSNITYGLPMMLVLMIAKWVGDFFNEGIYDMHIKLQGVPLMGWDPPIMATGICANNIMSSPVVCFNTVERVGRIFDILKDPSSYHNGFPVVEPTQ--QFGVFRGIILRSQLIILLKHKV</Hsp_qseq>
+      <Hsp_hseq>PHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLK-----------------------------------------TLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKV</Hsp_hseq>
+      <Hsp_midline>P + + +S K+ESLDYD  EN LFL+E++         V+I RW++  +IG++T L+A  IDI +  L+  KY +IK N++  T    ++    LW  ++  FV + + +V + EPVAAGSGIPQIKC+LNGVK+PHVVR+K                                         TLV KV GV+ SV GGLA GKEGPMIHSG+V+AAG+SQGRST+  RDF IFE FR D EKRDFVS GAAAGV+AAFGAPVGGVLFSLEEGASFWNQ LTWR+FF S+ISTFTLN VLSIY G   DLS+PGLINFG F      Y  +E+P+F+ MGV+GG+LGA+FNA+N+ LT+FR+R++ R  L+V+EA +VAA+TA+ +FVLIY ++DC PL   +++  LQ FC DGEY+SM    F+TPE+S+ +LFH P G++N L+L LF  VYFFL+CWTYGL V +G+F+P +LIGA WGR+F   L  +     W+ PG+YAL+GAAA LGG+VRMTLSLTVI+MEATSN+TYG P+MLVLM AK VGD F EG+YDMHI+LQ VP + W+ P+ +  + A  +MS+PV C    E+VG I D+L D +S HNGFPVVE     Q    +G+ILRSQLI+LLKHKV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>5</Iteration_iter-num>
+  <Iteration_query-ID>XP_001742728.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein [Monosiga brevicollis MX1]</Iteration_query-def>
+  <Iteration_query-len>790</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>677.937</Hsp_bit-score>
+      <Hsp_score>1748</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>42</Hsp_query-from>
+      <Hsp_query-to>741</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>730</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>365</Hsp_identity>
+      <Hsp_positive>490</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>704</Hsp_align-len>
+      <Hsp_qseq>YEGLDYEETESEIEQALRRKETEQQNNFHIAQRWALYFVIGVITAGIACSIDMAILKLSGLKFRWLANNIEHCVQHDCLVSSFFLWIATDVALVTLAGALTVYYAPVAQGSGISEIKCFLNGIKMPEVVRLKTLLVKGFGVMCAVVGGMAVGKEGPMIHSGAVVAAGISQGKSTSISSLHTSWFSAFRNDVDKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGSSFWNQLLTWRIFFASMTATFTLNFLLSGVKGGDWGALSNPGLLNFGQFDT--MPYTIAEIPIFMLMGLIGGLSGAAFNGLNLYLTRFRMKFITSRKLKLLEVSAIAAITVAVAFSMIFFSADCLPMGESPESSSPLQFFCADHQYSAMASLFFNTPEDSIKNLFHGKFAEIGSYNYETLALFALAYWLLGCMTYGLAIPSGLFVPTLLTGAAWGRLAGTILTAIFPGRAWTNPGKYSLIGAAANLGGVVRMTISLTVIVIEATGNVSYGLPIIIAVIVAKWVGDRFNEGIYDMHIELKHIPLLPWEPPVVSRYHLTASDIMTRKIQCVRLHEKVGHIVDLLKE--SKHNAFPVISWPDGDDTQLGIFEGQVLRSTLIVLLKEKAYGPKLRNSIKGRKLTVQEIRKYYPRWPTASSLRVSAGDREKFLDIEAYYNKSPYSVRWNNSLSRIFHLFRTMGLRHLAVVDIQNRLVGMITRKDIA</Hsp_qseq>
+      <Hsp_hseq>YESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKR-DFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWD-LSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPL-QGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDP---PGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTS-HSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVE--HADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLA</Hsp_hseq>
+      <Hsp_midline>YE LDY+ +E+++     R+           +RW +  +IG++T  +AC ID+ +  L+GLK+R +  NI+   +   L  S  LW   + A V +   +  +  PVA GSGI +IKCFLNG+K+P VVRLKTL++K  GV+ +VVGG+AVGKEGPMIHSG+V+AAGISQG+STS+       F  FR D +KRDFVS GAAAGVSAAFGAP+GGVLFSLEEG+SFWNQ LTWRIFFASM +TFTLNF+LS   G  W  LS+PGL+NFG+FD+  M YTI EIP+F+ MG++GG+ GA FN LN +LT FR+++I    L+++E   +AA+T  VAF +I+ S DC P+ +    S PLQ FCAD +Y++MA+ FFNTPE S+ +LFH      GSYN  TL LF L Y+ L C TYGL + +G+F+P+LL GAAWGRL G  L+ +     W +PGKY+L+GAAA LGG+VRMT+SLTVI++EAT NV+YG PI++ ++ AK VGD F EG+YDMHI+L+ +P L WE PV S + LTA ++M+  + C+R  EKVG IVD+L +  S HN FPV+     DDTQ    +G +LRS LIVLLK K +  +    +  R+L +++ R  YPR+P   S+ VS  +RE  +D+  + N SPY+V    SL R+F LFR +GLRHL VVD +N++VG++TRKD+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>6</Iteration_iter-num>
+  <Iteration_query-ID>XP_002109718.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein TRIADDRAFT_20821 [Trichoplax adhaerens]</Iteration_query-def>
+  <Iteration_query-len>687</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>605.52</Hsp_bit-score>
+      <Hsp_score>1560</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>686</Hsp_query-to>
+      <Hsp_hit-from>123</Hsp_hit-from>
+      <Hsp_hit-to>802</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>340</Hsp_identity>
+      <Hsp_positive>472</Hsp_positive>
+      <Hsp_gaps>32</Hsp_gaps>
+      <Hsp_align-len>699</Hsp_align-len>
+      <Hsp_qseq>NIQRWIIMFLIGVSTACVAALIDVGINAISSVKYLCYFQDC--------LAQPYLIWLALSISLVFIAAALVVYLEPVAIGSGIPQIKCFLNGVNIQRCVRLKTLVAKAVGVLFSVAGGLPVGKEGPMIHSGAALAAAISNGKVTIGKCSFNIFHYFRSPVEKRDFVSAGAAAGVSAAFGSPVGGVLFSLEEGASFWYQSITWRIFFASMTSTFTLNVIRSFIHGMPFNLSFPGLLDFGDF-KKGVTYYGYELPIFFLMGIVGGLLGALFNYINYKLSLHRMRNIRKSYLKLLEAIVVIIVCTAAAFLAVSLNQGCQPKYEAIQSELETFNFTSFKCGNGDYNTMATLFLNTPEKAIKNMFHTPQGLYTIPTLIWFTVIFFFTACWTYGVNVPSGLFVPCILTGAAWGRILGELINLIPGQE-WSSPGRYALMGAAAMLAGVVRMTISITVILVEAIGDIAFGLPLMVVILISKLVGDYFNEGLYDIHVQLMKVPLLPWEPPDLSGSLTVKDLTCESVITLRKTERVADIYTVIKDADLRHNGYPVVDDDGTAATANNTNVKGRLIGLILLSELKTILELQLY--KSNHPLKDYRLNGKDF-DTFKHFYSKHDDFSCEIPPEDMNKTIDLTKFMNPSPYTVYENMSFPRLYRLFRGLGLRHIVVINSKNQVIGIITRVDLARYRHSQAGGKVIMEKLAI</Hsp_qseq>
+      <Hsp_hseq>EIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQP----LQGGSMSYPLQLF-CADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEH------ADDTQ-PARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQ---SIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRG----LEELSL</Hsp_hseq>
+      <Hsp_midline> I+RW+I  LIG+ T  VA  ID+ +  ++ +KY     +         L+   L+W  L+ + V + + +V ++EPVA GSGIPQIKCFLNGV I   VRLKTLV K  GV+ SV GGL VGKEGPMIHSG+ +AA IS G+ T  K  F IF YFR   EKRDFVSAGAAAGVSAAFG+PVGGVLFSLEEGASFW Q +TWRIFFASM STFTLN + S  HG  ++LS PGL++FG F  + + Y  +E+P+F  MG+VGG+LGA+FN +NY L++ R+R I +  L+++EA++V  V    AF+ +  ++ CQP    +Q    ++    F C +G+YN+MA  F NTPEK++ ++FH P G Y   TL  FT+++FF ACWTYG+ V +G+F+P +L GAAWGR+ G  ++ + G   W+ PG+YALMGAAA L G+VRMT+S+TVI++EA  ++ +G P+M+V++ +K+VGD F EGLYD+H+QL  VP L WE P  S SLT +++    V  LR+ E+V  I  V+ D    HNG+PVV+       A++T    RL GLIL S+L  +L+ +++  +SN  L   RL  KDF D +  F       S  +  ++   T+DL++FMNPSPYTV +  S PR+++LFR LGLRH+VV++++NQV+G++TR DLARYR  + G    +E+L++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>7</Iteration_iter-num>
+  <Iteration_query-ID>XP_002595670.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein BRAFLDRAFT_200772 [Branchiostoma floridae]</Iteration_query-def>
+  <Iteration_query-len>718</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>860.136</Hsp_bit-score>
+      <Hsp_score>2221</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>718</Hsp_query-to>
+      <Hsp_hit-from>28</Hsp_hit-from>
+      <Hsp_hit-to>746</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>444</Hsp_identity>
+      <Hsp_positive>555</Hsp_positive>
+      <Hsp_gaps>7</Hsp_gaps>
+      <Hsp_align-len>722</Hsp_align-len>
+      <Hsp_qseq>NGKMFTLYFQGLDYDLVENSLFVKEAAANNKKLIR-ININRWVVMLMIGILTALVGVVIDILVHQLAGLKYSLLKSWIDSCVEDGCLAIPFALWVAIDALFVCFAAILVAYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKTLISKVIGVVFSVAGGLAVGKEGPMIHSGAVIAAGVSQGMSTTFKRDLKIFKYFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALTWRIFFCSVTTLFTLNIVLSVYFGRPGELAYPGLLNFGRFTV--LSYFWYEIPLFLLMGVAGGLSGALFNFVNHKICIFRMKYVYKPFMQVVEAMMVAIVTATLAFVSIYVSRDCKPLGQDPSEKPLQFFCSDGEYSTMATMMFQTPEQSVKSLFHDPPNSYNIGTLSVFCVIYFILACWTYGLSVPSGLFIPSLLCGAGWGRLFGIGVSHLVPNIAWSAPGIYALMGAAAQLGGVVRMTISLTVILMEATGNVSYGLPLMLVLLIAKWVGDIFNEGLYDIHIRLMSVPILGWEPPATSTTISARLVMSHPVTTLQQVEKVGRIVEALKEPHSNHNGFPVVD-TDQVTSGRFRGLILRSHLLVLIKRKMFLERGQTGAIRRNLEMKDFREAYPRFPSIHELNISPEEMECSIDLRPYMNPAPYTVSEDASLHRVFRLFRALGLRHLVVVNKDNLVMGIVTRKDLARYRLVSLRSLDLEELQMSH</Hsp_qseq>
+      <Hsp_hseq>NEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYR---LGKRGLEELSLAQ</Hsp_hseq>
+      <Hsp_midline>N K+ +L ++ LDYD  EN LF++E    N    R + I RWV+  +IGILT LV   IDI+V  LAGLKY ++K  ID   E G L+    LW  ++A FV   +++VA+ EPVAAGSGIPQIKC+LNGVK+PHVVR+KTL+ KV GV+ SV GGLAVGKEGPMIHSG+VIAAG+SQG ST+ KRD KIF+YFR DTEKRDFVS GAAAGVSAAFGAPVGGVLFSLEEGASFWNQ LTWRIFF S+ + FTLN VLS+Y G   +L+ PGL+NFGRF    ++Y  +EIP+F+ MGV GG+ GA+FN +N+ + +FR++Y+++P +QV+EA++VA VTAT+AFV IY SRDC+PL       PLQ FC+DGEY++MA   F TPE+SV SLFHDPP SYN  TL +F ++YF LACWTYGL+V +G+FIPSLL GA WGRLFGI +S+L     W+ PG YALMGAAAQLGG+VRMT+SLTVI+MEAT NV+YG P+MLVL+ AK VGD+F EGLYD+HI+L SVP L WE P TS +++AR VMS PVT L++ EKVG IV+ L +  SNHNGFPVV+  D     R +GLILRS L+VL+K K+F+ER   G ++R L +KDFR+AYPRFP I  +++S +E EC++DL  +MNP+PYTV ++ASL RVF+LFRALGLRHLVVV+  N V+G+VTRKDLARYR   L    LEEL ++ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>8</Iteration_iter-num>
+  <Iteration_query-ID>XP_004363664.1</Iteration_query-ID>
+  <Iteration_query-def>voltage gated chloride channel protein [Capsaspora owczarzaki ATCC 30864]</Iteration_query-def>
+  <Iteration_query-len>979</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>596.275</Hsp_bit-score>
+      <Hsp_score>1536</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>672</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>676</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>336</Hsp_identity>
+      <Hsp_positive>445</Hsp_positive>
+      <Hsp_gaps>33</Hsp_gaps>
+      <Hsp_align-len>679</Hsp_align-len>
+      <Hsp_qseq>VTRNPDWDGNKDGDDEDSDDHGDQDEEAGGDESSRLLLNGGGDGDLRN------FQSANMA----------------NSVRKLRSSKVTSISTKFESLDYDILENDIYVKDQAKIDRKHYVRLEAARWLVMFFVGVLTAVVAFLIDYCLTQISSVKFGWISDSITRCVDDECLDQSVLLWMGIDIFLVSIACLLVLFVEPIAQGSGIPEIKCYLNGIKIPHVVRFKALLTKTVGVLFSVSGGLACGKEGPMIHTGSVIAAGISQGKSTTFNIDLNLFKAFRTDHEKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGASFWNQALTWRIFFCSMIASFTLNVLLSGTKGTSWGAMSSPGLVNFGAFASAN--YNLFELPIFIAMGAVAGLFGALFNALNHRLTVFRFKYIYHSKALRFLEVILVAAATVIVSFTLIYFDDNCLPLGEKPGENPLEFFCQEHTYNEIATMLFNTPEESIKNLFHATRGDYSPETLSIFFLVMFCLSCWTYGISVPAGVFVPALLTGAAYGRLVGNLLYHAFPDADWVDPGKYALIGAASMLGGIVRMTISLTVIVVEGTGNISYGLPLMLSIMAAKLVGDLFNEGIYDLHIHLRRVPILHWEAPLPMQHFHASHVMSSNVVCIQEFDRVGRIVELLRTT--THNAFPVVTD-DGIQRWRQQ</Hsp_qseq>
+      <Hsp_hseq>VSKKVSWSG-RDRDDEEAAPLLRRTARPGGGTP---LLNGAGPGAARQSPRSALFRVGHMSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWD-LSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYI-HRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQ</Hsp_hseq>
+      <Hsp_midline>V++   W G +D DDE++     +    GG      LLNG G G  R       F+  +M+                +   K        +S K+ESLDYD  EN ++++++ +I+   +  +E  RW++   +G+LT +VA  ID  +  ++ +K+  I  +I +  +   L  S+LLW  ++   V +  ++V F+EP+A GSGIP+IKC+LNG+KIPHVVR K L+ K  GV+ SV GGLA GKEGPMIH+GSVIAAGISQG+ST+   D  +F+ FR D EKRDFVS GAAAGVSAAFGAP+GGVLFSLEEGASFWNQ LTWRIFF SMI++FTLN +LS   G  W  +SSPGL+NFG F S    Y + E+P+FIAMG V G+ GA+FNALN+ LT+FR +YI H   L+ +E +LVAA T  V+F LIY   +C PL       PL+ FC +  YN +A   FNTPE+S+ +LFH   G Y+P TL +F LV F L+CWTYG++V AGVF+P+LL GAA+GRL G  L +    A W DPGKYAL+GAA+ LGGIVRMT+SLTVI++E T N++YG P+ML +M AK+VGD+F EG+YD+HI L+ VP LHWEAP+      A  VMS+ V C++  ++VG IV++L  T   HN FPVV   D  Q  R Q</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>122.865</Hsp_bit-score>
+      <Hsp_score>307</Hsp_score>
+      <Hsp_evalue>1.28979e-27</Hsp_evalue>
+      <Hsp_query-from>817</Hsp_query-from>
+      <Hsp_query-to>957</Hsp_query-to>
+      <Hsp_hit-from>653</Hsp_hit-from>
+      <Hsp_hit-to>792</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>90</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>145</Hsp_align-len>
+      <Hsp_qseq>DSASLQHAPLVNEHSYGT----LCGIILRSQLITILKERAFGPRVVNAQGEHSVQAKVLTVDDFRASYPRYPSIDTISTTAYENEQFMDLRPYLNPTPYTLKHAAPLSRVYRIFRGLGLRHLIITDRFNQVVGMITRKDLTRFEI</Hsp_qseq>
+      <Hsp_hseq>DTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVER-----SNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRL</Hsp_hseq>
+      <Hsp_midline>D+AS  +   V EH+  T    L G+ILRSQLI +LK + F  R         +  + L + DFR +YPR+P I +I  +  E E  MDL  ++NP+PYT+   A L RV+++FR LGLRHL++ D  NQVVG++TRKDL R+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>9</Iteration_iter-num>
+  <Iteration_query-ID>XP_018668924.2</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7-like [Ciona intestinalis]</Iteration_query-def>
+  <Iteration_query-len>712</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>753.436</Hsp_bit-score>
+      <Hsp_score>1944</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>704</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>733</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>397</Hsp_identity>
+      <Hsp_positive>513</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>698</Hsp_align-len>
+      <Hsp_qseq>QALDYDTIENELHGEEERKMSSSDWKWIQFQRWIICMLIGIMTGIVAVVINICILELTAVKMHVVEQAIIHCVKNRCLYVPLLLWIAINVVLVTVASLLTVFVAPVAAGSGIPQIKCFLNGVKVPNVVRFKTLVTKVIGVIASVSGGLAVGKEGPMIHSGSVLAAGISQGRSISFNLNTRFFKHFRNDREKRDFVCAGAAAGVSAAFGAPVGGVLFSLEEAASFWNQALTWRIFLCSILSSYTLNFFMSIYHHHPGDLAYPGLINFGKFSG---SYEGFELPIFLLMAVFGGLSGAAFNAINHKITVFRLKYLKAKYFKVLEVVFVAAVSATIAFVLIYWNPECKPL-GQDPYVRLQFFCNDGEYNTMAVLFFTPPEESVKSLFHDPLGALQPLTIVIFVLPYFFLACWTYGLQVPSGLFIPSLLIGAAWGRLVGNCVNFIWPDDIWAQDLSKYALIGAAAQLGGTVRMTISLTVILIEATGNITYSLPLMAVLLLAKWVGDYFNHGIYDMHIHLNKVPILPWEPPALSTNIQAREVMGTPVVTLRTVPLVSDICSVLSDPRNCHSGYPITD-----SEGKFRGVILRTQLLILLKHKEFVER---GGSSERIKLSVFRDSYPRYFPLSVINVSEGEQQCHVDLRPFLNPSPYTIQENASLPRIFRLFRALGLRHLVVLNDEYKVVGMISRKDIWKWE</Hsp_qseq>
+      <Hsp_hseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYR</Hsp_hseq>
+      <Hsp_midline>++LDYD  EN+L  EEER+++ + ++ ++ +RW+IC LIGI+TG+VA  I+I +  L  +K  V++  I    +   L   LLLW  +N   V V S++  F+ PVAAGSGIPQIKCFLNGVK+P+VVR KTLV KV GVI SV GGLAVGKEGPMIHSGSV+AAGISQGRS S   + + F++FR D EKRDFV AGAAAGVSAAFGAPVGGVLFSLEE ASFWNQ LTWRIF  S++S++TLNF +SIYH +  DL+ PGLINFG+F     +Y   E+P+F+ M V GG+ GA FNA+N+ +T+FR++Y+     +V+E V VAAV+AT+AFVLIY + +C+PL G      LQ FC DGEYN+MA  FF  PE+SV SLFHDP G+  PLT+ +F L YFFLACWTYGL V +G+FIPSLLIGAAWGRL G  ++++    IWA D  KYAL+GAAAQLGG VRMT+SLTVI++EAT N+TY  P+M VL+ AK VGD F  G+YDMHI L  VP L WE P  S ++ AREVM TPV  LR    V  I  VLSD  + H+G+P+ +        + +G+ILR+QL++LLKHK FVER   G    R++L  FRD+YPR+ P+  I+VS+ E++C +DL  F+NPSPYT+ + ASLPR+F+LFRALGLRHLVV+++  +VVG+++RKD+ ++ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>10</Iteration_iter-num>
+  <Iteration_query-ID>XP_643243.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel protein [Dictyostelium discoideum AX4]</Iteration_query-def>
+  <Iteration_query-len>757</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>380.178</Hsp_bit-score>
+      <Hsp_score>975</Hsp_score>
+      <Hsp_evalue>4.53476e-120</Hsp_evalue>
+      <Hsp_query-from>56</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>29</Hsp_hit-from>
+      <Hsp_hit-to>729</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>250</Hsp_identity>
+      <Hsp_positive>402</Hsp_positive>
+      <Hsp_gaps>30</Hsp_gaps>
+      <Hsp_align-len>716</Hsp_align-len>
+      <Hsp_qseq>EKQKMKNIQSLNFSVNDNLLQREEYEKTTKGLHLKKTFGKWIICLFLGVIVGCIAYVIKMVVQLLQGLKFHYT----NHYVSNGLQGEAFLTFLGINLLFVFLSCLMVIVAGPLASSSGIPEVKGILNGVKVREALGFRALLGKIVSLVLSFSSGLFVGPEGPMIHIGSAVGAAISQFKSSTMGFYPSLFLSYRNDRDKRDFISIGAATGLAAAFGAPIGGVLFSIEEVSSFWSRQLTWRTFFTCVIAAFTTNFLLQGI-GSSPDMHDTGLLTFGF--SRLYLFRYSELLCFCFLGLIGGLLGAFFVFLNIHLNKWRKEKLKQNPYLRLFEALFVSVVTSVVCYYASFIFDCRYQSNIVIETSVCEDQSNTEMVQFFCPDGMYSELGSLLFGNPDQALRRLYSRTNNMFTLPPLLVFTLISLFFSIWSSGLWVAGGLFVPMMMVGAGFGRLFGQTIS------MWFTNIDSSIYALVGSAAMMAGYCRMTVCIVVIMVELTEGTQYLVPIILAVMISKWVGDFFNESVYEHLMEQKSIPFLQSKPPHSTNNIRISDVMSKNVVVLPEVCQVRLLVNILN--SNNHNAFPVINSGPYDNQRLYRGIILRDHILVLLFYRVFYRGTGEEIYLDENFDFDKFTTETSKSPPPLSEMNFDQFELDSFIDLRPYMNSSGVTIHNTFSFVEAYKLFRNMGLRHLPVIDINNEVVGMVTRNDL</Hsp_qseq>
+      <Hsp_hseq>EKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHR-PCLQVIEAVLVAAVTATVAFV--LIYSSR-------DCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIW---ADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGL-VQRRLRLKDFRDAYPRF-PPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDL</Hsp_hseq>
+      <Hsp_midline>EK      +SL++  ++N L  EE  +            +W+IC  +G++ G +A  I +VV+ L GLK+       + +   G    + L +  +N  FV +  ++V    P+A+ SGIP++K  LNGVK+   +  + L+ K+  ++LS   GL VG EGPMIH GS + A ISQ +S+++     +F  +R D +KRDF+S GAA G++AAFGAP+GGVLFS+EE +SFW++ LTWR FF  +I+ FT NF+L    G+  D+   GL+ FG   S    +   E+  F  +G++GG+LGA F  LN  L  +R   + + P L++ EA+ V+ VT+ V +    I+  R       +    +  S +  +Q FC DG Y+ + +  F  P++++  L+      +    L +FTL+  F + W+ GL V+ G+F+P +++GA +GRLFG ++S      +W    D   YAL+G+AA + G  RMT+ + VIM+E T    Y  PI+L +M +K VGD F E +Y+  ++ +S+PFL  + P +++++   +VMS  V  L    +V ++V++L+  ++NHN FPV+           +G+ILR  ++VLL ++VF   +   + +        F     +  PP+  ++  Q E +  +DL  +MN S  T+    S    +KLFR +GLRHL V+D  N+VVG+VTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>11</Iteration_iter-num>
+  <Iteration_query-ID>XP_002506018.1</Iteration_query-ID>
+  <Iteration_query-def>chloride Carrier/Channel family [Micromonas commoda]</Iteration_query-def>
+  <Iteration_query-len>924</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|NP_001277.1|</Hit_id>
+  <Hit_def>chloride transport protein 6 isoform 1 [Homo sapiens] &gt;ref|XP_001140805.3| chloride transport protein 6 isoform X1 [Pan troglodytes] &gt;ref|XP_004024704.1| chloride transport protein 6 [Gorilla gorilla gorilla]</Hit_def>
+  <Hit_accession>NP_001277</Hit_accession>
+  <Hit_len>869</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>320.472</Hsp_bit-score>
+      <Hsp_score>820</Hsp_score>
+      <Hsp_evalue>1.14797e-94</Hsp_evalue>
+      <Hsp_query-from>78</Hsp_query-from>
+      <Hsp_query-to>731</Hsp_query-to>
+      <Hsp_hit-from>48</Hsp_hit-from>
+      <Hsp_hit-to>660</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>223</Hsp_identity>
+      <Hsp_positive>346</Hsp_positive>
+      <Hsp_gaps>89</Hsp_gaps>
+      <Hsp_align-len>678</Hsp_align-len>
+      <Hsp_qseq>FDSHDYDPADNDLEEDARRARKRADYKAEEQWRWAMSVLIGVVMGFLAFTVDGLIKKFNGWKYGATTSSISPGGAG----------FGAWLVWVIISCLLASVAGGLVSYVEPLAAGSGIPELKTYLNGVHLRGLLRIKTLGAKLGGIAFSIGSGLIAGKEGPFVHGGGLVGGGLSAFGSHTLGFRTKKPSHFRNDADKRDFVAIGTAVGVAVAFGAPIGGMLFTVEEGASFHSTGMLWRGFLATCTGVLTTHWLDQLDFDAMDFAGAKFGVH--------RDFGLFTDDEANYSRVFWWYFWEVPIFAAIGCMGGLLGAAFVNINVKITMWRQRFIPVSDKYRRHAEVIFVCFVTATVLFIM-MAASPCKPIPEAYRVAAATDGDGNGVSDELPGGVAKFEYGVETRRQIRDQYFRSLFCKADEYSSYGQLFFVPLADSLKLLLHLGEVYEQNGTDEFEQHLFTMDALIMYFVFMYALMTWTYGIGAPTGLFVPSLAVGAAGGQIVGRIVRAMV----MSTGSEIVVDLHTYAVVGAAACLGGATRMTISITVLVMETTGSMQLIIPLMLTIFFAKAIGDKYSMGIYDTHIKIRGAPFLD-EPEHAGVAVDKLKVAEVMADSLVTLRPVMRVRELVEVLTNTSHGAFPVTITDVGEGHNAGDPIELHGSITRNILLK</Hsp_qseq>
+      <Hsp_hseq>YESLDYDRCINDPYLEVLETMDNKKGRRYEAVKWMVVFAIGVCTGLVGLFVDFFVRLFTQLKFGVVQTSVEECSQKGCLALSLLELLGFNLTFVFLASLLV--------LIEPVAAGSGIPEVKCYLNGVKVPGIVRLRTLLCKVLGVLFSVAGGLFVGKEGPMIHSGSVVGAGLPQFQSISLRKIQFNFPYFRSDRDKRDFVSAGAAAGVAAAFGAPIGGTLFSLEEGSSFWNQGLTWKVLFCSMSATFTLNFFR---------SGIQFGSWGSFQLPGLLNFGEFKCSDSD-KKCHLWTAMDLGFFVVMGVIGGLLGATFNCLNKRLAKYRMRNVHPKPKLVRVLESLLVSLVTTVVVFVASMVLGECRQMSSSSQI--GNDSFQLQVTEDVNSSIKTF------------------FCPNDTYNDMATLFFNPQESAILQLFH------QDGT-------FSPVTLALFFVLYFLLACWTYGISVPSGLFVPSLLCGAAFGRLVANVLKSYIGLGHIYSG--------TFALIGAAAFLGGVVRMTISLTVILIESTNEITYGLPIMVTLMVAKWTGDFFNKGIYDIHVGLRGVPLLEWETE---VEMDKLRASDIMEPNLTYVYPHTRIQSLVSILRTTVHHAFPVVTENRG---NEKEFMKGNQLISNNIKFK</Hsp_hseq>
+      <Hsp_midline>++S DYD   ND   +          +  E  +W +   IGV  G +   VD  ++ F   K+G   +S+                 G  L +V ++ LL          +EP+AAGSGIPE+K YLNGV + G++R++TL  K+ G+ FS+  GL  GKEGP +H G +VG GL  F S +L        +FR+D DKRDFV+ G A GVA AFGAPIGG LF++EEG+SF + G+ W+    + +   T ++           +G +FG           +FG F   +++  +   W   ++  F  +G +GGLLGA F  +N ++  +R R +    K  R  E + V  VT  V+F+  M    C+ +  + ++    D     V++++   +  F                  FC  D Y+    LFF P   ++  L H      Q+GT       F+   L ++FV  + L  WTYGI  P+GLFVPSL  GAA G++V  ++++ +    + +G        T+A++GAAA LGG  RMTIS+TV+++E+T  +   +P+M+T+  AK  GD ++ GIYD H+ +RG P L+ E E   V +DKL+ +++M  +L  + P  R++ LV +L  T H AFPV   + G   N  + ++ +  I+ NI  K</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>61.6178</Hsp_bit-score>
+      <Hsp_score>148</Hsp_score>
+      <Hsp_evalue>1.32093e-08</Hsp_evalue>
+      <Hsp_query-from>717</Hsp_query-from>
+      <Hsp_query-to>844</Hsp_query-to>
+      <Hsp_hit-from>738</Hsp_hit-from>
+      <Hsp_hit-to>856</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>65</Hsp_positive>
+      <Hsp_gaps>17</Hsp_gaps>
+      <Hsp_align-len>132</Hsp_align-len>
+      <Hsp_qseq>PIELHGSITRNILLKMLTHRVSMFDPE----EPREVLYENSEDRDALLEKLKQIPFKSPGVEMIASTLSRREMELSIDLTHFMQRHPFIVHADARLSRAYRLFRTMGLRHMYITPSKPQIIGVVTRKDLVEE</Hsp_qseq>
+      <Hsp_hseq>PLTFHGLILRSQLVTLLVRGVCYSESQSSASQPRLSYAEMAEDYP-----------RYPDIHDLDLTLLNPRM--IVDVTPYMNPSPFTVSPNTHVSQVFNLFRTMGLRHLPVVNAVGEIVGIITRHNLTYE</Hsp_hseq>
+      <Hsp_midline>P+  HG I R+ L+ +L   V   + +    +PR    E +ED             + P +  +  TL    M   +D+T +M   PF V  +  +S+ + LFRTMGLRH+ +  +  +I+G++TR +L  E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>12</Iteration_iter-num>
+  <Iteration_query-ID>XP_002768858.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Iteration_query-def>
+  <Iteration_query-len>776</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>243.047</Hsp_bit-score>
+      <Hsp_score>619</Hsp_score>
+      <Hsp_evalue>1.29504e-68</Hsp_evalue>
+      <Hsp_query-from>149</Hsp_query-from>
+      <Hsp_query-to>738</Hsp_query-to>
+      <Hsp_hit-from>117</Hsp_hit-from>
+      <Hsp_hit-to>729</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>192</Hsp_identity>
+      <Hsp_positive>325</Hsp_positive>
+      <Hsp_gaps>75</Hsp_gaps>
+      <Hsp_align-len>639</Hsp_align-len>
+      <Hsp_qseq>AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKV-EGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWV------GDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLS--SCTHNAFTIQDHSH-----RLLGVVMRSNIVDWVKGQG-------GVVSANTRL---------------------------NLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_qseq>
+      <Hsp_hseq>SLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRF-DSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIH--------RPCLQVIEAVLVAAVTATVAFVLIYSSRD-CQPLQGGSM--SYPLQLFCAD-----GEYNSMAAAFFNTPEKSVVSLFHDPPG--SYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVM----STPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVV--DNRNQVVGLVTRKDL</Hsp_hseq>
+      <Hsp_midline>++L+W  +    +      V+++ P+A GSGIP +K +LNGV +P ++R   +V ++ G I+ V  G   G EGPM H G+++ A ++Q  + + K   K    F     K +FVS GA  GV+ AF AP+GG+LF++EE +++W + L WR F   +I+++        +   + + S   L    +F ++++  + + E   FI +G+  G++GA F     +   +R  + H        R   QV+EA LV  +T  +A+ + +S    C+PL G S   +  +Q    D     G YN  AA      + SV  LF    G   +    L     + FFL   TYG+ + AG+F+P++++GA +GRLFG+ +        WA +PG YA+MGAA  + G  RMT+SLTVI++E   ++     +M+ ++ +K V D+F +G YD+  +L+  P++   +     ++  R+V     + P++     E +G I +VLS  +  HN F + +H+      RL G+++RS ++  +K +        G+V    RL                           +L +  N +P  V +   L + + +FR L LRH++VV  D+ N+VVG+VTRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>13</Iteration_iter-num>
+  <Iteration_query-ID>XP_003392724.1</Iteration_query-ID>
+  <Iteration_query-def>putative chloride channel protein [Leishmania infantum JPCM5]</Iteration_query-def>
+  <Iteration_query-len>885</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>253.832</Hsp_bit-score>
+      <Hsp_score>647</Hsp_score>
+      <Hsp_evalue>8.70398e-72</Hsp_evalue>
+      <Hsp_query-from>63</Hsp_query-from>
+      <Hsp_query-to>869</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>737</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>243</Hsp_identity>
+      <Hsp_positive>388</Hsp_positive>
+      <Hsp_gaps>131</Hsp_gaps>
+      <Hsp_align-len>829</Hsp_align-len>
+      <Hsp_qseq>PHVFTAE----ERRRMDWYESIDY--AEGQSLVH---RVSTTRQSSTDAKGWLRLLMFVLIGLAVGGWSLLVFQTLDYLAEVKLDAVQGVVRSRNSTYPPFNASRICMSALCNSGHEDGGDDGKAAVVLRALSWSALLHGGVLYTMWGVLMALLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSG--WHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFT-PCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGV----LFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFL--EAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEAL--TMTRHNAFPVVRVGKADQA--YEGMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTRVSFVGDRLMEK</Hsp_qseq>
+      <Hsp_hseq>PHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWV---ICALIGILTGLVACFIDIVVENLAGLKYRVIKGNI---------------------DKFTEKGG-----------LSFSLLLWA----TLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLK-RDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMA-YTIHEIP-------VFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCL------QVIEAVLVAAVTATVAFVLIYSSRDCQP----LQGGSMSYPLQL---FCADGE--YNSMAAAFFNTPEKSVVSLF-HDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSL---TAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLL----------KHKVFVE------------------RSNL--------GLVQRRLRLKDFRDAYP-----RFPPIQSI-HVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKR</Hsp_hseq>
+      <Hsp_midline>PH F  E    E+     YES+DY  +E Q  +    R++ T   + + K W+   +  LIG+  G  +  +   ++ LA +K   ++G +                     +   E GG           LS+S LL      T+    + + S +   + P AAGSGIP +  +LNGV  P +  ++ LV+K    IL+V  GL VG EGPMIH GS+I AG+  GRS SL      +F+ FR   ++RDF+SAGAA G+++AF +P+GG+LF LEE A+ ++  L W +F + +   + +    S   G  W L     +  G      +A + I  +P        +  +  V   + +   A+ Y ++  R       CL      +V+E  + A++ +T  +VL   +  C P    ++    +  ++L   FCA  E  ++ +A     +P   +  LF     G +   +L L   +Y   + +  G+ +S G  IPSLLIGA  GRL G+    L    +WAD G  AL+GAAA   GI R+T +L V+MME T++V++   +ML ++ AK + D      Y   +++++VPFL  EA  + H L   TAR++M++PVT L   + V  +V+ L  T + HN FPVV      Q    +G+I R+QL +LL            +V V+                  RS +        G +Q  +   + +  +      R P +  + H+        +DL  +++ S   V Q   + R +  FR LGLRHL V+D   +VVG++TR      RL ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>14</Iteration_iter-num>
+  <Iteration_query-ID>XP_005828918.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein GUITHDRAFT_88279 [Guillardia theta CCMP2712]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>307.76</Hsp_bit-score>
+      <Hsp_score>787</Hsp_score>
+      <Hsp_evalue>2.62883e-92</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>692</Hsp_query-to>
+      <Hsp_hit-from>68</Hsp_hit-from>
+      <Hsp_hit-to>730</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>239</Hsp_identity>
+      <Hsp_positive>388</Hsp_positive>
+      <Hsp_gaps>85</Hsp_gaps>
+      <Hsp_align-len>719</Hsp_align-len>
+      <Hsp_qseq>RWILTVVIGVSVAASAQVVQSLISLLIGFRNQMLQSLFDQRRTEADI---LIFFTMYNAGLVLIAGFLVVFLEPRAAADGISEIKAYLNGSNIPNCFSVQTIIVKLLGSIFASSAGLACGPEGPLIHIGAGIAHAV-----TAVDKIYTFLPWLPHSVLAQFHNDRDRREFIAAGAGAGIAAAFGAPIGGVLFALEEAASHLSPQLIWRILTSALVATFTLALIKS--NGTGGDISLAGLLSFGTAISIGDAKERTLNSDGTDSVSALDAPIYVWELFLFIILGAVGGVFGGFFGAGFDFLTPRRPRSRF---LKMVEVLLISLATSYSVFFFASNYPVCR--NDGSWTCKEADNWGGWLGCPEGQYDELATLFFGSKEQSIVRMVTQAWPHEP---FSNTSLFITSILNLFLMLITYGSPLPAGYFMPSWLVGASIGRLFGQLVKAYVGSSVYS--GAYALAGAAAMLGGVQRTSISLVFIIVECTSNVHFLLPIVTTLMVANFVAQKFTKEGVFDISLRHHSLRFLPHHPDWLMSLCTVSDVMANPVKCLHTVEKVGNIIDLLRNC--HHNGFPVLSLEGSRDENCIPRDRLEGLILRSHLRHILGTRFMRDGSTRDSLWSRITAARMSEVSLDGEIELVRRKGVLLPP-------ADDRERYVNLAAYMNAACYSVYSQCPLSRAYTIFRSLGLRHLPVVNQRFEVVGMLTRANFS</Hsp_qseq>
+      <Hsp_hseq>RWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDF--------KIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRF----DSEKMAYT---------------IHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMS------YPLQLFCADGEYNSMAAAFFNTPEKSVVSLF-----HDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFI-EGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPV--VEHADDTQPA---RLQGLILRSQLIVLLKHKVFVERSNLGLVQRRL---RLKD---------FRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLA</Hsp_hseq>
+      <Hsp_midline>RW++  +IG+     A  +  ++  L G + ++++   D+   +  +   L+ +   NA  VL+   +V F+EP AA  GI +IK +LNG  IP+   ++T+++K+ G I +   GLA G EGP+IH G+ IA  +     T++ + +         +   F  D ++R+F++AGA AG++AAFGAP+GGVLF+LEE AS  +  L WRI  +++++TFTL  + S  +G   D+S  GL++FG      D+++                   + E+ +FI +G VGGV G  F A   +LT  R R      L+++E +L++  T+   F    +   C+    GS +      +   L C +G+Y+ +A  FF + E+S+V +      H+P   ++  +L + +++  FL   TYG  + AG F+PS L+GA+ GRLFG  +    G+++++  G YAL GAAA LGG+ R ++SL  I++E TSNV +  PI+  LM A  V   F  EG++D+ ++  S+ FL           T  +VM+ PV CL   EKVG I+D+L +   +HNGFPV  +E + D       RL+GLILRS L  +L  +   + S    +  R+   R+ +          R      PP        D+RE  ++L+ +MN + Y+V  +  L R + +FR+LGLRHL VV+ R +VVG++TR + +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>15</Iteration_iter-num>
+  <Iteration_query-ID>XP_006818446.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Iteration_query-def>
+  <Iteration_query-len>818</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>797.734</Hsp_bit-score>
+      <Hsp_score>2059</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>56</Hsp_query-from>
+      <Hsp_query-to>817</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>803</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>431</Hsp_identity>
+      <Hsp_positive>554</Hsp_positive>
+      <Hsp_gaps>37</Hsp_gaps>
+      <Hsp_align-len>780</Hsp_align-len>
+      <Hsp_qseq>GHSRSDPRVARAMSWQNVEVTADD--------------RDTVGSMRVISSKYESLDYDQVENTFTVNVLIHCLLKAFTNSQNKWKKLSNVQCMQVKRWFVMFLIGICTGLVACFINICIDQISAIKYSTVRHFTKMCRDEACMEYALLVWNGFNVTFVTIAAFMVAYIAPVAAGSGIPQIKCYLNGVKVPFVVRIKTLITKVFGVTLSVAGGLSIGKEGPMIHSGAVIAAGVSQGKSTTFKIDGKVFEDFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQSLTWRIFFASMVSTFTLNVVLSYYNGDPWTLSNPGLVTFGKFTGQ--AYYGYEIPIFLLMGVAGGLLGALFNGLNYRLSVFRLKYVYLRLSCVTEAALVALVTTTISFTMIYFISDCHPIGSNSSPEPLQFFCDDGEFSATATLFFNTPEEALKSLFHDPLGAYKPVTVGVFFCIYFCLACWTYGLGVPSGLFIPSLLTGAAWGRLVGIFVHYVFPGGHFSDPGKYALIGAAAQLGGIVRMTISLTVILIEATGDVTYGLPLMLVLMISKWVGDYFNLGLYDIHILLQSVPLLPWEPPAMAHNISAHDVMSHPVVTLNTIETVGKIVDAMSH--HHHNGFPVVDPNEVTDRSFGTYRGLILRSQLIVLLKKEVFNETVGVTSLRQRIRLKDFRDEYPRYPGIKDIKVKPEHRQYHIDLRPFMNPTPYTVSQNSSLSRIFRLFRGLGLRHLVVVDDHSQVVGIVSRKDLARYRVFHHHFKLELEELHIS</Hsp_qseq>
+      <Hsp_hseq>GAARQSPRSALFRVGHMSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSEN------------QLFLEEERRINH-TAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVE--HADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRL----GKRGLEELSLA</Hsp_hseq>
+      <Hsp_midline>G +R  PR A         V  DD              ++   + +++S KYESLDYD  EN            + F   + +    +  + +++KRW +  LIGI TGLVACFI+I ++ ++ +KY  ++       ++  + ++LL+W   N  FV + + +VA+I PVAAGSGIPQIKC+LNGVK+P VVR+KTL+ KV GV LSV GGL++GKEGPMIHSG+VIAAG+SQG+ST+ K D K+FE FR DTEKRDFVS GAAAGVSAAFGAPVGGVLFSLEEGASFWNQ LTWRIFFASM+STFTLN VLS Y+G+ W LS+PGL+ FG+F  +  AY  +EIP+F+ MGV GG+LGA+FN LNY L++FR++Y++     V EA LVA VT T++F +IY   DC P+   S   PLQ FC DGE+++ A  FFNTPE+++ SLFHDP G+Y P+T+G+F  +YF LACWTYGL V +G+FIPSLL GAAWGRL GI + Y+     ++DPGKYAL+GAAAQLGGIVRMT+SLTVI++EAT +VTYG P+MLVLM +K VGD F  GLYD+HI LQSVP L WE P  +H+++A +VMS PV  L   E VG IVD +S    +HNGFPVV+     D      +GLILRSQLIVLLK +VF E   +  +++R+RLKDFRD YPR+P I+ I V  + R+  +DL  FMNP+PYTV Q +SL R+F+LFR LGLRHLVVVD+ +QVVG+V+RKDLARYR+     K  LEEL ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>16</Iteration_iter-num>
+  <Iteration_query-ID>XP_009533702.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein PHYSODRAFT_520430 [Phytophthora sojae]</Iteration_query-def>
+  <Iteration_query-len>967</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>536.184</Hsp_bit-score>
+      <Hsp_score>1380</Hsp_score>
+      <Hsp_evalue>1.53927e-177</Hsp_evalue>
+      <Hsp_query-from>171</Hsp_query-from>
+      <Hsp_query-to>932</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>743</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>327</Hsp_identity>
+      <Hsp_positive>462</Hsp_positive>
+      <Hsp_gaps>53</Hsp_gaps>
+      <Hsp_align-len>768</Hsp_align-len>
+      <Hsp_qseq>KEKDKEKRAKAQHRESFNYDFFESRVNMQHDQEQTESAVRSLNIARWVMTFGVGLGTALIACFVEFWTSLLSTFRTATMESLVAAEMD-GSQAFGTGYLAYSMISVGFVAVASYCVAILCPVAGGSGISEIKATLNGIKIHRVVRLKTLFCKAFGILFSVSGGLPVGKEGPMIHSGSVIGAGLSQGKSSSFGLDTSWTKFKGFRNDKEKRDFISCGAAAGVAAAFGAPIGGVLFALEEGASFWHQNLTWRTFFCAMVSAFVLNYFMSFMEANESNGPTPDVEHVFIGGTLGTQTGTFTFGQFVGSK-AYEVLDVPIFIVMGMVGGLFGAGFNGANTVLTKFRKRYVTHRFLRFGEALLIAFSMATASFWLSYYFGQCRDLAGDYSDSLSRFYCPEGQYNDLASLFTVNYATSMKQLLHFTGDGSFTPFSLCMFFVVFYIFACWTYGIAVPSGLFVPSLLAGAAYGRICVMIVHYL-GFPVGAQDGMFALIGSACMLGGMARMTISLTVIILECTGVIEWGLPIMVSLMAARWVGNSFNEGLYDIHIHLNHLPFLEFDPPYYARFLRALNIMSSPPTCVPQIAKVGEIYDVLKNC--NHGGFPVIVPRSQDAAGGGHRPNLGAKRISPRFAGTIYRHHLAVLLQRKDFFIEKPEPFVRTPAGDTTLLYNDQYALSYRDMEGSYPRYPSINDIQLDEEERDLWMDLTPYMNPTPHTVQEQTPVPRAFRLFRSLGLRHLIVLNRRNEVRGVITRKDLTPAHL-KFCLESLS</Hsp_qseq>
+      <Hsp_hseq>KEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFS--LLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRD--FKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSP---------------GLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFH-DPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPV-VEHADDTQPA-------------RLQGLILRSQLIVLLKHK-VFVERSN------------LGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELS</Hsp_hseq>
+      <Hsp_midline>KE    ++  +   ES +YD  E+++ ++ ++    +A R++ I RWV+   +G+ T L+ACF++     L+  +   ++  +    + G  +F    L ++ ++  FV V S  VA + PVA GSGI +IK  LNG+KI  VVRLKTL  K  G++ SV GGL VGKEGPMIHSGSVI AG+SQG+S+S   D  +  F+ FR D EKRDF+S GAAAGV+AAFGAP+GGVLF+LEEGASFW+Q LTWR FF +M+S F LN+ +S    N  +  +P               G   FG+F   K AY + ++P+FI MG+VGG+ GA FN  N  LT FR RY+    L+  EA+L+A   AT +F L Y    C+ L G       + +C +G+YN +A+ F      S+  L H    GS+ P +L +F +V++  ACWTYG+ V +G+F+PSLL GAA+GR+  + + YL G  + A  G +AL+G+A  LGG+ RMT+SLTVI++E T  + +G PIM+ LM A+ VG+ F EGLYD+HI L  +PFL ++ P  +  L A  +MS+P TC+ +  KVG I DVL +   NH GFPV V  + D                 R  G I R  L VLL+ K  F+E+              L   Q  L  +D   +YPR+P I  I + ++ER+  MDL+ +MNP+P+TV ++  +PR F+LFR+LGLRHL+V++ RN+V G++TRKDL    L K  LE LS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>17</Iteration_iter-num>
+  <Iteration_query-ID>XP_011426744.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7 [Crassostrea gigas]</Iteration_query-def>
+  <Iteration_query-len>765</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>770.77</Hsp_bit-score>
+      <Hsp_score>1989</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>751</Hsp_query-to>
+      <Hsp_hit-from>86</Hsp_hit-from>
+      <Hsp_hit-to>795</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>410</Hsp_identity>
+      <Hsp_positive>519</Hsp_positive>
+      <Hsp_gaps>19</Hsp_gaps>
+      <Hsp_align-len>722</Hsp_align-len>
+      <Hsp_qseq>SEKILSGDYESLDYDVCENDLYQLEERKKSVKEIMIIEMLRWLVMFFVGLLTGLVASLIDFCVIQSTDLKFSIIKKYVDKCVDNKCMEVPLLVWVGINGGLVIVASILTACFEPVAAGSGIPQIKCYLNGVKVPHVVRLKTIVVKVIGVIFSVAGGLIIGKEGPMIHSGAVIAAGISQGRSDTFRKFDLRIFEFFRSDTEKRDFVAGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALAWRIFFASMVSTFTLNVIQSYIKGIPWDLSYPGLFNFGSFDTT--SYSAFEIPIFILMGVLGGLFGALFNQLNYILTKFRRRYINKSRDRVLEAMIVAIITATVGYISLYFNNSCSPMVQDTKDNTVQVYCNDGQYSSTATILFQSPEDSVKSLFHESKGMYSPSTLVVYCLCVFILACWTYGLYVPSGLFIPGLLVGAAWGRFVGLCLNYIFPDVGWVDFGKYSLIGAAAQLGGIVRMTISLTVIIMEATGNITFGLPIMIVLIVAKWVGDIFNEGIYDMHIHIQGVPILGWEPSSVLTNLSAKEVMSHPVSVFNMRESVGRVMEVLK--TETHNGFPVVEDYIPNPLDSSINEEMSFGTYRGLILRSQLIVLLKQRVFGDNIDQFY---NLSTKDFRDAYPKFTPIRQIHVSQYERDNCEINLEPYMNPAAYCVTDNALFPRIFKLFRALGLRHLVVVDKHHQVVGMVTRKDLARYKVTRK</Hsp_qseq>
+      <Hsp_hseq>NEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKR-DFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEH----------ADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERE-CTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKR</Hsp_hseq>
+      <Hsp_midline>+EK+LS  YESLDYD  EN L+  EER+ +      +E+ RW++   +G+LTGLVA  ID  V     LK+ +IK  +DK  +   +   LL+W  +N   V+V S++ A  EPVAAGSGIPQIKC+LNGVK+PHVVRLKT+V+KV GVI SV GGL +GKEGPMIHSG+VIAAGISQGRS + ++ D +IFE+FR DTEKRDFV+ GAAAGVSAAFGAPVGGVLFSLEEGASFWNQ L WRIFFASM+STFTLN + S   G  WDLS PGL NFG FD+   +Y+  EIP+FI MGV+GG+ GA+FN LNY LT FR RYI++   +V+EA++VA +TATV ++ +Y +  C P+   +    +Q++C DG+Y+S A   F +PE SV SLFH+  G Y+P TL ++ L  F LACWTYGL V +G+FIP LL+GAAWGR  G+ L+Y+     W D GKY+L+GAAAQLGGIVRMT+SLTVI+MEAT N+T+G PIM+VL+ AK VGD+F EG+YDMHI +Q VP L WE      +L+A+EVMS PV+    RE VG +++VL      HNGFPVVE            ++      +GLILRSQLIVLLK +VF +  +       L  KDFRDAYP+F PI+ IHVSQ ER+ C ++L  +MNP+ Y V   A  PR+FKLFRALGLRHLVVVD  +QVVG+VTRKDLARY++ ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>18</Iteration_iter-num>
+  <Iteration_query-ID>XP_013760162.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel 7 [Thecamonas trahens ATCC 50062]</Iteration_query-def>
+  <Iteration_query-len>819</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>563.533</Hsp_bit-score>
+      <Hsp_score>1451</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>36</Hsp_query-from>
+      <Hsp_query-to>727</Hsp_query-to>
+      <Hsp_hit-from>95</Hsp_hit-from>
+      <Hsp_hit-to>787</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>336</Hsp_identity>
+      <Hsp_positive>471</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>705</Hsp_align-len>
+      <Hsp_qseq>QSLDYEVNENMVWRAHVASKSNWAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISRLIVDCDNCFWSPF--LSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQ--SYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRPEPTTVYEGITLR---RFTCPEGEYNDMATIFFTTQEEAIRQLFHNRDAFSYP-TLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLF-PSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLE--SNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYAN--AVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_qseq>
+      <Hsp_hseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLS-IYHGNMWD-LSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYI--HRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQP-----LQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPA-RLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIH--VSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDL</Hsp_hseq>
+      <Hsp_midline>+SLDY+ +EN ++       ++ A+      +WV+  L+G+ T LVA  ID+ +  +AG K+ +I   I          F  L +  +N   V V +  VAFIEPVAAGSGIP+IKC+LNG KIPHVVRL TL+ K  GV+ SV GGLAVG+EGPMIHSG+V+AAGISQG++TSL  D  +F+ FR D  KRDFV++GAAAGVSAAFG+P+GGVLFSLEEGAS WNQ LTWR FF +MIS+FTLN +LS    G  W  L+ PGL++FG F ++  +YT+ EIP F+ +GVVGG+ GA FNA+N  LT+FR+R+I   +P  +  EA+ +AA++ATV+F+  +   +C+P      +G ++    +  C +GEYN MA  FF T E+++  LFH+      P TL  F   YF LA  TYG +V +G+F+P +L G A+GRL G +L +L   +I  DPG YAL+GAAA LGG+VRMT+SLTVI++E+T++++YG P+ML +M +KIVGD+F EGLYD+HI ++ +PFL WE      +LTA ++MSTPV  L    +V  +V +L   ++ H  FP+    ++  P+ +  G+ILR ++I LLK + FV+ +N   V+  +   DF D YPR+P I  I   +  ++ +  M+LS +MNP+P T    A+   VF+LFR LGLRH+VVVD   +++G+VTR DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>19</Iteration_iter-num>
+  <Iteration_query-ID>XP_016612789.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein SPPG_00455 [Spizellomyces punctatus DAOM BR117]</Iteration_query-def>
+  <Iteration_query-len>876</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|NP_001269092.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 5 isoform d [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001269092</Hit_accession>
+  <Hit_len>766</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>627.091</Hsp_bit-score>
+      <Hsp_score>1616</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>140</Hsp_query-from>
+      <Hsp_query-to>865</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>761</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>365</Hsp_identity>
+      <Hsp_positive>492</Hsp_positive>
+      <Hsp_gaps>49</Hsp_gaps>
+      <Hsp_align-len>762</Hsp_align-len>
+      <Hsp_qseq>GPSNANKIDEYDPSSLEWAMEGTGRRVVYDDFTTIDWIHDFSKERVRIRNLQNL--RGVRGTLRKAYDACQAWILVFIVGAITGWLAAYIDVASEWASDLKEGYCKEGFYLNRKFCCW---HV--EANEECTEWATWS-MTFNAQSGAAMWGAEYFMFTVFGTAFALASAVLVKVYAPYAAGSGIPEVKTILGGFVIRKFLGGWTLLIKCIGLCLSVASGLSLGKEGPLVHVACCVGNIFPRIFDKYAKNEAKKREILSASSAAGVSVAFGAPIGGVLFSLEEVSYYFPYKTMWRSFFCAMVAAISLQLVNPFRTGKLVLFAVEYKRAWHGFELPFFVLLGILGGLYGSFFIRMNIRVAAYRKSSWLRHWVIAEVGVVAILTALLSFAHPFLRVSTVELVANLFKECIDNETDFYGLCSDHEN-----------------ALASVVKYLFLAAGIKIFFTIFTFGIRVPAGIFIPSMAVGACVGRALGIGMQLWQMAYPNM-W-MFSS-CKPHEQCVTPGTYAMVGAAAALGGVTRMTVSLTVIMFELTGALTYILPIMLTVMVSKWVGDALGKASIYDALIELNGYPFLDAKEEYTYSTTVGSVMT-RVED--LEVICGSGCTLEALSELVQTTGFKGYPVVAGLDGMVLVGYAGSAELRYAIDQAH--QNRCPPTTLCIFTD---LQQDTEDPFLDFRPWTDQTPMTISPKFPMELVMELFKKMGLRYVLVVQDGRLVGIVTKKDLLRHVSWKRGDENED</Hsp_qseq>
+      <Hsp_hseq>GIGSSNRIMDF----LEEPIPGVG---TYDDFNTIDWVREKSRDRDRHREITNKSKESTWALIHSVSDAFSGWLLMLLIGLLSGSLAGLIDISAHWMTDLKEGICTGGFWFNHEHCCWNSEHVTFEERDKCPEWNSWSQLIISTDEGAFAYIVNYFMYVLWALLFAFLAVSLVKVFAPYACGSGIPEIKTILSGFIIRGYLGKWTLVIKTITLVLAVSSGLSLGKEGPLVHVACCCGNILCHCFNKYRKNEAKRREVLSAAAAAGVSVAFGAPIGGVLFSLEEVSYYFPLKTLWRSFFAALVAAFTLRSINPFGNSRLVLFYVEFHTPWHLFELVPFILLGIFGGLWGALFIRTNIAWCRKRKTTQLGKYPVIEVLVVTAITAILAFPNEYTRMSTSELISELFNDC--GLLDSSKLC-DYENRFNTSKGGELPDRPAGVGVYSAMWQLALTLILKIVITIFTFGMKIPSGLFIPSMAVGAIAGRLLGVGME--QLAYYHQEWTVFNSWCSQGADCITPGLYAMVGAAACLGGVTRMTVSLVVIMFELTGGLEYIVPLMAAAMTSKWVADALGREGIYDAHIRLNGYPFLEAKEEFAHKTLAMDVMKPRRNDPLLTVLTQDSMTVEDVETIISETTYSGFPVVVSRESQRLVGFVLRRDLIISIENARKKQDGVVSTSIIYFTEHSPPLPPYTPPTLKLRNILDLSPFTVTDLTPMEIVVDIFRKLGLRQCLVTHNGRLLGIITKKDVLKHIA-QMANQDPD</Hsp_hseq>
+      <Hsp_midline>G  ++N+I ++    LE  + G G    YDDF TIDW+ + S++R R R + N         +    DA   W+L+ ++G ++G LA  ID+++ W +DLKEG C  GF+ N + CCW   HV  E  ++C EW +WS +  +   GA  +   YFM+ ++   FA  +  LVKV+APYA GSGIPE+KTIL GF+IR +LG WTL+IK I L L+V+SGLSLGKEGPLVHVACC GNI    F+KY KNEAK+RE+LSA++AAGVSVAFGAPIGGVLFSLEEVSYYFP KT+WRSFF A+VAA +L+ +NPF   +LVLF VE+   WH FEL  F+LLGI GGL+G+ FIR NI     RK++ L  + + EV VV  +TA+L+F + + R+ST EL++ LF +C     D   LC D+EN                  + S +  L L   +KI  TIFTFG+++P+G+FIPSMAVGA  GR LG+GM+  Q+AY +  W +F+S C     C+TPG YAMVGAAA LGGVTRMTVSL VIMFELTG L YI+P+M   M SKWV DALG+  IYDA I LNGYPFL+AKEE+ + T    VM  R  D  L V+     T+E +  ++  T + G+PVV   +   LVG+    +L  +I+ A   Q+    T++  FT+          P L  R   D +P T++   PME+V+++F+K+GLR  LV  +GRL+GI+TKKD+L+H++ +  +++ D</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>20</Iteration_iter-num>
+  <Iteration_query-ID>NP_001330038.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>772</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>385.956</Hsp_bit-score>
+      <Hsp_score>990</Hsp_score>
+      <Hsp_evalue>4.58524e-122</Hsp_evalue>
+      <Hsp_query-from>45</Hsp_query-from>
+      <Hsp_query-to>763</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>742</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>271</Hsp_identity>
+      <Hsp_positive>407</Hsp_positive>
+      <Hsp_gaps>41</Hsp_gaps>
+      <Hsp_align-len>733</Hsp_align-len>
+      <Hsp_qseq>NSLDYEVIENYAYREEQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAIIQKSYFAG-----FIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWCKSGICGHFGGGGFIIWDVSDGQDDYYFKELLPMAV-IGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLPL-LRKCSPCPESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFY-KKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILG--SNKHNGFPVIDHTRSGETLVI-GLVLRSHLLVLLQSKVDFQHSPLPCDPSA---RNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDLLIEENGESSAVEL</Hsp_qseq>
+      <Hsp_hseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLS-IYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPC--LQVIEAVLVAAVTATVAFVLIYSSRDCQPL------QGGSMSYP-------LQLFC-ADGEYNSMAAAFFNTPEKSVVSLFHDPP-GSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTARE-VMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPP--------IQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEEL</Hsp_hseq>
+      <Hsp_midline> SLDY+  EN  + EE+              +W    LIGI TGL A FI++ VEN AG K+ +    I K    G      +++  +N   V   + I+    P AAGSGIP+IK +LNG+ IP  +  +TL+ K+ G I SV GGLA+GKEGP++H+G+ IA+ + QG ST    + +  + F+ D ++RD V+ G AAGV+AAF APVGGVLF+LEE  S+W   L WR+FF S I    +   +     G        G I +   D +   Y    +P+ + +GV+GG+LGA+FN L  ++T +R   +H+    +++IEA +++ +T+ ++F L    R C P        G     P       +  FC  D EYN +A  FFNT + ++ +LF       ++  +L  F  +++ LA  T+G  V AG F+P ++IG+ +GRL G+ +       +  + G YAL+GAA+ LGG +RMT+SL VIM+E T+N+     IMLVL+ +K VGD F EGLY++  +L+ +P L          + A+E   S  V  L R  +V  +  +L   ++ HNGFPV++H    +   + GL+LRS L+VLL+ KV  + S L         ++ R ++  F          I+ IH++ D+ E  +DL+ F+NPSPY VP++ SL +V+ LFR LGLRHL VV   ++V+GL+TRKDL     G+    EL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>21</Iteration_iter-num>
+  <Iteration_query-ID>NP_001107803.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform b [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>781</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|14149607|ref|NP_001278.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens] &gt;gi|12644301|sp|P51798.2|CLCN7_HUMAN RecName: Full=H(+)/Cl(-) exchange transporter 7; AltName: Full=Chloride channel 7 alpha subunit; AltName: Full=Chloride channel protein 7; Short=ClC-7 &gt;gi|6980070|gb|AAF34711.1|AF224741_1 chloride channel protein 7 [Homo sapiens] &gt;gi|15215300|gb|AAH12737.1| Chloride channel 7 [Homo sapiens] &gt;gi|123999847|gb|ABM87432.1| chloride channel 7, partial [synthetic construct] &gt;gi|157929208|gb|ABW03889.1| chloride channel 7 [synthetic construct] &gt;gi|158256244|dbj|BAF84093.1| unnamed protein product [Homo sapiens]</Hit_def>
+  <Hit_accession>NP_001278</Hit_accession>
+  <Hit_len>805</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1588.16</Hsp_bit-score>
+      <Hsp_score>4111</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>781</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>805</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>781</Hsp_identity>
+      <Hsp_positive>781</Hsp_positive>
+      <Hsp_gaps>24</Hsp_gaps>
+      <Hsp_align-len>805</Hsp_align-len>
+      <Hsp_qseq>MANVSKKVSWSGRDRDDEEAAPLLRRTARPGGGTPLLNGAGPGAARQ------------------------DMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_qseq>
+      <Hsp_hseq>MANVSKKVSWSGRDRDDEEAAPLLRRTARPGGGTPLLNGAGPGAARQSPRSALFRVGHMSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_hseq>
+      <Hsp_midline>MANVSKKVSWSGRDRDDEEAAPLLRRTARPGGGTPLLNGAGPGAARQ                        DMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>22</Iteration_iter-num>
+  <Iteration_query-ID>XP_011520656.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>747</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1530</Hsp_bit-score>
+      <Hsp_score>3960</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>747</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>747</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>747</Hsp_identity>
+      <Hsp_positive>747</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>747</Hsp_align-len>
+      <Hsp_qseq>MSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_qseq>
+      <Hsp_hseq>MSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_hseq>
+      <Hsp_midline>MSSVELDDELLDPDMDPPHPFPKEIPHNEKLLSLKYESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPLQLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEELSLAQT</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>23</Iteration_iter-num>
+  <Iteration_query-ID>NP_197996.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|767986868|ref|XP_011520656.1|</Hit_id>
+  <Hit_def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Hit_def>
+  <Hit_accession>XP_011520656</Hit_accession>
+  <Hit_len>747</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>385.571</Hsp_bit-score>
+      <Hsp_score>989</Hsp_score>
+      <Hsp_evalue>1.22445e-121</Hsp_evalue>
+      <Hsp_query-from>45</Hsp_query-from>
+      <Hsp_query-to>763</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>742</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>271</Hsp_identity>
+      <Hsp_positive>407</Hsp_positive>
+      <Hsp_gaps>41</Hsp_gaps>
+      <Hsp_align-len>733</Hsp_align-len>
+      <Hsp_qseq>NSLDYEVIENYAYREEQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAIIQKSYFAG-----FIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWCKSGICGHFGGGGFIIWDVSDGQDDYYFKELLPMAV-IGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISFGLPL-LRKCSPCPESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFY-KKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILG--SNKHNGFPVIDHTRSGETLVI-GLVLRSHLLVLLQSKVDFQHSPLPCDPSA---RNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDLLIEENGESSAVEL</Hsp_qseq>
+      <Hsp_hseq>ESLDYDNSENQLFLEEERRINHTAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVIKGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLS-IYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPC--LQVIEAVLVAAVTATVAFVLIYSSRDCQPL------QGGSMSYP-------LQLFC-ADGEYNSMAAAFFNTPEKSVVSLFHDPP-GSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTARE-VMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPP--------IQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLARYRLGKRGLEEL</Hsp_hseq>
+      <Hsp_midline> SLDY+  EN  + EE+              +W    LIGI TGL A FI++ VEN AG K+ +    I K    G      +++  +N   V   + I+    P AAGSGIP+IK +LNG+ IP  +  +TL+ K+ G I SV GGLA+GKEGP++H+G+ IA+ + QG ST    + +  + F+ D ++RD V+ G AAGV+AAF APVGGVLF+LEE  S+W   L WR+FF S I    +   +     G        G I +   D +   Y    +P+ + +GV+GG+LGA+FN L  ++T +R   +H+    +++IEA +++ +T+ ++F L    R C P        G     P       +  FC  D EYN +A  FFNT + ++ +LF       ++  +L  F  +++ LA  T+G  V AG F+P ++IG+ +GRL G+ +       +  + G YAL+GAA+ LGG +RMT+SL VIM+E T+N+     IMLVL+ +K VGD F EGLY++  +L+ +P L          + A+E   S  V  L R  +V  +  +L   ++ HNGFPV++H    +   + GL+LRS L+VLL+ KV  + S L         ++ R ++  F          I+ IH++ D+ E  +DL+ F+NPSPY VP++ SL +V+ LFR LGLRHL VV   ++V+GL+TRKDL     G+    EL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>748513</Statistics_db-num>
+      <Statistics_db-len>92586161</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

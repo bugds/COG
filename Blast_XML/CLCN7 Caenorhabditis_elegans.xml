@@ -1,0 +1,1122 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>NP_001278.1</BlastOutput_query-ID>
+  <BlastOutput_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</BlastOutput_query-def>
+  <BlastOutput_query-len>805</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>NP_001278.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>805</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>627.861</Hsp_bit-score>
+      <Hsp_score>1618</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>788</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>366</Hsp_identity>
+      <Hsp_positive>503</Hsp_positive>
+      <Hsp_gaps>50</Hsp_gaps>
+      <Hsp_align-len>775</Hsp_align-len>
+      <Hsp_qseq>QSPRSALFRVGHMSSVE--------LDDELLDPDMDPPHPFPKEI-----PHNEKLLSLKYESLDYDNSENQLFLEEERRINH--TAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVI-------KGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPL---QLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT------QPARLQGLILRSQLIVLLKHKVFVER--SNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLA</Hsp_qseq>
+      <Hsp_hseq>EDPVSGLERVMSNSNLEHVARQRRRLEEELL---------FSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWR-ISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKD--YNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTL--HHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDD---QMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVA</Hsp_hseq>
+      <Hsp_midline>+ P S L RV   S++E        L++ELL         F +++       + + LS +YESL+Y+ SEN+L+ + E++ +H  T +R +   RW +C LIG+ TGLVA FIDI+V     +K+  I        G   + T  G +   ++ W   N   V + +++V ++ P+A GSGIPQIKC+LNG+ IP VVRLKTLV K  GV  SV GGL  GKEGPMIHSG+ + AGISQG+S SL  DF +F  FR D EKRDFVSAGAAAGV+AAFGAP+GGVLFSLEEGASFWNQ LTWR+FF++MIS+FT+N++LS ++G    LS  GL NFG F+++   Y I EIP+F+ +G++GG LGA+FN LN  LT FR +Y+     ++ E +LVAAV+  +AF+ I++  DCQP+     +      Q++C  GEY+++A+ FF  PE+SV S+FH P  S+   TL +F + YF L  WT+G++V +GVFIP++L GAAWGRLFGI +  L  +    DPGKYAL GAAAQLGG+VRMT+SLT I+MEAT ++T+G PIMLVLM  K VGD+F EGLYD HI L  VP L W  P  S ++ A  VM   V  L RRE+V  IV++L  T   H+GFPVV+  +++         RL+G ILRSQL  LL++++F E   SN  L       +D  D   +   +  + ++  +  C +D+  +M+P P+ VP   SLP +F+LFR LGLR+L VV++ N + G++TRKD+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>NP_506022.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein [Caenorhabditis elegans]</Iteration_query-def>
+  <Iteration_query-len>796</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1635.54</Hsp_bit-score>
+      <Hsp_score>4234</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>796</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>796</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>796</Hsp_identity>
+      <Hsp_positive>796</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>796</Hsp_align-len>
+      <Hsp_qseq>MTSRNRVRTSSNSLDPNEDPVSGLERVMSNSNLEHVARQRRRLEEELLFSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNREYHVDELYISES</Hsp_qseq>
+      <Hsp_hseq>MTSRNRVRTSSNSLDPNEDPVSGLERVMSNSNLEHVARQRRRLEEELLFSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNREYHVDELYISES</Hsp_hseq>
+      <Hsp_midline>MTSRNRVRTSSNSLDPNEDPVSGLERVMSNSNLEHVARQRRRLEEELLFSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNREYHVDELYISES</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>3</Iteration_iter-num>
+  <Iteration_query-ID>NP_610798.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel-b [Drosophila melanogaster]</Iteration_query-def>
+  <Iteration_query-len>813</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>540.806</Hsp_bit-score>
+      <Hsp_score>1392</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>103</Hsp_query-from>
+      <Hsp_query-to>809</Hsp_query-to>
+      <Hsp_hit-from>58</Hsp_hit-from>
+      <Hsp_hit-to>773</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>314</Hsp_identity>
+      <Hsp_positive>456</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>724</Hsp_align-len>
+      <Hsp_qseq>RSRTAAASTPNYESLDYEVCENTLFQDEQRKRLTERFSLRKDIIRWIIFIQIGIITALIACTIDIIIEELSIRKYTFL--YNSVKENVPLSDASDRDLLIPYLYWLLFSIVPVAFGAAMVTYIEPITAGSGIPQVKSYLNGVKIPRIVRIKTLAVKAIGVITSVVGGLAGGKEGPMIHAGAVVAAGISQGKSTTFLKDFRIFKAFRDDHEKRDFVLGGGAAGVSAAFGAPIGGMLFSLEEAASFWNQNLIWRTLVASIISVFTLNIVLSAYHGLNDF-TFTGLFNLGKFDTPLKFDYFELPIFMILGVTGGLLGAAWNSLNTKINKFRKRFIPWKIGKVLEAVVVAMMGVTLACLMIYFINDCRPLGNDPTNNPV---QLFCEDNEYNAVAALWFQTPEATVRSLFHDPPGSHKILTLALFTVVYYVLSCATFGLNVSLGVFIPTALVGAAWGRLLAMLTYYVFPQAEFLHPGKYALIGAAANLGGVLRMTISLSVILMETTGVETSFFFPLIIALISAKWVGDYFNEGIYDTQIQVNHVPMLTWEPLPQYKGLKAREILSKPVICIKIRDSANYIYEMLKKCDHNGFPVVDDVCGDRRSE----GRVCGIILRSQLIVILLKSLYVEN--KRFWLPETSIQTFRDLYPRFPSIKSVRKL-----DEKINYTVDLSMFMNPSPIRVNPHDSVPRIFQIFRALGLRHLLVINHENRIAGIITRRD</Hsp_qseq>
+      <Hsp_hseq>RTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENK-DYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATK-DITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALP----NDFYECQDDDDQMKSVAELGLTNFDESC--FLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKD</Hsp_hseq>
+      <Hsp_midline>R+ +  A +  YESL+YE+ EN L++D ++K   +    R    RW +   IG+ T L+A  IDI++      K+ ++  Y   K        +   +    + W+ ++ V V   A +V Y+ PI  GSGIPQ+K YLNG+ IP +VR+KTL  KA+GV  SV GGL  GKEGPMIH+GA V AGISQGKS +   DF +F+ FR+D EKRDFV  G AAGV+AAFGAPIGG+LFSLEE ASFWNQ L WR   +++IS FT+N +LS ++G + + ++TGL N G F+    ++ +E+P+F+++G+ GG LGA +N LNTK+ +FRK+++  K+G++ E ++VA +   LA L I+ I+DC+P+G +PT       Q++C+  EY+AVA+L+FQ PE +V+S+FH P  S  + TL +F + Y++L+  TFG++V  GVFIP  L GAAWGRL  +    +FP    + PGKYAL GAAA LGGV+RMTISL+ I+ME T  + +F  P+++ L+  KWVGD FNEG+YD  I +  VP+L W P    + + A  ++ K V+ ++ R+  + I E+L+   H+GFPVVD +           GR+ G ILRSQL  +L   ++ E       LP      F +       +KSV +L     DE     +D+  +M+P P RV  + S+P IF++FR LGLR+L V+N +N + G+ITR+D</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>4</Iteration_iter-num>
+  <Iteration_query-ID>XP_001627108.1</Iteration_query-ID>
+  <Iteration_query-def>predicted protein [Nematostella vectensis]</Iteration_query-def>
+  <Iteration_query-len>714</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>564.303</Hsp_bit-score>
+      <Hsp_score>1453</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>69</Hsp_query-from>
+      <Hsp_query-to>712</Hsp_query-to>
+      <Hsp_hit-from>61</Hsp_hit-from>
+      <Hsp_hit-to>680</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>321</Hsp_identity>
+      <Hsp_positive>427</Hsp_positive>
+      <Hsp_gaps>62</Hsp_gaps>
+      <Hsp_align-len>663</Hsp_align-len>
+      <Hsp_qseq>SLQKISPKFESLDYDIPENSLFLKEQKSFTPE-EIIKVDINRWIVMFIIGVITALIAAAIDICIGLLSKWKYD-IIKKNVELC------TGNYCMAKPYALWVAIDIFFVCIAACLVVYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKVKMGVNVLIKFWHLNCLLIFQIYLLIHQLLLAHLIDNFPLQTLVAKVVGVVFSVSGGLACGKEGPMIHSGAVVAAGVSQGRSTTFNRDFHIFESFRTDHEKRDFVSGGAAAGVAAAFGAPVGGVLFSLEEGASFWNQALTWRMFFGSIISTFTLNLVLSIYKGEAGDLSNPGLINFGTFTGNPYFGYELPLFLIMGVIGGLLGALFNAINHHLTIFRMRFVKRKWLRVVEACIVAALTASSSFVLIYFNKDCNPLGA---ANVTEGLQFFCQDGEYSSMGTLTFSTPEESIKNLFHLPLGAFNTLSLFLFFCVYFFLSCWTYGLYVPSGLFVPCILIGATWGRMFATLLHSVFPTWSWSTPGRYALIGAAASLGGVVRMTLSLTVILMEATSNITYGLPMMLVLMIAKWVGDFFNEGIYDMHIKLQGVPLMGWDPPIMATGICANNIMSSPVVCFNTVERVGRIFDILKDPSSYHNGFPVVEPTQQ--------FGVFRGIILRSQLIILLKHKV</Hsp_qseq>
+      <Hsp_hseq>SHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLK-----------------------------------------TLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILR--STLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRI</Hsp_hseq>
+      <Hsp_midline>S + +S ++ESL+Y+I EN L+   +K  + +  + ++  NRW V F+IGV T L+AA IDI +      K++ I+K  +  C      T   CM      W+  +   V IAA LV+Y  P+A GSGIPQIKCYLNG+ +P VVR+K                                         TLV+K VGV  SV GGL  GKEGPMIHSGA V AG+SQG+S +   DF +F  FR D EKRDFVS GAAAGVAAAFGAP+GGVLFSLEEGASFWNQALTWRMFF ++IS+FT+N +LS + G +G LS  GL NFG F    Y  +E+PLFL++G+IGG LGALFN +N  LT FR ++V  K  R+ E  +VAA++   +F+ I+   DC P+GA   A  T+  Q +C+ GEYS++ +L F  PEES+K++FH P+ +F   +L +F   YF L+ WT+G+ VPSG+F+P IL GA WGR+F   +  +FP+ +   PG+YAL GAAA LGGVVRMT+SLT I+MEAT +IT+GLP+MLVLM+ KWVGD FNEG+YD HI L  VP++GW+PP M+  I A+ +M   VV     ERV RI +IL+  S+ H+GFPVV+  ++        +G  +G ILRSQL  LL++++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>5</Iteration_iter-num>
+  <Iteration_query-ID>XP_001742728.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein [Monosiga brevicollis MX1]</Iteration_query-def>
+  <Iteration_query-len>790</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>576.244</Hsp_bit-score>
+      <Hsp_score>1484</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>741</Hsp_query-to>
+      <Hsp_hit-from>59</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>333</Hsp_identity>
+      <Hsp_positive>465</Hsp_positive>
+      <Hsp_gaps>21</Hsp_gaps>
+      <Hsp_align-len>724</Hsp_align-len>
+      <Hsp_qseq>TKRHFKQQAVYEGLDYEETESEIEQALRRKETEQQNNFHIAQ-RWALYFVIGVITAGIACSIDMAILKLSGLKFRWLANNI-EHCVQHD------CLVSSFFLWIATDVALVTLAGALTVYYAPVAQGSGISEIKCFLNGIKMPEVVRLKTLLVKGFGVMCAVVGGMAVGKEGPMIHSGAVVAAGISQGKSTSISSLHTSWFSAFRNDVDKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGSSFWNQLLTWRIFFASMTATFTLNFLLSGVKGGDWGALSNPGLLNFGQFDTMPYTIAEIPIFMLMGLIGGLSGAAFNGLNLYLTRFRMKFITSRKLKLLEVSAIAAITVAVAFSMIFFSADCLPMGESPESSSPL--QFFCADHQYSAMASLFFNTPEDSIKNLFHGKFAEIGSYNYETLALFALAYWLLGCMTYGLAIPSGLFVPTLLTGAAWGRLAGTILTAIFPGRAWTNPGKYSLIGAAANLGGVVRMTISLTVIVIEATGNVSYGLPIIIAVIVAKWVGDRFNEGIYDMHIELKHIPLLPWEPPVVSRYHLTASDIMTRKIQCVRLHEKVGHIVDLLKESKHNAFPVISW----PDGDDTQLGIFEGQVLRSTLIVLLKEKAYGPKLRNSIKGRKLTVQEIRKYYPRWPTASSLRVSAGDREKFLDIEAYYNKSPYSVRWNNSLSRIFHLFRTMGLRHLAVVDIQNRLVGMITRKDIA</Hsp_qseq>
+      <Hsp_hseq>TDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLG-IDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRS-GWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFH---SPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSR-NILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEE-GASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVA</Hsp_hseq>
+      <Hsp_midline>T  H    A YE L+YE +E+ + +   +K + Q   + I++ RW + F+IGV T  +A  ID+ +     +KF W+   +   C +        C+ +    WI  +  LVT+A  L +Y AP+A GSGI +IKC+LNGI +PEVVRLKTL+ K  GV C+V GG+  GKEGPMIHSGA V AGISQGKS S+  +    F  FRND +KRDFVS GAAAGV+AAFGAPIGGVLFSLEEG+SFWNQ LTWR+FF++M ++FT+N++LS   G   G LS  GL NFG F+   Y I EIP+F+L+G+IGG  GA FN LN  LT FR K+++S+  +L E   +AA++  +AF  IF   DC P+G +P ++S    Q +C   +YSA+ASLFF  PE+S+K++FH   + I S+   TL +F + Y+LL   T+G+++PSG+F+P +LTGAAWGRL G  +  +FP     +PGKY+L GAAA LGGVVRMTISLT I++EAT ++++GLPI++ ++V KWVGD FNEG+YD HI+L  +P+L W PP +SR ++ A  +M + +  +   E+V  IV++L+ + H+ FPV+      P       G  +G +LRS L  LL+ + +  +   S         E +    +  + + L ++  D   FLDIE Y +  P+ V  N SL  IF LFR +GLR+L VV+  N L G+ITRKD+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>6</Iteration_iter-num>
+  <Iteration_query-ID>XP_002109718.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein TRIADDRAFT_20821 [Trichoplax adhaerens]</Iteration_query-def>
+  <Iteration_query-len>687</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>515.383</Hsp_bit-score>
+      <Hsp_score>1326</Hsp_score>
+      <Hsp_evalue>2.04233e-173</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>668</Hsp_query-to>
+      <Hsp_hit-from>101</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>309</Hsp_identity>
+      <Hsp_positive>428</Hsp_positive>
+      <Hsp_gaps>39</Hsp_gaps>
+      <Hsp_align-len>690</Hsp_align-len>
+      <Hsp_qseq>QRWIIMFLIGVSTACVAALIDVGINAISSVKY---LCYF------------QDCLAQPYLIWLALSISLVFIAAALVVYLEPVAIGSGIPQIKCFLNGVNIQRCVRLKTLVAKAVGVLFSVAGGLPVGKEGPMIHSGAALAAAISNGKVTIGKCSFNIFHYFRSPVEKRDFVSAGAAAGVSAAFGSPVGGVLFSLEEGASFWYQSITWRIFFASMTSTFTLNVIRSFIHGMPFNLSFPGLLDFGDFKKGVTYYGYELPIFFLMGIVGGLLGALFNYINYKLSLHRMRNIRKSYLKLLEAIVVIIVCTAAAFLAVSLNQGCQPKYEAIQSELETFNFTSFKCGNGDYNTMATLFLNTPEKAIKNMFHTPQGLYTIPTLIWFTVIFFFTACWTYGVNVPSGLFVPCILTGAAWGRILGELIN-LIPGQEWSSPGRYALMGAAAMLAGVVRMTISITVILVEAIGDIAFGLPLMVVILISKLVGDYFNEGLYDIHVQLMKVPLLPWEPPDLSGSLTVKDLTCESVITLRKTERVADIYTVIKDADLRHNGYPVVDDDGTAATANNTNVKGRLIGLILLSELKTILELQLYK----SNHPL-KDYRLNGKDFDTFKHFYS---KHDDFSCEIPPEDMNKTIDLTKFMNPSPYTVYENMSFPRLYRLFRGLGLRHIVVINSKNQVIGIITRVDLA</Hsp_qseq>
+      <Hsp_hseq>NRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENK-DYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPI--GANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRST--LHHGFPVVDRIEESPYESLPDY-GRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESC---------FLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVA</Hsp_hseq>
+      <Hsp_midline> RW + FLIGV T  VAA ID+ ++    +K+   L Y               C+    + W+  +  LV IAA LV+Y+ P+A GSGIPQIKC+LNG+ I   VRLKTLV+KAVGV  SV GGL  GKEGPMIHSGAA+ A IS GK       F +F  FR+  EKRDFVSAGAAAGV+AAFG+P+GGVLFSLEEGASFW Q++TWR+FF++M S+FT+N I S+ +G    LS+ GL +FG F+    Y  +E+P+F L+GI+GG LGALFNY+N KL+  R + +     +L E ++V  V    AFL +     CQP          +       C  G+Y+ +A+LF   PE+++K+MFH+P   + + TL+ F + +F    WT+G++VPSG+F+P ILTGAAWGR+ G  +  L P      PG+YAL GAAA L GVVRMTIS+T I++EA  DI FGLP+M+V++++K VGD FNEGLYD H+ L +VP+L W PP +S ++    +  + V+ L + ERV+ I  +++     H+G+PVVD    +   +  +  GRL G IL S+L  +LE ++++    SN  L  D+     D D  K        + D SC          +D+  +M+P P+ V  N S P ++RLFRGLGLR++ V+N  N + G+ITR D+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>7</Iteration_iter-num>
+  <Iteration_query-ID>XP_002595670.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein BRAFLDRAFT_200772 [Branchiostoma floridae]</Iteration_query-def>
+  <Iteration_query-len>718</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>662.144</Hsp_bit-score>
+      <Hsp_score>1707</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>699</Hsp_query-to>
+      <Hsp_hit-from>69</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>359</Hsp_identity>
+      <Hsp_positive>485</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>710</Hsp_align-len>
+      <Hsp_qseq>FQGLDYDLVENSLF--VKEAAANNKKLIRININRWVVMLMIGILTALVGVVIDILVHQLAGLKYS-LLKSWIDSCVED------GCLAIPFALWVAIDALFVCFAAILVAYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKTLISKVIGVVFSVAGGLAVGKEGPMIHSGAVIAAGVSQGMSTTFKRDLKIFKYFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALTWRIFFCSVTTLFTLNIVLSVYFGRPGELAYPGLLNFGRFTVLSYFWYEIPLFLLMGVAGGLSGALFNFVNHKICIFRMKYVYKPFMQVVEAMMVAIVTATLAFVSIYVSRDCKPLGQDP---SEKPLQFFCSDGEYSTMATMMFQTPEQSVKSLFHDPPNSYNIGTLSVFCVIYFILACWTYGLSVPSGLFIPSLLCGAGWGRLFGIGVSHLVPNIAWSAPGIYALMGAAAQLGGVVRMTISLTVILMEATGNVSYGLPLMLVLLIAKWVGDIFNEGLYDIHIRLMSVPILGWEPPATSTTISARLVMSHPVTTLQQVEKVGRIVEALKEPHSNHNGFPVVDTDQVTS-------GRFRGLILRSHLLVLIKRKMFLERGQTGAIRRNLEMKDFREAYPRFPSIHELNISPEEMECSIDLRPYMNPAPYTVSEDASLHRVFRLFRALGLRHLVVVNKDNLVMGIVTRKDLA</Hsp_qseq>
+      <Hsp_hseq>YESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRS--TLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPN-DFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVA</Hsp_hseq>
+      <Hsp_midline>++ L+Y++ EN L+   ++  ++   L RI+ NRW V  +IG+ T LV   IDI+VH    +K++ +LK  +  C E+      GC+      W+  + + V  AAILV Y  P+A GSGIPQIKCYLNG+ +P VVR+KTL+SK +GV  SV GGL  GKEGPMIHSGA + AG+SQG S +   D  +F+ FR D EKRDFVS GAAAGV+AAFGAP+GGVLFSLEEGASFWNQALTWR+FF ++ + FT+N +LS + GR G L++ GL NFG F    Y  +EIPLFLL+G+ GG  GALFN++N K+  FR KYV     ++ E ++VA V+  LAF++I+   DC+P+G +P   S +  Q +C  GEYS +A++ FQ PE+SVKS+FH P NS+ + TL +F + YF+L  WT+G+SVPSG+FIP++L GA WGRLFGI V  L P++    PG YAL GAAAQLGGVVRMTISLT I+MEAT ++++GLP+MLVL++ KWVGD+FNEGLYD HI L  VPILGW PP  S  I A  VM   V  L++ E+V RIVE L+   + H+GFPVVD  + +        GR +G ILRS L  L++ ++F E G + +   N +  + ++   +  S+ EL ++  +  C +D+ PYM+P P+ V  + SL  +FRLFR LGLR+L VVN DN + G++TRKD+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>8</Iteration_iter-num>
+  <Iteration_query-ID>XP_004363664.1</Iteration_query-ID>
+  <Iteration_query-def>voltage gated chloride channel protein [Capsaspora owczarzaki ATCC 30864]</Iteration_query-def>
+  <Iteration_query-len>979</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>550.051</Hsp_bit-score>
+      <Hsp_score>1416</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>82</Hsp_query-from>
+      <Hsp_query-to>661</Hsp_query-to>
+      <Hsp_hit-from>58</Hsp_hit-from>
+      <Hsp_hit-to>646</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>299</Hsp_identity>
+      <Hsp_positive>405</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>591</Hsp_align-len>
+      <Hsp_qseq>RSSKVTSISTKFESLDYDILENDIYVKDQAKIDRKHYV-RLEAARWLVMFFVGVLTAVVAFLIDYCLTQISSVKFGWISDSI-TRCVDDE------CLDQSVLLWMGIDIFLVSIACLLVLFVEPIAQGSGIPEIKCYLNGIKIPHVVRFKALLTKTVGVLFSVSGGLACGKEGPMIHTGSVIAAGISQGKSTTFNIDLNLFKAFRTDHEKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGASFWNQALTWRIFFCSMIASFTLNVLLSGTKGTSWGAMSSPGLVNFGAFASANYNLFELPIFIAMGAVAGLFGALFNALNHRLTVFRFKYIYHSKALRFLEVILVAAATVIVSFTLIYFDDNCLPLGEKPGENPL---EFFCQEHTYNEIATMLFNTPEESIKNLFHATRGDYSPETLSIFFLVMFCLSCWTYGISVPAGVFVPALLTGAAYGRLVGNLLYHAFPDADWVDPGKYALIGAASMLGGIVRMTISLTVIVVEGTGNISYGLPLMLSIMAAKLVGDLFNEGIYDLHIHLRRVPILHWEAPLPMQHFHASHVMSSNVVCIQEFDRVGRIVELLRTTTHNAFPVV</Hsp_qseq>
+      <Hsp_hseq>RTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRS-GWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYV-SSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVV</Hsp_hseq>
+      <Hsp_midline>R+    ++S ++ESL+Y+I EN +Y   + K   +  + R+   RW V F +GV T +VA  ID  +     +KF WI   + ++C +++      C+   ++ W+G +  LV+IA +LV++V PIA GSGIP+IKCYLNGI IP VVR K L++K VGV  SV GGL  GKEGPMIH+G+ + AGISQGKS +  ID  LF+ FR D EKRDFVS GAAAGV+AAFGAPIGGVLFSLEEGASFWNQALTWR+FF +MI+SFT+N +LS   G S G +S  GL NFG F + +YN++E+P+F+ +G + G  GALFN LN +LT FR KY+  SK  R  E +LVAA +  ++F  I+  D+C P+G  P        + +C++  Y+ +A++ F  PEES+K++FH+    +   TL IF +  F L+ WT+GISVP+GVF+PA+LTGAA+GRL G  +   FP    +DPGKYAL GAA+ LGG+VRMTISLT I++E T +I++GLP+ML +M  K VGD+FNEG+YD HI L  VPIL W  P   ++  A  VM  +VV ++  +RV RIVE+LR+T H+ FPVV</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>74.7146</Hsp_bit-score>
+      <Hsp_score>182</Hsp_score>
+      <Hsp_evalue>1.58474e-13</Hsp_evalue>
+      <Hsp_query-from>821</Hsp_query-from>
+      <Hsp_query-to>952</Hsp_query-to>
+      <Hsp_hit-from>649</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>70</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>132</Hsp_align-len>
+      <Hsp_qseq>LQHAPLVNEHSYGTLCGIILRSQLITILKERAFGPRVVNAQGEHSVQAKVLTVDDFRASYPRYPSIDTISTTAYENEQFMDLRPYLNPTPYTLKHAAPLSRVYRIFRGLGLRHLIITDRFNQVVGMITRKDL</Hsp_qseq>
+      <Hsp_hseq>IEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDD------QMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>++ +P  +   YG L G ILRSQL  +L+ R F     +     +   +    DD      +  S+  +  T ++   F+D+ PY++P P+ +     L  ++R+FRGLGLR+L + +  N + G+ITRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>9</Iteration_iter-num>
+  <Iteration_query-ID>XP_018668924.2</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7-like [Ciona intestinalis]</Iteration_query-def>
+  <Iteration_query-len>712</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>603.979</Hsp_bit-score>
+      <Hsp_score>1556</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>700</Hsp_query-to>
+      <Hsp_hit-from>70</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>334</Hsp_identity>
+      <Hsp_positive>469</Hsp_positive>
+      <Hsp_gaps>29</Hsp_gaps>
+      <Hsp_align-len>708</Hsp_align-len>
+      <Hsp_qseq>QALDYDTIENELHGEEERKMSSSDWKW-IQFQRWIICMLIGIMTGIVAVVINICILELTAVKMH-VVEQAIIHCVKNR------CLYVPLLLWIAINVVLVTVASLLTVFVAPVAAGSGIPQIKCFLNGVKVPNVVRFKTLVTKVIGVIASVSGGLAVGKEGPMIHSGSVLAAGISQGRSISFNLNTRFFKHFRNDREKRDFVCAGAAAGVSAAFGAPVGGVLFSLEEAASFWNQALTWRIFLCSILSSYTLNFFMSIYHHHPGDLAYPGLINFGKFSG-SYEGFELPIFLLMAVFGGLSGAAFNAINHKITVFRLKYLKAKYFKVLEVVFVAAVSATIAFVLIYWNPECKPLGQDPYVRL----QFFCNDGEYNTMAVLFFTPPEESVKSLFHDPLGALQPLTIVIFVLPYFFLACWTYGLQVPSGLFIPSLLIGAAWGRLVGNCVNFIWPDDIWAQDLSKYALIGAAAQLGGTVRMTISLTVILIEATGNITYSLPLMAVLLLAKWVGDYFNHGIYDMHIHLNKVPILPWEPPALSTNIQAREVMGTPVVTLRTVPLVSDICSVLSDPRNCHSGYPITD-----------SEGKFRGVILRTQLLILLKHKEFVERGGSSERIKLSVF--RDSYPRYFPLSVINVSEGEQQCHVDLRPFLNPSPYTIQENASLPRIFRLFRALGLRHLVVLNDEYKVVGMISRKDI</Hsp_qseq>
+      <Hsp_hseq>ESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFP-SVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRS--TLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>++L+Y+  EN L+ + E+K S     W I   RW +C LIG+ TG+VA  I+I +     +K + +++  +  C + +      C++  ++ WI  N VLVT+A++L ++VAP+A GSGIPQIKC+LNG+ +P VVR KTLV+K +GV  SV GGL  GKEGPMIHSG+ + AGISQG+S S  ++   F+ FRNDREKRDFV AGAAAGV+AAFGAP+GGVLFSLEE ASFWNQALTWR+F  +++SS+T+N+ +S ++   G L++ GL NFG F    Y  +E+P+FLL+ + GG  GA FN +N K+T FR KY+ +K  ++ E + VAAVS  +AF+ I+   +C+P+G +P        Q +C  GEY+ +A LFF  PEESVKS+FH P+ +    T+VIF + YF L  WT+G+ VPSG+FIP++L GAAWGRL G  V  ++P  +   D  KYAL GAAAQLGG VRMTISLT I++EAT +IT+ LP+M VL++ KWVGD FN G+YD HI L +VPIL W PP +S NI A  VM   VV L     VS I  +L      H G+P+ D             G+ +G ILR+QL  LL+++ F E G S+  +    +  +D   +   ++ + ++  ++ C +D+ P+++P P+ +  N SLP IFRLFR LGLR+L V+ND+  + G+I+RKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>10</Iteration_iter-num>
+  <Iteration_query-ID>XP_643243.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel protein [Dictyostelium discoideum AX4]</Iteration_query-def>
+  <Iteration_query-len>757</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>409.068</Hsp_bit-score>
+      <Hsp_score>1050</Hsp_score>
+      <Hsp_evalue>2.46519e-131</Hsp_evalue>
+      <Hsp_query-from>64</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>70</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>258</Hsp_identity>
+      <Hsp_positive>407</Hsp_positive>
+      <Hsp_gaps>38</Hsp_gaps>
+      <Hsp_align-len>718</Hsp_align-len>
+      <Hsp_qseq>QSLNFSVNDNLLQREEYEKTTKGLHLKK-TFGKWIICLFLGVIVGCIAYVIKMVVQLLQGLKFHYTNHYV-----------SNGLQGEAFLTFLGINLLFVFLSCLMVIVAGPLASSSGIPEVKGILNGVKVREALGFRALLGKIVSLVLSFSSGLFVGPEGPMIHIGSAVGAAISQFKSSTMGFYPSLFLSYRNDRDKRDFISIGAATGLAAAFGAPIGGVLFSIEEVSSFWSRQLTWRTFFTCVIAAFTTNFLLQGI-GSSPDMHDTGLLTFGFSRLYLFRYSELLCFCFLGLIGGLLGAFFVFLNIHLNKWRKEKLKQNPYLRLFEALFVSVVTSVVCYYASF-IFDCRYQSNIVIETSVCEDQSNTEMVQFFCPDGMYSELGSLLFGNPDQALRRLYSRTNNMFTLPPLLVFTLISLFFSIWSSGLWVAGGLFVPMMMVGAGFGRLFGQTISMWF---TNIDSSIYALVGSAAMMAGYCRMTVCIVVIMVELTEGTQYLVPIILAVMISKWVGDFFNESVYEHLMEQKSIPFLQSKPPHSTNNIRISDVMSKNVVVLPEVCQVRLLVNILNSNNHNAFPVIN---SGPYDNQRLY---RGIILRDHILVLLFYRVFYRGTGEEIYLDENFDFDKFTTETSKSPPPLSEMNFDQFELDSFIDLRPYMNSSG--VTIHNTFSFVEAYKLFRNMGLRHLPVIDINNEVVGMVTRNDL</Hsp_qseq>
+      <Hsp_hseq>ESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRK-KYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQ-------PIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDE---SCFLDIEPYMHPHPHRVPLNTSLPFI--FRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>+SLN+ +++N L R+  +K +  L L + +  +W +C  +GV  G +A  I ++V   + +KF++   Y+           + G      + ++G N + V ++ ++VI   P+A  SGIP++K  LNG+ + E +  + L+ K V +  S   GL  G EGPMIH G+AVGA ISQ KS ++G    LF  +RNDR+KRDF+S GAA G+AAAFGAPIGGVLFS+EE +SFW++ LTWR FF+ +I++FT N++L    G S  +  TGL  FG      +   E+  F  +G+IGG LGA F +LN  L ++RK K   +   RLFE L V+ V+  + +   F I DC+               ++T++ Q +C  G YS + SL F NP+++++ ++    N F +  L++F +     ++W+ G+ V  G+F+P ++ GA +GRLFG  +   F   T ID   YAL G+AA + G  RMT+ +  I++E T+   + +PI+L +M++KWVGD FNE +Y+  ++   +P L   PP  + NI    VM K+VV L    +V  +V IL S  H+ FPV++     PY++   Y   +G ILR  +  LL  R+F         L  +F   +   +  KS   L   NFD+     F+D+ PYM+     V ++ +  F+  ++LFR +GLR+L V++ +N + G++TR D+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>11</Iteration_iter-num>
+  <Iteration_query-ID>XP_002506018.1</Iteration_query-ID>
+  <Iteration_query-def>chloride Carrier/Channel family [Micromonas commoda]</Iteration_query-def>
+  <Iteration_query-len>924</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>336.265</Hsp_bit-score>
+      <Hsp_score>861</Hsp_score>
+      <Hsp_evalue>4.30363e-102</Hsp_evalue>
+      <Hsp_query-from>32</Hsp_query-from>
+      <Hsp_query-to>841</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>271</Hsp_identity>
+      <Hsp_positive>423</Hsp_positive>
+      <Hsp_gaps>117</Hsp_gaps>
+      <Hsp_align-len>839</Hsp_align-len>
+      <Hsp_qseq>MDRLDKVVNMEEGSRSIHKERAEML-GGAIDTAQADKAHARLKRMAAFDSHDYDPADNDLEEDARR--ARKRADYKAEEQWRWAMSVLIGVVMGFLAFTVDGLIK-----KFNGW--KYGATTSSISPGGAGFGA-WLV---WVIISCLLASVAGGLVSYVEPLAAGSGIPELKTYLNGVHLRGLLRIKTLGAKLGGIAFSIGSGLIAGKEGPFVHGGGLVGGGLSAFGSHTLGFRTKKPSHFRNDADKRDFVAIGTAVGVAVAFGAPIGGMLFTVEEGASFHSTGMLWRGFLATCTGVLTTHWLDQLDFDAMDFAGAKFGVHRDFGLFTDDEANYSRVFWWYFWEVPIFAAIGCMGGLLGAAFVNINVKITMWRQRFIPVSDKYRRHAEVIFVCFVTATVLFI-MMAASPCKPI---PEAYRVAAATDGDGNGVSDELPGGVAKFEYGVETRRQIRDQYFRSLFCKADEYSSYGQLFFVPLADSLKLLLHLGEVYEQNGTDEFEQHLFTMDALIMYFVFMYALMTWTYGIGAPTGLFVPSLAVGAAGGQIVGRIVRAMVMSTGSEIVVDLHTYAVVGAAACLGGATRMTISITVLVMETTGSMQLIIPLMLTIFFAKAIGDKYSMGIYDTHIKIRGAPFL--DEPEHA-GVAVDKLKVAEVMADSLVTLRPVMRVRELVEVLTNTSHGAFPVTITDVGEG--HNAGDPIELHGSITRNILLKMLTHRVSMFDPE------EPREVLYENSEDRDALLEKLKQIPFKSPGVEMIASTLSRREMELSIDLTHFMQRHPFIVHADARLSRAYRLFRTMGLRHMYITPSKPQIIGVVTRKDL</Hsp_qseq>
+      <Hsp_hseq>LERVMSNSNLEHVARQRRRLEEELLFSRQLDDVGRTDSHEALS--ARYESLNYEISENRLYRDAEKKPSHQLTLWRISRN-RWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFN-WILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSW-FNGRSGWLSWTGLA-NFGVFENKDYN--------IWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKY--VSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTA------------------------------TSTQINQ-----MWCKKGEYSAVASLFFQNPEESVKSMFHS------------PINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTG---IDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADR-----VMRKDVVALERRERVSRIVEILRSTLHHGFPV-VDRIEESPYESLPDYGRLKGYILRSQLFKLLENRI--FEEEGASNSALPND-FYECQDDDD----QMKSV------AEL---GLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>++R+    N+E  +R   +   E+L    +D      +H  L   A ++S +Y+ ++N L  DA +  + +   ++     RW +  LIGV  G +A  +D ++      KFN W  KY  +       G   G  W V   W+  +C+L ++A  LV YV P+A GSGIP++K YLNG+ +  ++R+KTL +K  G+A S+G GL AGKEGP +H G  VG G+S   S++LG        FRND +KRDFV+ G A GVA AFGAPIGG+LF++EEGASF +  + WR F +      T +W+    F+      +  G+  +FG+F + + N         WE+P+F  IG +GG LGA F  +N K+T +R+++  VS K  R  E + V  V+  + F+ + A   C+PI   P A                              T  QI       ++CK  EYS+   LFF    +S+K + H               + F +  L+++ +  + L  WT+GI  P+G+F+P++  GAA G++ G  V  +  S      +D   YA+ GAAA LGG  RMTIS+T ++ME T  +   +P+ML +   K +GD ++ G+YD HI +   P L  + P+ +  +  D+     VM   +V L    RV  +VE+L +T H  FPV +  + E    +  D   L G I R+ L K+L +R+  F+ E       P +  YE  +D D    ++K +       E+    L+  +    +D+  +M  HP  V  +  L   +RLFR +GLR++++      + GV+TRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>12</Iteration_iter-num>
+  <Iteration_query-ID>XP_002768858.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Iteration_query-def>
+  <Iteration_query-len>776</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>246.899</Hsp_bit-score>
+      <Hsp_score>629</Hsp_score>
+      <Hsp_evalue>1.70439e-70</Hsp_evalue>
+      <Hsp_query-from>104</Hsp_query-from>
+      <Hsp_query-to>738</Hsp_query-to>
+      <Hsp_hit-from>102</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>208</Hsp_identity>
+      <Hsp_positive>329</Hsp_positive>
+      <Hsp_gaps>86</Hsp_gaps>
+      <Hsp_align-len>697</Hsp_align-len>
+      <Hsp_qseq>KWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSD--------NPGC---AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEG-SCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDW-----ASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTIQDHSH-----------RLLGVVMRSNIVDWVKG-----QGGVVSA--------------NTRLNLLDLTNRTPTIVSELTP--------------LAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_qseq>
+      <Hsp_hseq>RWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKD---YNIWEIPLFLLIGIIGGCLGALF----NYLNTKLTEFRKKYVSSK----LGRLFECLLVAAVSGFLAF-LTIFAIDDCQPIGANPTATSTQINQMWCKK----GEYSAVASLFFQNPEESVKSMFHSPIN--SFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILG----WNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDD--NHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>+W +  + G   G+    I I  H+    K + ++ +L S           GC    M+ WI     L+      V Y++P+AGGSGIP +K YLNG+ +P+++R   +V + +G    VG G  AG EGPM H GA VGA ++Q  + +          F   + K +FVS GA  GVA AF APIGG+LF++EE +++W + L WR F   +I+S+       +F  +    S   LA    F N D   +++WE   F+L+GI  G +GA F     Y       F   Y + K     G++ E  LV  ++  LA+ ++   +  C+P+       +  I    C +    G Y+  A++   + + SVK +F   +    F    L   G   F LTL T+G+++P+G+F+P I+ GA +GRLFG++V          +PG YA+ GAA  + G  RMTISLT I++E   D+     +M+ ++V+K V DMFN+G YD   +L   P +     ++   M+   +  R+    +      E + RI E+L S  H+ F + D              RL G ++RS +   ++      +G   SA                 +  L LTN   +   ++ P              L   + +FR L LR++ VV+ D  N + G++TRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>13</Iteration_iter-num>
+  <Iteration_query-ID>XP_003392724.1</Iteration_query-ID>
+  <Iteration_query-def>putative chloride channel protein [Leishmania infantum JPCM5]</Iteration_query-def>
+  <Iteration_query-len>885</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>195.282</Hsp_bit-score>
+      <Hsp_score>495</Hsp_score>
+      <Hsp_evalue>7.57058e-52</Hsp_evalue>
+      <Hsp_query-from>199</Hsp_query-from>
+      <Hsp_query-to>858</Hsp_query-to>
+      <Hsp_hit-from>155</Hsp_hit-from>
+      <Hsp_hit-to>771</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>199</Hsp_identity>
+      <Hsp_positive>312</Hsp_positive>
+      <Hsp_gaps>111</Hsp_gaps>
+      <Hsp_align-len>694</Hsp_align-len>
+      <Hsp_qseq>MWGVLMALLSSLCCLVM----------PSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDLFRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCL----SCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPT-VMVAVLSGLLAVAYTVSSIRFSRWRSRCLFPTTLYRVLEPCVFASLFSTACYVLPLFT--PCVPTPPHVREKKEALNVELFTAFCAQPETTHHPLATLTMTSPYNLLRLLFSRRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGV----LFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFL---EAQTSMHLLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVV-RVGKADQAYE---------GMITRAQLQLLLWVVYLREVGDASEVLVDEEGDDDGAANVGDGAADARSGMASKQVDAEGFLQSHVTAAELKRVHEFLFWNRLPSVPMMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPVLDRTQRVVGILTR</Hsp_qseq>
+      <Hsp_hseq>MWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGID-FGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNG-RSGW------------LSWTGLANF---GVFENKD--YNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYV-SSKLGRLFE-CLLVAAVSGFLAFLTIFAIDDCQP----IGANPTATSTQINQMWCKKGE--YSAVASLFFQNPEESVKSMF-HSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNIL----ADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRI--EESPYESLPDYGRLKGYILRSQLFKLL-----------ENRIFEEEG-------------------ASNSALPNDFYECQDDDDQMKSVAELGLTNFDESC-------------FLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITR</Hsp_hseq>
+      <Hsp_midline>MW V++A +   C LV           P A GSGIP +  YLNG+  P +  ++ LV K +    +V  GL  G EGPMIH G+ +GAG+  G+S SLG     +F  FRN R++RDF+SAGAA G+ +AF +P+GG+LF LEE A+ ++  L W +F S +    +  WI+   N   SGW            L    +A F    V EN    Y    IP  +++ ++ G L   +   + + + +R + +  + L R+ E C+  +  S     L +F    C P    +     A + ++   +C + E  +  +A+L   +P   ++ +F       F   +L++    Y + + +  G+ +  G  IP++L GA  GRL G+    LF      D G  AL GAAA   G+ R+T +L  ++ME T D++    +ML ++V K + D      Y A +++  VP L     + S ++L    A  +M   V  LE  + V  +VE L  T H+ FPVV R+   +  YE         G I R+QL  LL              + +EEG                   AS       F +      ++K V E    N   S              ++D+ PY+      V     +   +  FR LGLR+L V++    + G++TR</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>14</Iteration_iter-num>
+  <Iteration_query-ID>XP_005828918.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein GUITHDRAFT_88279 [Guillardia theta CCMP2712]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>279.641</Hsp_bit-score>
+      <Hsp_score>714</Hsp_score>
+      <Hsp_evalue>2.62633e-82</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>690</Hsp_query-to>
+      <Hsp_hit-from>102</Hsp_hit-from>
+      <Hsp_hit-to>773</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>236</Hsp_identity>
+      <Hsp_positive>366</Hsp_positive>
+      <Hsp_gaps>62</Hsp_gaps>
+      <Hsp_align-len>711</Hsp_align-len>
+      <Hsp_qseq>RWILTVVIGVSVAASAQVVQSLISLLIGFR-NQMLQSLF-----DQRRTEA----DILIFFTMYNAGLVLIAGFLVVFLEPRAAADGISEIKAYLNGSNIPNCFSVQTIIVKLLGSIFASSAGLACGPEGPLIHIGAGIAHAVTAVDKIYTFLPWLPHSVLAQFHNDRDRREFIAAGAGAGIAAAFGAPIGGVLFALEEAASHLSPQLIWRILTSALVATFTLALIKS--NGTGGDISLAGLLSFGTAISIGDAKERTLNSDGTDSVSALDAPIYVWELFLFIILGAVGGVFGGFFGAGFDFLTPRRPR---SRFLKMVEVLLISLATSY----SVFFFASNYPVCRNDGSWTCKEADNWGGWLGCPEGQYDELATLFFGSKEQSIVRMVTQAWPHEPFSNTSLFITSILNLFLMLITYGSPLPAGYFMPSWLVGASIGRLFGQLVKAYVGS--SVYSGAYALAGAAAMLGGVQRTSISLVFIIVECTSNVHFLLPIVTTLMVANFVAQKFTKEGVFDISLRHHSLRFLPHHPDWLMSLCTVSDVMANPVKCLHTVEKVGNIIDLLRNCHHNGFPVLS-LEGSRDENCIPRDRLEGLILRSHLRHILGTR-FMRDGSTRDSLWSRITAARMSEVSLDGEIELVRRKGVLLPPADDRERYVNLAAYMNAACYSVYSQCPLSRAYTIFRSLGLRHLPVVNQRFEVVGMLTRAN</Hsp_qseq>
+      <Hsp_hseq>RWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQ-GKSYSL--GIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGV------FENKDYN---------------IWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMW-----CKKGEYSAVASLFFQNPEESVKSMFHS--PINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFN-EGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDD----DDQMKSVAELGL---TNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKD</Hsp_hseq>
+      <Hsp_midline>RW +  +IGV     A  +  ++      + N +L+ L      +QR T A     ++I +  YN  LV IA  LV+++ P A   GI +IK YLNG  IP    ++T++ K +G   +   GL  G EGP+IH GA +   ++   K Y+    +   +  +F NDR++R+F++AGA AG+AAAFGAPIGGVLF+LEE AS  +  L WR+  SA++++FT+  I S  NG  G +S  GL +FG        + +  N               +WE+ LF+++G +GG  G  F      LT  R +   S+  ++ E LL++  + +    ++F      P+  N  + + +    W     C +G+Y  +A+LFF + E+S+  M     P   F  T+L I  I    L L T+G  +P+G F+P+ L GA+ GRLFG  V+    S   +  G YALAGAAA LGGV R +ISL  II+E T ++ F LPI+  LMV  +V   F  EG++D  +    +  L  +P  +        VM   V  L   E+V  I+++LR+  H+GFPV+  +E S  E+     RL+G ILRS L  +L  R F  +G++  +L +     +      D +++ V   G+      D   ++++  YM+   + V     L   + +FR LGLR+L VVN    + G++TR +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>15</Iteration_iter-num>
+  <Iteration_query-ID>XP_006818446.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Iteration_query-def>
+  <Iteration_query-len>818</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>665.226</Hsp_bit-score>
+      <Hsp_score>1715</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>78</Hsp_query-from>
+      <Hsp_query-to>817</Hsp_query-to>
+      <Hsp_hit-from>54</Hsp_hit-from>
+      <Hsp_hit-to>794</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>371</Hsp_identity>
+      <Hsp_positive>502</Hsp_positive>
+      <Hsp_gaps>27</Hsp_gaps>
+      <Hsp_align-len>754</Hsp_align-len>
+      <Hsp_qseq>DDRDTVGSMRVISSKYESLDYDQVENTFTVNVLIHCLLKAFTNSQNKWKKLSNVQCMQVKRWFVMFLIGICTGLVACFINICIDQISAIKYSTV-RHFTKMCRDE------ACMEYALLVWNGFNVTFVTIAAFMVAYIAPVAAGSGIPQIKCYLNGVKVPFVVRIKTLITKVFGVTLSVAGGLSIGKEGPMIHSGAVIAAGVSQGKSTTFKIDGKVFEDFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQSLTWRIFFASMVSTFTLNVVLSYYNGDPWTLSNPGLVTFGKFTGQAYYGYEIPIFLLMGVAGGLLGALFNGLNYRLSVFRLKYVYLRLSCVTEAALVALVTTTISFTMIYFISDCHPIGSN---SSPEPLQFFCDDGEFSATATLFFNTPEEALKSLFHDPLGAYKPVTVGVFFCIYFCLACWTYGLGVPSGLFIPSLLTGAAWGRLVGIFVHYVFPGGHFSDPGKYALIGAAAQLGGIVRMTISLTVILIEATGDVTYGLPLMLVLMISKWVGDYFNLGLYDIHILLQSVPLLPWEPPAMAHNISAHDVMSHPVVTLNTIETVGKIVDAMSHHHHNGFPVVDPNEVTDRS----FGTYRGLILRSQLIVLLKKEVFNETVGVTSLRQRIRLKDFRDEYPRYPGIKDIKVKPEHRQYHIDLRPFMNPTPYTVSQNSSLSRIFRLFRGLGLRHLVVVDDHSQVVGIVSRKDLARYRVFHHHFKLELEELHIS</Hsp_qseq>
+      <Hsp_hseq>DDVGRTDSHEALSARYESLNYEISEN------------RLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEE-GASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNREYHVDELYIS</Hsp_hseq>
+      <Hsp_midline>DD     S   +S++YESL+Y+  EN            + + +++ K      +  +   RWFV FLIG+ TGLVA FI+I +     IK++ + ++    C +E       CM   ++ W G+N   VTIAA +V Y+AP+A GSGIPQIKCYLNG+ +P VVR+KTL++K  GV  SV GGL  GKEGPMIHSGA + AG+SQGKS +  ID  +F +FR D EKRDFVS GAAAGV+AAFGAP+GGVLFSLEEGASFWNQ+LTWR+FF++M+S+FT+N +LS++NG    LS  GL  FG F  + Y  +EIP+FLL+G+ GG LGALFN LN +L+ FR KYV  +L  + E  LVA V+  ++F  I+ I DC PIG+N   +S +  Q +C  GE+SA A+LFF  PEE++KS+FH P+ ++   T+ +F   YF L  WT+G+ VPSG+FIP++LTGAAWGRL GIFV  +FP     DPGKYAL GAAAQLGG+VRMTISLT I++EAT D+T+GLP+MLVLM++KWVGD FN GLYD HI L  VP+L W PP M+ NI A  VM   VV L   E V +IV+ +    H+GFPVVD  E +       +G  +G ILRSQL  LL+  +F E  G ++        + +D+  +   + ++ +        +D+ P+M+P P+ V  N+SL  IFRLFRGLGLR+L VV+D + + G+++RKD+AR+R    + +  ++EL+IS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>16</Iteration_iter-num>
+  <Iteration_query-ID>XP_009533702.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein PHYSODRAFT_520430 [Phytophthora sojae]</Iteration_query-def>
+  <Iteration_query-len>967</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>462.611</Hsp_bit-score>
+      <Hsp_score>1189</Hsp_score>
+      <Hsp_evalue>2.15867e-149</Hsp_evalue>
+      <Hsp_query-from>165</Hsp_query-from>
+      <Hsp_query-to>919</Hsp_query-to>
+      <Hsp_hit-from>50</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>309</Hsp_identity>
+      <Hsp_positive>442</Hsp_positive>
+      <Hsp_gaps>58</Hsp_gaps>
+      <Hsp_align-len>769</Hsp_align-len>
+      <Hsp_qseq>SRKQQMKEKDKEKRAKAQHRESFNYDFFESRVNMQHDQEQTESAVRSL---NIARWVMTFGVGLGTALIACFVEFWTSLLSTFR----TATMESLVAAEMDGSQA--FGTGYLAYSMISVGFVAVASYCVAILCPVAGGSGISEIKATLNGIKIHRVVRLKTLFCKAFGILFSVSGGLPVGKEGPMIHSGSVIGAGLSQGKSSSFGLDTSWTKFKGFRNDKEKRDFISCGAAAGVAAAFGAPIGGVLFALEEGASFWHQNLTWRTFFCAMVSAFVLNYFMSFMEANESNGPTPDVEHVFIGGTLGTQTGTFTFGQFVGSKAYEVLDVPIFIVMGMVGGLFGAGFNGANTVLTKFRKRYVTHRFLRFGEALLIAFSMATASFWLSYYFGQCRDLAGD---YSDSLSRFYCPEGQYNDLASLFTVNYATSMKQLLHFTGDGSFTPFSLCMFFVVFYIFACWTYGIAVPSGLFVPSLLAGAAYGRICVMIVHYLGFP--VGAQDGMFALIGSACMLGGMARMTISLTVIILECTGVIEWGLPIMVSLMAARWVGNSFNEGLYDIHIHLNHLPFLEFDPPYYARFLRALNIMSSPPTCVPQIAKVGEIYDVLKNCNHGGFPVIVPRSQDAAGGGHRPNLGAKRISPRFAGTIYRHHLAVLLQRKDFFIEKPEPFVRTPAGDTTLLYNDQYALSYRDMEGSYPRYPSINDIQLDEEERDLWMDLTPYMNPTPHTVQEQTPVPRAFRLFRSLGLRHLIVLNRRNEVRGVITRKDL</Hsp_qseq>
+      <Hsp_hseq>SRQLDDVGRTDSHEALSARYESLNYEISENR--LYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGID--FGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWF-----NGRS---------GWL-SWTGLANFGVF-ENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFH-SPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERL-FPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPV-VDRIEESPYES-LPDYG------RLKGYILRSQLFKLLENRIF---------EEEGASNSALPNDFYECQDDD-----DQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>SR+     +     A +   ES NY+  E+R  +  D E+  S   +L   +  RW + F +G+ T L+A F++         +       + S    E  G+ A    T  +A+   +   V +A+  V  + P+AGGSGI +IK  LNGI I  VVRLKTL  KA G+  SV GGL  GKEGPMIHSG+ +GAG+SQGKS S G+D  +  F+ FRND+EKRDF+S GAAAGVAAAFGAPIGGVLF+LEEGASFW+Q LTWR FF AM+S+F +N+ +S+      NG +         G L + TG   FG F  +K Y + ++P+F+++G++GG  GA FN  NT LT+FRK+YV+ +  R  E LL+A      +F   +    C+ +  +    S  +++ +C +G+Y+ +ASLF  N   S+K + H +   SF   +L +F + +++   WT+GI+VPSG+F+P++L GAA+GR+  + V  L FP   G   G +AL G+A  LGG+ RMTISLT II+E T  I +GLPIM+ LM  +WVG+ FNEGLYD HI L  +P L ++PP  +R + A  +M      + +  +V  I ++L++  H GFPV V R +++      P+ G      R  G I R  L  LL+ + F                + L ND Y     D      +  S+ ++ L   +   ++D+ PYM+P PH V   T +P  FRLFR LGLR+L V+N  N +RGVITRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>17</Iteration_iter-num>
+  <Iteration_query-ID>XP_011426744.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7 [Crassostrea gigas]</Iteration_query-def>
+  <Iteration_query-len>765</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>638.262</Hsp_bit-score>
+      <Hsp_score>1645</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>763</Hsp_query-to>
+      <Hsp_hit-from>61</Hsp_hit-from>
+      <Hsp_hit-to>794</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>353</Hsp_identity>
+      <Hsp_positive>500</Hsp_positive>
+      <Hsp_gaps>29</Hsp_gaps>
+      <Hsp_align-len>745</Hsp_align-len>
+      <Hsp_qseq>SEKILSGDYESLDYDVCENDLYQLEERKKSVK-EIMIIEMLRWLVMFFVGLLTGLVASLIDFCVIQSTDLKFSIIKKYV-DKCVDNK------CMEVPLLVWVGINGGLVIVASILTACFEPVAAGSGIPQIKCYLNGVKVPHVVRLKTIVVKVIGVIFSVAGGLIIGKEGPMIHSGAVIAAGISQGRSDTFRKFDLRIFEFFRSDTEKRDFVAGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALAWRIFFASMVSTFTLNVIQSYIKGIPWDLSYPGLFNFGSFDTTSYSAFEIPIFILMGVLGGLFGALFNQLNYILTKFRRRYINKSRDRVLEAMIVAIITATVGYISLYFNNSCSPMVQD---TKDNTVQVYCNDGQYSSTATILFQSPEDSVKSLFHESKGMYSPSTLVVYCLCVFILACWTYGLYVPSGLFIPGLLVGAAWGRFVGLCLNYIFPDVGWVDFGKYSLIGAAAQLGGIVRMTISLTVIIMEATGNITFGLPIMIVLIVAKWVGDIFNEGIYDMHIHIQGVPILGWEPSSVLTNLSAKEVMSHPVSVFNMRESVGRVMEVLKTETHNGFPVVEDYIPNPLDSSINEEMSFGTYRGLILRSQLIVLLKQRVFGDN-------IDQFYNLSTKDFRDAYPKFTPIRQIHVSQYERDNCEINLEPYMNPAAYCVTDNALFPRIFKLFRALGLRHLVVVDKHHQVVGMVTRKDLARYKVTRKFWKARIDELLMS</Hsp_qseq>
+      <Hsp_hseq>SHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSL-GIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPD----YGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDD-----DQMKSVAELGLTNFD-ESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVARFRERRRNREYHVDELYIS</Hsp_hseq>
+      <Hsp_midline>S + LS  YESL+Y++ EN LY+  E+K S +  +  I   RW V F +G+ TGLVA+ ID  V  S D+KF+ I KY+  KC + +      CM   ++ W+G N  LV +A+IL     P+A GSGIPQIKCYLNG+ +P VVRLKT+V K +GV  SV GGL  GKEGPMIHSGA + AGISQG+S +    D  +F  FR+D EKRDFV+ GAAAGV+AAFGAP+GGVLFSLEEGASFWNQAL WR+FF++M+S+FT+N I S+  G    LS+ GL NFG F+   Y+ +EIP+F+L+G++GG  GALFN LN  LT+FR++Y++    R+ E ++VA ++  + +++++  + C P+  +   T     Q++C  G+YS+ A++ FQ+PE+SVKS+FH     +  +TLV++ +  F+L  WT+G+ VPSG+FIP +L GAAWGR  G+ +  +FP V  +D GKY+L GAAAQLGG+VRMTISLT IIMEAT +ITFGLPIM+VL+V KWVGD+FNEG+YD HI +  VPILGW P  +  N+ A  VM   V     RE V R++E+L++  H+GFPVV+    +P +S  +    +G  +G ILRSQL  LL+ R+F +         + FY     D      +   + ++ ++ ++ ++C +++EPYM+P  + V  N   P IF+LFR LGLR+L VV+  + + G++TRKD+AR++  R+  +  +DEL +S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>18</Iteration_iter-num>
+  <Iteration_query-ID>XP_013760162.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel 7 [Thecamonas trahens ATCC 50062]</Iteration_query-def>
+  <Iteration_query-len>819</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>561.222</Hsp_bit-score>
+      <Hsp_score>1445</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>727</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>341</Hsp_identity>
+      <Hsp_positive>467</Hsp_positive>
+      <Hsp_gaps>37</Hsp_gaps>
+      <Hsp_align-len>750</Hsp_align-len>
+      <Hsp_qseq>ARVRHKARRAMSGTEWEHLLQRSHVHHSEQDDVQSLDYEVNENMVWRAHVASKSN----WAYSRERGLKWVVALLVGMATALVAYTIDMFIRGVAGAKFTLISR-LIVDCDN--------CFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPVSKPWARFAEALFIAALSATVSFLFAFFIFECRP---EPTTVYEGITLRRFTCPEGEYNDMATIFFTTQEEAIRQLFHNR-DAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVH-DPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPFLGWEPERLMENLTAADIMSTPVNVLPYFVRVRDVVVLLESNTHGAFPLCG-IDEN---GLPS-DQFVGIILRHEIITLLKRRAFVDYANAVRSHV--DWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDRMRRIMGIVTRHDL</Hsp_qseq>
+      <Hsp_hseq>ARQRRRLEEELLFSRQLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNR---WFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNG--RSGWLSWTGLANFGVFENKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKY--VSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQIN--QMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIF-EEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESC--FLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline>AR R +    +  +     + R+  H +     +SL+YE++EN ++R      S+    W  SR R   W V  L+G+ T LVA  ID+ +      KF  I + L+  C          C W+  +++I  N +LV++AA  V ++ P+A GSGIP+IKCYLNG  IP VVRL TL+ KA GV  SV GGL  G+EGPMIHSGA + AGISQGK+ SL +D GLF+ FRND  KRDFV++GAAAGV+AAFG+PIGGVLFSLEEGAS WNQALTWR FF  MISSFT+N +LS  +   + G+L+  GL +FG F  + Y + EIP F++IG++GG  GA FN +NTKLT FR ++  VS    R  E L +AA+S  ++FL  F I +C+P    PT     I   +  C +GEY+ +A++FF   EE+++ +FH+  ++F   TL  F   YF L + T+G SVPSG+F+P ILTG A+GRL G  +E LFPS+   DPG YAL GAAA LGGVVRMTISLT II+E+T DI++GLP+ML +MV+K VGD+FNEGLYD HID+  +P LGW P ++  N+ A  +M   V  L    RV  +V +L S  H  FP+   I+E+    LP   +  G ILR ++  LL+ R F +   A  S +  D+ +  DD  +   + ++    FDE    F+++ PYM+P P       +   +FRLFRGLGLR++ VV+    + G++TR D+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>19</Iteration_iter-num>
+  <Iteration_query-ID>XP_016612789.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein SPPG_00455 [Spizellomyces punctatus DAOM BR117]</Iteration_query-def>
+  <Iteration_query-len>876</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|NP_495940.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_495940</Hit_accession>
+  <Hit_len>797</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>592.038</Hsp_bit-score>
+      <Hsp_score>1525</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>168</Hsp_query-from>
+      <Hsp_query-to>859</Hsp_query-to>
+      <Hsp_hit-from>71</Hsp_hit-from>
+      <Hsp_hit-to>795</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>336</Hsp_identity>
+      <Hsp_positive>452</Hsp_positive>
+      <Hsp_gaps>39</Hsp_gaps>
+      <Hsp_align-len>728</Hsp_align-len>
+      <Hsp_qseq>YDDFTTIDWIHDFSKERVRIRNL--QNLRGVRGTLRKAYDACQAWILVFIVGAITGWLAAYIDVASEWASDLKEGYCKEGFYLNRKFCCWHVE----ANEECTEWATWSMTFNAQSGAAMWGA--EYFMFTVFGTAFALASAVLVKVYAPYAAGSGIPEVKTILGGFVIRKFLGGWTLLIKCIGLCLSVASGLSLGKEGPLVHVACCVGNIFPRIFDKYAKNEAKKREILSASSAAGVSVAFGAPIGGVLFSLEEVSYYFPYKTMWRSFFCAMVAAISLQLVNPFRTGKLVLFAVEYKRAWHGFELPFFVLLGILGGLYGSFFIRMNIRVAAYRKSS-WLRHWVIAEVGVVAILTALLSFAHPFLRVSTVELVANLFKECIDNETDFYGLCSDHENALASVVKYLFLAAGIKIFFTIFTFGIRVPAGIFIPSMAVGACVGRALGIGM-QLWQ--MAYPNMWMFSSCKPHEQCVTPGTYAMVGAAAALGGVTRMTVSLTVIMFELTGALTYILPIMLTVMVSKWVGDALGKASIYDALIELNGYPFLDAKEEYTYSTTVGSVM-----TRVED-------------LEVICGSGCTLEALSELVQTTGFKGYPVVAGLDGMVLVGYAGSAELRYAIDQAHQNR--CPPTTLCIFTDLQQDT----EDPFLDFRPWTDQTPMTISPKFPMELVMELFKKMGLRYVLVVQDGRLVGIVTKKDLLRHVSWKR</Hsp_qseq>
+      <Hsp_hseq>YGDFHTIDWQRDLARDRLRHKMISKKKVDFPLGLLQSGWDAGAGWICVLFVGLAAGATAGIIDIGARWMSDLKTGVCADRFWLDHEHCCWSSNDTFYKDDDCKAWTKWPWMLNYYNSSSFLFLFLEWIFYIGWAVAMSTLAVLFVKIFAPYACGSGIPEIKCILSGFVIRGYLGKWTFIIKSVGLILSSASGLSLGKEGPMVHLACCIGNIFSYLFPKYGLNEAKKREILSASAAAGVSVAFGAPIGGVLFSLEEASYYFPLKTMWRSFFCALVAGIILRFVNPFGSNQTSLFHVDYMMKWTFIELVPFAILGLFGGIIGSLFIFANIRWSRFRKNSKMLGGNPIYEVMLITLVTAAISYFNPFTRKSAQSMIQQLFDRC-EDQIDEDSLC-DQNKALSIAFGQLLWALIFKFVITIFTFGIKVPCGLFVPSIGMGAIAGRILGITVDQIFRAVQATPGHSDYFTCQIGKDCVMPGLYAMVGAAAVLGGVTRMTVSLVVIMFELTGSLEFIVPTMVATMFSKWIGDGISKMGIYEAHIELNGYPFLDSKGEYPYSTVASQVMRPSIHRQVADEMSMSDLRELKNELSVITESGMTLGDLESLLRQTDFNGFPVVVSQNSMHLVGFITRRDILLALHTARKTQPYVVTNSIAYFSDGVPDAMPGGPAP-LRLRKILDMAPMTVTDQTPMETVIDMFRKLGLRHVLVTKNGKVLGIITKKDILQFMRNKN</Hsp_hseq>
+      <Hsp_midline>Y DF TIDW  D +++R+R + +  + +    G L+  +DA   WI V  VG   G  A  ID+ + W SDLK G C + F+L+ + CCW        +++C  W  W    N  + ++      E+  +  +  A +  + + VK++APYA GSGIPE+K IL GFVIR +LG WT +IK +GL LS ASGLSLGKEGP+VH+ACC+GNIF  +F KY  NEAKKREILSAS+AAGVSVAFGAPIGGVLFSLEE SYYFP KTMWRSFFCA+VA I L+ VNPF + +  LF V+Y   W   EL  F +LG+ GG+ GS FI  NIR + +RK+S  L    I EV ++ ++TA +S+ +PF R S   ++  LF  C +++ D   LC D   AL+     L  A   K   TIFTFGI+VP G+F+PS+ +GA  GR LGI + Q+++   A P    + +C+  + CV PG YAMVGAAA LGGVTRMTVSL VIMFELTG+L +I+P M+  M SKW+GD + K  IY+A IELNGYPFLD+K EY YST    VM      +V D             L VI  SG TL  L  L++ T F G+PVV   + M LVG+    ++  A+  A + +      ++  F+D   D       P L  R   D  PMT++ + PME V+++F+K+GLR+VLV ++G+++GI+TKKD+L+ +  K </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>20</Iteration_iter-num>
+  <Iteration_query-ID>NP_001330038.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>772</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>378.637</Hsp_bit-score>
+      <Hsp_score>971</Hsp_score>
+      <Hsp_evalue>1.61814e-119</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>750</Hsp_query-to>
+      <Hsp_hit-from>44</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>268</Hsp_identity>
+      <Hsp_positive>418</Hsp_positive>
+      <Hsp_gaps>64</Hsp_gaps>
+      <Hsp_align-len>767</Hsp_align-len>
+      <Hsp_qseq>SDNLLWSRVPESDDTSTDDITLLNSHRDGDGGVNSLDYEVIENYAYRE-EQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAII-------QKSYFAG-----FIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWC--KSGICGHFGGGGFIIWDVSDGQDDYYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISF-GLPLLRKCSPCPESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLN-IEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPVIDHTRSG--ETL-----VIGLVLRSHLLVLLQSKV----DFQHSPLPCDPSARNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDL</Hsp_qseq>
+      <Hsp_hseq>EEELLFSR-------QLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFE----NKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGR--LFECLLVAAVSGFLAFLTIFAIDDCQPIGAN----------PTATSTQINQMWCK-KGEYSAVASLFFQNPEESVKSMFHSP-INSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMR-KDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPND---------FYE-CQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline> + LL+SR         DD+   +SH        SL+YE+ EN  YR+ E+    +L +      +WF   LIG+ TGL A FI++ V      KF      +       Q+   AG      I ++  N VLV  +A ++   AP A GSGIP+IK YLNGI IP  +  +TL+ K  G   SVGGGL  GKEGP++H+GA + + + QG S    ++    + F++DR++RD V+ G AAGVAAAF AP+GGVLF+LEE  S+W   L WR+FF++ I +  V   + W   +SG     G   F +++      DY   E+    +IG+IGG LGALFN L   +T +R+  +  K  R  + E  +++ ++  ++F  +  +  C P   +          P          +CK   EY+ +A++FF   +++++++F +  +  F   +L+ F   ++ L + TFG +VP+G F+P I+ G+ +GRL G+FV R +  +  I+ G YAL GAA+ LGG +RMT+SL  I++E T ++     IMLVL+++K VGD FNEGLY+    L  +P+L   P    R ++A    + + V++L R  RV+ +  IL S  H+GFPV+D       E+L     + G +LRS L  LL++++       +S LP D         F E  +    +   + ++ LT+ D   ++D+ P+++P P+ VP + SL  ++ LFR LGLR+LFVV   + + G+ITRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>21</Iteration_iter-num>
+  <Iteration_query-ID>NP_001107803.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform b [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>781</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>626.32</Hsp_bit-score>
+      <Hsp_score>1614</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>62</Hsp_query-from>
+      <Hsp_query-to>764</Hsp_query-to>
+      <Hsp_hit-from>61</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>354</Hsp_identity>
+      <Hsp_positive>483</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>723</Hsp_align-len>
+      <Hsp_qseq>NEKLLSLKYESLDYDNSENQLFLEEERRINH--TAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVI-------KGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPL---QLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT------QPARLQGLILRSQLIVLLKHKVFVER--SNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLA</Hsp_qseq>
+      <Hsp_hseq>SHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWR-ISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKD--YNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTL--HHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDD---QMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVA</Hsp_hseq>
+      <Hsp_midline>+ + LS +YESL+Y+ SEN+L+ + E++ +H  T +R +   RW +C LIG+ TGLVA FIDI+V     +K+  I        G   + T  G +   ++ W   N   V + +++V ++ P+A GSGIPQIKC+LNG+ IP VVRLKTLV K  GV  SV GGL  GKEGPMIHSG+ + AGISQG+S SL  DF +F  FR D EKRDFVSAGAAAGV+AAFGAP+GGVLFSLEEGASFWNQ LTWR+FF++MIS+FT+N++LS ++G    LS  GL NFG F+++   Y I EIP+F+ +G++GG LGA+FN LN  LT FR +Y+     ++ E +LVAAV+  +AF+ I++  DCQP+     +      Q++C  GEY+++A+ FF  PE+SV S+FH P  S+   TL +F + YF L  WT+G++V +GVFIP++L GAAWGRLFGI +  L  +    DPGKYAL GAAAQLGG+VRMT+SLT I+MEAT ++T+G PIMLVLM  K VGD+F EGLYD HI L  VP L W  P  S ++ A  VM   V  L RRE+V  IV++L  T   H+GFPVV+  +++         RL+G ILRSQL  LL++++F E   SN  L       +D  D   +   +  + ++  +  C +D+  +M+P P+ VP   SLP +F+LFR LGLR+L VV++ N + G++TRKD+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>22</Iteration_iter-num>
+  <Iteration_query-ID>XP_011520656.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>747</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>626.32</Hsp_bit-score>
+      <Hsp_score>1614</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>28</Hsp_query-from>
+      <Hsp_query-to>730</Hsp_query-to>
+      <Hsp_hit-from>61</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>354</Hsp_identity>
+      <Hsp_positive>483</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>723</Hsp_align-len>
+      <Hsp_qseq>NEKLLSLKYESLDYDNSENQLFLEEERRINH--TAFRTVEIKRWVICALIGILTGLVACFIDIVVENLAGLKYRVI-------KGNIDKFTEKGGLSFSLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRFDSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIHRPCLQVIEAVLVAAVTATVAFVLIYSSRDCQPLQGGSMSYPL---QLFCADGEYNSMAAAFFNTPEKSVVSLFHDPPGSYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWADPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVMSTPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDT------QPARLQGLILRSQLIVLLKHKVFVER--SNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVVDNRNQVVGLVTRKDLA</Hsp_qseq>
+      <Hsp_hseq>SHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWR-ISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKD--YNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGRLFECLLVAAVSGFLAFLTIFAIDDCQPIGANPTATSTQINQMWCKKGEYSAVASLFFQNPEESVKSMFHSPINSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTL--HHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDD---QMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDVA</Hsp_hseq>
+      <Hsp_midline>+ + LS +YESL+Y+ SEN+L+ + E++ +H  T +R +   RW +C LIG+ TGLVA FIDI+V     +K+  I        G   + T  G +   ++ W   N   V + +++V ++ P+A GSGIPQIKC+LNG+ IP VVRLKTLV K  GV  SV GGL  GKEGPMIHSG+ + AGISQG+S SL  DF +F  FR D EKRDFVSAGAAAGV+AAFGAP+GGVLFSLEEGASFWNQ LTWR+FF++MIS+FT+N++LS ++G    LS  GL NFG F+++   Y I EIP+F+ +G++GG LGA+FN LN  LT FR +Y+     ++ E +LVAAV+  +AF+ I++  DCQP+     +      Q++C  GEY+++A+ FF  PE+SV S+FH P  S+   TL +F + YF L  WT+G++V +GVFIP++L GAAWGRLFGI +  L  +    DPGKYAL GAAAQLGG+VRMT+SLT I+MEAT ++T+G PIMLVLM  K VGD+F EGLYD HI L  VP L W  P  S ++ A  VM   V  L RRE+V  IV++L  T   H+GFPVV+  +++         RL+G ILRSQL  LL++++F E   SN  L       +D  D   +   +  + ++  +  C +D+  +M+P P+ VP   SLP +F+LFR LGLR+L VV++ N + G++TRKD+A</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>23</Iteration_iter-num>
+  <Iteration_query-ID>NP_197996.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|17559050|ref|NP_506022.1|</Hit_id>
+  <Hit_def>Chloride channel protein [Caenorhabditis elegans] &gt;gi|12239595|gb|AAG49526.1|AF319616_1 CLC-type chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|12658402|gb|AAK01123.1|AF328908_1 voltage-gated chloride channel CLH-6 [Caenorhabditis elegans] &gt;gi|17645971|emb|CAB00111.2| Chloride channel protein [Caenorhabditis elegans]</Hit_def>
+  <Hit_accession>NP_506022</Hit_accession>
+  <Hit_len>796</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>379.022</Hsp_bit-score>
+      <Hsp_score>972</Hsp_score>
+      <Hsp_evalue>1.72978e-119</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>750</Hsp_query-to>
+      <Hsp_hit-from>44</Hsp_hit-from>
+      <Hsp_hit-to>774</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>268</Hsp_identity>
+      <Hsp_positive>418</Hsp_positive>
+      <Hsp_gaps>64</Hsp_gaps>
+      <Hsp_align-len>767</Hsp_align-len>
+      <Hsp_qseq>SDNLLWSRVPESDDTSTDDITLLNSHRDGDGGVNSLDYEVIENYAYRE-EQAHRGKLYVGYYVAVKWFFSLLIGIGTGLAAVFINLSVENFAGWKFALTFAII-------QKSYFAG-----FIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQGGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGWC--KSGICGHFGGGGFIIWDVSDGQDDYYFKELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRVKIIEACIISCITSAISF-GLPLLRKCSPCPESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMREFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLN-IEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLPRVIRVADVASILGSNKHNGFPVIDHTRSG--ETL-----VIGLVLRSHLLVLLQSKV----DFQHSPLPCDPSARNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPRPSRVIGLITRKDL</Hsp_qseq>
+      <Hsp_hseq>EEELLFSR-------QLDDVGRTDSHEALSARYESLNYEISENRLYRDAEKKPSHQLTLWRISRNRWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFE----NKDYNIWEIPLFLLIGIIGGCLGALFNYLNTKLTEFRKKYVSSKLGR--LFECLLVAAVSGFLAFLTIFAIDDCQPIGAN----------PTATSTQINQMWCK-KGEYSAVASLFFQNPEESVKSMFHSP-INSFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILGWNPPKMSRNILADRVMR-KDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPND---------FYE-CQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDDNHLRGVITRKDV</Hsp_hseq>
+      <Hsp_midline> + LL+SR         DD+   +SH        SL+YE+ EN  YR+ E+    +L +      +WF   LIG+ TGL A FI++ V      KF      +       Q+   AG      I ++  N VLV  +A ++   AP A GSGIP+IK YLNGI IP  +  +TL+ K  G   SVGGGL  GKEGP++H+GA + + + QG S    ++    + F++DR++RD V+ G AAGVAAAF AP+GGVLF+LEE  S+W   L WR+FF++ I +  V   + W   +SG     G   F +++      DY   E+    +IG+IGG LGALFN L   +T +R+  +  K  R  + E  +++ ++  ++F  +  +  C P   +          P          +CK   EY+ +A++FF   +++++++F +  +  F   +L+ F   ++ L + TFG +VP+G F+P I+ G+ +GRL G+FV R +  +  I+ G YAL GAA+ LGG +RMT+SL  I++E T ++     IMLVL+++K VGD FNEGLY+    L  +P+L   P    R ++A    + + V++L R  RV+ +  IL S  H+GFPV+D       E+L     + G +LRS L  LL++++       +S LP D         F E  +    +   + ++ LT+ D   ++D+ P+++P P+ VP + SL  ++ LFR LGLR+LFVV   + + G+ITRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>28347</Statistics_db-num>
+      <Statistics_db-len>13471670</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

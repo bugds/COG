@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein_v5</BlastOutput_db>
+  <BlastOutput_query-ID>NP_001278.1</BlastOutput_query-ID>
+  <BlastOutput_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</BlastOutput_query-def>
+  <BlastOutput_query-len>805</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>NP_001278.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform a [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>805</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>274.633</Hsp_bit-score>
+      <Hsp_score>701</Hsp_score>
+      <Hsp_evalue>8.98848e-81</Hsp_evalue>
+      <Hsp_query-from>175</Hsp_query-from>
+      <Hsp_query-to>787</Hsp_query-to>
+      <Hsp_hit-from>149</Hsp_hit-from>
+      <Hsp_hit-to>738</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>192</Hsp_identity>
+      <Hsp_positive>325</Hsp_positive>
+      <Hsp_gaps>75</Hsp_gaps>
+      <Hsp_align-len>639</Hsp_align-len>
+      <Hsp_qseq>SLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRF-DSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIH--------RPCLQVIEAVLVAAVTATVAFVLIYSSRD-CQPLQGGSM--SYPLQLFCAD-----GEYNSMAAAFFNTPEKSVVSLFHDPPG--SYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVM----STPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVV--DNRNQVVGLVTRKDL</Hsp_qseq>
+      <Hsp_hseq>AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKV-EGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWV------GDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLS--SCTHNAFTIQDHSH-----RLLGVVMRSNIVDWVKGQG-------GVVSANTRL---------------------------NLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>++L+W  +    +      V+++ P+A GSGIP +K +LNGV +P ++R   +V ++ G I+ V  G   G EGPM H G+++ A ++Q  + + K   K    F     K +FVS GA  GV+ AF AP+GG+LF++EE +++W + L WR F   +I+++        +   + + S   L    +F ++++  + + E   FI +G+  G++GA F     +   +R  + H        R   QV+EA LV  +T  +A+ + +S    C+PL G S   +  +Q    D     G YN  AA      + SV  LF    G   +    L     + FFL   TYG+ + AG+F+P++++GA +GRLFG+ +        WA +PG YA+MGAA  + G  RMT+SLTVI++E   ++     +M+ ++ +K V D+F +G YD+  +L+  P++   +     ++  R+V     + P++     E +G I +VLS  +  HN F + +H+      RL G+++RS ++  +K +        G+V    RL                           +L +  N +P  V +   L + + +FR L LRH++VV  D+ N+VVG+VTRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>NP_506022.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein [Caenorhabditis elegans]</Iteration_query-def>
+  <Iteration_query-len>796</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>284.263</Hsp_bit-score>
+      <Hsp_score>726</Hsp_score>
+      <Hsp_evalue>2.67013e-84</Hsp_evalue>
+      <Hsp_query-from>102</Hsp_query-from>
+      <Hsp_query-to>779</Hsp_query-to>
+      <Hsp_hit-from>102</Hsp_hit-from>
+      <Hsp_hit-to>741</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>212</Hsp_identity>
+      <Hsp_positive>335</Hsp_positive>
+      <Hsp_gaps>86</Hsp_gaps>
+      <Hsp_align-len>702</Hsp_align-len>
+      <Hsp_qseq>RWFVCFLIGVFTGLVAAFIDIMVHYSKDIKFNWILKYLLSKCGEEQRGTTAGCMWTVMIAWIGYNCVLVTIAAILVIYVAPIAGGSGIPQIKCYLNGIAIPEVVRLKTLVSKAVGVACSVGGGLCAGKEGPMIHSGAAVGAGISQGKSYSLGIDFGLFREFRNDREKRDFVSAGAAAGVAAAFGAPIGGVLFSLEEGASFWNQALTWRMFFSAMISSFTVNWILSWFNGRSGWLSWTGLANFGVFENKD---YNIWEIPLFLLIGIIGGCLGALF----NYLNTKLTEFRKKYVSSK----LGRLFECLLVAAVSGFLAF-LTIFAIDDCQPIGANPTATSTQINQMWCKK----GEYSAVASLFFQNPEESVKSMFHSPIN--SFGVTTLVIFGIEYFLLTLWTFGISVPSGVFIPAILTGAAWGRLFGIFVERLFPSVTGIDPGKYALAGAAAQLGGVVRMTISLTAIIMEATKDITFGLPIMLVLMVTKWVGDMFNEGLYDAHIDLAEVPILG----WNPPKMSRNILADRVMRKDVVALERRERVSRIVEILRSTLHHGFPVVDRIEESPYESLPDYGRLKGYILRSQLFKLLENRIFEEEGASNSALPNDFYECQDDDDQMKSVAELGLTNFDESCFLDIEPYMHPHPHRVPLNTSLPFIFRLFRGLGLRYLFVVNDD--NHLRGVITRKDVARFRE</Hsp_qseq>
+      <Hsp_hseq>KWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSD--------NPGC---AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEG-SCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGAIFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGEW-----ASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLSTCTHNAF----TIEDSSH-------RLLGIVMRANIVDLV-----KAHGGAVSA-----------------SSRLNLLNMTNRT-----------PTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANHVVGIVTRKDIVDSME</Hsp_hseq>
+      <Hsp_midline>+W +  + G   G+    I I  H+    K + ++ +L S           GC    M+ WI     L+      V Y++P+AGGSGIP +K YLNG+ +P+++R   +V + +G    VG G  AG EGPM H GA VGA ++Q  + +          F   + K +FVS GA  GVA AF APIGG+LF++EE +++W + L WR F   +I+S+       +F  +    S   LA    F N D   +++WE   F+L+GI  G +GA+F     Y       F   Y + K     G++ E  LV  ++  LA+ ++   +  C+P+       +  I    C +    G Y+ +A++   + + SVK +F   +    F    L   G   F LTL T+G+++P+G+F+P I+ GA +GRLFG++V          +PG YA+ GAA  + G  RMTISLT I++E   D+     +M+ ++V+K V DMFN+G YD   +L   P +     ++   M+   +  R+    +      E + RI E+L +  H+ F     IE+S +       RL G ++R+ +  L+     +  G + SA                  + L L N                P  V   T L   + +FR L LR++ VV+ D  NH+ G++TRKD+    E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>3</Iteration_iter-num>
+  <Iteration_query-ID>NP_610798.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel-b [Drosophila melanogaster]</Iteration_query-def>
+  <Iteration_query-len>813</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>250.366</Hsp_bit-score>
+      <Hsp_score>638</Hsp_score>
+      <Hsp_evalue>4.38866e-72</Hsp_evalue>
+      <Hsp_query-from>74</Hsp_query-from>
+      <Hsp_query-to>810</Hsp_query-to>
+      <Hsp_hit-from>12</Hsp_hit-from>
+      <Hsp_hit-to>722</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>224</Hsp_identity>
+      <Hsp_positive>357</Hsp_positive>
+      <Hsp_gaps>118</Hsp_gaps>
+      <Hsp_align-len>783</Hsp_align-len>
+      <Hsp_qseq>NSVPPDIPINGSAGSPNRNINSSEPIFHLRSRTAAASTPNYESLDYEVCENTLFQDEQRKRLTERFSLRKD-----------IIRWIIFIQIGIITALIACTIDIIIEELSIRKYTFLYNSVKENVPLSDASDRDLLIPYLYWLLFSIVPVAFGAAMVTYIEPITAGSGIPQVKSYLNGVKIPRIVRIKTLAVKAIGVITSVVGGLAGGKEGPMIHAGAVVAAGISQGKSTTFLKDFRIFKAFRDDHEKRDFVLGGGAAGVSAAFGAPIGGMLFSLEEAASFWNQNLIWRTLVASIISVFT---LNIVLSAYHGLNDFTFTGLFNLGKFDTPLKFDYFELPIFMILGVTGGLLGAAWNSLNTKINKFRKR--FIPWKIG-------KVLEAVVVAMMGVTLA-CLMIYFINDCRPLGNDPT---NNPVQLFCED----NEYNAVAALWFQTPEATVRSLFHDPPGSHKIL--TLALFTVVYYVLSCATFGLNVSLGVFIPTALVGAAWGRLLAMLTYYVFPQAEFLHP-----GKYALIGAAANLGGVLRMTISLSVILMETTGVETSFFFPLIIALISAKWVGDYFNEGIYDTQIQVNHVPMLTWEPLPQYK--GLKAREILS----KPVICIKIRDSANYIYEMLKKCDHNGFPVVDDVCGDRRSEGRVCGIILRSQLIVILLKSLYVENKRFWLPETSIQTFRDLYPRFPSIKSVRKLDEKINYTVDLSMFMNPSPIRVNPHDSVPRIFQIFRALGLRHLLVINHE--NRIAGIITRRDF</Hsp_qseq>
+      <Hsp_hseq>TSTPAHTAGNGEGGDSD---TEAEEALLTATDFRCPKPPPFESFDYFVDQPSKHRDTLLVGPT--WSLDKSDPAHYRPRTTVLIGWLLVILAGLLVGVLRAVILI--------GSYWLYRGRLIAMIAAIASE-GLGLALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVRNVFQ-LRALLPFSSHRIKYEFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALVNCSNPFDCYTVHAYLEASGADR--TFRVWELFVCALIGVLFGLLGALFCA-GVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAIVTDDDIAGAMCDEGLSGGSVNPLAALLVSSRDEAIRLLFSPYMGDSEYTPGVLILAAVVIFVLTSLTYGLAIPMGLFIPNIMMGACVGRLIGI----------WMHPLGGSVGSYAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPY-IMITVIVAKQVADLFLKGAYDLVLEVRQVPYL--EELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTVLTKSEHCAFIV--------ESRGKLRGLVSRRAI-----------EDYLW----------------------RHGPVSRNEVLDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSRKDL</Hsp_hseq>
+      <Hsp_midline> S P     NG  G  +     +E      +       P +ES DY V + +  +D      T  +SL K            +I W++ I  G++  ++   I I           +LY      +  + AS+  L +  + WL+  +       A+V Y+EP+  GSGIP VK+YLNG+ +PR+++ +  A++ +G I  V  G   G EGPM H GA+V A ++Q       +  R    F     K +F+  G A GV+AAF AP+GG+LFSLEEA+++W     WR     II+ FT   L+ +++  +  + +T          D    F  +EL +  ++GV  GLLGA + +   K+ + R+R  F  + +G       +V+E +VV +M + L+  L   F  +C P+  D     ++     C++       N +AAL   + +  +R LF    G  +     L L  VV +VL+  T+GL + +G+FIP  ++GA  GRL+ +          ++HP     G YA+IGAA  L G  RMTISL+ I++E TG      + ++I +I AK V D F +G YD  ++V  VP L  E L  Y    ++ + I S     P+      ++   I+ +L K +H  F V         S G++ G++ R  +               W                      R      N  +DL    N  P+ V     + + + +FR LGLRHLLV+  E  +R+ GI++R+D </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>4</Iteration_iter-num>
+  <Iteration_query-ID>XP_001627108.1</Iteration_query-ID>
+  <Iteration_query-def>predicted protein [Nematostella vectensis]</Iteration_query-def>
+  <Iteration_query-len>714</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>246.514</Hsp_bit-score>
+      <Hsp_score>628</Hsp_score>
+      <Hsp_evalue>3.11462e-71</Hsp_evalue>
+      <Hsp_query-from>161</Hsp_query-from>
+      <Hsp_query-to>709</Hsp_query-to>
+      <Hsp_hit-from>150</Hsp_hit-from>
+      <Hsp_hit-to>670</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>176</Hsp_identity>
+      <Hsp_positive>288</Hsp_positive>
+      <Hsp_gaps>90</Hsp_gaps>
+      <Hsp_align-len>580</Hsp_align-len>
+      <Hsp_qseq>LWVAIDIFFVCIAACLVVYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKVKMGVNVLIKFWHLNCLLIFQIYLLIHQLLLAHLIDNFPLQTLVAKVVGVVFSVSGGLACGKEGPMIHSGAVVAAGVSQGRSTTFNRDFHI--FESFRTDHEKRDFVSGGAAAGVAAAFGAPVGGVLFSLEEGASFWNQALTWRMFFGSIISTFTLNLVLSIY--KGEAGDLSNPGLINFGTFTGNPYFGYELPLFLIMGVIGGLLGALFNAINHHLTIFRMRFV--------KRKWLRVVEACIVAALTASSSFVLIYFNKDCNPLGAANVTEGLQFFCQD-------------GEYSSMGTLTFSTPEESIKNLFHLPLG--AFNTLSLFLFFCVYFFLSCWTYGLYVPSGLFVPCILIGATWGRMFATLLHSVFPTWSWSTPGRYALIGAAASLGGVVRMTLSLTVILMEATSNITYGLPMMLVLMIAKWVGDFFNEGIYDMHIKLQGVP----LMGWDPPIMATGICANNIMSSPVVCFNTVERVGRIFDILKDPSSYHNGFPVVEPTQQFGVFRGIILRSQLIILLK</Hsp_qseq>
+      <Hsp_hseq>IWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPK------------LMRFW-----------------------------GIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHA---RNKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGAIFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLIT-----ILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGE----WA-SNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLS--TCTHNAFTIEDSSHR---LLGIVMRANIVDLVK</Hsp_hseq>
+      <Hsp_midline>+W+AI +  +C     V Y  P+A GSGIP +K YLNGV VP             L++FW                              +V +++G +  V  G   G EGPM H GA+V A V+Q  +      F++     F T   K +FVS GA  GVA AF AP+GG+LF++EE +++W + L WR F G II+++   L    +  K E   ++  G + F     + +  +E   F+++G+  GL+GA+F     +   +R  F         +R++ +VVEA +V  +T     +L+ +    + +GA    +G  +   D             G Y+ +  +  +  + S+K LF   LG   F    L     + FFL+  TYG+ +P+GLFVP I++GA +GR+F   +      W+ S PG YA++GAA  + G  RMT+SLTVI++E   ++     +M+ ++++K V D FN+G YD+  +L+G P    L  +D   MA       + ++P+  F  VE +GRI ++L   +  HN F + + + +     GI++R+ ++ L+K</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>5</Iteration_iter-num>
+  <Iteration_query-ID>XP_001742728.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein [Monosiga brevicollis MX1]</Iteration_query-def>
+  <Iteration_query-len>790</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>268.855</Hsp_bit-score>
+      <Hsp_score>686</Hsp_score>
+      <Hsp_evalue>8.45389e-79</Hsp_evalue>
+      <Hsp_query-from>113</Hsp_query-from>
+      <Hsp_query-to>761</Hsp_query-to>
+      <Hsp_hit-from>139</Hsp_hit-from>
+      <Hsp_hit-to>758</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>203</Hsp_identity>
+      <Hsp_positive>323</Hsp_positive>
+      <Hsp_gaps>81</Hsp_gaps>
+      <Hsp_align-len>675</Hsp_align-len>
+      <Hsp_qseq>HCVQHDCLVSSFFLWIATDVALVTLAGALTVYYAPVAQGSGISEIKCFLNGIKMPEVVRLKTLLVKGFGVMCAVVGGMAVGKEGPMIHSGAVVAAGISQGKSTSISSLHTSWFSAFRNDVDKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGSSFWNQLLTWRIFFASMTATF----TLNFLLSGVKGGDWGALSNPGLLNFGQFDTMPYTIAEIPIFMLMGLIGGLSGAAFNGLNLYLTRFRMKFI--------TSRKLKLLEVSAIAAITVAVAFSMIFFS-ADCLPM-GESPESSSPLQFFCADH-----QYSAMASLFFNTPEDSIKNLFHGKFAEIGSYNYETLALFALAYWLLGCMTYGLAIPSGLFVPTLLTGAAWGRLAGTILTAIFPGRAWTNPGKYSLIGAAANLGGVVRMTISLTVIVIEATGNVSYGLPIIIAVIVAKWVGDRFNEGIYDMHIELKHIPLLPWEPPVVSRYHLTASDIMTRKIQCVRLH-----EKVGHIVDLLKESKHNAFPVISWPDGDDTQLGIFEGQVLRSTLIVLLKEKAYGPKLRNSIKGRKLTVQEIRKYYPRWPTASSLRVSAGDREKFLDIEAYYNKSPYSVRWNNSLSRIFHLFRTMGLRHLAVVDIQ--NRLVGMITRKDIANIHANMTREDFFESIIGKSN</Hsp_qseq>
+      <Hsp_hseq>HWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHAR--NKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEG---SCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGE-AEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFG-----LWVGDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIE-ELSIYDERNMAGRDV-TYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTI---QDHSHRLLGV----VMRSNIV-------------------------------DWVKGQGGVVSANTRLNLLDLT---NRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVESMED-AAEDYNRSKDGDDT</Hsp_hseq>
+      <Hsp_midline>H ++ D    +  +WIA  V L+   G    Y +P+A GSGI ++K +LNG+ +P+++R   ++ +  G +  V  G   G EGPM H GA+V A ++Q  +   +  +      F     K +FVS GA  GV+ AF APIGG+LF++EE S++W + L WR F   + A++    T  +    V+G     ++  G + F   D   + + E   F+L+G+  GL GA F     Y   +R  F           R  +++E   +  IT+ +A+ + +     C P+ G+S   +  +Q    D       Y+  A++     + S+K LF  +  E   +    LA      + L  +TYG+AIP+GLFVP ++ GA +GRL G     ++ G   +NPG Y+++GAA  + G  RMTISLTVIVIE  G++     +++ V+V+K V D FN+G YD+  EL+  P +  E  +    ++   D+ T ++    L      E +G I ++L    HNAF +    D     LG+    V+RS ++                                W       VSA  R   LD+    N++P  V     L++ + +FR + LRH+ VVD    NR+VG++TRKDI     +   ED+  S  G   </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>6</Iteration_iter-num>
+  <Iteration_query-ID>XP_002109718.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein TRIADDRAFT_20821 [Trichoplax adhaerens]</Iteration_query-def>
+  <Iteration_query-len>687</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>258.84</Hsp_bit-score>
+      <Hsp_score>660</Hsp_score>
+      <Hsp_evalue>3.3858e-76</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>667</Hsp_query-to>
+      <Hsp_hit-from>92</Hsp_hit-from>
+      <Hsp_hit-to>722</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>205</Hsp_identity>
+      <Hsp_positive>340</Hsp_positive>
+      <Hsp_gaps>92</Hsp_gaps>
+      <Hsp_align-len>693</Hsp_align-len>
+      <Hsp_qseq>WIIMFLIGVSTACVAALIDVGINAISSVKYLCYF----QDCLAQPYLIWLALSISLVFIAAALVVYLEPVAIGSGIPQIKCFLNGVNIQRCVRLKTLVAKAVGVLFSVAGGLPVGKEGPMIHSGAALAAAISNGKVTIGKCSFNIFHY-----FRSPVEKRDFVSAGAAAGVSAAFGSPVGGVLFSLEEGASFWYQSITWRIFFASMTSTFTLNVIRSFIH-GMPFNL-SFPGLLDFGDFKKGVTYYGYELPIFFLMGIVGGLLGALF----NYINYK----LSLHRMRNIRKSYLKLLEAIVVIIVCTAAAF-LAVSLNQGCQPKY-EAIQSELETFN-FTSFKCGNGDYNTMATLFLNTPEKAIKNMFHTPQG--LYTIPTLIWFTVIFFFTACWTYGVNVPSGLFVPCILTGAAWGRILGELINLIPGQEWSSPGRYALMGAAAMLAGVVRMTISITVILVEAIGDIAFGLPLMVVILISKLVGDYFNEGLYDIHVQLMKVPLLP----WEPPDLSGSLTVKDLTCESVITLRKTERVADIYTVIKDADLRHNGYPVVDDDGTAATANNTNVKGRLIGLILLSELKTILELQLYKSNHPLKDYRLNGKDFDTFKHFYSKHDDFSCEIPPEDMNKTIDLTKFMNPSPYTVYENMSFPRLYRLFRGLGLRH--IVVINSKNQVIGIITRVDL</Hsp_qseq>
+      <Hsp_hseq>WLLVILAGLLVGVLRAVILIGSYWLYRGRLIAMIAAIASEGLGLALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVR------NVFQLRALLPFSSHRIKYEFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALVNCSNPFDCYTVHAYLEASGADR--TFRVWELFVCALIGVLFGLLGALFCAGVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAIVTDDDIAGAMCDEGLSGGSVNPLAALLVSSRDEAIRLLFSPYMGDSEYTPGVLILAAVVIFVLTSLTYGLAIPMGLFIPNIMMGACVGRLIGIWMHPLGG----SVGSYAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPYIMITVIVAKQVADLFLKGAYDLVLEVRQVPYLEELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTVLTKSE--HCAFIV-------------ESRGKLRGLV---------------SRRAIEDY--------LWRH------------GPVSRNEVLDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSRKDL</Hsp_hseq>
+      <Hsp_midline>W+++ L G+    + A+I +G   +   + +        + L    ++WL + +SL  +  ALV Y+EP+A GSGIP +K +LNG+ + R ++ +    + VG +  V  G   G EGPM H GA + AA++   V       N+F       F S   K +F+S G A GV+AAF +P+GG+LFSLEE +++W    TWR FF  + ++FT   + + ++   PF+  +    L+     +  T+  +EL +  L+G++ GLLGALF      I  +      L  M   R+   +++E IVVI++    +F L+ +    C P   +AI ++ +            G  N +A L +++ ++AI+ +F    G   YT   LI   V+ F     TYG+ +P GLF+P I+ GA  GR++G  ++ + G    S G YA++GAA MLAG  RMTIS+T I+VE  GD+     +M+ ++++K V D F +G YD+ +++ +VP L     +    + G      ++   + +    E    I+TV+  ++  H  + V               +G+L GL+               S   ++DY         ++H             P   N+ +DL    N  P TV  +    + Y LFR LGLRH  +V +   ++V+GI++R DL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>7</Iteration_iter-num>
+  <Iteration_query-ID>XP_002595670.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein BRAFLDRAFT_200772 [Branchiostoma floridae]</Iteration_query-def>
+  <Iteration_query-len>718</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>306.605</Hsp_bit-score>
+      <Hsp_score>784</Hsp_score>
+      <Hsp_evalue>2.13366e-93</Hsp_evalue>
+      <Hsp_query-from>40</Hsp_query-from>
+      <Hsp_query-to>698</Hsp_query-to>
+      <Hsp_hit-from>104</Hsp_hit-from>
+      <Hsp_hit-to>738</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>234</Hsp_identity>
+      <Hsp_positive>347</Hsp_positive>
+      <Hsp_gaps>80</Hsp_gaps>
+      <Hsp_align-len>687</Hsp_align-len>
+      <Hsp_qseq>RWVVMLMIGILTALVGVVIDILVHQLAGLKYSLLKSWIDSCVEDGCLAIPFALWVAIDALFVCFAAILVAYGEPVAAGSGIPQIKCYLNGVKVPHVVRIKTLISKVIGVVFSVAGGLAVGKEGPMIHSGAVIAAGVSQGMSTTFKRDLKIFKYFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALTWRIFF-CSVTTLFTLNIVLSVYFGRPGELAYPGLLNFGRF--TVLSYFW-YEIPLFLLMGVAGGLSGALF-----NFVNHKICIFRMKYVYKP---FMQVVEAMMVAIVTATLAF-VSIYVSRDCKPL-GQD--PSEKPLQFFCSD----GEYSTMATMMFQTPEQSVKSLFHD--PPNSYNIGTLSVFCVIYFILACWTYGLSVPSGLFIPSLLCGAGWGRLFGIGVSHLVPNIAWSAPGIYALMGAAAQLGGVVRMTISLTVILMEATGNVSYGLPLMLVLLIAKWVGDIFNEGLYDIHIRLMSVPILGWEPPATSTTISARLVM----SHPVTTLQQVEKVGRIVEALKEPHSNHNGFPVVDTDQVTSGRFRGLILRSHLLVLIKRKMFLERGQTGAIRRNLEMKDFREAYPRFPSIHELNISPEEMECSIDLRPYMNPAPYTVSEDASLHRVFRLFRALGLRHLVVVNKD--NLVMGIVTRKDL</Hsp_qseq>
+      <Hsp_hseq>KWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKS-DNPGCAML---IWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQ-MHARNKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTR--LTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDWASN-----PGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSS--CTHNAFTIQD----HSHRLLGVVMRSNIVDWVK-------GQGGVVSANTRL---------------------------NLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>+W++ ++ G +  +   VI I  H L   K   +  W+ S    GC  +   +W+AI    +CF    V+Y  P+A GSGIP +K YLNGV VP ++R   ++ +++G +  V  G   G EGPM H GA++ A V+Q M    K  LK    F T   K +FVS GA  GV+ AF AP+GG+LF++EE +++W + L WR F  C + +  T   + + YF    E +   L    +F     SYF  +E   F+L+G+  GL GA F      F  ++   F +    K    F QVVEA +V I+T  LA+ VS      CKPL GQ   P++      C +    G Y+  A M+    + SVK LF        +  G L+    I F L   TYG+++P+GLF+P+++ GA +GRLFG+ V     N     PG+YA+MGAA  + G  RMTISLTVI++E  G++     +M+ ++++K V D+FN+G YDI   L   P +          ++ R V     + P++   +VE +GRI E L      HN F + D     S R  G+++RS+++  +K       GQ G +  N  +                           +L    N  P  VSE   L + + +FR L LRH++VV+KD  N V+GIVTRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>8</Iteration_iter-num>
+  <Iteration_query-ID>XP_004363664.1</Iteration_query-ID>
+  <Iteration_query-def>voltage gated chloride channel protein [Capsaspora owczarzaki ATCC 30864]</Iteration_query-def>
+  <Iteration_query-len>979</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>257.684</Hsp_bit-score>
+      <Hsp_score>657</Hsp_score>
+      <Hsp_evalue>1.33035e-73</Hsp_evalue>
+      <Hsp_query-from>59</Hsp_query-from>
+      <Hsp_query-to>660</Hsp_query-to>
+      <Hsp_hit-from>21</Hsp_hit-from>
+      <Hsp_hit-to>637</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>208</Hsp_identity>
+      <Hsp_positive>331</Hsp_positive>
+      <Hsp_gaps>91</Hsp_gaps>
+      <Hsp_align-len>655</Hsp_align-len>
+      <Hsp_qseq>NG-GGDGDLRNFQSANMANSVRKLRSSKVTSISTKFESLDYDILE-----NDIYVKDQAKIDRK---HYVRLEAARWLVMFFVGVLTAVVAFLIDYCLTQISSVKFGWISD----SITRCVDDECLDQSVLLWMGIDIFLVSIACLLVLFVEPIAQGSGIPEIKCYLNGIKIPHVVRFKALLTKTVGVLFSVSGGLACGKEGPMIHTGSVIAAGISQGKSTTFNIDLNLFKAFRTDHEKRDFVSGGAAAGVSAAFGAPIGGVLFSLEEGASFWNQALTWRIFFCSMIASFT---LNVLLSGTKG----TSWGAMSSPGLVNFGAFASANYNLFELPIFIAMGAVAGLFGALFNALNHRLTVFRFKYIYH--------SKALRFLEVILVAAATVIVSFTL---IYFDDN-CLPLGEKPGENPLEFFCQE----HTYNEIATMLFNTPEESIKNLFHATRGD--YSPETLSIFFLVMFCLSCWTYGISVPAGVFVPALLTGAAYGRLVGNLLYHAFPDADWVDP-----GKYALIGAASMLGGIVRMTISLTVIVVEGTGNISYGLPLMLSIMAAKLVGDLFNEGIYDLHIHLRRVPILHWEAPLPMQHFHA------SHVMS----SNVVCIQEFDRVGRIVELLRTTTHNAFPV</Hsp_qseq>
+      <Hsp_hseq>NGEGGDSDTEAEEALLTATDFRCPKPPP-------FESFDYFVDQPSKHRDTLLVGPTWSLDKSDPAHY------RPRTTVLIGWLLVILAGLLVGVLRAVILIGSYWLYRGRLIAMIAAIASEGLGLALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVRNV-FQLRALLPFSSHRIKYEFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALVNCSNPFDCYTVHAYLEASG-------ADRTFRVWELFVCALIGVLFGLLGALFCA-GVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAIVTDDDIAGAMCDEGLSGGSVNPLAALLVSSRDEAIRLLFSPYMGDSEYTPGVLILAAVVIFVLTSLTYGLAIPMGLFIPNIMMGACVGRLIGI----------WMHPLGGSVGSYAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPYIMITVIVAKQVADLFLKGAYDLVLEVRQVPYLE---ELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTV---LTKSEHCAFIV</Hsp_hseq>
+      <Hsp_midline>NG GGD D    ++   A   R  +          FES DY + +     + + V     +D+    HY      R      +G L  ++A L+   L  +  +   W+      ++   +  E L  ++++W+ I + L ++   LV +VEP+A GSGIP++K YLNGI +P +++F+A   + VG +  V  G   G EGPM H G+++ A ++Q         L     F +   K +F+S G A GV+AAF AP+GG+LFSLEE +++W    TWR FF  +IASFT   L+ L++ +      T    + + G       A   + ++EL +   +G + GL GALF A   +L   R +  +H         +A R +EVI+V   T+++SF L    +++ N  +P      ++     C E     + N +A +L ++ +E+I+ LF    GD  Y+P  L +  +V+F L+  TYG+++P G+F+P ++ GA  GRL+G           W+ P     G YA+IGAA ML G  RMTISLT IVVE TG++     +M++++ AK V DLF +G YDL + +R+VP L     L   H +A      S  MS    ++   ++ F+R+  +   L  + H AF V</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>49.6766</Hsp_bit-score>
+      <Hsp_score>117</Hsp_score>
+      <Hsp_evalue>4.24019e-06</Hsp_evalue>
+      <Hsp_query-from>896</Hsp_query-from>
+      <Hsp_query-to>952</Hsp_query-to>
+      <Hsp_hit-from>664</Hsp_hit-from>
+      <Hsp_hit-to>722</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>59</Hsp_align-len>
+      <Hsp_qseq>NEQFMDLRPYLNPTPYTLKHAAPLSRVYRIFRGLGLRHLII--TDRFNQVVGMITRKDL</Hsp_qseq>
+      <Hsp_hseq>RNEVLDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSRKDL</Hsp_hseq>
+      <Hsp_midline>  + +DL    N  P T+  + PL + Y +FR LGLRHL++   +  ++VVG+++RKDL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>9</Iteration_iter-num>
+  <Iteration_query-ID>XP_018668924.2</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7-like [Ciona intestinalis]</Iteration_query-def>
+  <Iteration_query-len>712</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>280.796</Hsp_bit-score>
+      <Hsp_score>717</Hsp_score>
+      <Hsp_evalue>7.14729e-84</Hsp_evalue>
+      <Hsp_query-from>47</Hsp_query-from>
+      <Hsp_query-to>700</Hsp_query-to>
+      <Hsp_hit-from>99</Hsp_hit-from>
+      <Hsp_hit-to>736</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>213</Hsp_identity>
+      <Hsp_positive>345</Hsp_positive>
+      <Hsp_gaps>94</Hsp_gaps>
+      <Hsp_align-len>693</Hsp_align-len>
+      <Hsp_qseq>QFQRWIICMLIGIMTGIVAVVINICILELTAVKMHVVEQAIIHCVKNRCLYVPLLLWIAINVVLVTVASLLTVFVAPVAAGSGIPQIKCFLNGVKVPNVVRFKTLVTKVIGVIASVSGGLAVGKEGPMIHSGSVLAAGISQGRSISFNLNTRFFKH----FRNDREKRDFVCAGAAAGVSAAFGAPVGGVLFSLEEAASFWNQALTWRIFLCSILSSY----TLNFFMSIYHHHPGDLAYPGLINFGKFSGSY-EGFELPIFLLMAVFGGLSGAAFNAINHKITVFRLKYL--------KAKYFKVLEVVFVAAVSATIAFVLIYWNP--ECKPLGQDPYVR----LQFFCND----GEYNTMAVLFFTPPEESVKSLFHDPLGALQ----PLTIVIFVLPYFFLACWTYGLQVPSGLFIPSLLIGAAWGRLVGNCVNFIWPDDIWAQDLSKYALIGAAAQLGGTVRMTISLTVILIEATGNITYSLPLMAVLLLAKWVGDYFNHGIYDMHIHLNKVPILP----WEPPALSTNIQAREVMGTPVVTLRTVPLVSDICSVLSDPRNC-HSGYPITDSEGKFRGVILRTQLLILLK-HKEFVERGGSSERIKLSVFRDSYPRYFPLSVINVSEGEQQCHVDLRPFLNPSPYTIQENASLPRIFRLFRALGLRHLVVL--NDEYKVVGMISRKDI</Hsp_qseq>
+      <Hsp_hseq>QWVKWILTIVEGAVIGICRGVILIGSHWLLVGK----TDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQ-----MHARNKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLA--GGMQFPNADESYFHVWEFACFILLGIFFGLMGAIFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLITILLAYG-VSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFII--FFLTLLTYGVAIPAGLFVPNIMLGACFGRLFG-----LWVGE-WASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLS---TCTHNAFTIEDSSHRLLGIVMRANIVDLVKAHGGAVS---ASSRLNL---------------LNMT--------------NRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANHVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>Q+ +WI+ ++ G + GI   VI I    L   K      A+IH +K+      +L+WIAI V L+        +++P+A GSGIP +K +LNGV VP ++RF  +V +++G I  V  G   G EGPM H G+++ A ++Q      +   +F+      F   + K +FV  GA  GV+ AF AP+GG+LF++EEA+++W + L WR FL  I++SY    T  +F         +LA  G + F     SY   +E   F+L+ +F GL GA F         +R  +         + ++ +V+E   V  ++  +A+  + W+    CKPL    Y+         C++    G YN +A +  T  + SVK LF   LG  +     L    F++  FFL   TYG+ +P+GLF+P++++GA +GRL G     +W  + WA +   YA++GAA  + G  RMTISLTVI+IE  G++     +M  ++++K V D FN G YD+   L   P +     ++   ++       +   P+     V  +  I  VLS    C H+ + I DS  +  G+++R  ++ L+K H   V    +S R+ L               +N++              N +P  + E   L + + +FR L LRH++V+  +D   VVG+++RKDI</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>10</Iteration_iter-num>
+  <Iteration_query-ID>XP_643243.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel protein [Dictyostelium discoideum AX4]</Iteration_query-def>
+  <Iteration_query-len>757</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>282.337</Hsp_bit-score>
+      <Hsp_score>721</Hsp_score>
+      <Hsp_evalue>6.17936e-84</Hsp_evalue>
+      <Hsp_query-from>95</Hsp_query-from>
+      <Hsp_query-to>756</Hsp_query-to>
+      <Hsp_hit-from>104</Hsp_hit-from>
+      <Hsp_hit-to>738</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>201</Hsp_identity>
+      <Hsp_positive>336</Hsp_positive>
+      <Hsp_gaps>93</Hsp_gaps>
+      <Hsp_align-len>695</Hsp_align-len>
+      <Hsp_qseq>KWIICLFLGVIVGCIAYVIKMVVQLLQGLKFHYTNHYVSNGLQGEAFLTFLGINLLFVFLSCLMVIVAGPLASSSGIPEVKGILNGVKVREALGFRALLGKIVSLVLSFSSGLFVGPEGPMIHIGSAVGAAISQFKSSTMGFYPSLFLSYRNDRDKRDFISIGAATGLAAAFGAPIGGVLFSIEEVSSFWSRQLTWRTFFTCVIAAFTTNFLLQGI-----GSSPDMHDTGLLTFGFSRLYLFRYSELLCFCFLGLIGGLLGAFF------------VFLNIHLNKWRKEKLKQNPYLRLFEALFVSVVTSVVCYYASF--IFDCR------YQSNIVIETSVCEDQSNTEMVQFFCPDGMYSELGSLLFGNPDQALRRLYSRTNNMFTLP--PLLVFTLISLFFSIWSSGLWVAGGLFVPMMMVGAGFGRLFGQTISMWFTNIDSSIYALVGSAAMMAGYCRMTVCIVVIMVELTEGTQYLVPIILAVMISKWVGDFFNESVYEHLMEQKSIPFLQSKPPHSTNNIRISDVMSKNVVV----LPEVCQVRLLVNILNSNNHNAFPVINSGPYDNQRLYRGIILRDHILVLLFYRVFYRGTGEEIYLDENFDFDKFTTETSKSPPPLSEMNFDQFELDSFIDLRPYMNSSGVTIHNTFSFVEAYKLFRNMGLRHLPVIDIN--NEVVGMVTRNDL</Hsp_qseq>
+      <Hsp_hseq>KWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNK-FYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNL--AGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQ-----VVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDM---------GYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDWASN--PGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTI-----QDHSHRLLGVVMRSNIV------DWVKGQGGVVSANTRLNLLDLTNRT---PTIVSELT---------------------------PLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>KWI+ +  G ++G    VI +    L   K     H++ +   G A L ++ I +  +      V    PLA  SGIP+VK  LNGV V + + F  ++ +I+  ++   +G + G EGPM H+G+ VGAA++Q  +    FY    L +   + K +F+S+GA  G+A AF APIGG+LF+IEE S++W R+L WR F  C+IA++ T    Q       GS  ++   G + F  +    F   E  CF  LG+  GL+GA F            VF +++ N   + +  Q     + EA  V ++T ++ Y  S+  +  C+      Y  N  I+ ++C++  +          G Y+   ++L  + D +++ L+S        P   L     I  F ++ + G+ +  GLFVP +M+GA FGRLFG  +  W +N    +YA++G+A MMAG+ RMT+ + VI++EL    + L  +++ V++SK V D FN+  Y+ + E +  P+++    +   N+   DV  +          EV  +  +  +L+S  HNAF +      D+     G+++R +I+       + +G G  +  +   +    T  T   P  +SE+                               +AY +FRN+ LRH+ V+D +  N VVG+VTR D+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>11</Iteration_iter-num>
+  <Iteration_query-ID>XP_002506018.1</Iteration_query-ID>
+  <Iteration_query-def>chloride Carrier/Channel family [Micromonas commoda]</Iteration_query-def>
+  <Iteration_query-len>924</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>224.557</Hsp_bit-score>
+      <Hsp_score>571</Hsp_score>
+      <Hsp_evalue>2.69513e-62</Hsp_evalue>
+      <Hsp_query-from>71</Hsp_query-from>
+      <Hsp_query-to>742</Hsp_query-to>
+      <Hsp_hit-from>42</Hsp_hit-from>
+      <Hsp_hit-to>682</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>213</Hsp_identity>
+      <Hsp_positive>326</Hsp_positive>
+      <Hsp_gaps>89</Hsp_gaps>
+      <Hsp_align-len>701</Hsp_align-len>
+      <Hsp_qseq>RLKRMAAFDSHDY--DPADNDLEEDARRARKRADYKAEEQWRWAMSVLIGVVMGFLAFTVDGLIKKF----NGWKYG----ATTSSISPGGAGFGAWLVWVIISCLLASVAGGLVSYVEPLAAGSGIPELKTYLNGVHLRGLLRIKTLGAKLGGIAFSIGSGLIAGKEGPFVHGGGLVGGGLSAFGSHTLGFRTKKPSHFRNDADKRDFVAIGTAVGVAVAFGAPIGGMLFTVEEGASFHSTGMLWRGFLATCTGVLTTHWLDQLDFDAMDFAGAKFGVHRDFGLFTDDEANYSRVFWWYFWEVPIFAAIGCMGGLLGAAFVN----INVKITMWRQRFIPVSDKYR--RHAEVIFVCFVTATVLFIMMAA--SPCKP-IPEAYRVAAATDGDGNG-VSDE-LPGGVAKFEYGVETRRQIRDQYFRSLFCKADEYSSYGQLFFVPLADSLKLLLHLGEVYEQNGTDEFEQHLFTMDALIMYFVFMYALMTWTYGIGAPTGLFVPSLAVGAAGGQIVGRIVRAMVMSTGSEIVVDLHTYAVVGAAACLGGATRMTISITVLVMETTGSMQLIIPLMLTIFFAKAIGDKYSMGIYDTHIKIRGAPFLDEPE-HAGVAVDKLKVAEVMADS-LVTLRPVMRVRELVEVLTNTSHGAFPVTITDVGEGHNAGDPIE----LHGSITRNILLKM--LTHRVSMFDP</Hsp_qseq>
+      <Hsp_hseq>RCPKPPPFESFDYFVDQPSKHRDTLLVGPTWSLDKSDPAHYRPRTTVLIGWLLVILAGLLVGVLRAVILIGSYWLYRGRLIAMIAAIASEGLGL-ALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVRNV-FQLRALLPFSSHRIKYEFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALVNCSNPFDC--YTVHAYL-----EASGADRTF--RVWELFVCALIGVLFGLLGALFCAGVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAI----VTDDDIAGAMCDEGLSGGSVNPLAALLVSS--RDEAIRLLF------SPY------------------------MGDSE-----YTPGVLILAAVVIFVLTSLTYGLAIPMGLFIPNIMMGACVGRLIGIWMHPLGGSVGS--------YAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPYIMITVIVAKQVADLFLKGAYDLVLEVRQVPYLEELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTVLTKSEHCAFIVESRGKLRGLVSRRAIEDYLWRHGPVSRNEVLDLVDLANRCPLTVP</Hsp_hseq>
+      <Hsp_midline>R  +   F+S DY  D      +          D      +R   +VLIG ++  LA  + G+++      + W Y     A  ++I+  G G  A +VW++I   LA++ G LV+YVEPLA GSGIP++KTYLNG+ L  LL+ +    ++ G    +G G  AG EGP  H G +VG  ++      + F+ +    F +   K +F++IGTA+GVA AF AP+GG+LF++EE +++      WR F        T   L  L   +  F    + VH        + +   R F    WE+ + A IG + GLLGA F      I  +   W   F    D+ R  R  EVI V  +T  + F +  A    C P +P+A      TD D  G + DE L GG       +      RD+  R LF      S Y                         G  E     +T   LI+  V ++ L + TYG+  P GLF+P++ +GA  G+++G  +  +  S GS        YAV+GAA  L G +RMTIS+T +V+E TG +Q +  +M+T+  AK + D +  G YD  +++R  P+L+E + +   A+    ++  M+ + L +   V     +  VLT + H AF V       G  +   IE     HG ++RN +L +  L +R  +  P</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>48.9062</Hsp_bit-score>
+      <Hsp_score>115</Hsp_score>
+      <Hsp_evalue>7.87015e-06</Hsp_evalue>
+      <Hsp_query-from>780</Hsp_query-from>
+      <Hsp_query-to>865</Hsp_query-to>
+      <Hsp_hit-from>662</Hsp_hit-from>
+      <Hsp_hit-to>743</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>88</Hsp_align-len>
+      <Hsp_qseq>LSRREMELSIDLTHFMQRHPFIVHADARLSRAYRLFRTMGLRHMYITPSKP--QIIGVVTRKDLVEESAALTLGEKAADLSYEELTET</Hsp_qseq>
+      <Hsp_hseq>VSRNEV---LDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSRKDLF---LALMYCEEEPPVELQQCTAS</Hsp_hseq>
+      <Hsp_midline>+SR E+   +DL     R P  V A   L +AY LFR +GLRH+ +   +   +++G+V+RKDL     AL   E+   +  ++ T +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>12</Iteration_iter-num>
+  <Iteration_query-ID>XP_002768858.1</Iteration_query-ID>
+  <Iteration_query-def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Iteration_query-def>
+  <Iteration_query-len>776</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>1602.8</Hsp_bit-score>
+      <Hsp_score>4149</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>776</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>776</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>776</Hsp_identity>
+      <Hsp_positive>776</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>776</Hsp_align-len>
+      <Hsp_qseq>MLSPCSPKPKAQPSISKLDTTSCSGSETYSSAGGGSKKDCASEEEMEVLLRASQFKEGVKGIESHDYFWDHPTIHDGSIPVGPSGPLDPRKPSSYSPFIAQWVKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTIQDHSHRLLGVVMRSNIVDWVKGQGGVVSANTRLNLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVESMEDAAEDYNRSKDGDDTMSQRSSTAAASCSLDGAL</Hsp_qseq>
+      <Hsp_hseq>MLSPCSPKPKAQPSISKLDTTSCSGSETYSSAGGGSKKDCASEEEMEVLLRASQFKEGVKGIESHDYFWDHPTIHDGSIPVGPSGPLDPRKPSSYSPFIAQWVKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTIQDHSHRLLGVVMRSNIVDWVKGQGGVVSANTRLNLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVESMEDAAEDYNRSKDGDDTMSQRSSTAAASCSLDGAL</Hsp_hseq>
+      <Hsp_midline>MLSPCSPKPKAQPSISKLDTTSCSGSETYSSAGGGSKKDCASEEEMEVLLRASQFKEGVKGIESHDYFWDHPTIHDGSIPVGPSGPLDPRKPSSYSPFIAQWVKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTIQDHSHRLLGVVMRSNIVDWVKGQGGVVSANTRLNLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVESMEDAAEDYNRSKDGDDTMSQRSSTAAASCSLDGAL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>13</Iteration_iter-num>
+  <Iteration_query-ID>XP_003392724.1</Iteration_query-ID>
+  <Iteration_query-def>putative chloride channel protein [Leishmania infantum JPCM5]</Iteration_query-def>
+  <Iteration_query-len>885</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>191.815</Hsp_bit-score>
+      <Hsp_score>486</Hsp_score>
+      <Hsp_evalue>3.18336e-51</Hsp_evalue>
+      <Hsp_query-from>176</Hsp_query-from>
+      <Hsp_query-to>721</Hsp_query-to>
+      <Hsp_hit-from>119</Hsp_hit-from>
+      <Hsp_hit-to>657</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>163</Hsp_identity>
+      <Hsp_positive>275</Hsp_positive>
+      <Hsp_gaps>53</Hsp_gaps>
+      <Hsp_align-len>569</Hsp_align-len>
+      <Hsp_qseq>GKAAVVLRALSWSALLHGGVLYTMWGVLMA-LLSSLCCLVMPSAAGSGIPDVMAYLNGVMFPRIFNIRNLVVKTLSCILAVSAGLPVGTEGPMIHMGSLIGAGLPTGRSRSLGCSATSVFDL-----FRNPRDQRDFISAGAACGLTSAFSSPLGGMLFVLEEMATHFSVRLAWLVFLSCLSCMWIIQTCNSFLSGWHLVDRSAMALGDLREASIAMFYIDTVPENTVSLYTYTFIPTVMVAVLSGLLAVAYTVSSIRFSRWRSRCLF--------PTTLYRVLEPCVFASLFSTACYVLP--LFTPCVPTPPHVREKKEALNVELFTAFCAQPET--THHPLATLTMTSPYNLLRLLFS--RRSAGLFPAWSLLLHLAIYVVGSSYAGGMFISCGTVIPSLLIGAVEGRLIGVLFQRPVWADEGVVALIGAAAYFAGISRLTFALVVVMMELTADVSHITCLMLGILVAKSIADKCCHSFYHASLEVKAVPFLEAQTSMH---LLDTYTARDIMTSPVTVLETMDTVLHVVEALTMTRHNAFPVVRVGKADQAYEGMITRAQLQLLLW</Hsp_qseq>
+      <Hsp_hseq>GRLIAMIAAIASEGLGLALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVR-------NVFQLRALLPFSSHRIKYEFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALVNCSNPFD--CYTVHAYLEASGA----------DRTFRVWELFVCALIGVLFGLLGALFC-AGVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAIVTDD----DIAGAMCDEGLSGGSVNPLAALLVSSRDEAIRLLFSPYMGDSEYTPGVLILAAVVIFVL-TSLTYGLAIPMGLFIPNIMMGACVGRLIGI-WMHPLGGSVGSYAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPYIMITVIVAKQVADLFLKGAYDLVLEVRQVPYLEELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTVLTKSEHCAFIVESRGK----LRGLVSRRAIEDYLW</Hsp_hseq>
+      <Hsp_midline>G+   ++ A++   L    +++ + GV +A L+ +L   V P A GSGIPDV  YLNG++ PR+   R   ++ +  I+ V  G   G+EGPM H+G+++GA +     R       +VF L     F + R + +FIS G A G+ +AF +PLGG+LF LEE +T++     W  F  C+   +  +  ++ ++  +  D     +    EAS A            +   +      ++ VL GLL   +  + ++  + R R  F            +RV+E  V   +     + L    F  C P  P      +    ++  A C +  +  + +PLA L ++S    +RLLFS     +   P   +L  + I+V+ +S   G+ I  G  IP++++GA  GRLIG+ +  P+    G  A+IGAA   AG SR+T +L  +++E+T D+  +  +M+ ++VAK +AD      Y   LEV+ VP+LE   S H   +     +  +  +P+T   T++T   +   LT + H AF V   GK      G+++R  ++  LW</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>35.4242</Hsp_bit-score>
+      <Hsp_score>80</Hsp_score>
+      <Hsp_evalue>0.10142</Hsp_evalue>
+      <Hsp_query-from>796</Hsp_query-from>
+      <Hsp_query-to>858</Hsp_query-to>
+      <Hsp_hit-from>656</Hsp_hit-from>
+      <Hsp_hit-to>719</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>65</Hsp_align-len>
+      <Hsp_qseq>MMEHLPLSAIRSYIDLRPYVDNSAPYVQQGVCVSRAYYTFRHLGLRHLPV--LDRTQRVVGILTR</Hsp_qseq>
+      <Hsp_hseq>LWRHGPVSR-NEVLDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSR</Hsp_hseq>
+      <Hsp_midline>+  H P+S     +DL    +     V     + +AY  FR LGLRHL V  ++ + RVVGI++R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>14</Iteration_iter-num>
+  <Iteration_query-ID>XP_005828918.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein GUITHDRAFT_88279 [Guillardia theta CCMP2712]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>235.343</Hsp_bit-score>
+      <Hsp_score>599</Hsp_score>
+      <Hsp_evalue>1.30851e-66</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>693</Hsp_query-to>
+      <Hsp_hit-from>102</Hsp_hit-from>
+      <Hsp_hit-to>738</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>208</Hsp_identity>
+      <Hsp_positive>330</Hsp_positive>
+      <Hsp_gaps>136</Hsp_gaps>
+      <Hsp_align-len>732</Hsp_align-len>
+      <Hsp_qseq>RWILTVVIGVSVAASAQVVQSLIS---LLIGFRNQMLQSLFDQRRTEADILIFFTMYNAGLVLIAGFLVVFLEPRAAADGISEIKAYLNGSNIPNCFSVQTIIVKLLGSIFASSAGLACGPEGPLIHIGAGIAHAVT---AVDKIYTFLPWLPHSVLAQFHNDRDRREFIAAGAGAGIAAAFGAPIGGVLFALEEAASHLSPQLIWRILTSALVATF----TLALIKSNGTGGDISLAGLLSFGTAISIGDAKERTLNSDGTDSVSALDAPIYVWELFLFIILGAVGGVFGGFFGAG-----------FDFLTPRRPRSRFLKMVE---VLLISLATSYSVFFFASNYPVCR---------NDG--SWTCKEADNWGGWLGCPEGQYDELATLFFGSKEQSIVRMVTQAWPHEPFSNTSLFITSILNLFLMLITYGSPLPAGYFMPSWLVGASIGRLFGQLVKAYVGSSVYSGAYALAGAAAMLGGVQRTSISLVFIIVECTSNVHFLLPIVTTLMVANFVAQKFTKEGVFDI--SLRHHS-LRFLPHHPDWLMSLCTVSDVM-ANPVKCLHTVEKVGNIIDLLRNCHHNGFPVLSLEGSRDENCIPRDRLEGLILRSHLRHILGTRFMRDGSTRDSLWSRITAARMSEVSLDGEIELVRRKGVLLPPADDRERYVNLAAYMNAACYSVYSQCPLSRAYTIFRSLGLRHLPVVNQR--FEVVGMLTRANFSE</Hsp_qseq>
+      <Hsp_hseq>KWILTIVEGAVIGICRGVI--LIGSHWLLVGKTDAMIHWL--KSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYL-------KALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFP-------------NAD--------ESYFHVWEFACFILLGIFFGLMGAIFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLITILLAYGVSW--SEMGACKPLDGQSYIPNDGIQAAMCDE--------GVDMGYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGEWASN---PGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNK-GAYDIVSELRGYPYIEELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLSTCTHNAF---TIEDS-------SHRLLGIVMRANI-----------------------------------VDLVKAHG----GAVSASSRLNLLNMTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANHVVGIVTRKDIVD</Hsp_hseq>
+      <Hsp_midline>+WILT+V G  +     V+  LI    LL+G  + M+  L  +       ++ +      L+   G+ V ++ P A   GI ++KAYLNG  +P       I+ ++LG I     G   G EGP+ H+GA +  AV    A +K Y          L  F   + + EF++ GAG G+A AF APIGG+LF +EEA+++   +L WR     ++A++    T    +    G  ++LAG + F              N+D        ++  +VWE   FI+LG   G+ G  F  G           F   +  + R RF ++VE   V+LI++  +Y V +  S    C+         NDG  +  C E        G   G Y+ LA +    ++ S+  + +       F    L     +  FL L+TYG  +PAG F+P+ ++GA  GRLFG  V  +  +    G YA+ GAA M+ G  R +ISL  I++E   ++  L  ++ T++V+  VA  F K G +DI   LR +  +  L  + +  M+   V+  M A P+     VE +G I ++L  C HN F   ++E S         RL G+++R+++                                   ++LV+  G     A      +NL    N     V    PL++AYTIFR+L LRH+ VV++     VVG++TR +  +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>15</Iteration_iter-num>
+  <Iteration_query-ID>XP_006818446.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7-like [Saccoglossus kowalevskii]</Iteration_query-def>
+  <Iteration_query-len>818</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>293.508</Hsp_bit-score>
+      <Hsp_score>750</Hsp_score>
+      <Hsp_evalue>1.24726e-87</Hsp_evalue>
+      <Hsp_query-from>135</Hsp_query-from>
+      <Hsp_query-to>797</Hsp_query-to>
+      <Hsp_hit-from>99</Hsp_hit-from>
+      <Hsp_hit-to>736</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>209</Hsp_identity>
+      <Hsp_positive>345</Hsp_positive>
+      <Hsp_gaps>81</Hsp_gaps>
+      <Hsp_align-len>691</Hsp_align-len>
+      <Hsp_qseq>QVKRWFVMFLIGICTGLVACFINICIDQISAIKYSTVRHFTKMCRDEACMEYALLVWNGFNVTFVTIAAFMVAYIAPVAAGSGIPQIKCYLNGVKVPFVVRIKTLITKVFGVTLSVAGGLSIGKEGPMIHSGAVIAAGVSQGKSTTFKIDGKVFEDFRTDTEKRDFVSGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQSLTWRIFFASMVSTFTLNVVLSYYNG--DPWTLSNPGLVTFGKFTGQAYYGYEIPIFLLMGVAGGLLGALF-NGLNYRLSVFRLKYVYL--------RLSCVTEAALVALVTTTISFTMIYF-ISDCHPIGSNS--SPEPLQ-FFCDD----GEFSATATLFFNTPEEALKSLFHDPLGAY---KPVTVGVFFCIYFCLACWTYGLGVPSGLFIPSLLTGAAWGRLVGIFVHYVFPGGHFSDPGKYALIGAAAQLGGIVRMTISLTVILIEATGDVTYGLPLMLVLMISKWVGDYFNLGLYDIHILLQSVPLLP----WEPPAMAHNISAHDVMSHPVVTLNTIETVGKIVDAMSHHHHNGFPVVDPNEVTDRSFGTYRGLILRSQLIVLLKKEVFNETVGVTSLRQRIRLKDFRDEYPRYPGIKDIKVKPEHRQYHIDLRPFMNPTPYTVSQNSSLSRIFRLFRGLGLRHLVVV--DDHSQVVGIVSRKDL</Hsp_qseq>
+      <Hsp_hseq>QWVKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLK-SDNPGC---AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGAIFCQGVRY-FQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFF-LTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWV-----GEWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLSTCTHNAFTIEDSSH-------RLLGIVMRANIVDLVKAH-----GGAVSASSRLNLLNMT-----------------------------NRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANHVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>Q  +W +  + G   G+    I I    +   K   + H+ K   +  C   A+L+W    V  +    + V+Y++P+A GSGIP +K YLNGV VP ++R   ++ ++ G  + V  G   G EGPM H GA++ A V+Q  +   K   K    F T   K +FVS GA  GV+ AF AP+GG+LF++EE +++W + L WR F   +++++   +   Y+    +   ++  G + F       ++ +E   F+L+G+  GL+GA+F  G+ Y    +R  + +L        R   V EA LV L+T  +++ + +  +  C P+   S    + +Q   CD+    G ++  A +     + ++K LF   LG     +       F I+F L   TYG+ +P+GLF+P+++ GA +GRL G++V     G   S+PG YA++GAA  + G  RMTISLTVI+IE  GD+     +M+ +++SK V D FN G YDI   L+  P +     ++   MA     + + + P+     +ET+G+I + +S   HN F + D +           G+++R+ ++ L+K        G  S   R+ L +                               N TP  VS+ + L++ + +FR L LRH++VV  DD + VVGIV+RKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>16</Iteration_iter-num>
+  <Iteration_query-ID>XP_009533702.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein PHYSODRAFT_520430 [Phytophthora sojae]</Iteration_query-def>
+  <Iteration_query-len>967</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>234.187</Hsp_bit-score>
+      <Hsp_score>596</Hsp_score>
+      <Hsp_evalue>1.79624e-65</Hsp_evalue>
+      <Hsp_query-from>210</Hsp_query-from>
+      <Hsp_query-to>768</Hsp_query-to>
+      <Hsp_hit-from>85</Hsp_hit-from>
+      <Hsp_hit-to>637</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>172</Hsp_identity>
+      <Hsp_positive>289</Hsp_positive>
+      <Hsp_gaps>52</Hsp_gaps>
+      <Hsp_align-len>582</Hsp_align-len>
+      <Hsp_qseq>RSLNIARWVMTFGVGLGTALIACFVEFWTSLLSTFRTATMESLVAAEMDGSQAFGTGYLAYSMISVGFVAVASYCVAILCPVAGGSGISEIKATLNGIKIHRVVRLKTLFCKAFGILFSVSGGLPVGKEGPMIHSGSVIGAGLSQGKSSS-FGLDTSWTKFKGFRNDKEKRDFISCGAAAGVAAAFGAPIGGVLFALEEGASFWHQNLTWRTFFCAMVSAFVLNYFMSFMEANESNGPTPDVEHVFIGGTLGTQTGTFTFGQFVGSKAYEVLDVPIFIVMGMVGGLFGAGFNGANTVLTKFRKRYVTHRF---------LRFGEALLIAFSMATASFWLSY-YFGQCRDLAGD---YSDSLSRFYCPEG----QYNDLASLFTVNYATSMKQLLH-FTGDGSFTPFSLCMFFVVFYIFACWTYGIAVPSGLFVPSLLAGAAYGRICVMIVHYLGFPVGAQDGMFALIGSACMLGGMARMTISLTVIILECTGVIEWGLPIMVSLMAARWVGNSFNEGLYDIHIHLNHLPFLEFDPPYYARFLRALNIMS----SPPTCVPQIAKVGEIYDVLKNCNHGGFPV</Hsp_qseq>
+      <Hsp_hseq>RTTVLIGWLLVILAGLLVGVLRAVILIGSYWLYRGRLIAMIAAIA-----SEGLGLALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVRNVFQLRA----LLPFSSHRIKYEFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALV--NCSNPFDCYTVHAYLEASGADRT-------------FRVWELFVCALIGVLFGLLGALFC-AGVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAIVTDDDIAGAMCDEGLSGGSVNPLAALLVSSRDEAIRLLFSPYMGDSEYTPGVLILAAVVIFVLTSLTYGLAIPMGLFIPNIMMGACVGRLIGIWMH----PLGGSVGSYAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPYIMITVIVAKQVADLFLKGAYDLVLEVRQVPYLEELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTVLTKSEHCAFIV</Hsp_hseq>
+      <Hsp_midline>R+  +  W++    GL   ++   +   +  L   R   M + +A     S+  G   + + +I V    +    VA + P+AGGSGI ++K  LNGI + R+++ +    +  G +  V  G   G EGPM H G+++GA ++Q    + F L         F + + K +FIS G A GVAAAF AP+GG+LF+LEE +++W    TWR FF  ++++F   +  + +  N SN       H ++  +   +T             + V ++ +  ++G++ GL GA F  A   L + R+R   H F          R  E +++       SF LS+ +F +C  +  D     D ++   C EG      N LA+L   +   +++ L   + GD  +TP  L +  VV ++    TYG+A+P GLF+P+++ GA  GR+  + +H    P+G   G +A+IG+A ML G +RMTISLT I++E TG ++    IM++++ A+ V + F +G YD+ + +  +P+LE    Y+   +R  +I S    +P T    +     I+ VL    H  F V</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>51.9878</Hsp_bit-score>
+      <Hsp_score>123</Hsp_score>
+      <Hsp_evalue>8.55379e-07</Hsp_evalue>
+      <Hsp_query-from>863</Hsp_query-from>
+      <Hsp_query-to>929</Hsp_query-to>
+      <Hsp_hit-from>664</Hsp_hit-from>
+      <Hsp_hit-to>731</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>69</Hsp_align-len>
+      <Hsp_qseq>RDLWMDLTPYMNPTPHTVQEQTPVPRAFRLFRSLGLRHLIV--LNRRNEVRGVITRKDLTPAHLKFCLE</Hsp_qseq>
+      <Hsp_hseq>RNEVLDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSRKDLFLA-LMYCEE</Hsp_hseq>
+      <Hsp_midline>R+  +DL    N  P TV    P+ +A+ LFR LGLRHL+V  +   + V G+++RKDL  A L +C E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>17</Iteration_iter-num>
+  <Iteration_query-ID>XP_011426744.1</Iteration_query-ID>
+  <Iteration_query-def>PREDICTED: H(+)/Cl(-) exchange transporter 7 [Crassostrea gigas]</Iteration_query-def>
+  <Iteration_query-len>765</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>295.819</Hsp_bit-score>
+      <Hsp_score>756</Hsp_score>
+      <Hsp_evalue>6.65954e-89</Hsp_evalue>
+      <Hsp_query-from>21</Hsp_query-from>
+      <Hsp_query-to>743</Hsp_query-to>
+      <Hsp_hit-from>38</Hsp_hit-from>
+      <Hsp_hit-to>736</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>225</Hsp_identity>
+      <Hsp_positive>367</Hsp_positive>
+      <Hsp_gaps>114</Hsp_gaps>
+      <Hsp_align-len>768</Hsp_align-len>
+      <Hsp_qseq>SMEEEESDSEENKANVSEKILSGDYESLDYDVCENDLYQ----------LEERKKSVKEIMIIEMLRWLVMFFVGLLTGLVASLI----DFCVIQSTDLKFSIIKKYVDKCVDNKCMEVPLLVWVGINGGLVIVASILTACFEPVAAGSGIPQIKCYLNGVKVPHVVRLKTIVVKVIGVIFSVAGGLIIGKEGPMIHSGAVIAAGISQGRSDTFRKFDLRIFEFFRSDTEKRDFVAGGAAAGVSAAFGAPVGGVLFSLEEGASFWNQALAWRIFFASMVSTF----TLNVIQSYIKGIPWDLSYPGLFNFGSFDTTSYSAFEIPIFILMGVLGGLFGALFNQLNYILTKFRRRYIN-----KSRDR---VLEAMIVAIITATVGY-ISLYFNNSCSPMVQDT---KDNTVQVYCND----GQYSSTATILFQSPEDSVKSLFHESKG--MYSPSTLVVYCLCVFILACWTYGLYVPSGLFIPGLLVGAAWGRFVGLCLNYIFPDVGWV-DFGKYSLIGAAAQLGGIVRMTISLTVIIMEATGNITFGLPIMIVLIVAKWVGDIFNEGIYDMHIHIQGVPILGWEPSSVLT--NLSAKEVM----SHPVSVFNMRESVGRVMEVLKTETHNGFPVVEDYIPNPLDSSINEEMSFGTYRGLILRSQLIVLLKQRVFGDNIDQFYNLSTKDFRDAYPKFTPIRQIHVSQYERDNCEINLEPYMNPAAYCVTDNALFPRIFKLFRALGLRHLVVVDKH--HQVVGMVTRKDL</Hsp_qseq>
+      <Hsp_hseq>SSEEEETEALLKVSQFQEGVKG--IESHDYFWDHPTIHDGSIPVGPSGPLDPRKPSCYSPFIAQWVKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCA--------MLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN--KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLA--GGMQFPNADESYFHVWEFACFILLGIFFGLMGAIFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGE------WASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYI--EELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLSTCTHNAFTI---------------EDSSHRLLGIVMRANIVDLVKAH--GGAVSA------------------------------SSRLNLLNMTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANHVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>S EEEE+++    +   E +     ES DY      ++           L+ RK S     I + ++W++    G + G+   +I     + ++  TD     +K     C         +L+W+ I   L+       +   P+A GSGIP +K YLNGV VP ++R   IV +++G I  V  G   G EGPM H GA++ A ++Q  +    KF L+    F +   K +FV+ GA  GV+ AF AP+GG+LF++EE +++W + L WR F   +++++    T    Q  ++G   +L+  G   F + D + +  +E   FIL+G+  GL GA+F Q       +RR + +     K R R   V+EA +V +IT  + Y +S     +C P+   +    D      C++    G Y+  A +L    + SVK LF    G   +    L      +F L   TYG+ +P+GLF+P +++GA +GR  GL +        W  + G Y+++GAA  + G  RMTISLTVI++E  G++     +M+ ++V+K V D+FN+G YD+   ++G P +  E  S+    N++ K V     + P+S F   E++GR+ EVL T THN F +               E S     G+++R+ ++ L+K    G  +                                +  +NL    N     V++     + + +FR L LRH++VVDK   + VVG+VTRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>18</Iteration_iter-num>
+  <Iteration_query-ID>XP_013760162.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel 7 [Thecamonas trahens ATCC 50062]</Iteration_query-def>
+  <Iteration_query-len>819</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>270.011</Hsp_bit-score>
+      <Hsp_score>689</Hsp_score>
+      <Hsp_evalue>6.51944e-79</Hsp_evalue>
+      <Hsp_query-from>66</Hsp_query-from>
+      <Hsp_query-to>742</Hsp_query-to>
+      <Hsp_hit-from>103</Hsp_hit-from>
+      <Hsp_hit-to>754</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>216</Hsp_identity>
+      <Hsp_positive>339</Hsp_positive>
+      <Hsp_gaps>83</Hsp_gaps>
+      <Hsp_align-len>706</Hsp_align-len>
+      <Hsp_qseq>LKWVVALLVGMATALVAYTIDMFIRG----VAGAKFTLISRLIVDCDNCFWSPFLSYIAVNVLLVSVAAFAVAFIEPVAAGSGIPEIKCYLNGYKIPHVVRLSTLLCKAGGVMFSVAGGLAVGREGPMIHSGAVLAAGISQGKATSLPLDSGLFKTFRNDHMKRDFVASGAAAGVSAAFGSPIGGVLFSLEEGASHWNQALTWRTFFCTMISSFTLNLLLSGTSPGVKWGYLNQPGLVDFGEFVAQSYTVVEIPFFVIIGVVGGLSGAAFNAINTKLTLFRMRFIPV---SKPWARFAEALFIAALSATVSFLFAFFIF-----ECRPEPTTVY---EGITLRRFTCPE----GEYNDMATIFFTTQEEAIRQLFHNR---DAFSYPTLAFFMFAYFGLAVVTYGASVPSGLFVPCILTGCAFGRLAGHALEHLFPSIVHDPGTYALVGAAAFLGGVVRMTISLTVIILESTNDISYGLPVMLTIMVSKIVGDLFNEGLYDIHIDIKHIPF---LGWEPERLMENLTAADIMS-TPVNVLPYFVRVRDVVVLLESNTHGAFPLCGIDENGLPSDQFVGIILRHEIITLLKRRAFVDYANAVRSHVDWLDFVDDYPRYPDIVDIRADIFDEDMDKFMNLSPYMNPAPITTQPVAAATAVFRLFRGLGLRHMVVVDR--MRRIMGIVTRHDLVH-LEDKFHRDGSPRD</Hsp_qseq>
+      <Hsp_hseq>VKWILTIVEG---AVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGC---AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLP-FSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVE-AGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGI--QAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDW----ASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFT---IQDH---SHRLLGVVMRSNIVDWVKGQGGVVSANTR------LNLLDLTNRTPTIVS-------------------------ELTPLAQA---YTIFRNLALRHMIVVDKDDANRVVGIVTRKDIVESMEDAAEDYNRSKD</Hsp_hseq>
+      <Hsp_midline>+KW++ ++ G   A++     + + G    + G    +I  L  D   C     L +IA+ V L+    + V+++ P+A GSGIP++K YLNG  +P ++R   ++ +  G +  V  G   G EGPM H GA++ A ++Q  A +      L   F    +K +FV+ GA  GV+ AF +PIGG+LF++EE +++W + L WR F   +I+S+   L        V+   +N  G + F       + V E   F+++G+  GL GA F         +R  F  +    K   RF + +  A L   ++ L A+ +       C+P     Y   +GI  +   C E    G YN  A +  T ++ +++ LF  R     F    LA   F  F L ++TYG ++P+GLFVP I+ G  FGRL G  +         +PG YA++GAA  + G  RMTISLTVI++E   D+     VM+T++VSK V D+FN+G YDI  +++  P+   L    ER M        MS  P++       +  +  +L S TH AF    I ++   S + +G+++R  I+  +K +  V  AN        L+ +D   R P IV                             P+A A   + +FR L LRHM+VVD+    R++GIVTR D+V  +ED        +D</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>19</Iteration_iter-num>
+  <Iteration_query-ID>XP_016612789.1</Iteration_query-ID>
+  <Iteration_query-def>hypothetical protein SPPG_00455 [Spizellomyces punctatus DAOM BR117]</Iteration_query-def>
+  <Iteration_query-len>876</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785829.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785829</Hit_accession>
+  <Hit_len>752</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>214.157</Hsp_bit-score>
+      <Hsp_score>544</Hsp_score>
+      <Hsp_evalue>8.88622e-59</Hsp_evalue>
+      <Hsp_query-from>210</Hsp_query-from>
+      <Hsp_query-to>851</Hsp_query-to>
+      <Hsp_hit-from>92</Hsp_hit-from>
+      <Hsp_hit-to>722</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>208</Hsp_identity>
+      <Hsp_positive>317</Hsp_positive>
+      <Hsp_gaps>151</Hsp_gaps>
+      <Hsp_align-len>712</Hsp_align-len>
+      <Hsp_qseq>WILVFIVGAITGWLAAYIDVASEWASDLKEGYCKEGFYLNRKFCCWHVEANEECTEWATWSMTFNAQSGAAMWGAEYFMFTVFGTAFALASAVLVKVYAPYAAGSGIPEVKTILGGFVIRKFLGGWTLLIKCIGLCLSVASGLSLGKEGPLVHVACCVG---------NIFP-RIFDKYAKNEAKKREILSASSAAGVSVAFGAPIGGVLFSLEEVSYYFPYKTMWRSFFCAMVAAISLQLV-------NPFR--TGKLVLFAVEYKRAWHGFELPFFVLLGILGGLYGSFFIRMNIRVAAYRKSSWL----------RHWVIAEVGVVAILTALLSFAHP---FLRVSTVELVANLFKECIDNETDFYGLCSDHENALASV--------VKYLF---------------LAAGIKIFFTIFTFGIRVPAGIFIPSMAVGACVGRALGIGMQLWQMAYPNMWMFSSCKPHEQCVTPGTYAMVGAAAALGGVTRMTVSLTVIMFELTGALTYILPIMLTVMVSKWVGDALGKASIYDALIELNGYPF---LDAKEEYTY-STTVGSVM--------TRVEDLEVICGSGCTLEALSELVQTTGFKGYPVVAGLDGMVLVGYAGSAELRYAIDQAHQNRCPPTTLCIFTDLQQDTEDPFLDFRPWTDQTPMTISPKFPMELVMELFKKMGLRYVLVV---QDGRLVGIVTKKDL</Hsp_qseq>
+      <Hsp_hseq>WLLVILAGLLVGVLRAVILIGSYW------------LYRGRLIAMIAAIASEGL-------------------GLALIVWLVIGVSLATLIGALVAYVEPLAGGSGIPDVKTYLNGIILPRLLKFRACALRVVGQIVVVGVGFYAGSEGPMAHLGAIVGAAVAQMHVRNVFQLRALLPFSSHRIKY-EFISIGTAMGVAAAFQAPLGGILFSLEEASTYWRAETTWRAFFGCIIASFTAKHLSALVNCSNPFDCYTVHAYLEASGADRTFRVWELFVCALIGVLFGLLGALFC-AGVKLIQSRRRAWFHLFSMGRDRRRAWRVIEVIVVILMTILLSFGLSWAFFYECNPVVPDAIVTDDDIAGAMCDEGLSGGSVNPLAALLVSSRDEAIRLLFSPYMGDSEYTPGVLILAAVVIFVLTSLTYGLAIPMGLFIPNIMMGACVGRLIGI------------WM------HPLGGSVGSYAVIGAAGMLAGFSRMTISLTAIVVEITGDLQQLPYIMITVIVAKQVADLFLKGA-YDLVLEVRQVPYLEELDSYHEYAMRGKSISSAMSPAPLTSFSTVETFERIHTVLTKSEHCAFIVESRG--------KLRGLV---------SRRAIEDYLWRHGPV------------SRNEVLDLVDLANRCPLTVPASFPLDKAYNLFRQLGLRHLLVVAVEESDRVVGIVSRKDL</Hsp_hseq>
+      <Hsp_midline>W+LV + G + G L A I + S W             Y  R        A+E                     G    ++ V G + A     LV    P A GSGIP+VKT L G ++ + L      ++ +G  + V  G   G EGP+ H+   VG         N+F  R    ++ +  K  E +S  +A GV+ AF AP+GG+LFSLEE S Y+  +T WR+FF  ++A+ + + +       NPF   T    L A    R +  +EL    L+G+L GL G+ F    +++   R+ +W           R W + EV VV ++T LLSF      F   + V   A +  + I       GL     N LA++        ++ LF               LAA +    T  T+G+ +P G+FIP++ +GACVGR +GI            WM      H    + G+YA++GAA  L G +RMT+SLT I+ E+TG L  +  IM+TV+V+K V D   K + YD ++E+   P+   LD+  EY     ++ S M        + VE  E I       E  + +V++ G         L G+V          R AI+       P             + +  LD     ++ P+T+   FP++    LF+++GLR++LVV   +  R+VGIV++KDL</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>20</Iteration_iter-num>
+  <Iteration_query-ID>NP_001330038.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>772</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>288.115</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>6.38572e-86</Hsp_evalue>
+      <Hsp_query-from>75</Hsp_query-from>
+      <Hsp_query-to>766</Hsp_query-to>
+      <Hsp_hit-from>103</Hsp_hit-from>
+      <Hsp_hit-to>752</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>204</Hsp_identity>
+      <Hsp_positive>346</Hsp_positive>
+      <Hsp_gaps>88</Hsp_gaps>
+      <Hsp_align-len>715</Hsp_align-len>
+      <Hsp_qseq>VKWFFSLLIGIGTGLA-AVFINLSVENFAGWKFALTFAIIQKSYFAGFIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQ-GGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGW--CK-SGICGHFGGGGFIIWDVSDGQDDYYFK--ELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRV------KIIEACIISCITSAISFGLPL--LRKCSPC--PESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMR-EFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLP---RVIRVADVASILGSNKHNGFPVIDHTRSGETLVIGLVLRSHLLVLLQSKVDFQHSPLPCDPSARNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPR--PSRVIGLITRKDLLIEENGESSAVELQQS</Hsp_qseq>
+      <Hsp_hseq>VKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLP--FSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQF-----PNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQA----AMCDEGVDM-----GYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGDWASN----PGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLSSCTHNAFTIQDHSHR----LLGVVMRSNIVDWVKGQ------------------------------GGVVSANTRLNLLDLT---------NRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDIV--ESMEDAAEDYNRS</Hsp_hseq>
+      <Hsp_midline>VKW  +++ G   G+   V +  S     G   A+   +   +     ++++ I + L+    + ++  +P A GSGIP++K YLNG+ +P  + F  ++ +I G I  VG G   G EGP+ H GA + + + Q     K++L +  P  F + + + + V+ G   GVA AF AP+GG+LF +EE +++W  +L WR F    I + + R    +  CK  G C +  GG           D+ YF   E     ++G+  GL+GA F Q   Y   +RR   H   N        +++EA ++  IT  +++G+    +  C P      +P+ GI+      M    V+        YN  A +    +D +++ LFS +    EF    L     + + L ++T+G A+PAG FVP IM+G+ +GRL G++V  +        G YA++GAA  + G  RMT+SL VI++E+  +L+LLP +M+ +++SK V D FN+G Y++ + L+G P +E    Y  R M  ++         L     V  +  +  +L S  HN F + DH+      ++G+V+RS+++  ++ +                               G+   +  L   DL          N +P +V E   L + Y +FR L LRH+ VV +   +RV+G++TRKD++  E+ E +A +  +S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>21</Iteration_iter-num>
+  <Iteration_query-ID>NP_001107803.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform b [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>781</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>274.633</Hsp_bit-score>
+      <Hsp_score>701</Hsp_score>
+      <Hsp_evalue>5.35452e-81</Hsp_evalue>
+      <Hsp_query-from>151</Hsp_query-from>
+      <Hsp_query-to>763</Hsp_query-to>
+      <Hsp_hit-from>149</Hsp_hit-from>
+      <Hsp_hit-to>738</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>192</Hsp_identity>
+      <Hsp_positive>325</Hsp_positive>
+      <Hsp_gaps>75</Hsp_gaps>
+      <Hsp_align-len>639</Hsp_align-len>
+      <Hsp_qseq>SLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRF-DSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIH--------RPCLQVIEAVLVAAVTATVAFVLIYSSRD-CQPLQGGSM--SYPLQLFCAD-----GEYNSMAAAFFNTPEKSVVSLFHDPPG--SYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVM----STPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVV--DNRNQVVGLVTRKDL</Hsp_qseq>
+      <Hsp_hseq>AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKV-EGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWV------GDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLS--SCTHNAFTIQDHSH-----RLLGVVMRSNIVDWVKGQG-------GVVSANTRL---------------------------NLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>++L+W  +    +      V+++ P+A GSGIP +K +LNGV +P ++R   +V ++ G I+ V  G   G EGPM H G+++ A ++Q  + + K   K    F     K +FVS GA  GV+ AF AP+GG+LF++EE +++W + L WR F   +I+++        +   + + S   L    +F ++++  + + E   FI +G+  G++GA F     +   +R  + H        R   QV+EA LV  +T  +A+ + +S    C+PL G S   +  +Q    D     G YN  AA      + SV  LF    G   +    L     + FFL   TYG+ + AG+F+P++++GA +GRLFG+ +        WA +PG YA+MGAA  + G  RMT+SLTVI++E   ++     +M+ ++ +K V D+F +G YD+  +L+  P++   +     ++  R+V     + P++     E +G I +VLS  +  HN F + +H+      RL G+++RS ++  +K +        G+V    RL                           +L +  N +P  V +   L + + +FR L LRH++VV  D+ N+VVG+VTRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>22</Iteration_iter-num>
+  <Iteration_query-ID>XP_011520656.1</Iteration_query-ID>
+  <Iteration_query-def>H(+)/Cl(-) exchange transporter 7 isoform X1 [Homo sapiens]</Iteration_query-def>
+  <Iteration_query-len>747</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|294879988|ref|XP_002768858.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983] &gt;gi|239871796|gb|EER01576.1| Chloride channel protein CLC-d, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002768858</Hit_accession>
+  <Hit_len>776</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>274.248</Hsp_bit-score>
+      <Hsp_score>700</Hsp_score>
+      <Hsp_evalue>4.69432e-81</Hsp_evalue>
+      <Hsp_query-from>117</Hsp_query-from>
+      <Hsp_query-to>729</Hsp_query-to>
+      <Hsp_hit-from>149</Hsp_hit-from>
+      <Hsp_hit-to>738</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>192</Hsp_identity>
+      <Hsp_positive>325</Hsp_positive>
+      <Hsp_gaps>75</Hsp_gaps>
+      <Hsp_align-len>639</Hsp_align-len>
+      <Hsp_qseq>SLLLWATLNAAFVLVGSVIVAFIEPVAAGSGIPQIKCFLNGVKIPHVVRLKTLVIKVSGVILSVVGGLAVGKEGPMIHSGSVIAAGISQGRSTSLKRDFKIFEYFRRDTEKRDFVSAGAAAGVSAAFGAPVGGVLFSLEEGASFWNQFLTWRIFFASMISTFTLNFVLSIYHGNMWDLSSPGLINFGRF-DSEKMAYTIHEIPVFIAMGVVGGVLGAVFNALNYWLTMFRIRYIH--------RPCLQVIEAVLVAAVTATVAFVLIYSSRD-CQPLQGGSM--SYPLQLFCAD-----GEYNSMAAAFFNTPEKSVVSLFHDPPG--SYNPLTLGLFTLVYFFLACWTYGLTVSAGVFIPSLLIGAAWGRLFGISLSYLTGAAIWA-DPGKYALMGAAAQLGGIVRMTLSLTVIMMEATSNVTYGFPIMLVLMTAKIVGDVFIEGLYDMHIQLQSVPFLHWEAPVTSHSLTAREVM----STPVTCLRRREKVGVIVDVLSDTASNHNGFPVVEHADDTQPARLQGLILRSQLIVLLKHKVFVERSNLGLVQRRLRLKDFRDAYPRFPPIQSIHVSQDERECTMDLSEFMNPSPYTVPQEASLPRVFKLFRALGLRHLVVV--DNRNQVVGLVTRKDL</Hsp_qseq>
+      <Hsp_hseq>AMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARN-KFYLKALLPFSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKV-EGSCVNLAGGMQFPNADESYFHVWEFACFILLGIFFGLMGATFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMIITILLAYGVSWSEMGACKPLDGQSYIPNDGIQAAMCDEGVDMGYYNPFAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWV------GDWASNPGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGRDVTYRMSAAPLSGFGEVESLGRIQEVLS--SCTHNAFTIQDHSH-----RLLGVVMRSNIVDWVKGQG-------GVVSANTRL---------------------------NLLDLTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANRVVGIVTRKDI</Hsp_hseq>
+      <Hsp_midline>++L+W  +    +      V+++ P+A GSGIP +K +LNGV +P ++R   +V ++ G I+ V  G   G EGPM H G+++ A ++Q  + + K   K    F     K +FVS GA  GV+ AF AP+GG+LF++EE +++W + L WR F   +I+++        +   + + S   L    +F ++++  + + E   FI +G+  G++GA F     +   +R  + H        R   QV+EA LV  +T  +A+ + +S    C+PL G S   +  +Q    D     G YN  AA      + SV  LF    G   +    L     + FFL   TYG+ + AG+F+P++++GA +GRLFG+ +        WA +PG YA+MGAA  + G  RMT+SLTVI++E   ++     +M+ ++ +K V D+F +G YD+  +L+  P++   +     ++  R+V     + P++     E +G I +VLS  +  HN F + +H+      RL G+++RS ++  +K +        G+V    RL                           +L +  N +P  V +   L + + +FR L LRH++VV  D+ N+VVG+VTRKD+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>23</Iteration_iter-num>
+  <Iteration_query-ID>NP_197996.1</Iteration_query-ID>
+  <Iteration_query-def>chloride channel D [Arabidopsis thaliana]</Iteration_query-def>
+  <Iteration_query-len>792</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|XP_002785830.1|</Hit_id>
+  <Hit_def>Chloride channel protein CLC-b, putative [Perkinsus marinus ATCC 50983]</Hit_def>
+  <Hit_accession>XP_002785830</Hit_accession>
+  <Hit_len>775</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>291.967</Hsp_bit-score>
+      <Hsp_score>746</Hsp_score>
+      <Hsp_evalue>2.94366e-87</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>791</Hsp_query-to>
+      <Hsp_hit-from>39</Hsp_hit-from>
+      <Hsp_hit-to>775</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>217</Hsp_identity>
+      <Hsp_positive>380</Hsp_positive>
+      <Hsp_gaps>110</Hsp_gaps>
+      <Hsp_align-len>808</Hsp_align-len>
+      <Hsp_qseq>SDDTSTDDITLLNSHRDGDGGVNSLDYEVIENYAYREEQAHRGKLYVGY--------------YVA--VKWFFSLLIGIGTGLA-AVFINLSVENFAGWKFALTFAIIQKSYFAGFIVYLLINLVLVFSSAYIITQFAPAAAGSGIPEIKGYLNGIDIPGTLLFRTLIGKIFGSIGSVGGGLALGKEGPLVHTGACIASLLGQ-GGSTKYHLNSRWPQLFKSDRDRRDLVTCGCAAGVAAAFRAPVGGVLFALEEVTSWWRSQLMWRVFFTSAIVAVVVRTAMGW--CK-SGICGHFGGGGFIIWDVSDGQDDYYFK--ELLPMAVIGVIGGLLGALFNQLTLYMTSWRRNSLHKKGNRV------KIIEACIISCITSAISFGLPL--LRKCSPC--PESVPDSGIECPRPPGMYGNYVNFFCKTDNEYNDLATIFFNTQDDAIRNLFSAKTMR-EFSAQSLLTFLAMFYTLAVVTFGTAVPAGQFVPGIMIGSTYGRLVGMFVVRFYKKLNIEEGTYALLGAASFLGGSMRMTVSLCVIMVEITNNLKLLPLIMLVLLISKAVGDAFNEGLYEVQARLKGIPLLESRPKYHMRQMIAKEACQSQKVISLP---RVIRVADVASILGSNKHNGFPVIDHTRSGETLVIGLVLRSHLLVLLQSKVDFQHSPLPCDPSARNIRHSFSEFAKPVSSKGLCIEDIHLTSDDLEMYIDLAPFLNPSPYVVPEDMSLTKVYNLFRQLGLRHLFVVPR--PSRVIGLITRKDLLIEENGESSAVELQQSTSVRGRYSETATRMDAARPLLDDLL</Hsp_qseq>
+      <Hsp_hseq>SEEEETEALLKVSQFQEGVKGIESHDY------FWDHPTIHDGSIPVGPSGPLDPRKPSCYSPFIAQWVKWILTIVEGAVIGICRGVILIGSHWLLVGKTDAMIHWLKSDNPGCAMLIWIAIGVPLICFIGWGVSYMSPLAGGSGIPDVKAYLNGVMVPKLMRFWGIVWRILGQIVVVGTGHYAGSEGPMAHLGAIVGAAVAQMHARNKFYLKALLP--FSTQKVKDEFVSMGAGMGVATAFEAPIGGMLFTIEEASTYWPRELYWRCFLGCIIASYMTRLTAQYFQCKVEGSCVNLAGGMQF-----PNADESYFHVWEFACFILLGIFFGLMGAIFCQGVRYFQYYRRVFFHLYSNGKDRRRFGQVVEAGLVMLITILLAYGVSWSEMGACKPLDGQSYIPNDGIQA----AMCDEGVDM-----GYYNPLAAMLLTDRDTSVKWLFSPRLGEAEFPQGQLAAAGFIIFFLTLLTYGVAIPAGLFVPNIMLGACFGRLFGLWVGEWASN----PGVYAVMGAAGMMAGFTRMTISLTVIVIELVGDLRLLPAVMVTVVVSKQVADMFNKGAYDIVSELRGYPYIEELSIYDERNMAGKYVTYRMSAAPLSGFGEVETLGRIQEVLSTCTHNAFTIEDSSHR----LLGIVMRANIVDLVKA---------------------------------------HGGAVSASSRLNLLNMTNRTPTIVSELTPLAQAYTIFRNLALRHMIVVDKDDANHVVGIVTRKDIV--DSMEDAADEFGKPGKSDDTVSHSSTAAASRTSIIDDVL</Hsp_hseq>
+      <Hsp_midline>S++  T+ +  ++  ++G  G+ S DY       +     H G + VG               ++A  VKW  +++ G   G+   V +  S     G   A+   +   +     ++++ I + L+    + ++  +P A GSGIP++K YLNG+ +P  + F  ++ +I G I  VG G   G EGP+ H GA + + + Q     K++L +  P  F + + + + V+ G   GVA AF AP+GG+LF +EE +++W  +L WR F    I + + R    +  CK  G C +  GG           D+ YF   E     ++G+  GL+GA+F Q   Y   +RR   H   N        +++EA ++  IT  +++G+    +  C P      +P+ GI+      M    V+        YN LA +    +D +++ LFS +    EF    L     + + L ++T+G A+PAG FVP IM+G+ +GRL G++V  +        G YA++GAA  + G  RMT+SL VI++E+  +L+LLP +M+ +++SK V D FN+G Y++ + L+G P +E    Y  R M  K          L     V  +  +  +L +  HN F + D +      ++G+V+R++++ L+++                                       H  +      ++L    N +P +V E   L + Y +FR L LRH+ VV +   + V+G++TRKD++  ++ E +A E  +        S ++T   +   ++DD+L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>22860</Statistics_db-num>
+      <Statistics_db-len>7410969</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
