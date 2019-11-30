@@ -337,7 +337,7 @@ def analyzeBlastDict(blastDict, proteins):
 
 def main():
     Entrez.email = email
-    for goodFilename in os.listdir(rootFolder + '/Fasta'):
+    for goodFilename in os.listdir(rootFolder + '/Input'):
         if '_good' in goodFilename:
             filename = goodFilename.replace('_good', '')
             shortName = os.path.splitext(filename)[0]
