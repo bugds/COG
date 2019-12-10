@@ -95,6 +95,8 @@ def getIsoforms(proteins):
         id=','.join(proteins.keys())
     ))
     genes = [i['Id'] for i in record[0]['LinkSetDb'][0]['Link']]
+    # Safe efetch usage is less than 20 uids at a time (???)
+    # IDK why, but if more it sends "An error has occured"
     record = Entrez.efetch(
         db="gene", 
         rettype="gene_table", 
@@ -103,6 +105,8 @@ def getIsoforms(proteins):
     )
 
     line = record.readline()
+    if 'An error has occured' in line:
+        raise ValueError('NCBI error')
     genes = list()
     while ('[' in line):
         species = line.split('[')[1][:-2]
@@ -180,6 +184,12 @@ def createBlastDict(blast):
                     if substrings[i] == 'ref':
                         blastDict[record.id][species] = substrings[i+1]
     return blastDict
+
+def checkBlastDict(blastDict, proteins):
+    speciesSet = [p.species for p in proteins.values()]
+    for record in blastDict.keys():
+        if set(blastDict[record].keys()) != speciesSet:
+            pass
 
 def createTemporaryArrays(blastDict, proteins):
     '''Creating temporary arrays for assistance
@@ -288,14 +298,14 @@ def analyzeBlastDict(blastDict, proteins):
         for goodProtein in goodList:
             if not (isoformsSps in blastDict[goodProtein.refseq]):
                 failedRecipr.append(goodProtein)
-                print('{} not found in BLAST for {}'.format(
-                    isoformsSps, goodProtein.refseq
-                ))
+                #print('{} not found in BLAST for {}'.format(
+                #    isoformsSps, goodProtein.refseq
+                #))
             elif not (blastDict[goodProtein.refseq][isoformsSps] in isoformsIds):
                 failedRecipr.append(goodProtein)
-                print('{}\'s first hit is not interest ({})'.format(
-                    goodProtein.refseq, isoformsSps
-                ))
+                #print('{}\'s first hit is not interest ({})'.format(
+                #    goodProtein.refseq, isoformsSps
+                #))
 
         forwardIsoforms = {}
         for isoform in isoforms:
@@ -309,9 +319,9 @@ def analyzeBlastDict(blastDict, proteins):
                             print('Unexpected???')
                     else:
                         failedGood.append(oneGoodSp)
-                        print('{}\'s first hit not referencial in {}'.format(
-                            isoform, oneGoodSp
-                        ))
+                        #print('{}\'s first hit not referencial in {}'.format(
+                        #    isoform, oneGoodSp
+                        #))
                 else:
                     failedGood.append(oneGoodSp)
                     print('{} not found in BLAST for {}'.format(
@@ -354,6 +364,7 @@ def main():
                     filename
                 )
             blastDict = createBlastDict(blast)
+            checkBlastDict(blastDict, proteins)
             htmlFull = analyzeBlastDict(blastDict, proteins)
             output.write(htmlFull.getvalue())
             output.close()
