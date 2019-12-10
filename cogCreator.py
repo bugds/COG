@@ -46,18 +46,60 @@ def getSequences(seqFilename, proteins, good=True):
         line = seqFile.readline()
     return proteins
 
-def goodGeneMakesGoodProtein(goodGenes, proteins):
-    '''If there are referencial isoforms of some gene,
-    all isoforms of this gene must be seen as referencial
-
-    :param goodGenes: List of genes coding referencial isoforms
+def getIsoforms(proteins):
+    ''' Getting isoforms for all proteins in tree
+    
     :param proteins: Dictionary for storing information about proteins
-    :return: "proteins" with all referencial proteins marked
+    :return: Dictionary supplemented with isoforms
     '''
-    for protein in proteins.values():
-        if protein.gene in goodGenes:
-            protein.good = True
+    record = Entrez.read(Entrez.elink(
+        db="gene", 
+        dbfrom="protein", 
+        id=','.join(proteins.keys())
+    ))
+    genes = [i['Id'] for i in record[0]['LinkSetDb'][0]['Link']]
+    # Safe efetch usage is less than 20 uids at a time (???)
+    # IDK why, but if more it sends "An error has occured"
+    for i in range(0, 1 + (len(genes) // 20)):
+        if i*20 > len(genes):
+            efetchAndParse(genes[i*20:len(genes)])
+        else:
+            efetchAndParse(genes[i*20:(i+1)*20])  
     return proteins
+
+def efetchAndParse(genesPart):
+    record = Entrez.efetch(
+        db="gene", 
+        rettype="gene_table", 
+        retmode="text", 
+        id=','.join(genes)
+    )
+    line = record.readline()
+    if 'An error has occured' in line:
+        raise ValueError('NCBI error')
+    genes = list()
+    while ('[' in line):
+        species = line.split('[')[1][:-2]
+        line = record.readline()
+        genes.append({species : line.split(',')[0].split(': ')[1]})
+    line = record.readline()
+    
+    i = -1
+    goodGenes = list()
+    while line:
+        if 'from: ' in line:
+            i+=1
+        if 'Exon table' in line:
+            proteins, goodGenes = addIsoform(
+                line.split()[-1], 
+                i, 
+                genes, 
+                goodGenes, 
+                proteins
+            )
+        line = record.readline()
+        
+    proteins = goodGeneMakesGoodProtein(goodGenes, proteins)
 
 def addIsoform(refseq, i, genes, goodGenes, proteins):
     '''Add isoform of protein that's already in "proteins" dictionary
@@ -83,53 +125,17 @@ def addIsoform(refseq, i, genes, goodGenes, proteins):
         )
     return proteins, goodGenes
 
-def getIsoforms(proteins):
-    ''' Getting isoforms for all proteins in tree
-    
+def goodGeneMakesGoodProtein(goodGenes, proteins):
+    '''If there are referencial isoforms of some gene,
+    all isoforms of this gene must be seen as referencial
+
+    :param goodGenes: List of genes coding referencial isoforms
     :param proteins: Dictionary for storing information about proteins
-    :return: Dictionary supplemented with isoforms
+    :return: "proteins" with all referencial proteins marked
     '''
-    record = Entrez.read(Entrez.elink(
-        db="gene", 
-        dbfrom="protein", 
-        id=','.join(proteins.keys())
-    ))
-    genes = [i['Id'] for i in record[0]['LinkSetDb'][0]['Link']]
-    # Safe efetch usage is less than 20 uids at a time (???)
-    # IDK why, but if more it sends "An error has occured"
-    record = Entrez.efetch(
-        db="gene", 
-        rettype="gene_table", 
-        retmode="text", 
-        id=','.join(genes)
-    )
-
-    line = record.readline()
-    if 'An error has occured' in line:
-        raise ValueError('NCBI error')
-    genes = list()
-    while ('[' in line):
-        species = line.split('[')[1][:-2]
-        line = record.readline()
-        genes.append({species : line.split(',')[0].split(': ')[1]})
-    line = record.readline()
-    
-    i = -1
-    goodGenes = list()
-    while line:
-        if 'from: ' in line:
-            i+=1
-        if 'Exon table' in line:
-            proteins, goodGenes = addIsoform(
-                line.split()[-1], 
-                i, 
-                genes, 
-                goodGenes, 
-                proteins
-            )
-        line = record.readline()
-
-    proteins = goodGeneMakesGoodProtein(goodGenes, proteins)
+    for protein in proteins.values():
+        if protein.gene in goodGenes:
+            protein.good = True
     return proteins
 
 def checkPreviousBlast(filename):
