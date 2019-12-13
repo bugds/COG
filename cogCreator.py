@@ -29,6 +29,49 @@ class ProteinClass():
         self.refseq = refseq
         self.good = good
 
+def checkPrevious(shortName, folder):
+    '''Check if there was a previous file with the same name
+
+    :param filename: file containing needed information
+    :param folder: Where to seek for the file
+    :return: False if file was not found
+    '''
+    for filename in os.listdir(rootFolder + '/' + folder):
+        if shortName in filename:
+            path = '/'.join([rootFolder, folder, filename])
+            if folder == 'Blast_XML':
+                return SearchIO.parse(path, 'blast-xml')
+            else:
+                return parseProteins(path)
+    return False
+
+def parseProteins(path):
+    proteinsFile = open(path, 'r')
+    proteins = dict()
+    line = proteinsFile.readline()
+    while '//' in line:
+        proteins[line.split('//')[2]] = \
+            ProteinClass(
+                line.split('//')[0],
+                line.split('//')[1],
+                line.split('//')[2],
+                bool(line.split('//')[3]),
+            )
+        line = proteinsFile.readline()
+    proteinsFile.close()
+    return proteins
+
+def saveProteins(proteins, shortName):
+    proteinsFile = open(rootFolder + '/Previous_Proteins/' + shortName + '.txt', 'w')
+    for p in proteins.values():
+        proteinsFile.write('{}//{}//{}//{}\n'.format(
+            p.species, 
+            p.gene, 
+            p.refseq, 
+            str(p.good)
+        ))
+    proteinsFile.close()
+
 def getSequences(seqFilename, proteins, good=True):
     '''Gets accession numbers from corresponding file
 
@@ -316,12 +359,15 @@ def main():
         if '_good' in goodFilename:
             filename = goodFilename.replace('_good', '')
             shortName = os.path.splitext(filename)[0]
-            proteins = dict()
-            proteins = getSequences(goodFilename, proteins)
-            proteins = getSequences(filename, proteins, False)
-            proteins = getIsoforms(proteins)
+            proteins = checkPrevious(shortName, 'Previous_Proteins')
+            if not proteins:
+                proteins = dict()
+                proteins = getSequences(goodFilename, proteins)
+                proteins = getSequences(filename, proteins, False)
+                proteins = getIsoforms(proteins)
+                saveProteins(proteins, shortName)
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
-            blast = checkPreviousBlast(shortName)
+            blast = checkPrevious(shortName, 'Blast_XML')
             if not blast:
                 blast = blastSearch(
                     '\n'.join([p.refseq for p in proteins.values()]),
