@@ -62,70 +62,45 @@ def getIsoforms(proteins):
     # IDK why, but if more it sends "An error has occured"
     for i in range(0, 1 + (len(genes) // 20)):
         if i*20 > len(genes):
-            efetchAndParse(genes[i*20:len(genes)])
+            efetchAndParse(genes[i*20:len(genes)], proteins)
         else:
-            efetchAndParse(genes[i*20:(i+1)*20])  
+            efetchAndParse(genes[i*20:(i+1)*20], proteins) 
+    proteins = goodGeneMakesGoodProtein(proteins) 
     return proteins
 
-def efetchAndParse(genesPart):
+def efetchAndParse(genesPart, proteins):
     record = Entrez.efetch(
         db="gene", 
         rettype="gene_table", 
         retmode="text", 
-        id=','.join(genes)
+        id=','.join(genesPart)
     )
+
+    genesStrings = list()
     line = record.readline()
-    if 'An error has occured' in line:
-        raise ValueError('NCBI error')
-    genes = list()
-    while ('[' in line):
-        species = line.split('[')[1][:-2]
+    while '[' in line:
+        genesStrings.append(line)
         line = record.readline()
-        genes.append({species : line.split(',')[0].split(': ')[1]})
-    line = record.readline()
-    
-    i = -1
-    goodGenes = list()
+    genesStrings.append(line)
+
+    i=-1
     while line:
         if 'from: ' in line:
             i+=1
+            species = genesStrings[i].split('[')[1][:-2]
+            gene = genesStrings[i+1].split(',')[0].split(': ')[1]
         if 'Exon table' in line:
-            proteins, goodGenes = addIsoform(
-                line.split()[-1], 
-                i, 
-                genes, 
-                goodGenes, 
-                proteins
-            )
+            refseq = line.split()[-1]
+            if refseq in proteins:
+                proteins[refseq].gene = gene
+                proteins[refseq].species = species
+            elif refseq[1] == 'P':
+                proteins[refseq] = ProteinClass(species, gene, refseq, False)
         line = record.readline()
-        
-    proteins = goodGeneMakesGoodProtein(goodGenes, proteins)
 
-def addIsoform(refseq, i, genes, goodGenes, proteins):
-    '''Add isoform of protein that's already in "proteins" dictionary
+    return proteins
 
-    :param refseq: Accession number of additional isoform
-    :param i: Index of isoform coding gene, listed in "genes"
-    :param genes: List of genes that code proteins of interest
-    :param goodGenes: List of genes that code referencial proteins
-    :param proteins: Dictionary for storing information about proteins
-    :return: "proteins" supplemented with single isoform, "goodGenes"
-    '''
-    if refseq in proteins:
-        proteins[refseq].species = next(iter(genes[i].keys()))
-        proteins[refseq].gene = next(iter(genes[i].values()))
-        if proteins[refseq].good == True:
-            goodGenes.append(proteins[refseq].gene)
-    elif refseq[1] == 'P':
-        proteins[refseq] = ProteinClass(
-            next(iter(genes[i].keys())),
-            next(iter(genes[i].values())),
-            refseq,
-            False
-        )
-    return proteins, goodGenes
-
-def goodGeneMakesGoodProtein(goodGenes, proteins):
+def goodGeneMakesGoodProtein(proteins):
     '''If there are referencial isoforms of some gene,
     all isoforms of this gene must be seen as referencial
 
@@ -133,6 +108,7 @@ def goodGeneMakesGoodProtein(goodGenes, proteins):
     :param proteins: Dictionary for storing information about proteins
     :return: "proteins" with all referencial proteins marked
     '''
+    goodGenes = [p.gene for p in proteins.values() if p.good]
     for protein in proteins.values():
         if protein.gene in goodGenes:
             protein.good = True
@@ -150,13 +126,12 @@ def checkPreviousBlast(filename):
             return SearchIO.parse(xmlPath, 'blast-xml')
     return False
 
-def blastSearch(query, species, filename, writeToFile=True):
+def blastSearch(query, species, filename):
     '''Run BLAST, save results of a search to a file and return its contents
 
     :param query: String with accession numbers divided by paragraphs
     :param species: String with all species, against which BLAST is performed
     :param filename: Name of original fasta file for saving results of BLAST
-    :param writeToFile: Boolean, whether to write to a file or not
     '''
     records = NCBIWWW.qblast(
         'blastp',
@@ -171,17 +146,18 @@ def blastSearch(query, species, filename, writeToFile=True):
         + '.xml'
     xml = open(xmlPath, 'w')
     xml.write(records.getvalue())
+    xml.close()
     return SearchIO.parse(xmlPath, 'blast-xml')
 
-def createBlastDict(blast):
+def createBlastDict(blast, blastDict):
     '''Create dictionary containing BLAST results
 
     :param blast: contents of the XML-file with BLAST results
     :return: Dictionary containing BLAST results
     '''
-    blastDict = {}
     for record in blast:
-        blastDict[record.id] = {}
+        if record.id not in blastDict:
+            blastDict[record.id] = {}
         for hit in record:
             species = hit.description.split('[')[1][:-1]
             if not species in blastDict[record.id]:
@@ -191,11 +167,40 @@ def createBlastDict(blast):
                         blastDict[record.id][species] = substrings[i+1]
     return blastDict
 
-def checkBlastDict(blastDict, proteins):
-    speciesSet = [p.species for p in proteins.values()]
+def checkBlastDict(filename, blastDict, proteins, iteration):
+    '''Checks if BLAST found all species in each case
+
+    :param filename: Name of currently explored file
+    :param blastDict: Dictionary containing BLAST results
+    :param proteins: Dictionary for storing information about proteins
+    :param iteration: Number of additional BLAST required currently
+    :returns: "blastDict" supported with BLAST results
+    '''
+    speciesSet = set([p.species for p in proteins.values()])
+    speciesForBlast = set()
+    queriesForBlast = set()
     for record in blastDict.keys():
-        if set(blastDict[record].keys()) != speciesSet:
-            pass
+        lostSpecies = speciesSet - set(blastDict[record].keys())
+        if bool(lostSpecies):
+            speciesForBlast = speciesForBlast | lostSpecies
+            queriesForBlast.add(record)
+    if bool(queriesForBlast):
+        newBlast = checkPreviousBlast('{}_iter{}'.format(
+            os.path.splitext(filename)[0], 
+            str(iteration) + '.xml'
+        ))
+        if not newBlast:
+            newBlast = blastSearch(
+                '\n'.join(queriesForBlast),
+                ' OR '.join(speciesForBlast),
+                '{}_iter{}'.format(
+                    os.path.splitext(filename)[0], 
+                    str(iteration) + '.txt'
+                )
+            )
+        blastDict = createBlastDict(newBlast, blastDict)
+        return checkBlastDict(filename, blastDict, proteins, iteration + 1)
+    return blastDict
 
 def createTemporaryArrays(blastDict, proteins):
     '''Creating temporary arrays for assistance
@@ -369,8 +374,8 @@ def main():
                     ' OR '.join([p.species for p in proteins.values()]),
                     filename
                 )
-            blastDict = createBlastDict(blast)
-            checkBlastDict(blastDict, proteins)
+            blastDict = createBlastDict(blast, dict())
+            blastDict = checkBlastDict(filename, blastDict, proteins, 0)
             htmlFull = analyzeBlastDict(blastDict, proteins)
             output.write(htmlFull.getvalue())
             output.close()
