@@ -190,14 +190,19 @@ def checkBlastDict(filename, blastDict, proteins, iteration):
             str(iteration) + '.xml'
         ))
         if not newBlast:
-            newBlast = blastSearch(
-                '\n'.join(queriesForBlast),
-                ' OR '.join(speciesForBlast),
-                '{}_iter{}'.format(
-                    os.path.splitext(filename)[0], 
-                    str(iteration) + '.txt'
+            try:
+                newBlast = blastSearch(
+                    '\n'.join(queriesForBlast),
+                    ' OR '.join(speciesForBlast),
+                    '{}_iter{}'.format(
+                        os.path.splitext(filename)[0], 
+                        str(iteration) + '.txt'
+                    )
                 )
-            )
+            except TypeError:
+                print(filename)
+                print(iteration)
+                raise TypeError
         blastDict = createBlastDict(newBlast, blastDict)
         return checkBlastDict(filename, blastDict, proteins, iteration + 1)
     return blastDict
@@ -248,47 +253,36 @@ def writeHtml(
     :return: HTML-string of BLAST analysis for single species
     '''
     htmlPart = StringIO()
-    htmlPart.write("""<details>
-    <summary>{}</summary>
-    <details>
-    \t<summary>&emsp;Gene id: {}</summary>
-    \t<details>
-    \t<summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
+    htmlString = open(rootFolder + '/htmlStrings.txt', 'r').read()\
+        .split('\n')
+    htmlString = [line.replace(r'\n', '\n').replace(r'\t', '\t') for line in htmlString]
+    htmlPart.write(htmlString[0].format(
         species,
         gene,
         len(failedRecipr),
-        'of',
-        reciprocalAll,
-        'referencial proteins failed reciprocal BLAST:'
+        reciprocalAll
     ))
     for failed in failedRecipr:
-        htmlPart.write('\n&emsp;&emsp;&emsp;&emsp;{} [{}]<br>'.format(
+        htmlPart.write(htmlString[1].format(
             failed.refseq,
             failed.species
         ))        
-    htmlPart.write("""\t\t\t</details>
-    \t\t<details>
-    \t\t<summary>&emsp;&emsp;{} {} {} {}</summary>""".format(
+    htmlPart.write(htmlString[2].format(
         forwardFailed,
-        'of',
-        forwardAll,
-        'isoforms failed to find all referencial proteins in first hit:'
+        forwardAll
     ))
     for isoform, fails in forwardIsoforms.items():
-        htmlPart.write('<details>')
-        htmlPart.write('<summary>&emsp;&emsp;&emsp;{}: {} {} {} {}</summary>'.format(
+        htmlPart.write(htmlString[3].format(
             isoform,
             len(fails),
-            'of',
-            len(goodSpecies),
-            'referencial proteins not found:'
+            len(goodSpecies)
         ))
         for failed in fails:
-            htmlPart.write('\n&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>'.format(
+            htmlPart.write(htmlString[4].format(
                 failed
             ))
-        htmlPart.write('</details>')
-    htmlPart.write('</details></details></details>')
+        htmlPart.write(htmlString[5])
+    htmlPart.write(htmlString[6])
     return htmlPart.getvalue()
 
 def analyzeBlastDict(blastDict, proteins):
@@ -300,7 +294,7 @@ def analyzeBlastDict(blastDict, proteins):
     '''
     protDict, goodList, goodSpecies = \
         createTemporaryArrays(blastDict, proteins)
-    htmlFull = StringIO()
+    htmlFull = ''
 
     for gene, isoforms in protDict.items():
         isoformsIds = [i.refseq for i in isoforms]
@@ -342,8 +336,7 @@ def analyzeBlastDict(blastDict, proteins):
 
         bad = len({k: v for k, v in forwardIsoforms.items() if v != []})
 
-        htmlFull.write(
-            writeHtml(
+        htmlFull += writeHtml(
                 isoformsSps,
                 gene,
                 len(goodList),
@@ -352,7 +345,6 @@ def analyzeBlastDict(blastDict, proteins):
                 failedRecipr,
                 forwardIsoforms,
                 goodSpecies
-            )
         )
     return htmlFull
 
@@ -377,7 +369,7 @@ def main():
             blastDict = createBlastDict(blast, dict())
             blastDict = checkBlastDict(filename, blastDict, proteins, 0)
             htmlFull = analyzeBlastDict(blastDict, proteins)
-            output.write(htmlFull.getvalue())
+            output.write(htmlFull)
             output.close()
 
 main()
