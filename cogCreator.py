@@ -41,8 +41,9 @@ def getSequences(seqFilename, proteins, good=True):
     seqFile = open(path, 'r')
     line = seqFile.readline()
     while line:
-        proteins[line.replace('\n', '')] = \
-            ProteinClass(None, None, line.replace('\n', ''), good)
+        if not line.replace('\n', '') in proteins:
+            proteins[line.replace('\n', '')] = \
+                ProteinClass(None, None, line.replace('\n', ''), good)
         line = seqFile.readline()
     return proteins
 
@@ -78,6 +79,8 @@ def efetchAndParse(genesPart, proteins):
 
     genesStrings = list()
     line = record.readline()
+    if "An error has occured. Please try again later." in line:
+        raise TypeError("Something wrong on NCBI side. Try again")
     while '[' in line:
         genesStrings.append(line)
         line = record.readline()
@@ -190,102 +193,17 @@ def checkBlastDict(filename, blastDict, proteins, iteration):
             str(iteration) + '.xml'
         ))
         if not newBlast:
-            try:
-                newBlast = blastSearch(
-                    '\n'.join(queriesForBlast),
-                    ' OR '.join(speciesForBlast),
-                    '{}_iter{}'.format(
-                        os.path.splitext(filename)[0], 
-                        str(iteration) + '.txt'
-                    )
+            newBlast = blastSearch(
+                '\n'.join(queriesForBlast),
+                ' OR '.join(speciesForBlast),
+                '{}_iter{}'.format(
+                    os.path.splitext(filename)[0], 
+                    str(iteration) + '.txt'
                 )
-            except TypeError:
-                print(filename)
-                print(iteration)
-                print(queriesForBlast)
-                print(speciesForBlast)
-                raise TypeError
+            )
         blastDict = createBlastDict(newBlast, blastDict)
         return checkBlastDict(filename, blastDict, proteins, iteration + 1)
     return blastDict
-
-def createTemporaryArrays(blastDict, proteins):
-    '''Creating temporary arrays for assistance
-
-    :param blastDict: Dictionary containing BLAST results
-    :param proteins: Dictionary for storing information about proteins
-    :return: Dictionary of non-referencial proteins; 
-        List of referencial proteins;
-        Set of species linked to referencial proteins
-    '''
-    protDict = dict()
-    goodList = list()
-    goodSpecies = set()
-
-    for protein in proteins.values():
-        if protein.good:
-            goodList.append(protein)
-            goodSpecies.add(protein.species)
-        elif protein.gene in protDict:
-            protDict[protein.gene].append(protein)
-        else:
-            protDict[protein.gene] = [protein]
-    return protDict, goodList, goodSpecies
-
-def writeHtml(
-    species,
-    gene,
-    reciprocalAll,
-    forwardFailed,
-    forwardAll,
-    failedRecipr,
-    forwardIsoforms,
-    goodSpecies):
-    '''Writes BLAST analysis for single gene in form of an HTML-file
-
-    :param species: Species linked to analyzed gene
-    :param gene: Analyzed gene
-    :param reciprocalPercent: Percent of isoforms which are top hits 
-        of referencial BLAST
-    :param forwardPercent: Percent of isoforms, that, when BLASTed
-        lead to referencial proteins as top hits
-    :failedRecipr: 
-    :forwardIsoforms:
-    :goodSpecies:
-    :return: HTML-string of BLAST analysis for single species
-    '''
-    htmlPart = StringIO()
-    htmlString = open(rootFolder + '/htmlStrings.txt', 'r').read()\
-        .split('\n')
-    htmlString = [line.replace(r'\n', '\n').replace(r'\t', '\t') for line in htmlString]
-    htmlPart.write(htmlString[0].format(
-        species,
-        gene,
-        len(failedRecipr),
-        reciprocalAll
-    ))
-    for failed in failedRecipr:
-        htmlPart.write(htmlString[1].format(
-            failed.refseq,
-            failed.species
-        ))        
-    htmlPart.write(htmlString[2].format(
-        forwardFailed,
-        forwardAll
-    ))
-    for isoform, fails in forwardIsoforms.items():
-        htmlPart.write(htmlString[3].format(
-            isoform,
-            len(fails),
-            len(goodSpecies)
-        ))
-        for failed in fails:
-            htmlPart.write(htmlString[4].format(
-                failed
-            ))
-        htmlPart.write(htmlString[5])
-    htmlPart.write(htmlString[6])
-    return htmlPart.getvalue()
 
 def analyzeBlastDict(blastDict, proteins):
     '''Analysis of a BLAST dictionary
@@ -294,61 +212,103 @@ def analyzeBlastDict(blastDict, proteins):
     :param proteins: Dictionary for storing information about proteins
     :return: HTML-string containing analysis results
     '''
-    protDict, goodList, goodSpecies = \
-        createTemporaryArrays(blastDict, proteins)
     htmlFull = ''
+    gProteins = [p for p in proteins.values() if p.good]
+    gSpecies = set([p.species for p in gProteins])
 
-    for gene, isoforms in protDict.items():
-        isoformsIds = [i.refseq for i in isoforms]
-        isoformsSps = next(iter(isoforms)).species
-        failedRecipr = []
-        for goodProtein in goodList:
-            if not (isoformsSps in blastDict[goodProtein.refseq]):
-                failedRecipr.append(goodProtein)
-                #print('{} not found in BLAST for {}'.format(
-                #    isoformsSps, goodProtein.refseq
-                #))
-            elif not (blastDict[goodProtein.refseq][isoformsSps] in isoformsIds):
-                failedRecipr.append(goodProtein)
-                #print('{}\'s first hit is not interest ({})'.format(
-                #    goodProtein.refseq, isoformsSps
-                #))
+    for qSpecies in set([p.species for p in proteins.values()]):
+        qGenes = set()
+        qReverse = dict()
+        qForward = dict()
 
-        forwardIsoforms = {}
-        for isoform in isoforms:
-            failedGood = []
-            for oneGoodSp in goodSpecies:
-                if oneGoodSp in blastDict[isoform.refseq]:
-                    hit = blastDict[isoform.refseq][oneGoodSp]
-                    if hit in proteins:
-                        if not proteins[hit].good:
-                            failedGood.append(oneGoodSp)
-                            print('Unexpected???')
-                    else:
-                        failedGood.append(oneGoodSp)
-                        #print('{}\'s first hit not referencial in {}'.format(
-                        #    isoform, oneGoodSp
-                        #))
+        for qGene in [p.gene for p in proteins.values() if p.species == qSpecies]:
+            qGenes.add(qGene)
+            qReverse[qGene] = dict() # for qRefseq use qReverse.keys()
+            qForward[qGene] = set()
+            goodGene = False
+            for qRefseq in [p.refseq for p in proteins.values() if p.gene == qGene]:
+                if not proteins[qRefseq].good:
+                    qReverse[qGene][qRefseq] = set()
+                    if proteins[qRefseq].species in gSpecies:
+                        raise ValueError("Same species in both groups - remove one")
+                    for s in gSpecies:
+                        if blastDict[qRefseq][s] in [p.refseq for p in gProteins]:
+                            qReverse[qGene][qRefseq].add(s)
                 else:
-                    failedGood.append(oneGoodSp)
-                    print('{} not found in BLAST for {}'.format(
-                        oneGoodSp, isoform
-                    ))
-            forwardIsoforms[isoform.refseq] = failedGood
+                    goodGene = True
+            for gRefseq in [p.refseq for p in gProteins]:
+                if blastDict[gRefseq][qSpecies] in proteins:
+                    if proteins[blastDict[gRefseq][qSpecies]].gene == qGene:
+                        qForward[qGene].add(gRefseq)
 
-        bad = len({k: v for k, v in forwardIsoforms.items() if v != []})
+        if not goodGene:
+            htmlFull += writeHtml(
+                    proteins,
+                    gSpecies,
+                    set([p.refseq for p in gProteins]),
+                    qSpecies,
+                    qGenes,
+                    qReverse,
+                    qForward
+            )
 
-        htmlFull += writeHtml(
-                isoformsSps,
-                gene,
-                len(goodList),
-                bad,
-                len(isoforms),
-                failedRecipr,
-                forwardIsoforms,
-                goodSpecies
-        )
     return htmlFull
+
+def writeHtml(
+    proteins,
+    gSpecies,
+    gRefseqs,
+    qSpecies,
+    qGenes,
+    qReverse,
+    qForward):
+    '''Writes BLAST analysis for single gene in form of an HTML-file
+
+    :param proteins: Dictionary for storing information about proteins
+    :param gSpecies: Set of good species
+    :param gRefseqs: Set of good accession numbers
+    :param qSpecies: Species linked to analyzed genes
+    :param qGenes: Set of analyzed genes
+    :param qReverse: Dictionary of reciprocal BLAST: isoform>species
+    :param qForward: Set of species found by forward BLAST
+    :return: HTML-string of BLAST analysis for single species
+    '''
+    htmlPart = StringIO()
+    htmlString = open(rootFolder + '/htmlStrings.txt', 'r').read()\
+        .split('\n')
+    htmlString = [line.replace(r'\n', '\n').replace(r'\t', '\t') for line in htmlString]
+
+    htmlPart.write(htmlString[0].format(qSpecies))
+    for qGene in qGenes:
+        htmlPart.write(htmlString[1].format(
+        qGene,
+        str(len(gRefseqs) - len(qForward[qGene])),
+        len(gRefseqs)
+        ))
+        for fail in (gRefseqs - qForward[qGene]):
+            htmlPart.write(htmlString[2].format(
+                fail,
+                proteins[fail].species
+            ))        
+        htmlPart.write(htmlString[3].format(
+            str(len(qReverse[qGene]) \
+                - len([qR for qR in qReverse[qGene].values() if qR])),
+            len(qReverse[qGene])
+        ))
+        for isoform, success in qReverse[qGene].items():
+            htmlPart.write(htmlString[4].format(
+                isoform,
+                str(len(gSpecies) - len(success)),
+                len(gSpecies)
+            ))
+            for fail in (gSpecies - success):
+                htmlPart.write(htmlString[5].format(
+                    fail
+                ))
+            htmlPart.write(htmlString[6])
+        htmlPart.write(htmlString[7])
+    htmlPart.write(htmlString[8])
+    return htmlPart.getvalue()
 
 def main():
     Entrez.email = email
