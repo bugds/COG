@@ -202,6 +202,8 @@ def checkBlastDict(filename, blastDict, proteins, iteration):
             except TypeError:
                 print(filename)
                 print(iteration)
+                print(queriesForBlast)
+                print(speciesForBlast)
                 raise TypeError
         blastDict = createBlastDict(newBlast, blastDict)
         return checkBlastDict(filename, blastDict, proteins, iteration + 1)
