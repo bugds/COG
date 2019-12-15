@@ -1,5 +1,6 @@
 import sys
 import os
+import pickle
 from io import StringIO
 from Bio import SearchIO, Entrez
 from Bio.Blast import NCBIWWW, NCBIXML
@@ -28,6 +29,20 @@ class ProteinClass():
         self.gene = gene
         self.refseq = refseq
         self.good = good
+
+def checkPreviousProteins(filename):
+    for prevName in os.listdir(rootFolder + '/Previous_Proteins'):
+        if filename in prevName:
+            path = rootFolder + '/Previous_Proteins/' + prevName
+            with open(path, 'rb') as f:
+                return pickle.load(f)
+    return False
+
+def saveProteins(shortName, proteins):
+    path = rootFolder + '/Previous_Proteins/' + shortName + '.pkl'
+    with open(path, 'wb') as f:
+        pickle.dump(proteins, f)
+
 
 def getSequences(seqFilename, proteins, good=True):
     '''Gets accession numbers from corresponding file
@@ -316,10 +331,13 @@ def main():
         if '_good' in goodFilename:
             filename = goodFilename.replace('_good', '')
             shortName = os.path.splitext(filename)[0]
-            proteins = dict()
-            proteins = getSequences(goodFilename, proteins)
-            proteins = getSequences(filename, proteins, False)
-            proteins = getIsoforms(proteins)
+            proteins = checkPreviousProteins(shortName)
+            if not proteins:
+                proteins = dict()
+                proteins = getSequences(goodFilename, proteins)
+                proteins = getSequences(filename, proteins, False)
+                proteins = getIsoforms(proteins)
+                saveProteins(shortName, proteins)
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
             blast = checkPreviousBlast(shortName)
             if not blast:
