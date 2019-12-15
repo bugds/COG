@@ -30,18 +30,18 @@ class ProteinClass():
         self.refseq = refseq
         self.good = good
 
-def checkPreviousProteins(filename):
-    for prevName in os.listdir(rootFolder + '/Previous_Proteins'):
+def checkPreviousPickle(filename, folder):
+    for prevName in os.listdir(rootFolder + folder):
         if filename in prevName:
-            path = rootFolder + '/Previous_Proteins/' + prevName
+            path = rootFolder + folder + '/' + prevName
             with open(path, 'rb') as f:
                 return pickle.load(f)
     return False
 
-def saveProteins(shortName, proteins):
-    path = rootFolder + '/Previous_Proteins/' + shortName + '.pkl'
+def savePickle(shortName, toSave, folder):
+    path = rootFolder + folder + '/' + shortName + '.pkl'
     with open(path, 'wb') as f:
-        pickle.dump(proteins, f)
+        pickle.dump(toSave, f)
 
 
 def getSequences(seqFilename, proteins, good=True):
@@ -331,23 +331,26 @@ def main():
         if '_good' in goodFilename:
             filename = goodFilename.replace('_good', '')
             shortName = os.path.splitext(filename)[0]
-            proteins = checkPreviousProteins(shortName)
+            proteins = checkPreviousPickle(shortName, '/Previous_Proteins')
             if not proteins:
                 proteins = dict()
                 proteins = getSequences(goodFilename, proteins)
                 proteins = getSequences(filename, proteins, False)
                 proteins = getIsoforms(proteins)
-                saveProteins(shortName, proteins)
+                savePickle(shortName, proteins, '/Previous_Proteins')
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
-            blast = checkPreviousBlast(shortName)
-            if not blast:
-                blast = blastSearch(
-                    '\n'.join([p.refseq for p in proteins.values()]),
-                    ' OR '.join([p.species for p in proteins.values()]),
-                    filename
-                )
-            blastDict = createBlastDict(blast, dict())
-            blastDict = checkBlastDict(filename, blastDict, proteins, 0)
+            blastDict = checkPreviousPickle(shortName, '/Previous_blastDict')
+            if not blastDict:
+                blast = checkPreviousBlast(shortName)
+                if not blast:
+                    blast = blastSearch(
+                        '\n'.join([p.refseq for p in proteins.values()]),
+                        ' OR '.join([p.species for p in proteins.values()]),
+                        filename
+                    )
+                blastDict = createBlastDict(blast, dict())
+                blastDict = checkBlastDict(filename, blastDict, proteins, 0)
+                savePickle(shortName, blastDict, '/Previous_blastDict')
             htmlFull = analyzeBlastDict(blastDict, proteins)
             output.write(htmlFull)
             output.close()
