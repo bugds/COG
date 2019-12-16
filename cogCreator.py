@@ -1,3 +1,7 @@
+# Make sure your data is up-to-date;
+# Cogger uses NCBI sources which are frequently updated
+# Mismatches may cause errors
+
 import sys
 import os
 import pickle
@@ -78,10 +82,10 @@ def getIsoforms(proteins):
     # IDK why, but if more it sends "An error has occured"
     for i in range(0, 1 + (len(genes) // 20)):
         if i*20 > len(genes):
-            efetchAndParse(genes[i*20:len(genes)], proteins)
+            efetchAndParse(genes[i*20:], proteins)
         else:
             efetchAndParse(genes[i*20:(i+1)*20], proteins) 
-    proteins = goodGeneMakesGoodProtein(proteins) 
+    proteins = goodGeneMakesGoodProtein(proteins)
     return proteins
 
 def efetchAndParse(genesPart, proteins):
