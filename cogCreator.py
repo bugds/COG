@@ -35,6 +35,12 @@ class ProteinClass():
         self.good = good
 
 def checkPreviousPickle(filename, folder):
+    '''Takes previously pickled objects or returns "False"
+
+    :param filename: Name of analyzed file
+    :param folder: Folder in which pickled objects are contained
+    :return: Object or "False" if it does not exist
+    '''
     for prevName in os.listdir(rootFolder + folder):
         if filename in prevName:
             path = rootFolder + folder + '/' + prevName
@@ -43,10 +49,32 @@ def checkPreviousPickle(filename, folder):
     return False
 
 def savePickle(shortName, toSave, folder):
+    '''Saves variables into a pickle file
+
+    :param shortName: Part of the analyzed file name
+    :param toSave: Object to save
+    :param folder: Folder in which pickled objects are contained
+    '''
     path = rootFolder + folder + '/' + shortName + '.pkl'
     with open(path, 'wb') as f:
         pickle.dump(toSave, f)
 
+def updateSequences(seqFilename, proteins, good=True):
+    '''If "proteins" dictionary was saved earlier, reassigns "good" attributes
+    of "proteins" according to new "good" and "not good" distribution
+
+    :param seqFilename: Name of a file with accession numbers
+    :param proteins: Dictionary for storing information about proteins
+    :param good: Boolean, if referencial protein - True
+    :return: Updated dictionary
+    '''
+    path = rootFolder + '/Input/' + seqFilename
+    seqFile = open(path, 'r')
+    line = seqFile.readline()
+    while line:
+        proteins[line.replace('\n', '')].good = good
+        line = seqFile.readline()
+    return proteins
 
 def getSequences(seqFilename, proteins, good=True):
     '''Gets accession numbers from corresponding file
@@ -342,6 +370,10 @@ def main():
                 proteins = getSequences(filename, proteins, False)
                 proteins = getIsoforms(proteins)
                 savePickle(shortName, proteins, '/Previous_Proteins')
+            else:
+                proteins = updateSequences(filename, proteins, False) # All seqs first
+                proteins = updateSequences(goodFilename, proteins)    # Then only good 
+                                                                # (prevents rewriting)
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
             blastDict = checkPreviousPickle(shortName, '/Previous_blastDict')
             if not blastDict:
