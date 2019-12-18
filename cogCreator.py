@@ -217,7 +217,7 @@ def createBlastDict(blast, blastDict):
                         blastDict[record.id][species] = substrings[i+1]
     return blastDict
 
-def checkBlastDict(filename, blastDict, proteins, iteration):
+def checkBlastDict(filename, blastDict, proteins, iteration, previous=None):
     '''Checks if BLAST found all species in each case
 
     :param filename: Name of currently explored file
@@ -240,16 +240,23 @@ def checkBlastDict(filename, blastDict, proteins, iteration):
             str(iteration) + '.xml'
         ))
         if not newBlast:
-            newBlast = blastSearch(
-                '\n'.join(queriesForBlast),
-                ' OR '.join(speciesForBlast),
-                '{}_iter{}'.format(
-                    os.path.splitext(filename)[0], 
-                    str(iteration) + '.txt'
+            if (previous['queries'] == queriesForBlast) and \
+               (previous['species'] == speciesForBlast):
+                for s in speciesForBlast:
+                    for q in queriesForBlast:
+                        blastDict[q][s] = 'NA'
+            else:
+                newBlast = blastSearch(
+                    '\n'.join(queriesForBlast),
+                    ' OR '.join(speciesForBlast),
+                    '{}_iter{}'.format(
+                        os.path.splitext(filename)[0], 
+                        str(iteration) + '.txt'
+                    )
                 )
-            )
         blastDict = createBlastDict(newBlast, blastDict)
-        return checkBlastDict(filename, blastDict, proteins, iteration + 1)
+        return checkBlastDict(filename, blastDict, proteins, iteration + 1,
+        {'queries':queriesForBlast, 'species':speciesForBlast})
     return blastDict
 
 def analyzeBlastDict(blastDict, proteins):
@@ -273,6 +280,7 @@ def analyzeBlastDict(blastDict, proteins):
             qReverse[qGene] = dict() # for qRefseq use qReverse.keys()
             qForward[qGene] = set()
             goodGene = False
+            # Reciprocal BLAST
             for qRefseq in [p.refseq for p in proteins.values() if p.gene == qGene]:
                 if not proteins[qRefseq].good:
                     qReverse[qGene][qRefseq] = set()
@@ -283,6 +291,7 @@ def analyzeBlastDict(blastDict, proteins):
                             qReverse[qGene][qRefseq].add(s)
                 else:
                     goodGene = True
+            # Forward BLAST
             for gRefseq in [p.refseq for p in gProteins]:
                 if blastDict[gRefseq][qSpecies] in proteins:
                     if proteins[blastDict[gRefseq][qSpecies]].gene == qGene:
@@ -374,7 +383,6 @@ def main():
                 proteins = updateSequences(filename, proteins, False) # All seqs first
                 proteins = updateSequences(goodFilename, proteins)    # Then only good 
                                                                 # (prevents rewriting)
-            output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
             blastDict = checkPreviousPickle(shortName, '/Previous_blastDict')
             if not blastDict:
                 blast = checkPreviousBlast(shortName)
@@ -388,6 +396,7 @@ def main():
                 blastDict = checkBlastDict(filename, blastDict, proteins, 0)
                 savePickle(shortName, blastDict, '/Previous_blastDict')
             htmlFull = analyzeBlastDict(blastDict, proteins)
+            output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
             output.write(htmlFull)
             output.close()
 
