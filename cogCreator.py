@@ -113,6 +113,8 @@ def getIsoforms(proteins):
             efetchAndParse(genes[i*20:], proteins)
         else:
             efetchAndParse(genes[i*20:(i+1)*20], proteins) 
+    
+    proteins = checkProteins(proteins)
     proteins = goodGeneMakesGoodProtein(proteins)
     return proteins
 
@@ -146,8 +148,47 @@ def efetchAndParse(genesPart, proteins):
                 proteins[refseq].species = species
             elif refseq[1] == 'P':
                 proteins[refseq] = ProteinClass(species, gene, refseq, False)
+                # We don't think every protein, not mentioned in input file
+                # is not referencial. There are 2 cases:
+                # 1) there are isoforms of this protein in the input file
+                #     (if gene is referencial, "goodGeneMakesGoodProtein" helps
+                #      to maintain its "good"ness, other stay "bad")
+                # 2) no isoforms in the input file, old ANs are deprecated
+                #     ("checkProteins" helps new proteins to inherit "good"
+                #      attributes from the old ones)
         line = record.readline()
 
+    return proteins
+
+def checkProteins(proteins):
+    ''' If outdated proteins are present in the input files,
+    NCBI fetches not them, but updated ones. In this situation
+    "proteins" contains 2 numbers for the same protein: one old,
+    with no gene and species info, but with correct "good" 
+    attribute, and new, with no "good" attribute, but with gene
+    and species information. This function deletes old and
+    supplies new with "good" attribute
+
+    :param proteins: Dictionary for storing information about proteins
+    :return: Dictionary with deleted old and supplied new proteins
+    '''
+
+    toDel = set()
+    for old in proteins.values():
+        if old.species == None:
+            record = Entrez.read(Entrez.elink(
+                db="gene", 
+                dbfrom="protein", 
+                id=old.refseq
+            ))
+            gene = record[0]['LinkSetDb'][0]['Link'][0]['Id']
+            for new in proteins.values():
+                if new.gene == gene:
+                    new.good = old.good
+                    toDel.add(old.refseq)
+                    print('Deprecated proteins: {}>{}'.format(old.refseq, new.refseq))
+    for old in toDel:
+        del proteins[old]
     return proteins
 
 def goodGeneMakesGoodProtein(proteins):
@@ -217,7 +258,8 @@ def createBlastDict(blast, blastDict):
                         blastDict[record.id][species] = substrings[i+1]
     return blastDict
 
-def checkBlastDict(filename, blastDict, proteins, iteration, previous=None):
+def checkBlastDict(filename, blastDict, proteins, iteration, previous={'queries':set(),
+    'species':set()}):
     '''Checks if BLAST found all species in each case
 
     :param filename: Name of currently explored file
@@ -251,7 +293,7 @@ def checkBlastDict(filename, blastDict, proteins, iteration, previous=None):
                     ' OR '.join(speciesForBlast),
                     '{}_iter{}'.format(
                         os.path.splitext(filename)[0], 
-                        str(iteration) + '.txt'
+                        str(iteration) + '.nomatter'
                     )
                 )
         blastDict = createBlastDict(newBlast, blastDict)
