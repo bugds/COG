@@ -15,7 +15,7 @@ rootFolder = sys.path[0]
 # /Blast_XML    (search results in xml format)
 # /Results      (for output)
 
-hitlist_size = 700
+hitlist_size = 300
 email = 'bug.dmitrij@gmail.com'
 
 class ProteinClass():
@@ -70,10 +70,14 @@ def updateSequences(seqFilename, proteins, good=True):
     '''
     path = rootFolder + '/Input/' + seqFilename
     seqFile = open(path, 'r')
-    line = seqFile.readline()
+    line = seqFile.readline().replace('\n', '')
     while line:
-        proteins[line.replace('\n', '')].good = good
-        line = seqFile.readline()
+        if line in proteins:
+            proteins[line].good = good
+        else:
+            print('Added ' + line + '. Delete /Previous_Proteins for ' + seqFilename)
+        line = seqFile.readline().replace('\n', '')
+    seqFile.close()
     return proteins
 
 def getSequences(seqFilename, proteins, good=True):
@@ -86,12 +90,11 @@ def getSequences(seqFilename, proteins, good=True):
     '''
     path = rootFolder + '/Input/' + seqFilename
     seqFile = open(path, 'r')
-    line = seqFile.readline()
+    line = seqFile.readline().replace('\n', '')
     while line:
-        if not line.replace('\n', '') in proteins:
-            proteins[line.replace('\n', '')] = \
-                ProteinClass(None, None, line.replace('\n', ''), good)
-        line = seqFile.readline()
+        if not line in proteins:
+            proteins[line] = ProteinClass(None, None, line, good)
+        line = seqFile.readline().replace('\n', '')
     return proteins
 
 def getIsoforms(proteins):
@@ -176,17 +179,22 @@ def checkProteins(proteins):
     toDel = set()
     for old in proteins.values():
         if old.species == None:
-            record = Entrez.read(Entrez.elink(
-                db="gene", 
-                dbfrom="protein", 
+            record = Entrez.read(Entrez.efetch(
+                db="protein", 
+                rettype='gp',
+                retmode='xml',
                 id=old.refseq
             ))
-            gene = record[0]['LinkSetDb'][0]['Link'][0]['Id']
+            tempor = [r['GBFeature_quals'] for r in record[0]['GBSeq_feature-table'] \
+                if r['GBFeature_key'] == 'CDS']
+            tempor = [r['GBQualifier_value'] for r in next(iter(tempor)) \
+                if r['GBQualifier_name'] == 'db_xref']
+            gene = tempor[0].split(':')[1]
+            print('Deprecated proteins: {}'.format(old.refseq))
             for new in proteins.values():
                 if new.gene == gene:
                     new.good = old.good
                     toDel.add(old.refseq)
-                    print('Deprecated proteins: {}>{}'.format(old.refseq, new.refseq))
     for old in toDel:
         del proteins[old]
     return proteins
@@ -300,6 +308,47 @@ def checkBlastDict(filename, blastDict, proteins, iteration, previous={'queries'
         return checkBlastDict(filename, blastDict, proteins, iteration + 1,
         {'queries':queriesForBlast, 'species':speciesForBlast})
     return blastDict
+
+def checkGood(blastDict, proteins):
+    ''' Consists of 2 checks:
+    oneGenePerSpecies - so there would be no duplication events across
+    all good proteins. Prints warning
+
+    trulyGood - checks if BLAST results confirm that all good proteins
+    do find each other via reciprocal BLAST. Prints warning
+
+    :param blastDict: Dictionary containing BLAST results
+    :param proteins: Dictionary for storing information about proteins
+    :return: "proteins"
+    '''
+    goodProteins = [p for p in proteins.values() if p.good]
+
+    # def oneGenePerSpecies(goodProteins=goodProteins):
+    speciesSet = set()
+    genesSet = set()
+    for p in goodProteins:
+        if (p.species in speciesSet) and (not p.gene in genesSet):
+            print('WARNING!!! Your good set contains paralogs in ' + p.species)
+        speciesSet.add(p.species)
+        genesSet.add(p.gene)
+
+    # def trulyGood(blastDict=blastDict, proteins=proteins):
+    for refseq in proteins:
+        if proteins[refseq].good:
+            for species in set([p.species for p in proteins.values() if p.good]):
+                if blastDict[refseq][species] in proteins:
+                    if not proteins[blastDict[refseq][species]].good:
+                        print('WARNING!!! Good protein:')
+                        print(refseq + ' does not find another good protein in ' \
+                            + species)
+                        print('Finds ' + blastDict[refseq][species] + ' instead of ' \
+                            + str([p.refseq for p in goodProteins if p.species == species]))
+                else:
+                    print('WARNING!!! Good protein:')
+                    print(refseq + ' does not find another good protein in ' \
+                        + species)
+                    print('Finds ' + blastDict[refseq][species] + ' instead of ' \
+                        + str([p.refseq for p in goodProteins if p.species == species]))
 
 def analyzeBlastDict(blastDict, proteins):
     '''Analysis of a BLAST dictionary
@@ -437,6 +486,8 @@ def main():
                 blastDict = createBlastDict(blast, dict())
                 blastDict = checkBlastDict(filename, blastDict, proteins, 0)
                 savePickle(shortName, blastDict, '/Previous_blastDict')
+            print(shortName)
+            checkGood(blastDict, proteins)
             htmlFull = analyzeBlastDict(blastDict, proteins)
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
             output.write(htmlFull)
