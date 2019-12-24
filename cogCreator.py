@@ -75,7 +75,7 @@ def updateSequences(seqFilename, proteins, good=True):
         if line in proteins:
             proteins[line].good = good
         else:
-            print('Added ' + line + '. Delete /Previous_Proteins for ' + seqFilename)
+            print(line + ' was not in previous run')
         line = seqFile.readline().replace('\n', '')
     seqFile.close()
     return proteins
