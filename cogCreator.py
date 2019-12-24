@@ -62,7 +62,7 @@ def savePickle(shortName, toSave, folder):
 def updateSequences(seqFilename, proteins, good=True):
     '''If "proteins" dictionary was saved earlier, reassigns "good" attributes
     of "proteins" according to new "good" and "not good" distribution
-
+    
     :param seqFilename: Name of a file with accession numbers
     :param proteins: Dictionary for storing information about proteins
     :param good: Boolean, if referencial protein - True
@@ -78,6 +78,7 @@ def updateSequences(seqFilename, proteins, good=True):
             print(line + ' was not in previous run')
         line = seqFile.readline().replace('\n', '')
     seqFile.close()
+    proteins = goodGeneMakesGoodProtein(proteins)
     return proteins
 
 def getSequences(seqFilename, proteins, good=True):
