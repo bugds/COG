@@ -1,0 +1,3 @@
+from cogCreator import *
+
+mainOnline()

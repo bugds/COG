@@ -238,7 +238,8 @@ def blastSearch(query, species, filename):
         'refseq_protein',
         query,
         entrez_query = species,
-        hitlist_size = hitlist_size
+        hitlist_size = hitlist_size,
+        expect=0.01
     )
     xmlPath = rootFolder \
         + '/Blast_XML/' \
@@ -488,10 +489,29 @@ def main():
                 blastDict = checkBlastDict(filename, blastDict, proteins, 0)
                 savePickle(shortName, blastDict, '/Previous_blastDict')
             print(shortName)
+            # savePickle(shortName, {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
             checkGood(blastDict, proteins)
             htmlFull = analyzeBlastDict(blastDict, proteins)
             output = open(rootFolder + '/Results/' + shortName + '.html', 'w')
             output.write(htmlFull)
             output.close()
+
+def mainOnline():
+    Entrez.email = email
+    for filename in os.listdir(rootFolder + '/Input'):
+        shortName = os.path.splitext(filename)[0]
+
+        proteins = getSequences(filename, dict(), False)
+        proteins = getIsoforms(proteins)
+
+        blast = blastSearch(
+            '\n'.join([p.refseq for p in proteins.values()]),
+            ' OR '.join([p.species for p in proteins.values()]),
+            filename
+        )
+        blastDict = createBlastDict(blast, dict())
+        blastDict = checkBlastDict(filename, blastDict, proteins, 0)
+
+        savePickle(shortName, {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
 main()
