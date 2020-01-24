@@ -257,6 +257,7 @@ def createBlastDict(blast, blastDict):
     :return: Dictionary containing BLAST results
     '''
     for record in blast:
+        print(record.id)
         if record.id not in blastDict:
             blastDict[record.id] = {}
         for hit in record:
@@ -499,16 +500,21 @@ def main():
 def mainOnline():
     Entrez.email = email
     for filename in os.listdir(rootFolder + '/Input'):
-        shortName = os.path.splitext(filename)[0]
 
-        proteins = getSequences(filename, dict(), False)
-        proteins = getIsoforms(proteins)
+        proteins = checkPreviousPickle(os.path.splitext(filename)[0], '/Previous_Proteins')
+        if not proteins:
+            proteins = getSequences(filename, dict(), False)
+            proteins = getIsoforms(proteins)
+            savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
 
-        blast = blastSearch(
-            '\n'.join([p.refseq for p in proteins.values()]),
-            ' OR '.join([p.species for p in proteins.values()]),
-            filename
-        )
+        blast = checkPreviousBlast(os.path.splitext(filename)[0])
+        if not blast:
+            blast = blastSearch(
+                '\n'.join([p.refseq for p in proteins.values()]),
+                ' OR '.join([p.species for p in proteins.values()]),
+                filename
+            )
+
         blastDict = createBlastDict(blast, dict())
         blastDict = checkBlastDict(filename, blastDict, proteins, 0)
 
