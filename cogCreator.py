@@ -297,7 +297,8 @@ def checkBlastDict(filename, blastDict, proteins, iteration, previous={'queries'
                (previous['species'] == speciesForBlast):
                 for s in speciesForBlast:
                     for q in queriesForBlast:
-                        blastDict[q][s] = 'NA'
+                        if not s in blastDict[q]:
+                            blastDict[q][s] = 'NA'
             else:
                 newBlast = blastSearch(
                     '\n'.join(queriesForBlast),
