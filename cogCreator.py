@@ -508,7 +508,7 @@ def mainOnline():
             proteins = getIsoforms(proteins)
             savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
 
-        blast = checkPreviousBlast(os.path.splitext(filename)[0])
+        blast = checkPreviousBlast(os.path.splitext(filename)[0] + '.xml')
         if not blast:
             blast = blastSearch(
                 '\n'.join([p.refseq for p in proteins.values()]),
