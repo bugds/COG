@@ -257,7 +257,6 @@ def createBlastDict(blast, blastDict):
     :return: Dictionary containing BLAST results
     '''
     for record in blast:
-        print(record.id)
         if record.id not in blastDict:
             blastDict[record.id] = {}
         for hit in record:
@@ -299,6 +298,7 @@ def checkBlastDict(filename, blastDict, proteins, iteration, previous={'queries'
                     for q in queriesForBlast:
                         if not s in blastDict[q]:
                             blastDict[q][s] = 'NA'
+                return blastDict
             else:
                 newBlast = blastSearch(
                     '\n'.join(queriesForBlast),
@@ -519,6 +519,7 @@ def mainOnline():
         blastDict = createBlastDict(blast, dict())
         blastDict = checkBlastDict(filename, blastDict, proteins, 0)
 
-        savePickle(shortName, {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+        savePickle(os.path.splitext(filename)[0], \
+            {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
 main()
