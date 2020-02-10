@@ -14,7 +14,6 @@ rootFolder = sys.path[0]
 path2G2R = '/windows1/usr/Boog/gene2refseq/g2r.tsv'
 path2blastp = '/home/bioinfuser/bioinfuser/ncbi-blast-2.10.0+/bin/blastp'
 path2refseq_protein = '/windows1/usr/Boog/BLASTrefseqDB'
-path2taxidlist = sys.path[0] + '/taxidlist.txt'
 
 # 'rootFolder' is a directory that contains:
 # /Input        (pairs of input files (good, all) for each protein)
@@ -82,7 +81,7 @@ def getSequences(seqFilename, proteins, good=False):
         line = seqFile.readline().replace('\n', '')
     return proteins
 
-def getIsoforms(proteins):
+def getIsoformsOld(proteins):
     ''' Getting isoforms for all proteins in tree
     
     :param proteins: Dictionary for storing information about proteins
@@ -110,6 +109,50 @@ def getIsoforms(proteins):
                     False
                 )
             line = gene2Refseq.readline()
+    
+    proteins = checkProteins(proteins)
+    return proteins
+
+def getIsoforms(proteins):
+    ''' Getting isoforms for all proteins in tree
+    
+    :param proteins: Dictionary for storing information about proteins
+    :return: Dictionary supplemented with isoforms
+    '''    
+    with open(path2G2R, 'r') as gene2Refseq:
+        tempSet = [gene2Refseq.readline()]
+        line = gene2Refseq.readline()
+
+        toSave = False
+
+        while line:
+            if tempSet[-1].split('\t')[2] in proteins:
+                toSave = True
+
+            if line.split('\t')[1] == prevGene:
+                tempSet.append(line)
+            else:
+                if toSave:
+                    for l in tempSet:
+                        proteins[l.split('\t')[2]] = ProteinClass(
+                            l.split('\t')[0], 
+                            l.split('\t')[1], 
+                            l.split('\t')[2], 
+                            False
+                        )
+                    toSave = False
+                tempSet = [line]
+
+            line = gene2Refseq.readline()
+
+        if toSave:
+            for l in tempSet:
+                proteins[l.split('\t')[2]] = ProteinClass(
+                    l.split('\t')[0], 
+                    l.split('\t')[1], 
+                    l.split('\t')[2], 
+                    False
+                )
     
     proteins = checkProteins(proteins)
     return proteins
@@ -177,7 +220,7 @@ def checkPreviousBlast(filename):
             return SearchIO.parse(xmlPath, 'blast-xml')
     return False
 
-def blastSearch(query, species, filename, first=True):
+def blastSearch(query, species, filename):
     '''Run BLAST, save results of a search to a file and return its contents
 
     :param query: String with accession numbers divided by paragraphs
@@ -189,16 +232,13 @@ def blastSearch(query, species, filename, first=True):
         + os.path.splitext(filename)[0] \
         + '.xml'
     
-    if not first:
-        with open('{}/Temp/{}{}'.format(rootFolder, filename, '.q'), 'w') as q:
-            q.write(query)
-        query = '{}/Temp/{}{}'.format(rootFolder, filename, '.q')
-        with open('{}/Temp/{}{}'.format(rootFolder, filename, '.s'), 'w') as s:
-            s.write(species)
-        species = '{}/Temp/{}{}'.format(rootFolder, filename, '.s')
-    else:
-        query = '{}/Input/{}'.format(rootFolder, filename)
-        species = path2taxidlist
+    with open('{}/Temp/{}{}'.format(rootFolder, filename, '.q'), 'w') as q:
+        q.write(query)
+    query = '{}/Temp/{}{}'.format(rootFolder, filename, '.q')
+
+    with open('{}/Temp/{}{}'.format(rootFolder, filename, '.s'), 'w') as s:
+        s.write(species)
+    species = '{}/Temp/{}{}'.format(rootFolder, filename, '.s')
     
     subprocess.run(
         [path2blastp, 
@@ -213,9 +253,8 @@ def blastSearch(query, species, filename, first=True):
         cwd = path2refseq_protein
     )
     
-    if not first:
-        os.remove(query)
-        os.remove(species)
+    os.remove(query)
+    os.remove(species)
     
     return SearchIO.parse(xmlPath, 'blast-xml')
 
@@ -275,8 +314,7 @@ def checkBlastDict(filename, blastDict, proteins, iteration, previous={'queries'
                     '{}_iter{}'.format(
                         os.path.splitext(filename)[0], 
                         str(iteration) + '.nomatter'
-                    ),
-                    False
+                    )
                 )
         blastDict = createBlastDict(newBlast, blastDict)
         return checkBlastDict(filename, blastDict, proteins, iteration + 1,
@@ -456,5 +494,15 @@ def mainOffline():
         savePickle(os.path.splitext(filename)[0], \
             {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
+def compare():
+    for filename in os.listdir(rootFolder + '/Input'):
+        print('ertert')
+        proteins = getSequences(filename, dict(), False)
+        proteins = getIsoformsOld(proteins)
+        print(proteins)
+        proteins = getSequences(filename, dict(), False)
+        proteins = getIsoforms(proteins)
+        print(proteins)
 
-mainOffline()
+# mainOffline()
+compare()
