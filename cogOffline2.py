@@ -21,6 +21,7 @@ evalueLimit = 0.0001 # Generally 10^-4
 qCoverLimit = 0.1 # To get this limit length of a domain of interest must be divided by query length
 initBlastTargets = '500'
 numThreads = '3'
+mergeAllInput = True
 
 # 'rootFolder' is a directory that contains:
 # /Input        (pairs of input files (good, all) for each protein)
@@ -92,7 +93,8 @@ def checkPreviousPickle(filename, folder):
     :return: Object or "False" if it does not exist
     '''
     for prevName in os.listdir(rootFolder + folder):
-        if filename in prevName:
+        basePrevName = os.path.splitext(prevName)[0]
+        if filename == basePrevName:
             path = rootFolder + folder + '/' + prevName
             with open(path, 'rb') as f:
                 return pickle.load(f)
@@ -204,10 +206,7 @@ def blastSearch(query, speciesList, filename, blastDict):
         + '.xml'
     
     query = createInputForBlast('.q', query, filename)
-    taxidList = createInputForBlast('.t', taxidList, filename)
-    
-    time1 = time.time()
-    print('start')
+    taxidList = createInputForBlast('.t', speciesList, filename)
     
     bashBlast(
         query=query, 
@@ -216,9 +215,6 @@ def blastSearch(query, speciesList, filename, blastDict):
     )
     
     blast = SearchIO.parse(xmlPath, 'blast-xml')
-    
-    time2 = time.time()
-    print('end (' + str(time2-time1) + ')')
     
     writeInBlastDict(blast, blastDict)
     
@@ -406,27 +402,58 @@ def writeHtml(
     return htmlPart.getvalue()
 
 def mainOffline():
-    for filename in os.listdir(rootFolder + '/preInput'):
-        print(filename)
-        with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
-            blast = initialBlast(filename, oneStrFile.read().replace('\n', ''))
-            initBlastList = parseInitialBlast(blast, qCoverLimit, evalueLimit)
-            with open(rootFolder + '/Input/' + filename, 'w') as blastResults:
-                blastResults.write('\n'.join(list(dict.fromkeys(initBlastList))))
+    # for filename in os.listdir(rootFolder + '/preInput'):
+    #     print(filename)
+    #     with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
+    #         blast = initialBlast(filename, oneStrFile.read().replace('\n', ''))
+    #         initBlastList = parseInitialBlast(blast, qCoverLimit, evalueLimit)
+    #         with open(rootFolder + '/Input/' + filename, 'w') as blastResults:
+    #             blastResults.write('\n'.join(list(dict.fromkeys(initBlastList))))
+
+    # for filename in os.listdir(rootFolder + '/Input'):
+    #     print(filename)
+
+    #     proteins = checkPreviousPickle(os.path.splitext(filename)[0], '/Previous_Proteins')
+
+    #     if not proteins:
+    #         proteins = getSequences(filename, dict())       
+    #         proteins = getIsoforms(proteins)
+    #         proteins = getSpeciesName(proteins)
+    #         toDel = list()
+    #         for r in proteins.keys():
+    #             if proteins[r].species == None:
+    #                 toDel.append(r)
+    #                 print('SOMETHING BADD!!!')
+    #                 # print('{}\n{}\n{}\n{}\n{}\n'.format(
+    #                 #     p.species,
+    #                 #     p.taxid,
+    #                 #     p.symbol,
+    #                 #     p.gene,
+    #                 #     p.refseq
+    #                 # ))
+    #         for r in toDel:
+    #             del proteins[r]
+
+    #         savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
+
+    # if mergeAllInput:
+    #     refseqSet = set()
+    #     for filename in os.listdir(rootFolder + '/Input'):
+    #         with open(rootFolder + '/Input/' + filename, 'r') as singleInput:
+    #             line = singleInput.readline().replace('\n', '')
+    #             while line:
+    #                 refseqSet.add(line)
+    #                 line = singleInput.readline().replace('\n', '')
+    #     with open(rootFolder + '/Input/merged.txt', 'w') as merged:
+    #         merged.write('\n'.join(refseqSet))
 
     for filename in os.listdir(rootFolder + '/Input'):
-        print(filename)
-
         proteins = checkPreviousPickle(os.path.splitext(filename)[0], '/Previous_Proteins')
 
         if not proteins:
-            proteins = getSequences(filename, dict())
-            start = time.time()            
+            proteins = getSequences(filename, dict())       
             proteins = getIsoforms(proteins)
-            print(time.time() - start)
-            start = time.time()
             proteins = getSpeciesName(proteins)
-            print(time.time() - start)
             toDel = list()
             for r in proteins.keys():
                 if proteins[r].species == None:
@@ -442,33 +469,33 @@ def mainOffline():
             for r in toDel:
                 del proteins[r]
 
-            savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
-        
-        # print(len(proteins))
-        
-        # if len(proteins) < 300:
-        #     # blast = checkPreviousBlast(os.path.splitext(filename)[0] + '.xml')
-        #     # if not blast: ...
-        #     blast = blastSearches(
-        #         [p.refseq for p in proteins.values()],
-        #         [p.taxid for p in proteins.values()],
-        #         filename,
-        #         blastDict
-        #     )
-        #     blastDict = createBlastDict(blast, dict())
-        #     blastDict = checkBlastDict(filename, blastDict, proteins, 0)
-        # else:
-        #     blastDict = {}
-        #     for p in [p.refseq for p in proteins.values()]:
-        #         blastDict = blastSearch(
-        #             p, 
-        #             [p.taxid for p in proteins.values()], 
-        #             filename, 
-        #             blastDict
-        #         )
-        #         blastDict = checkBlastDict(p, filename, blastDict, proteins, 0)
+        print('proteins ready')
 
-        # savePickle(os.path.splitext(filename)[0], \
-        #     {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+        if len(proteins) < 300:
+            # blast = checkPreviousBlast(os.path.splitext(filename)[0] + '.xml')
+            # if not blast: ...
+            blast = blastSearch(
+                [p.refseq for p in proteins.values()],
+                [p.taxid for p in proteins.values()],
+                filename,
+                blastDict
+            )
+            blastDict = createBlastDict(blast, dict())
+            blastDict = checkBlastDict(filename, blastDict, proteins, 0)
+        else:
+            blastDict = {}
+            for p in [p.refseq for p in proteins.values()]:
+                blastDict = blastSearch(
+                    p, 
+                    [p.taxid for p in proteins.values()], 
+                    filename, 
+                    blastDict
+                )
+                print('success')
+                blastDict = checkBlastDict(p, filename, blastDict, proteins, 0)
+                print('success2')
+
+        savePickle(os.path.splitext(filename)[0], \
+            {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
 mainOffline()
