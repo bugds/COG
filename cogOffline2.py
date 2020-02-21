@@ -77,9 +77,9 @@ def parseInitialBlast(blast, qCoverLimit, evalueLimit):
                     for i in range(len(substrings)):
                         if substrings[i] == 'ref':
                             initBlastList.append(substrings[i+1])
-                print(initBlastList[-1])
-                print(qCover)
-                print(hsp.evalue)
+                # print(initBlastList[-1])
+                # print(qCover)
+                # print(hsp.evalue)
     
     return initBlastList
 
@@ -408,12 +408,11 @@ def writeHtml(
 def mainOffline():
     for filename in os.listdir(rootFolder + '/preInput'):
         print(filename)
-        with open(rootFolder + '/preInput/' + filename, 'r') as file:
-            blast = initialBlast(filename, file.read().replace('\n', ''))
-            parseInitialBlast(blast, qCoverLimit, evalueLimit)
-            with open(rootFolder + '/Input/' + os.path.splitext(filename)[0] + '.txt', 'w') as f:
-                f.write('\n'.join(list(dict.fromkeys(initBlastList))))
-
+        with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
+            blast = initialBlast(filename, oneStrFile.read().replace('\n', ''))
+            initBlastList = parseInitialBlast(blast, qCoverLimit, evalueLimit)
+            with open(rootFolder + '/Input/' + filename, 'w') as blastResults:
+                blastResults.write('\n'.join(list(dict.fromkeys(initBlastList))))
 
     for filename in os.listdir(rootFolder + '/Input'):
         print(filename)
