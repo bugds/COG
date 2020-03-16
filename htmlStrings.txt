@@ -1,9 +1,0 @@
-<details>\n\t<summary>{}</summary>\n
-\t<details>\n\t\t<summary>&emsp;Gene id: {}</summary>\n\t\t<details>\n\t\t\t<summary>&emsp;&emsp;{} of {} referencial proteins failed forward BLAST:</summary>\n
-\t\t\t\t&emsp;&emsp;&emsp;&emsp;{} [{}]<br>\n
-\t\t</details>\n\t\t<details>\n\t\t\t<summary>&emsp;&emsp;{} of {} isoforms failed to find all referencial proteins in first hit:</summary>\n
-\t\t\t<details>\n\t\t\t\t<summary>&emsp;&emsp;&emsp;{}: {} of {} referencial species' proteins don't match :</summary>\n
-\t\t\t\t\t&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>\n
-\t\t\t</details>\n
-\t\t</details>\n\t</details>\n
-</details>
