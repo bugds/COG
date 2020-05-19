@@ -10,10 +10,10 @@ from copy import deepcopy
 from networkx.algorithms.approximation import clique
 
 rootFolder = sys.path[0]
-path2G2R = '/windows1/usr/Boog/gene2refseq/gene2refseq'
+path2G2R = '/windows1/usr/Boog/gene2refseq/gene2refseq' # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
 path2blastp = '/home/bioinfuser/bioinfuser/ncbi-blast-2.10.0+/bin/blastp'
 path2refseq_protein = '/windows1/usr/Boog/BLASTrefseqDB'
-path2T2N = '/windows1/usr/Boog/taxid2name/names.dmp'
+path2T2N = '/windows1/usr/Boog/taxid2name/names.dmp' # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 path2repre = '/windows1/usr/Boog/taxid2name/representatives.txt'
 
 evalueLimit = 0.0001 # Generally 10^-4
