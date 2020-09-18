@@ -10,19 +10,19 @@ from copy import deepcopy
 from networkx.algorithms.approximation import clique
 
 rootFolder = sys.path[0]
-path2G2R = '/windows1/usr/Boog/gene2refseq/gene2refseq' # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
-path2blastp = '/home/bioinfuser/bioinfuser/ncbi-blast-2.10.0+/bin/blastp'
-path2refseq_protein = '/windows1/usr/Boog/BLASTrefseqDB'
-path2T2N = '/windows1/usr/Boog/taxid2name/names.dmp' # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2repre = '/windows1/usr/Boog/taxid2name/representatives.txt'
+path2G2R = '/home/bioinfuser/data/corgi_files/gene2refseq' # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
+path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
+path2refseq_protein = '/home/bioinfuser/data/refseq_protein'
+path2T2N = '/home/bioinfuser/data/corgi_files/names.dmp' # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+path2repre = '/home/bioinfuser/data/corgi_files/euka_taxids.txt'
 
 evalueLimit = 0.0001 # Generally 10^-4
 qCoverLimit = 0.1 # To get this limit length of a domain of interest must be divided by query length
-initBlastTargets = '500'
+initBlastTargets = '700'
 numThreads = '3'
 blastChunkSize = 200
 orthologyThreshold = 1.0
-preInput = False
+preInput = True
 mergeInput = False
 doMainAnalysis = True
 
@@ -36,7 +36,6 @@ class ProteinClass():
     '''
     def __init__(self, species, taxid, symbol, gene, refseq):
         '''Initialization
-
         :param species: Species in which proteins are synthetized
         :param gene: Coding gene
         :param refseq: Reference sequence accession number
@@ -91,7 +90,6 @@ def parseInitialBlast(blast, qCoverLimit, evalueLimit):
 # This function should be deleted in final version
 def checkPreviousPickle(filename, folder):
     '''Takes previously pickled objects or returns "False"
-
     :param filename: Name of analyzed file
     :param folder: Folder in which pickled objects are contained
     :return: Object or "False" if it does not exist
@@ -106,7 +104,6 @@ def checkPreviousPickle(filename, folder):
 
 def savePickle(shortName, toSave, folder):
     '''Saves variables into a pickle file
-
     :param shortName: Part of the analyzed file name
     :param toSave: Object to save
     :param folder: Folder in which pickled objects are contained
@@ -117,7 +114,6 @@ def savePickle(shortName, toSave, folder):
 
 def getSequences(seqFilename, proteins):
     '''Gets accession numbers from corresponding file
-
     :param seqFilename: Name of a file with accession numbers
     :param proteins: Dictionary for storing information about proteins
     :param good: Boolean, True for referencial proteins
@@ -198,7 +194,6 @@ def getSpeciesName(proteins):
 
 def blastSearch(query, speciesList, filename, blastDict):
     '''Run BLAST, save results of a search to a file and return its contents
-
     :param query: String with accession numbers divided by paragraphs
     :param species: String with all species, against which BLAST is performed
     :param filename: Name of original fasta file for saving results of BLAST
@@ -253,13 +248,14 @@ def bashBlast(query, out, taxidList, db='refseq_protein', outfmt='5',
     )
 
     if 'Sequence ID not found' in blastProcess.stderr.decode():
+        print(blastProcess.stderr.decode())
+        exit(1)
         return False
     
     return True
 
 def writeInBlastDict(blast, blastDict):
     '''Create dictionary containing BLAST results
-
     :param blast: contents of the XML-file with BLAST results
     :return: Dictionary containing BLAST results
     '''
@@ -277,7 +273,6 @@ def writeInBlastDict(blast, blastDict):
     
 def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), set()]):
     '''Checks if BLAST found all species in each case
-
     :param filename: Name of currently explored file
     :param blastDict: Dictionary containing BLAST results
     :param proteins: Dictionary for storing information about proteins
@@ -325,7 +320,6 @@ def goodGeneMakesGoodProtein(proteins, goodGenes):
 
 def analyzeBlastDict(blastDict, proteins):
     '''Analysis of a BLAST dictionary
-
     :param blastDict: Dictionary containing BLAST results
     :param proteins: Dictionary for storing information about proteins
     :return: HTML-string containing analysis results
@@ -361,16 +355,15 @@ def analyzeBlastDict(blastDict, proteins):
                     if proteins[blastDict[gRefseq][qSpecies]].gene == qGene:
                         qForward[qGene].add(gRefseq)
 
-        if not goodGene:
-            htmlFull += writeHtml(
-                    proteins,
-                    gSpecies,
-                    set([p.refseq for p in gProteins]),
-                    qSpecies,
-                    qGenes,
-                    qReverse,
-                    qForward
-            )
+        htmlFull += writeHtml(
+                proteins,
+                gSpecies,
+                set([p.refseq for p in gProteins]),
+                qSpecies,
+                qGenes,
+                qReverse,
+                qForward
+        )
 
     return htmlFull
 
@@ -409,8 +402,9 @@ def writeHtml(
 
     htmlPart.write(htmlString[0].format(qSpecies))
     for qGene in qGenes:
+        temporaryProteins = [p for p in proteins if proteins[p].gene == qGene]
         htmlPart.write(htmlString[1].format(
-        qGene,
+        ', Gene symbol: '.join([qGene, proteins[temporaryProteins[0]].symbol]),
 #        str(len(gRefseqs) - len(qForward[qGene])),
         len(qForward[qGene]),
         len(gRefseqs)
@@ -504,18 +498,18 @@ def main():
                     savePickle('part_' + os.path.splitext(filename)[0], \
                         {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
             blastDict = blastSearch(
-                        [seq.refseq for seq in chunksForBlast.values()],
-                        [seq.taxid for seq in proteins.values()],
-                        filename,
-                        blastDict
-                    )
+                [seq.refseq for seq in chunksForBlast.values()],
+                [seq.taxid for seq in proteins.values()],
+                filename,
+                blastDict
+            )
             print(str(datetime.datetime.now()) + ': Blast search completed')
             savePickle(os.path.splitext(filename)[0], \
                 {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
             
             blastDict = checkBlastDict(proteins, filename, blastDict, 0)
             print(str(datetime.datetime.now()) + ': Blast dictionary checked')
-            savePickle('os.path.splitext(filename)[0], \
+            savePickle(os.path.splitext(filename)[0], \
                 {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
             transDict = deepcopy(blastDict)
@@ -546,14 +540,48 @@ def main():
 
         for filename in os.listdir(rootFolder + '/preInput'):
             print(filename)
+
+            # proteins need to be refreshed each time we do an analysis
+            # else good values are not dropped
+
+            pkl = checkPreviousPickle('merged', '/For_online')
+            proteins = pkl['proteins']
+            blastDict = pkl['blastDict']
+
+            transDict = deepcopy(blastDict)
+
+            for q in transDict.keys():
+                for s in transDict[q].keys():
+                    if transDict[q][s] in proteins:
+                        transDict[q][s] = proteins[transDict[q][s]].gene
+                    else:
+                        transDict[q][s] = 'NA'
+
+            geneDict = dict()
+
+            for g in set([p.gene for p in proteins.values()]):
+                geneDict[g] = dict()
+                isoforms = [p.refseq for p in proteins.values() if p.gene == g]
+                for s in set([p.species for p in proteins.values()]):
+                    targetGenes = dict()
+                    for i in isoforms:
+                        if s in transDict[i]:
+                            if not transDict[i][s] in geneDict[g]:
+                                targetGenes[transDict[i][s]] = 1
+                            else:
+                                targetGenes[transDict[i][s]] += 1
+                    if len(targetGenes) > 0:
+                        if max(targetGenes.values())/sum(targetGenes.values()) >= orthologyThreshold:
+                            geneDict[g][s] = list(targetGenes.keys())[list(targetGenes.values()).index(max(targetGenes.values()))]
+
             with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
                 mainRefseq = oneStrFile.read().replace('\n', '')
             mainSpecies = proteins[mainRefseq].species
-            mainGene = proteins[mainRefseq].gene   
+            mainGene = proteins[mainRefseq].gene 
 
             graph = networkx.Graph()
             graph.add_node(mainGene)
-
+                
             for q in geneDict:
                 qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
                 if (mainSpecies in geneDict[q]) and (qSpecies in geneDict[mainGene]):
@@ -598,85 +626,4 @@ def main():
                 out.write('<br>Results:<br>')
                 out.write(html)
 
-# main()
-
-pkl = checkPreviousPickle('1merged', '/For_online')
-proteins = pkl['proteins']
-blastDict = pkl['blastDict']
-
-transDict = deepcopy(blastDict)
-
-for q in transDict.keys():
-    for s in transDict[q].keys():
-        if transDict[q][s] in proteins:
-            transDict[q][s] = proteins[transDict[q][s]].gene
-        else:
-            transDict[q][s] = 'NA'
-
-geneDict = dict()
-
-for g in set([p.gene for p in proteins.values()]):
-    geneDict[g] = dict()
-    isoforms = [p.refseq for p in proteins.values() if p.gene == g]
-    for s in set([p.species for p in proteins.values()]):
-        targetGenes = dict()
-        for i in isoforms:
-            if s in transDict[i]:
-                if not transDict[i][s] in geneDict[g]:
-                    targetGenes[transDict[i][s]] = 1
-                else:
-                    targetGenes[transDict[i][s]] += 1
-        if len(targetGenes) > 0:
-            if max(targetGenes.values())/sum(targetGenes.values()) >= orthologyThreshold:
-                geneDict[g][s] = list(targetGenes.keys())[list(targetGenes.values()).index(max(targetGenes.values()))]
-
-filename = 'CLCNKB.txt'
-with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
-    mainRefseq = oneStrFile.read().replace('\n', '')
-mainSpecies = proteins[mainRefseq].species
-mainGene = proteins[mainRefseq].gene   
-
-graph = networkx.Graph()
-graph.add_node(mainGene)
-
-for q in geneDict:
-    qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
-    if (mainSpecies in geneDict[q]) and (qSpecies in geneDict[mainGene]):
-        if (geneDict[q][mainSpecies] == mainGene) and \
-        (geneDict[mainGene][qSpecies] == q):
-            graph.add_node(q)
-
-for q in graph.nodes():
-    for s in geneDict[q]:
-        for t in graph.nodes():
-            qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
-            tSpecies = [p.species for p in proteins.values() if p.gene == t][0]
-            if (tSpecies in geneDict[q]) and (qSpecies in geneDict[t]):
-                if (q != t) and (geneDict[q][tSpecies] == t) and (geneDict[t][qSpecies] == q):
-                    graph.add_edge(q, t)
-
-maxClique = clique.max_clique(graph)
-
-proteins = goodGeneMakesGoodProtein(proteins, maxClique)
-
-refDict = dict()
-for p in proteins.values():
-    if p.good:
-        refDict[p.species] = p.gene                
-toDel = set()
-for p in proteins.values():
-    if (p.species in refDict.keys()) and (p.gene != refDict[p.species]):
-        toDel.add(p.refseq)
-tempProteins = deepcopy(proteins)
-for refseq in toDel:
-    tempProteins.pop(refseq)
-
-html = analyzeBlastDict(blastDict, tempProteins)
-with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '.html', 'w') as out:
-    out.write('Original cluster:<br>')
-    for gene in maxClique:
-        out.write([p.species for p in proteins.values() if p.gene == gene][0] + ': ' + \
-            [p.symbol for p in proteins.values() if p.gene == gene][0] + ' (' + \
-            gene + ')<br>')
-    out.write('<br>Results:<br>')
-    out.write(html)
+main()
