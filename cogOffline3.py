@@ -10,16 +10,16 @@ from copy import deepcopy
 from networkx.algorithms.approximation import clique
 
 rootFolder = sys.path[0]
-path2G2R = '/home/bioinfuser/data/corgi_files/corgi_files/gene2refseq' # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
+path2G2R = '/home/bioinfuser/data/corgi_files/gene2refseq' # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
 path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
 path2refseq_protein = '/home/bioinfuser/data/refseq_protein'
-path2T2N = '/home/bioinfuser/data/corgi_files/corgi_files/names.dmp' # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2repre = '/home/bioinfuser/data/corgi_files/corgi_files/euka_taxids.txt'
+path2T2N = '/home/bioinfuser/data/corgi_files/names.dmp' # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+path2repre = '/home/bioinfuser/data/corgi_files/euka_taxids.txt'
 
 evalueLimit = 0.0001 # Generally 10^-4
 qCoverLimit = 0.1 # To get this limit length of a domain of interest must be divided by query length
 initBlastTargets = '700'
-numThreads = '3'
+numThreads = '40'
 blastChunkSize = 100
 orthologyThreshold = 1.0
 preInput = True
@@ -298,8 +298,28 @@ def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), se
                     blastDict[q][s] = 'NA'
         return blastDict
     else:
+        chunksForBlast = dict()
+        counter = 0
+        for refseq in queriesForBlast:
+            chunksForBlast[refseq] = proteins[refseq]
+            counter += 1
+            if counter >= blastChunkSize:
+                blastDict = blastSearch(
+                    [seq.refseq for seq in chunksForBlast.values()],
+                    taxidsForBlast,
+                    '{}_iter{}'.format(
+                        os.path.splitext(filename)[0], 
+                        str(iteration) + '.nomatter'
+                    ),
+                    blastDict
+                )
+                print(str(datetime.datetime.now()) + ': Blast search completed')
+                counter = 0
+                chunksForBlast = dict()
+                savePickle('part_' + os.path.splitext(filename)[0], \
+                    {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
         blastDict = blastSearch(
-            queriesForBlast,
+            [seq.refseq for seq in chunksForBlast.values()],
             taxidsForBlast,
             '{}_iter{}'.format(
                 os.path.splitext(filename)[0], 
@@ -307,6 +327,10 @@ def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), se
             ),
             blastDict
         )
+        print(str(datetime.datetime.now()) + ': Blast search completed')
+        savePickle(os.path.splitext(filename)[0], \
+            {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+    
         return checkBlastDict(proteins, filename, blastDict, iteration + 1,
         [queriesForBlast, taxidsForBlast])
 
@@ -437,76 +461,89 @@ def writeHtml(
     return htmlPart.getvalue()
 
 def main():
-    if preInput:
-        for filename in os.listdir(rootFolder + '/preInput'):
-            print(filename)
-            with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
-                mainRefseq = oneStrFile.read().replace('\n', '')
-                blast = initialBlast(filename, mainRefseq)
-                initBlastList = parseInitialBlast(blast, qCoverLimit, evalueLimit)
-                with open(rootFolder + '/Input/' + filename, 'w') as blastResults:
-                    blastResults.write('\n'.join(list(dict.fromkeys(initBlastList))))
-    
-    if mergeInput:
-        mergedSet = set()
-        for filename in os.listdir(rootFolder + '/Input'):
-            with open(rootFolder + '/Input/' + filename, 'r') as singleFile:
-                singleContent = singleFile.read()
-            mergedSet = mergedSet | set(singleContent.split('\n'))
-        mergedSet.discard('')
-        with open(rootFolder + '/Input/merged.txt', 'w') as mergedFile:
-            mergedFile.write('\n'.join(mergedSet))
 
+    # if preInput:
+        # for filename in os.listdir(rootFolder + '/preInput'):
+            # print(filename)
+            # with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
+                # mainRefseq = oneStrFile.read().replace('\n', '')
+                # blast = initialBlast(filename, mainRefseq)
+                # initBlastList = parseInitialBlast(blast, qCoverLimit, evalueLimit)
+                # with open(rootFolder + '/Input/' + filename, 'w') as blastResults:
+                    # blastResults.write('\n'.join(list(dict.fromkeys(initBlastList))))
+    
+    # if mergeInput:
+        # mergedSet = set()
+        # for filename in os.listdir(rootFolder + '/Input'):
+            # with open(rootFolder + '/Input/' + filename, 'r') as singleFile:
+                # singleContent = singleFile.read()
+            # mergedSet = mergedSet | set(singleContent.split('\n'))
+        # mergedSet.discard('')
+        # with open(rootFolder + '/Input/merged.txt', 'w') as mergedFile:
+            # mergedFile.write('\n'.join(mergedSet))
+
+    # if doMainAnalysis:
+        # for filename in os.listdir(rootFolder + '/Input'):
+            # proteins = checkPreviousPickle(
+                # os.path.splitext(filename)[0], 
+                # '/Previous_Proteins'
+                # )
+
+            # if not proteins:
+                # proteins = getSequences(filename, dict())       
+                # proteins = getIsoforms(proteins)
+                # proteins = getSpeciesName(proteins)
+                # toDel = list()
+                # for r in proteins.keys():
+                    # if proteins[r].species == None:
+                        # toDel.append(r)
+                        # print('SOMETHING BADD!!!')
+                # for r in toDel:
+                    # del proteins[r]
+            
+            # savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
+            # print(str(datetime.datetime.now()) + ': "proteins" ready')
+
+            # blastDict = dict()
+            # chunksForBlast = dict()
+            # counter = 0
+            # for p in proteins.values():
+                # chunksForBlast[p.refseq] = p
+                # counter += 1
+                # if counter >= blastChunkSize:
+                    # blastDict = blastSearch(
+                        # [seq.refseq for seq in chunksForBlast.values()],
+                        # [seq.taxid for seq in proteins.values()],
+                        # filename,
+                        # blastDict
+                    # )
+                    # print(str(datetime.datetime.now()) + ': Blast search completed')
+                    # counter = 0
+                    # chunksForBlast = dict()
+                    # savePickle('part_' + os.path.splitext(filename)[0], \
+                        # {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+            # blastDict = blastSearch(
+                # [seq.refseq for seq in chunksForBlast.values()],
+                # [seq.taxid for seq in proteins.values()],
+                # filename,
+                # blastDict
+            # )
+            # print(str(datetime.datetime.now()) + ': Blast search completed')
+            # savePickle(os.path.splitext(filename)[0], \
+                # {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+
+############################################################
     if doMainAnalysis:
         for filename in os.listdir(rootFolder + '/Input'):
-            proteins = checkPreviousPickle(
-                os.path.splitext(filename)[0], 
-                '/Previous_Proteins'
-                )
-
-            if not proteins:
-                proteins = getSequences(filename, dict())       
-                proteins = getIsoforms(proteins)
-                proteins = getSpeciesName(proteins)
-                toDel = list()
-                for r in proteins.keys():
-                    if proteins[r].species == None:
-                        toDel.append(r)
-                        print('SOMETHING BADD!!!')
-                for r in toDel:
-                    del proteins[r]
+            with open(rootFolder + '/For_online/' + filename.split('.')[0] + '.pkl', 'rb') as f:
+                f = pickle.load(f)
             
-            savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
-            print(str(datetime.datetime.now()) + ': "proteins" ready')
-
-            blastDict = dict()
-            chunksForBlast = dict()
-            counter = 0
-            for p in proteins.values():
-                chunksForBlast[p.refseq] = p
-                counter += 1
-                if counter >= blastChunkSize:
-                    blastDict = blastSearch(
-                        [seq.refseq for seq in chunksForBlast.values()],
-                        [seq.taxid for seq in proteins.values()],
-                        filename,
-                        blastDict
-                    )
-                    print(str(datetime.datetime.now()) + ': Blast search completed')
-                    counter = 0
-                    chunksForBlast = dict()
-                    savePickle('part_' + os.path.splitext(filename)[0], \
-                        {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
-            blastDict = blastSearch(
-                [seq.refseq for seq in chunksForBlast.values()],
-                [seq.taxid for seq in proteins.values()],
-                filename,
-                blastDict
-            )
-            print(str(datetime.datetime.now()) + ': Blast search completed')
-            savePickle(os.path.splitext(filename)[0], \
-                {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+            proteins = f['proteins']
+            blastDict = f['blastDict']
             
+            #raise TypeError('1212')
+
+ 
             blastDict = checkBlastDict(proteins, filename, blastDict, 0)
             print(str(datetime.datetime.now()) + ': Blast dictionary checked')
             savePickle(os.path.splitext(filename)[0], \
