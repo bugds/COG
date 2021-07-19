@@ -24,8 +24,8 @@ blastChunkSize = 100
 orthologyThreshold = 1.0
 preInput = False
 mergeInput = False
-doMainAnalysis = False
-finalAnalysis = True
+doMainAnalysis = True
+finalAnalysis = False
 
 # 'rootFolder' is a directory that contains:
 # /Input        (pairs of input files (good, all) for each protein)
@@ -219,7 +219,7 @@ def blastSearch(query, speciesList, filename, blastDict):
 
     os.remove(query)
     os.remove(taxidList)
-    os.remove(xmlPath)
+    #os.remove(xmlPath)
 
     return blastDict
 
@@ -299,6 +299,7 @@ def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), se
     else:
         chunksForBlast = dict()
         counter = 0
+        chunkN = 0
         for refseq in queriesForBlast:
             chunksForBlast[refseq] = proteins[refseq]
             counter += 1
@@ -306,27 +307,30 @@ def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), se
                 blastDict = blastSearch(
                     [seq.refseq for seq in chunksForBlast.values()],
                     taxidsForBlast,
-                    '{}_iter{}'.format(
-                        os.path.splitext(filename)[0], 
+                    '{}_check_chunk{}_iter{}'.format(
+                        os.path.splitext(filename)[0],
+                        str(chunkN),
                         str(iteration) + '.nomatter'
                     ),
                     blastDict
                 )
-                print(str(datetime.datetime.now()) + ': Blast search completed')
+                print(str(datetime.datetime.now()) + ': Blast search completed (iteration ' + str(iteration) + ', chunk ' + str(chunkN) + ')')
                 counter = 0
+                chunkN += 1
                 chunksForBlast = dict()
                 savePickle('part_' + os.path.splitext(filename)[0], \
                     {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
         blastDict = blastSearch(
             [seq.refseq for seq in chunksForBlast.values()],
             taxidsForBlast,
-            '{}_iter{}'.format(
-                os.path.splitext(filename)[0], 
+            '{}_check_chunk{}_iter{}'.format(
+                os.path.splitext(filename)[0],
+                str(chunkN),
                 str(iteration) + '.nomatter'
             ),
             blastDict
         )
-        print(str(datetime.datetime.now()) + ': Blast search completed')
+        print(str(datetime.datetime.now()) + ': Blast search completed (iteration ' + str(iteration) + ', chunk ' + str(chunkN) + ')')
         savePickle(os.path.splitext(filename)[0], \
             {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
     
@@ -409,24 +413,20 @@ def writeHtml(
     htmlPart = StringIO()
     htmlString = list()
     htmlString.append('<details>\n\t<summary>{}</summary>\n')
-#    htmlString.append('\t<details>\n\t\t<summary>&emsp;Gene id: {}</summary>\n\t\t<details>\n\t\t\t<summary>&emsp;&emsp;{} of {} referencial proteins failed forward BLAST:</summary>\n')
     htmlString.append('\t<details>\n\t\t<summary>&emsp;Gene id: {}</summary>\n\t\t<details>\n\t\t\t<summary>&emsp;&emsp;{}/{} referencial -> this gene. Fails:</summary>\n')
     htmlString.append('\t\t\t\t&emsp;&emsp;&emsp;&emsp;{} [{}]<br>\n')
-#    htmlString.append('\t\t</details>\n\t\t<details>\n\t\t\t<summary>&emsp;&emsp;{} of {} isoforms failed to find all referencial proteins in first hit:</summary>\n')
     htmlString.append('\t\t</details>\n\t\t<details>\n\t\t\t<summary>&emsp;&emsp;{}/{} isoforms of this gene -> only referencial isoforms. Fails:</summary>\n')
-    htmlString.append('\t\t\t<details>\n\t\t\t\t<summary>&emsp;&emsp;&emsp;{} -> isoforms of {}/{} referencial species. Fails:</summary>\n')
+    htmlString.append('\t\t\t<details>\n\t\t\t\t<summary>&emsp;&emsp;&emsp;{} -> isoforms of {}/{} referencial genes. Fails:</summary>\n')
     htmlString.append('\t\t\t\t\t&emsp;&emsp;&emsp;&emsp;&emsp;{}<br>\n')
     htmlString.append('\t\t\t</details>\n')
     htmlString.append('\t\t</details>\n\t</details>\n')
     htmlString.append('</details>')
-    # htmlString = [line.replace(r'\n', '\n').replace(r'\t', '\t') for line in htmlString]
 
     htmlPart.write(htmlString[0].format(qSpecies))
     for qGene in qGenes:
         temporaryProteins = [p for p in proteins if proteins[p].gene == qGene]
         htmlPart.write(htmlString[1].format(
         ', Gene symbol: '.join([qGene, proteins[temporaryProteins[0]].symbol]),
-#        str(len(gRefseqs) - len(qForward[qGene])),
         len(qForward[qGene]),
         len(gRefseqs)
         ))
@@ -436,15 +436,12 @@ def writeHtml(
                 proteins[fail].species
             ))
         htmlPart.write(htmlString[3].format(
-#            str(len(qReverse[qGene]) \
-#                - len([qR for qR in qReverse[qGene].values() if qR])),
             len([qR for qR in qReverse[qGene].values() if len(qR) == len(gSpecies)]),
             len(qReverse[qGene])
         ))
         for isoform, success in qReverse[qGene].items():
             htmlPart.write(htmlString[4].format(
                 isoform,
-#                str(len(gSpecies) - len(success)),
                 len(success),
                 len(gSpecies)
             ))
@@ -458,6 +455,7 @@ def writeHtml(
     return htmlPart.getvalue()
 
 def main():
+    print(str(datetime.datetime.now()) + ': start')
 
     if preInput:
         for filename in os.listdir(rootFolder + '/preInput'):
@@ -495,6 +493,7 @@ def main():
             print(str(datetime.datetime.now()) + ': "proteins" ready')
             blastDict = dict()
             chunksForBlast = dict()
+            chunkN = 0
             counter = 0
             for p in proteins.values():
                 chunksForBlast[p.refseq] = p
@@ -503,21 +502,28 @@ def main():
                     blastDict = blastSearch(
                         [seq.refseq for seq in chunksForBlast.values()],
                         [seq.taxid for seq in proteins.values()],
-                        filename,
+                        '{}_basic_chunk{}'.format(
+                            os.path.splitext(filename)[0],
+                            str(chunkN) + '.nomatter'
+                        ),
                         blastDict
                     )
-                    print(str(datetime.datetime.now()) + ': Blast search completed')
+                    print(str(datetime.datetime.now()) + ': Blast search completed (chunk ' + str(chunkN) + ')')
                     counter = 0
+                    chunkN += 1
                     chunksForBlast = dict()
                     savePickle('part_' + os.path.splitext(filename)[0], \
                         {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
             blastDict = blastSearch(
                 [seq.refseq for seq in chunksForBlast.values()],
                 [seq.taxid for seq in proteins.values()],
-                filename,
+                '{}_basic_chunk{}'.format(
+                    os.path.splitext(filename)[0],
+                    str(chunkN) + '.nomatter'
+                ),
                 blastDict
             )
-            print(str(datetime.datetime.now()) + ': Blast search completed')
+            print(str(datetime.datetime.now()) + ': Blast search completed (chunk ' + str(chunkN) + ')')
             savePickle(os.path.splitext(filename)[0], \
                 {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
@@ -592,10 +598,7 @@ def main():
                             graph.add_edge(q, t)
 
             maxClique = clique.max_clique(graph)
-            print(maxClique)
 
-            # for p in proteins.values():
-                # setattr(p, 'good', False)
             proteins = goodGeneMakesGoodProtein(proteins, maxClique)
 
             refDict = dict()
