@@ -9,28 +9,48 @@ from Bio import SearchIO
 from copy import deepcopy
 from networkx.algorithms import clique
 
+# 'rootFolder' is a directory that contains:
+# /preInput             (accession numbers of queried proteins, each in a 
+#                       separate file named accordingly)
+# /Input                (hits of initial Blast search)
+# /Previous_Proteins    (dictionary of candidate proteins with metadata)
+# /Blast_XML            (search results in xml format)
+# /Results              (for output)
 rootFolder = sys.path[0]
-path2G2R = '/home/bioinfuser/data/corgi_files/corgi_oct/gene2refseq' # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
+# ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
+path2G2R = '/home/bioinfuser/data/corgi_files/corgi_oct/gene2refseq' 
+# Blastp utility
 path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
+# Database with representative taxids
 path2refseq_protein = '/home/bioinfuser/data/corgi_files/representative_1'
-path2T2N = '/home/bioinfuser/data/corgi_files/corgi_oct/names.dmp' # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+# ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+path2T2N = '/home/bioinfuser/data/corgi_files/corgi_oct/names.dmp'
+# Representative taxids
 path2repre = '/home/bioinfuser/data/corgi_files/corgi_oct/euka_taxids.txt'
 
-evalueLimit = 0.1 # Generally 10^-4
-qCoverLimit = 0.1 # To get this limit length of a domain of interest must be divided by query length
+# E-value is generally 10^-4
+evalueLimit = 0.1
+# Query cover: length of a domain of interest divided by query length
+qCoverLimit = 0.1
+# Number of targets in initial Blast search (expected number of homologs)
 initBlastTargets = '700'
+# Number of CPU threads
 numThreads = '48'
+# Technical constant, do not change
 blastChunkSize = 100
+# A fraction of isoforms needed to be the closest between two genes,
+# so the genes can be called homologous
 orthologyThreshold = 1.0
+# First step: initial Blast search, creating a dictionary of candidate-proteins
 preInput = False
+# Second step: merging results of Blast search (optional)
 mergeInput = False
+# Third step: perform Blast search, create dictionary of results
 doMainAnalysis = False
+# Forth step: analysis
 finalAnalysis = True
-
-# 'rootFolder' is a directory that contains:
-# /Input        (pairs of input files (good, all) for each protein)
-# /Blast_XML    (search results in xml format)
-# /Results      (for output)
+# Remove all Blast results (to save space)
+removeXml = True
 
 class ProteinClass():
     '''Class for proteins
@@ -38,37 +58,44 @@ class ProteinClass():
     def __init__(self, species, taxid, symbol, gene, refseq):
         '''Initialization
         :param species: Species in which proteins are synthetized
+        :param taxid: Taxid of a species
+        :param symbol: Gene symbol
         :param gene: Coding gene
         :param refseq: Reference sequence accession number
-        :param good: Boolean, if referencial protein - True
         '''
         self.species = species
         self.taxid = taxid
         self.symbol = symbol
         self.gene = gene
         self.refseq = refseq
-        self.good = False
+        self.good = False # This parameter defines orthologs
 
 def initialBlast(filename, query):
+    '''Run initial Blast - results will constitute the list of
+    candidate-homologs
+    :param filename: Name of analyzed file
+    :param query: Accession number of a query
+    :return: Blast search results in xml-format
+    '''
     with open(path2repre, 'r') as repre:
         taxidList = repre.read().split('\n')
-
     query = createInputForBlast('.q', query, filename)
     xmlPath = rootFolder + '/Blast_XML/' + os.path.splitext(filename)[0] + '.xml'
     taxidList = createInputForBlast('.t', taxidList, filename)
-
     bashBlast(
         query=query, 
         out=xmlPath,
         taxidList=taxidList,
         max_target_seqs=initBlastTargets
     )
-
     return SearchIO.parse(xmlPath, 'blast-xml')
 
 def parseInitialBlast(blast):
+    '''Filter results based on query cover and E-value limits
+    :param blast: Blast search results in xml-format
+    :return: Filtered list of proteins
+    '''
     initBlastList = list()
-
     for record in blast:
         queryLen = int(record.seq_len)
         for hit in record:
@@ -76,19 +103,16 @@ def parseInitialBlast(blast):
                 alnSpan = int(hsp.query_span)
                 qCover = float("{0:.2f}".format(alnSpan/queryLen))
                 if (qCover > qCoverLimit) and (hsp.evalue < evalueLimit):
-                    # can't just take hit.accession - does not have accession version
+                    # can't just take hit.accession - 
+                    # does not have accession version
                     substrings = hit.id.split('|')
                     for i in range(len(substrings)):
                         if substrings[i] == 'ref':
                             initBlastList.append(substrings[i+1])
-                # print(initBlastList[-1])
-                # print(qCover)
-                # print(hsp.evalue)
-    
     return initBlastList
 
 def checkPreviousPickle(filename, folder):
-    '''Takes previously pickled objects or returns "False"
+    '''Take previously pickled objects or returns "False"
     :param filename: Name of analyzed file
     :param folder: Folder in which pickled objects are contained
     :return: Object or "False" if it does not exist
@@ -103,7 +127,7 @@ def checkPreviousPickle(filename, folder):
     return False
 
 def savePickle(shortName, toSave, folder):
-    '''Saves variables into a pickle file
+    '''Save variables into a pickle file
     :param shortName: Part of the analyzed file name
     :param toSave: Object to save
     :param folder: Folder in which pickled objects are contained
@@ -113,11 +137,10 @@ def savePickle(shortName, toSave, folder):
         pickle.dump(toSave, f)
 
 def getSequences(seqFilename, proteins):
-    '''Gets accession numbers from corresponding file
+    '''Get accession numbers from corresponding file
     :param seqFilename: Name of a file with accession numbers
     :param proteins: Dictionary for storing information about proteins
-    :param good: Boolean, True for referencial proteins
-    :return: Dictionary supplemented with proteins information
+    :return: Dictionary supplemented with proteins metadata
     '''
     path = rootFolder + '/Input/' + seqFilename
     seqFile = open(path, 'r')
@@ -129,8 +152,7 @@ def getSequences(seqFilename, proteins):
     return proteins
 
 def getIsoforms(proteins):
-    ''' Getting isoforms for all proteins in tree
-
+    '''Get isoforms for all featured proteins
     :param proteins: Dictionary for storing information about proteins
     :return: Dictionary supplemented with isoforms
     '''
@@ -138,26 +160,26 @@ def getIsoforms(proteins):
         tempSet = [gene2Refseq.readline().replace('\n', '')]
         index = parseG2RHeader(tempSet[0].split('\t'))
         line = gene2Refseq.readline().replace('\n', '')
-
         toSave = False
-
         while line:
             if tempSet[-1].split('\t')[index['p']] in proteins:
                 toSave = True
-
             if line.split('\t')[index['g']] == tempSet[-1].split('\t')[index['g']]:
                 tempSet.append(line)
             else:
                 saveTempSet(toSave, tempSet, proteins, index)
                 toSave = False
                 tempSet = [line]
-
             line = gene2Refseq.readline().replace('\n', '')
-
         saveTempSet(toSave, tempSet, proteins, index)
     return proteins
 
 def parseG2RHeader(header):
+    '''Get the columns of taxids, gene symbols, accession numbers, and
+    gene ID from gene2refseq file
+    :param header: Header of a gene2refseq file
+    :return: Dictionary of column numbers
+    '''
     return {
             't':header.index('#tax_id'), 
             'g':header.index('GeneID') , 
@@ -166,6 +188,14 @@ def parseG2RHeader(header):
         }
 
 def saveTempSet(toSave, tempSet, proteins, index):
+    '''Save set of data for a single protein, parsed from
+    gene2refseq file
+    :param toSave: If False, function will not be performed
+    :param tempSet: Data for a currently parsed gene
+    :param proteins: Dictionary for storing information about proteins
+    :param index: Dictionary of gene2refseq columns
+    :return: Supplemented dictionary for storing information about proteins
+    '''
     if toSave:
         for l in tempSet:
             if l.split('\t')[index['p']] != '-':
@@ -179,6 +209,10 @@ def saveTempSet(toSave, tempSet, proteins, index):
     return proteins
 
 def getSpeciesName(proteins):
+    '''Get names of species from taxids, using the names.dmp file
+    :param proteins: Dictionary for storing information about proteins
+    :return: Supplemented dictionary for storing information about proteins
+    '''
     with open(path2T2N, 'r') as f:
         taxids = [p.taxid for p in proteins.values()]
         line = f.readline()
@@ -199,43 +233,46 @@ def blastSearch(query, speciesList, filename, blastDict):
     :param query: String with accession numbers divided by paragraphs
     :param species: String with all species, against which BLAST is performed
     :param filename: Name of original fasta file for saving results of BLAST
+    :return: Contents of xml-file with Blast results in form of a dictionary
     '''
-
     xmlPath = rootFolder \
         + '/Blast_XML/' \
         + os.path.splitext(filename)[0] \
         + '.xml'
-
     query = createInputForBlast('.q', query, filename)
     taxidList = createInputForBlast('.t', speciesList, filename)
-
     blastNotVoid = bashBlast(
         query=query,
         out=xmlPath,
         taxidList = taxidList
     )
-
     if blastNotVoid:
         blast = SearchIO.parse(xmlPath, 'blast-xml')
         writeInBlastDict(blast, blastDict)
-
     os.remove(query)
     os.remove(taxidList)
-    #os.remove(xmlPath)
-
+    if removeXml:
+        os.remove(xmlPath)
     return blastDict
 
-def createInputForBlast(extension, input, filename):
+def createInputForBlast(extension, inp, filename):
+    '''Creating files for Blastp input
+    :param extension: ".q" for query, ".t" for taxids
+    :param inp: Contents of the input
+    :param filename: Name of currently analyzed file
+    :return: Path to the temporary file
+    '''
     with open('{}/Temp/{}{}'.format(rootFolder, filename, extension), 'w') as f:
-        if isinstance(input, str):
-            f.write(input)
+        if isinstance(inp, str):
+            f.write(inp)
         else:
-            f.write('\n'.join(input))
+            f.write('\n'.join(inp))
     return '{}/Temp/{}{}'.format(rootFolder, filename, extension)
 
 def bashBlast(query, out, taxidList, outfmt='5',
-    num_threads=numThreads, max_target_seqs='500'):
-
+  num_threads=numThreads, max_target_seqs='500'):
+    '''
+    '''
     blastProcess = subprocess.run(
         [path2blastp,
         '-db', 'representative_1',
@@ -328,7 +365,7 @@ def createBlastDict(proteins, filename):
 
 def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), set()]):
     '''Checks if BLAST found all species in each case
-    :param filename: Name of currently explored file
+    :param filename: Name of currently analyzed file
     :param blastDict: Dictionary containing BLAST results
     :param proteins: Dictionary for storing information about proteins
     :param iteration: Number of additional BLAST required currently
@@ -614,8 +651,8 @@ def reportHtml(filename, maxClique, proteins, html):
         out.write(html)
 
 def main():
-    print(str(datetime.datetime.now()) + ': start')
 
+    print(str(datetime.datetime.now()) + ': start')
     if preInput:
         for filename in os.listdir(rootFolder + '/preInput'):
             print(filename)
@@ -635,41 +672,34 @@ def main():
         mergedSet.discard('')
         with open(rootFolder + '/Input/merged.txt', 'w') as mergedFile:
             mergedFile.write('\n'.join(mergedSet))
+
     if doMainAnalysis:
         for filename in os.listdir(rootFolder + '/Input'):
             proteins = getSequences(filename, dict())
             proteins = getIsoforms(proteins)
             proteins = getSpeciesName(proteins)
             proteins = clearProteins(proteins)
-
             savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
             print(str(datetime.datetime.now()) + ': "proteins" ready')
-
             blastDict = createBlastDict(proteins, filename)
 
     if finalAnalysis:
         for filename in os.listdir(rootFolder + '/preInput'):
             print(filename)
-
             # proteins need to be refreshed each time we do an analysis
             # else good values are not dropped
-
             pkl = checkPreviousPickle(filename, '/For_online')
             blastDict = pkl['blastDict']
             pkl = checkPreviousPickle(filename, '/Previous_Proteins')
             proteins = pkl
-
             transDict, geneDict = createDictsForAnalysis(proteins, blastDict)
-
             with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
                 mainRefseq = oneStrFile.read().replace('\n', '')
             mainSpecies = proteins[mainRefseq].species
             mainGene = proteins[mainRefseq].gene 
-
             graph, maxCliques = createGraph(mainGene, mainSpecies, proteins, geneDict)
             maxCliques.sort()
             cliqueCounter = 0
-
             for maxClique in maxCliques:
                 cliqueCounter += 1
                 for p in proteins:
