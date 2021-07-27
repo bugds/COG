@@ -8,6 +8,7 @@ from io import StringIO
 from Bio import SearchIO
 from copy import deepcopy
 from networkx.algorithms import clique
+from pyvis.network import Network
 
 # 'rootFolder' is a directory that contains:
 # /preInput             (accession numbers of queried proteins, each in a 
@@ -42,7 +43,7 @@ orthologyThreshold = 1.0
 # First step: initial Blast search, creating a dictionary of candidate-proteins
 preInput = True
 # Second step: merging results of Blast search (optional)
-mergeInput = True
+mergeInput = False
 # Third step: perform Blast search, create dictionary of results
 doMainAnalysis = True
 # Forth step: analysis
@@ -534,6 +535,28 @@ def createGraph(mainGene, mainSpecies, proteins, geneDict):
     maxCliques = findLargestMaxCliques(graph, mainGene)
     return graph, maxCliques
 
+def drawGraph(graph, proteins, filename, mainGene):
+    '''Draw graph
+    :param graph: Graph representing Blast results
+    :param proteins: Dictionary for storing information about proteins
+    :param filename: Name of analyzed file
+    :param mainGene: Gene of query
+    '''
+    net = Network(height = '750px', width = '100%')
+    net.from_nx(graph)
+    net.show_buttons()
+    net.toggle_physics(False)
+    for node in net.nodes:
+        if node['label'] == mainGene:
+            node['color'] = 'red'
+        node['title'] = 'Gene id: ' + node['label']
+        node['label'] = [p.species for p in proteins.values() if p.gene == node['label']][0]
+        node['size'] = 2
+        node['font']['size'] = 4
+    for edge in net.edges:
+        edge['width'] = 0
+    net.save_graph(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html')
+
 def goodGeneMakesGoodProtein(proteins, goodGenes):
     '''If any isoform of a gene hypothesized to be orthologous, all
     other isoforms of this gene should be considered orthologous
@@ -756,6 +779,7 @@ def runFinalAnalysis():
         mainSpecies = proteins[mainRefseq].species
         mainGene = proteins[mainRefseq].gene 
         graph, maxCliques = createGraph(mainGene, mainSpecies, proteins, geneDict)
+        drawGraph(graph, proteins, filename, mainGene)
         maxCliques.sort()
         cliqueCounter = 0
         for maxClique in maxCliques:
