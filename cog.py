@@ -23,7 +23,7 @@ path2G2R = '/home/bioinfuser/data/corgi_files/corgi_oct/gene2refseq'
 # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 path2T2N = '/home/bioinfuser/data/corgi_files/corgi_oct/names.dmp'
 # Name of database with representative taxids
-databaseName = 'representative_1'
+databaseName = 'clcn'
 # Path to Blastp utility
 path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
 
@@ -41,11 +41,11 @@ blastChunkSize = 100
 # so the genes can be called homologous
 orthologyThreshold = 1.0
 # First step: initial Blast search, creating a dictionary of candidate-proteins
-preInput = True
+preInput = False
 # Second step: merging results of Blast search (optional)
 mergeInput = False
 # Third step: perform Blast search, create dictionary of results
-doMainAnalysis = True
+doMainAnalysis = False
 # Forth step: analysis
 finalAnalysis = True
 # Remove all Blast results (to save space)
@@ -506,7 +506,8 @@ def findLargestMaxCliques(graph, mainGene):
     maxCliques = list()
     for c in clique.find_cliques(graph):
         if len(c) == maxLen:
-            maxCliques.append(c)
+            if mainGene in c:
+                maxCliques.append(c)
     return maxCliques
 
 def createGraph(mainGene, mainSpecies, proteins, geneDict):
@@ -517,14 +518,27 @@ def createGraph(mainGene, mainSpecies, proteins, geneDict):
     :param geneDict: Dictionary of genes according to Blast results
     :return: Graph representating Blast results
     '''
+#    graph = networkx.Graph()
+#    graph.add_node(mainGene)
+#    for q in geneDict:
+#        qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
+#        if (mainSpecies in geneDict[q]) and (qSpecies in geneDict[mainGene]):
+#            if (geneDict[q][mainSpecies] == mainGene) and \
+#            (geneDict[mainGene][qSpecies] == q):
+#                graph.add_node(q)
+#    for q in graph.nodes():
+#        for t in graph.nodes():
+#            qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
+#            tSpecies = [p.species for p in proteins.values() if p.gene == t][0]
+#            if (tSpecies in geneDict[q]) and (qSpecies in geneDict[t]):
+#                if (q != t) and (geneDict[q][tSpecies] == t) and (geneDict[t][qSpecies] == q):
+#                    graph.add_edge(q, t)
+#    maxCliques = findLargestMaxCliques(graph, mainGene)
+#    return graph, maxCliques
     graph = networkx.Graph()
     graph.add_node(mainGene)
     for q in geneDict:
-        qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
-        if (mainSpecies in geneDict[q]) and (qSpecies in geneDict[mainGene]):
-            if (geneDict[q][mainSpecies] == mainGene) and \
-            (geneDict[mainGene][qSpecies] == q):
-                graph.add_node(q)
+        graph.add_node(q)
     for q in graph.nodes():
         for t in graph.nodes():
             qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
@@ -535,26 +549,67 @@ def createGraph(mainGene, mainSpecies, proteins, geneDict):
     maxCliques = findLargestMaxCliques(graph, mainGene)
     return graph, maxCliques
 
-def drawGraph(graph, proteins, filename, mainGene):
+def drawGraph(
+    graph, 
+    maxCliques,
+    proteins, 
+    filename, 
+    mainGene,
+    mainSpecies,
+    springLength = 200,
+    common_color = 'rgb(30 ,144 ,255)',
+    main_color = 'red',
+    max_color = 'rgb(50,205,50)'):
     '''Draw graph
     :param graph: Graph representing Blast results
     :param proteins: Dictionary for storing information about proteins
     :param filename: Name of analyzed file
     :param mainGene: Gene of query
     '''
-    net = Network(height = '750px', width = '100%')
+    net = Network(height = '95%', width = '100%')
     net.from_nx(graph)
-    net.show_buttons()
-    net.toggle_physics(False)
+    net.barnes_hut()
+    net.repulsion(spring_length = springLength)
+#    maxLen = clique.node_clique_number(graph, mainGene)
+#    cliquesNodes = {n:clique.node_clique_number(graph, n) for n in graph.nodes()}
+#    maxNodes = [n for n in cliquesNodes.keys() if cliquesNodes[n] == maxLen]
+    maxNodes = list(set().union(*maxCliques))
     for node in net.nodes:
-        if node['label'] == mainGene:
-            node['color'] = 'red'
-        node['title'] = 'Gene id: ' + node['label']
-        node['label'] = [p.species for p in proteins.values() if p.gene == node['label']][0]
-        node['size'] = 2
-        node['font']['size'] = 4
+        node['group'] = 'common'
+        node['color'] = common_color
+#        neighbors = [n for n in graph.neighbors(node['label'])]
+#        percentage = int(100*len(neighbors)/(len(graph) - 1))
+#        node['title'] = 'Connected to ' + str(percentage) + '% nodes.'
+        node['title'] = node['label']
+        node['size'] = 3
+        node['font'] = dict()
+        node['font']['size'] = 8
+    for node in net.nodes:
+        if node['label'] \
+          in [p.gene for p in proteins.values() if p.species == mainSpecies]:
+            node['group'] = 'main'
+            node['color'] = main_color
+        elif node['label'] in maxNodes:
+            node['group'] = 'max'
+            node['color'] = max_color
+        node['label'] = '_'.join([\
+            [p.species for p in proteins.values() if p.gene == node['label']][0],
+            [p.symbol for p in proteins.values() if p.gene == node['label']][0]
+        ]).replace(' ', '_')
     for edge in net.edges:
         edge['width'] = 0
+        edge['color'] = dict()
+        edge['color'] = common_color
+        if edge['from'] in maxNodes:
+            edge['color'] = max_color
+        if edge['to'] in maxNodes:
+            edge['color'] = max_color
+        if edge['from'] in \
+          [p.gene for p in proteins.values() if p.species == mainSpecies]:
+            edge['color'] = main_color
+        if edge['to'] in \
+          [p.gene for p in proteins.values() if p.species == mainSpecies]:
+            edge['color'] = main_color
     net.save_graph(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html')
 
 def goodGeneMakesGoodProtein(proteins, goodGenes):
@@ -776,10 +831,13 @@ def runFinalAnalysis():
         transDict, geneDict = createDictsForAnalysis(proteins, blastDict)
         with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
             mainRefseq = oneStrFile.read().replace('\n', '')
+        for k in proteins.keys():
+            if k.split('.')[0] == mainRefseq:
+                mainRefseq = k
         mainSpecies = proteins[mainRefseq].species
         mainGene = proteins[mainRefseq].gene 
         graph, maxCliques = createGraph(mainGene, mainSpecies, proteins, geneDict)
-        drawGraph(graph, proteins, filename, mainGene)
+        drawGraph(graph, maxCliques, proteins, filename, mainGene, mainSpecies)
         maxCliques.sort()
         cliqueCounter = 0
         for maxClique in maxCliques:

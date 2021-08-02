@@ -10,14 +10,14 @@ def isfloat(string):
 
 gene2refseq_path = '/home/bioinfuser/data/corgi_files/corgi_oct/gene2refseq'
 blastdbcmd_path = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
-newDatabase_batch = '/home/bioinfuser/data/corgi_files/big_database_batch'
-newDatabase_fasta = '/home/bioinfuser/data/corgi_files/big_database.fasta'
-newDatabase_name = '/home/bioinfuser/data/corgi_files/representative_1'
+newDatabase_batch = '/home/bioinfuser/data/corgi_files/clcn_database_batch'
+newDatabase_fasta = '/home/bioinfuser/data/corgi_files/clcn_database.fasta'
+newDatabase_name = '/home/bioinfuser/data/corgi_files/clcn'
 refseq_path = '/home/bioinfuser/data/refseq_protein_oct'
 
 email = "bug.dmitrij@gmail.com"
 
-with open('/home/bioinfuser/data/corgi_files/corgi_oct/euka_taxids.txt', 'r') as inpObj:
+with open('/home/bioinfuser/data/corgi_files/corgi_oct/clcn_taxids.txt', 'r') as inpObj:
     taxids = [t.replace('\n', '') for t in inpObj.readlines()]
 
 geneMapDF = pandas.read_csv(gene2refseq_path, sep = '\t', usecols=['#tax_id', 'GeneID', 'protein_accession.version'])
