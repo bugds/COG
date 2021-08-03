@@ -575,7 +575,6 @@ def drawGraph(
 #    maxNodWes = [n for n in cliquesNodes.keys() if cliquesNodes[n] == maxLen]
     moreMaxCliques = [g for c in maxCliques for g in c]
     for G in [p.gene for p in proteins.values() if p.species == mainSpecies]:
-        print(moreMaxCliques)
         moreMaxCliques.append([g for c in findLargestMaxCliques(graph, G) for g in c])
     maxNodes = list(set().union(*moreMaxCliques))
     for node in net.nodes:
