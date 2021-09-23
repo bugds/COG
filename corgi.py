@@ -8,16 +8,16 @@ def isfloat(string):
     except ValueError:
         return False
 
-gene2refseq_path = '/home/bioinfuser/data/corgi_files/corgi_oct/gene2refseq'
+gene2refseq_path = '/home/bioinfuser/data/corgi_files/corgi_2021/gene2refseq'
 blastdbcmd_path = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
-newDatabase_batch = '/home/bioinfuser/data/corgi_files/clcn_database_batch'
-newDatabase_fasta = '/home/bioinfuser/data/corgi_files/clcn_database.fasta'
-newDatabase_name = '/home/bioinfuser/data/corgi_files/clcn'
-refseq_path = '/home/bioinfuser/data/refseq_protein_oct'
+newDatabase_batch = '/home/bioinfuser/data/corgi_files/diss_batch'
+newDatabase_fasta = '/home/bioinfuser/data/corgi_files/diss.fasta'
+newDatabase_name = '/home/bioinfuser/data/corgi_files/diss'
+refseq_path = '/home/bioinfuser/data/refseq_protein_2021'
 
 email = "bug.dmitrij@gmail.com"
 
-with open('/home/bioinfuser/data/corgi_files/corgi_oct/clcn_taxids.txt', 'r') as inpObj:
+with open('/home/bioinfuser/data/corgi_files/corgi_2021/diss_taxids.txt', 'r') as inpObj:
     taxids = [t.replace('\n', '') for t in inpObj.readlines()]
 
 geneMapDF = pandas.read_csv(gene2refseq_path, sep = '\t', usecols=['#tax_id', 'GeneID', 'protein_accession.version'])
@@ -40,14 +40,22 @@ fastaSearch = subprocess.run(
 
 errRefseqs_all = fastaSearch.stderr.decode().split('\n')
 
+
 errRefseqs_all = [i.split(' ')[-1] for i in errRefseqs_all if "Skipped" in i]
+
+with open('/home/bioinfuser/data/corgi_files/errors.txt', 'w') as o:
+    i = 0
+    for l in errRefseqs_all:
+        o.write(l + '\n')
+        i += 1
+    print('Sequences with errors: ' + str(i))
 
 from Bio import Entrez
 Entrez.email = email
 
 errRefseqs_list = list()
 counter = 0
-step = 1000
+step = 600
 while counter < len(errRefseqs_all):
     errRefseqs_list.append(errRefseqs_all[counter : counter+step])
     counter += step
@@ -111,7 +119,7 @@ makeDB = subprocess.run(
         '-title', newDatabase_name,
         '-parse_seqids',
         '-out', newDatabase_name,
-        '-max_file_sz', '4GB',
+        '-max_file_sz', '4GB'
     ],
     stderr = subprocess.PIPE
 )

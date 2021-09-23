@@ -1,12 +1,15 @@
 import sys
 import os
+import json
 import pickle
 import subprocess
 import datetime
 import networkx
+import markov_clustering
 from io import StringIO
 from Bio import SearchIO
 from copy import deepcopy
+from random import choice
 from networkx.algorithms import clique
 from pyvis.network import Network
 
@@ -19,20 +22,22 @@ from pyvis.network import Network
 # /Results              (for output)
 rootFolder = sys.path[0]
 # ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
-path2G2R = '/home/bioinfuser/data/corgi_files/corgi_oct/gene2refseq' 
+path2G2R = '/home/bioinfuser/data/corgi_files/corgi_2021/gene2refseq' 
 # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2T2N = '/home/bioinfuser/data/corgi_files/corgi_oct/names.dmp'
+path2T2N = '/home/bioinfuser/data/corgi_files/corgi_2021/names.dmp'
 # Name of database with representative taxids
-databaseName = 'clcn'
+databaseName = 'diss'
 # Path to Blastp utility
 path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
+# Path to BlastDBCmd utility
+blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
 
 # E-value is generally 10^-4
 evalueLimit = 0.1
 # Query cover: length of a domain of interest divided by query length
 qCoverLimit = 0.1
 # Number of targets in initial Blast search (expected number of homologs)
-initBlastTargets = '700'
+initBlastTargets = '1000'
 # Number of CPU threads
 numThreads = '48'
 # Technical constant, do not change
@@ -41,15 +46,15 @@ blastChunkSize = 100
 # so the genes can be called homologous
 orthologyThreshold = 1.0
 # First step: initial Blast search, creating a dictionary of candidate-proteins
-preInput = False
+preInput = True
 # Second step: merging results of Blast search (optional)
 mergeInput = False
 # Third step: perform Blast search, create dictionary of results
-doMainAnalysis = False
+doMainAnalysis = True
 # Forth step: analysis
 finalAnalysis = True
 # Remove all Blast results (to save space)
-removeXml = True
+removeXml = False
 
 class ProteinClass():
     '''Class for proteins
@@ -356,21 +361,22 @@ def createBlastDict(proteins, filename):
             chunksForBlast = dict()
             savePickle('part_' + os.path.splitext(filename)[0], \
                 {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
-    blastDict = blastSearch(
-        sorted([seq.refseq for seq in chunksForBlast.values()]),
-        sorted([seq.taxid for seq in proteins.values()]),
-        '{}_basic_chunk{}'.format(
-            os.path.splitext(filename)[0],
-            str(chunkN) + '.nomatter'
-        ),
-        blastDict
-    )
-    print(
-        str(datetime.datetime.now()) \
-        + ': Blast search completed (chunk ' \
-        + str(chunkN) \
-        + ')' \
-    )
+    if len(chunksForBlast) > 0:
+        blastDict = blastSearch(
+            sorted([seq.refseq for seq in chunksForBlast.values()]),
+            sorted([seq.taxid for seq in proteins.values()]),
+            '{}_basic_chunk{}'.format(
+                os.path.splitext(filename)[0],
+                str(chunkN) + '.nomatter'
+            ),
+            blastDict
+        )
+        print(
+            str(datetime.datetime.now()) \
+            + ': Blast search completed (chunk ' \
+            + str(chunkN) \
+            + ')' \
+        )
     savePickle(os.path.splitext(filename)[0], \
         {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
 
@@ -494,7 +500,50 @@ def createDictsForAnalysis(proteins, blastDict):
                     if len(maxKeys) != 1:
                         print('Multiple equally good orthologous genes for ' + g + ': ' + ', '.join(maxKeys) + '. Chosen ' + maxKeys[0])
                     geneDict[g][s] = maxKeys[0]
-    return transDict, geneDict
+    greatIso = dict()
+    for q in blastDict.keys():
+        for s in blastDict[q].keys():
+            if not (s in greatIso):
+                greatIso[s] = dict()
+            h = blastDict[q][s]
+            if h in proteins:
+                g = proteins[h].gene
+                if not (g in greatIso[s]):
+                    greatIso[s][g] = dict()
+                if not (h in greatIso[s][g]):
+                    greatIso[s][g][h] = 0
+                greatIso[s][g][h] += 1
+    for s in greatIso:
+        for g in greatIso[s]:
+            currMax = 0
+            for h in greatIso[s][g]:
+                if greatIso[s][g][h] >= currMax:
+                    currMax = greatIso[s][g][h]
+                    currIso = h
+            greatIso[s][g] = currIso
+    return transDict, geneDict, greatIso
+
+def createFastasForTrees(proteins, greatIso, filename):
+    with open(rootFolder + '/Temp/bdc.txt', 'w') as f:
+        for s in greatIso:
+            for g in greatIso[s]:
+                f.write(greatIso[s][g] + '\n')
+    blastProcess = subprocess.run(
+        [blastdbcmd,
+        '-db', databaseName,
+        '-entry_batch', rootFolder + '/Temp/bdc.txt',
+        '-out', rootFolder + '/Temp/bdc_out.txt'],
+        stderr = subprocess.PIPE
+    )
+    with open(rootFolder + '/Temp/bdc_out.txt', 'r') as f:
+        fastaLines = f.readlines()
+    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '.fasta', 'w') as o:
+        for l in fastaLines:
+            if l.startswith('>'):
+                r = l.split()[0][1:]
+                l = '>' + proteins[r].species + '_' + proteins[r].symbol + '\n'
+                l = l.replace(' ', '_')
+            o.write(l)
 
 def findLargestMaxCliques(graph, mainGene):
     '''Find largest maximal cliques
@@ -518,23 +567,6 @@ def createGraph(mainGene, mainSpecies, proteins, geneDict):
     :param geneDict: Dictionary of genes according to Blast results
     :return: Graph representating Blast results
     '''
-#    graph = networkx.Graph()
-#    graph.add_node(mainGene)
-#    for q in geneDict:
-#        qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
-#        if (mainSpecies in geneDict[q]) and (qSpecies in geneDict[mainGene]):
-#            if (geneDict[q][mainSpecies] == mainGene) and \
-#            (geneDict[mainGene][qSpecies] == q):
-#                graph.add_node(q)
-#    for q in graph.nodes():
-#        for t in graph.nodes():
-#            qSpecies = [p.species for p in proteins.values() if p.gene == q][0]
-#            tSpecies = [p.species for p in proteins.values() if p.gene == t][0]
-#            if (tSpecies in geneDict[q]) and (qSpecies in geneDict[t]):
-#                if (q != t) and (geneDict[q][tSpecies] == t) and (geneDict[t][qSpecies] == q):
-#                    graph.add_edge(q, t)
-#    maxCliques = findLargestMaxCliques(graph, mainGene)
-#    return graph, maxCliques
     graph = networkx.Graph()
     graph.add_node(mainGene)
     for q in geneDict:
@@ -549,6 +581,14 @@ def createGraph(mainGene, mainSpecies, proteins, geneDict):
     maxCliques = findLargestMaxCliques(graph, mainGene)
     return graph, maxCliques
 
+def markovClustering(graph):
+    '''Perform Markov clustering on a graph
+    :param graph: Graph representing Blast results
+    :return: Clusters
+    '''
+    matrix = networkx.to_scipy_sparse_matrix(graph)
+    return markov_clustering.get_clusters(markov_clustering.run_mcl(matrix))
+
 def drawGraph(
     graph, 
     maxCliques,
@@ -556,64 +596,819 @@ def drawGraph(
     filename, 
     mainGene,
     mainSpecies,
-    springLength = 200,
-    common_color = 'rgb(30 ,144 ,255)',
-    main_color = 'red',
-    max_color = 'rgb(50,205,50)'):
+    springLength = 100,
+    commonColor = 'rgb(23,70,128)',
+    mainColor = 'rgb(237,41,57)',
+    maxColor = 'rgb(255,255,0)',
+    voidColor = 'rgb(120,120,120)',
+    palette = [
+        'rgb(189,176,0)',
+        'rgb(88,189,0)',
+        'rgb(0,176,189)',
+        'rgb(0,97,189)',
+        'rgb(101,0,189)',
+        'rgb(255, 236, 25)',
+        'rgb(133, 255, 25)',
+        'rgb(25, 240, 255)',
+        'rgb(25, 144, 255)',
+        'rgb(148, 25, 255)',
+        'rgb(255, 25, 186)',
+        'rgb(189,0,132)']):
     '''Draw graph
     :param graph: Graph representing Blast results
     :param proteins: Dictionary for storing information about proteins
     :param filename: Name of analyzed file
     :param mainGene: Gene of query
     '''
-    net = Network(height = '95%', width = '100%')
+    connectionsDict = dict()
+    net = Network(height = '65%', width = '100%')
+    clusters = markovClustering(graph)
+    clusters.sort(key = len, reverse = True)
+    nodesDict = {i: node for i, node in enumerate(graph.nodes())}
     net.from_nx(graph)
-    net.barnes_hut()
-    net.repulsion(spring_length = springLength)
-#    maxLen = clique.node_clique_number(graph, mainGene)
-#    cliquesNodes = {n:clique.node_clique_number(graph, n) for n in graph.nodes()}
-#    maxNodWes = [n for n in cliquesNodes.keys() if cliquesNodes[n] == maxLen]
+    net.barnes_hut(spring_length = springLength, gravity = -3000)
+    #net.show_buttons()
+    #net.repulsion(spring_length = springLength)
     moreMaxCliques = [g for c in maxCliques for g in c]
     for G in [p.gene for p in proteins.values() if p.species == mainSpecies]:
         moreMaxCliques.append([g for c in findLargestMaxCliques(graph, G) for g in c])
+    mainGenes = [p.gene for p in proteins.values() if p.species == mainSpecies]
     maxNodes = list(set().union(*moreMaxCliques))
+    mainGenes = [p.gene for p in proteins.values() if p.species == mainSpecies]
+    paletteDict = dict()
+    paletteNum = 0
+    for i in range(0, len(palette)):
+        for j in clusters[i]:
+            if paletteNum < len(palette):
+                paletteDict[nodesDict[j]] = palette[i]
     for node in net.nodes:
-        node['group'] = 'common'
-        node['color'] = common_color
-#        neighbors = [n for n in graph.neighbors(node['label'])]
-#        percentage = int(100*len(neighbors)/(len(graph) - 1))
-#        node['title'] = 'Connected to ' + str(percentage) + '% nodes.'
         node['title'] = node['label']
-        node['size'] = 3
-        node['font'] = dict()
-        node['font']['size'] = 8
-    for node in net.nodes:
-        if node['label'] \
-          in [p.gene for p in proteins.values() if p.species == mainSpecies]:
+        node['physics'] = True
+        node['hidden'] = False
+        connectionsDict[node['title']] = 0
+        for i in range(0, len(clusters)):
+            for j in clusters[i]:
+                if nodesDict[j] == node['title']:
+                    node['markov'] = i
+        if node['title'] in mainGenes:
             node['group'] = 'main'
-            node['color'] = main_color
-        elif node['label'] in maxNodes:
-            node['group'] = 'max'
-            node['color'] = max_color
+            node['color'] = node['color0'] = node['color1'] = mainColor
+        else:
+            if node['title'] in paletteDict:
+                node['color1'] = paletteDict[node['title']]
+            else:
+                node['color1'] = voidColor
+            if node['title'] in maxNodes:
+                node['group'] = 'max'
+                node['color'] = node['color0'] = maxColor
+            else:
+                node['group'] = 'common'
+                node['color'] = node['color0'] = commonColor
         node['label'] = '_'.join([\
             [p.species for p in proteins.values() if p.gene == node['label']][0],
             [p.symbol for p in proteins.values() if p.gene == node['label']][0]
         ]).replace(' ', '_')
+    allNodes = set([n['title'] for n in net.nodes])
     for edge in net.edges:
         edge['width'] = 0
-        edge['color'] = dict()
-        edge['color'] = common_color
-        if edge['from'] in maxNodes:
-            edge['color'] = max_color
         if edge['to'] in maxNodes:
-            edge['color'] = max_color
-        if edge['from'] in \
-          [p.gene for p in proteins.values() if p.species == mainSpecies]:
-            edge['color'] = main_color
-        if edge['to'] in \
-          [p.gene for p in proteins.values() if p.species == mainSpecies]:
-            edge['color'] = main_color
+            edge['from'], edge['to'] = edge['to'], edge['from']
+        if edge['to'] in mainGenes:
+            edge['from'], edge['to'] = edge['to'], edge['from']
+        for direction in ['from', 'to']:
+            connectionsDict[edge[direction]] += 1
+            allNodes.discard(edge[direction])
+    for node in net.nodes:
+        node['size'] = 2 + connectionsDict[node['title']] // 10
+        node['borderWidth'] = 2 + connectionsDict[node['title']] // 40
+        node['borderWidthSelected'] = 2 + connectionsDict[node['title']] // 10
+        node['font'] = dict()
+        node['font']['size'] = 3 + node['size']
+        if node['title'] in allNodes:
+            if node['color'] != mainColor:
+                node['color'] = voidColor
     net.save_graph(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html')
+
+def changeVisJS(filename):
+    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html', 'r') as f:
+        htmlLines = f.readlines()
+    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '.fasta', 'r') as f:
+        fastaLines = f.readlines()
+    fastaDict = dict()
+    for l in fastaLines:
+        if l.startswith('>'):
+            currGene = l[1:].strip()
+            fastaDict[currGene] = ''
+        else:
+            fastaDict[currGene] += l.strip()
+    fastaJson = json.dumps(fastaDict)
+    fastaJson = 'fasta = ' + fastaJson
+    commentString = [htmlL for htmlL in htmlLines if 'from the python' in htmlL][0]
+    nodesString = [htmlL for htmlL in htmlLines if 'nodes = new vis.DataSet' in htmlL][0]
+    edgesString = [htmlL for htmlL in htmlLines if 'edges = new vis.DataSet' in htmlL][0]
+    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html', 'w') as f:
+        f.write('<meta content="text/html;charset=utf-8" http-equiv="Content-Type">')
+        f.write('<meta content="utf-8" http-equiv="encoding">')
+        for l in htmlLines:
+            if '#mynetwork {' in l:
+                f.write('''
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          height: 70%;
+          overflow-y: scroll;
+        }
+
+        .fasta {
+          width: 100%;
+          height: 90%;
+          box-sizing: border-box;
+          margin: 0px;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          right: 15%;
+          font-size: 28px;
+          font-weight: bold;
+          position: fixed;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+''')
+            if 'return network;' in l:
+                f.write('''
+        function clickEvent() {
+            var options = {
+                fields: ['id', 'font']
+            };
+            var currentlySelected = nodes.get(network.getSelectedNodes(), options);
+            if (JSON.stringify(currentlySelected) != JSON.stringify(previouslySelected)) {
+                for (var i = 0; i < previouslySelected.length; i++) {
+                    previouslySelected[i].font.background = "transparent";
+                }
+                nodes.update(previouslySelected)
+                for (var i = 0; i < currentlySelected.length; i++) {
+                    currentlySelected[i].font.background = "rgb(220,220,220)";
+                }
+                nodes.update(currentlySelected)
+                previouslySelected = currentlySelected;
+            }
+            addSelected();
+        };
+        
+        network.on('dragStart', function() {
+            clickEvent();
+        });
+        
+        network.on('click', function() {
+            clickEvent();
+        });
+''')
+            if '"hideEdgesOnDrag": false,' in l:
+                f.write('\t\t"multiselect": true,\n')
+            if '"physics": {' in l:
+                f.write('''
+    "layout": {
+        "improvedLayout": false
+    },
+''')
+            if 'drawGraph();' in l:
+                f.write('''
+    // BRC code
+
+    var labelIdDict = {};
+    var clustalId = "";
+
+    var ids = nodes.getIds();
+    for (var i = 0; i < ids.length; i++) {
+        labelIdDict[nodes.get(ids[i]).label] = ids[i];
+    };
+    
+    function describe() {
+        options = {
+            fields: ['id', 'label', 'markov'],
+            filter: function(item){
+                return item.hidden == false;
+            }
+        };
+        var editLabels = document.getElementById("editNodes").value.split("\\n");
+        var editIds = [];
+        for (var i = 0; i < editLabels.length; i++) {
+            editIds.push(labelIdDict[editLabels[i]]);
+        }
+        editIds = editIds.filter(x => x !== undefined);
+        if (editIds.length > 0) {
+            editNodes = nodes.get(editIds, options)
+            var description = '';
+            for (var i = 0; i < editNodes.length; i++) {
+                description += '<details>'\
+                            + '<summary>'\
+                            + editNodes[i].label\
+                            + '</summary>'\
+                            + '<div style="padding-left: 25">'
+                optionsC = {
+                    fields: ['id', 'label'],
+                    filter: function(item){
+                        return item.hidden == false;
+                    }
+                };
+                var connectedNodes = nodes.get(network.getConnectedNodes(editNodes[i].id), optionsC);
+                var connectedLabels = [];
+                for (var j = 0; j < connectedNodes.length; j++) {
+                    connectedLabels.push(connectedNodes[j].label)
+                }
+                connectedLabels.sort();
+                for (var j = 0; j < connectedLabels.length; j++) {
+                    description += connectedLabels[j] + '<br>'
+                }
+                description += '</div></details>'
+            }
+            if (description) {
+                document.getElementById('connections').innerHTML = description
+            } else {
+                document.getElementById('connections').innerHTML = 'N/A'
+            }
+            description = '';
+            for (var i = 0; i < editNodes.length; i++) {
+                description += '<details>'\
+                            + '<summary>'\
+                            + editNodes[i].label\
+                            + '</summary>'\
+                            + '<div style="padding-left: 25">'
+                var markovNum = editNodes[i].markov
+                var markovCluster = nodes.get({
+                    filter: function(item) {
+                        return (item.markov == markovNum && !item.hidden && item.label != editNodes[i].label);
+                    }
+                });
+                markovCluster = markovCluster.map(a => a.label)
+                markovCluster.sort();
+                for (var j = 0; j < markovCluster.length; j++) {
+                    description += markovCluster[j] + '<br>'
+                }
+                description += '</div></details>'
+            }
+        }
+        if (description) {
+            document.getElementById('markovDesc').innerHTML = description
+        } else {
+            document.getElementById('markovDesc').innerHTML = 'N/A'
+        }
+    }
+    
+    function searchGraph() {
+        var searchedValue = document.getElementById('query').value;
+        var searchedItems = nodes.get({
+            fields: ['id', 'font'],
+            filter: function(item) {
+                return (item.label.toLowerCase().replace(' ', '_').includes(
+                    searchedValue.toLowerCase().replace(' ', '_')
+                ));
+            }
+        });
+        let searchedIds = searchedItems.map(a => a.id)
+        network.selectNodes(searchedIds);
+        if (JSON.stringify(searchedItems) != JSON.stringify(previouslySelected)) {
+            for (var i = 0; i < previouslySelected.length; i++) {
+                previouslySelected[i].font.background = "transparent";
+            }
+            nodes.update(previouslySelected);
+            for (var i = 0; i < searchedItems.length; i++) {
+                searchedItems[i].font.background = "rgb(220,220,220)"
+            }
+            nodes.update(searchedItems);
+            previouslySelected = searchedItems;
+        }
+        addSelected();
+    };
+    
+    function changeColors() {        
+        if (document.getElementById("markov").checked) {
+            allNodes = nodes.get({
+                fields: ['id', 'color', 'color1']
+            })
+            for (var i = 0; i < allNodes.length; i++) {
+                allNodes[i].color = allNodes[i].color1
+            }
+        } else if (document.getElementById("clique").checked) {
+            allNodes = nodes.get({
+                fields: ['id', 'color', 'color0']
+            })
+            for (var i = 0; i < allNodes.length; i++) {
+                allNodes[i].color = allNodes[i].color0
+            }
+        }
+        nodes.update(allNodes);
+    };
+
+    function selectGroup() {
+        var group = document.getElementById("selectGroup").value;
+        if (group == 'selectAll') {
+            options = {
+                fields: ['id', 'font']
+            };
+            var groupNodes = nodes.get(options)
+        } else if (group == 'selectHidden') {
+            options = {
+                fields: ['id', 'font'],
+                filter: function(item) {
+                    return item.hidden
+                }
+            };
+            var groupNodes = nodes.get(options);
+        } else if (group == 'selectShown') {
+            options = {
+                fields: ['id', 'font'],
+                filter: function(item) {
+                    return !(item.hidden)
+                }
+            };
+            var groupNodes = nodes.get(options)
+        } else if (group == 'selectConnected') {
+            options = {
+                fields: ['id', 'font'],
+                filter: function(item){
+                    return item.hidden == false;
+                }
+            };
+            var selectedNodes = nodes.get(network.getSelectedNodes(), options);
+            var groupNodes = selectedNodes;
+            for (var i = 0; i < selectedNodes.length; i++) {
+                var connectedNodes = nodes.get(network.getConnectedNodes(selectedNodes[i].id), options);
+                groupNodes = [...new Set(groupNodes.concat(connectedNodes))]
+            }
+        } else if (group == 'selectMarkov') {
+            options = {
+                fields: ['id', 'font', 'markov']
+            };
+            var selectedNodes = nodes.get(network.getSelectedNodes(), options);
+            var groupNodes = selectedNodes;
+            for (var i = 0; i < selectedNodes.length; i++) {
+                var markovNum = selectedNodes[i].markov
+                var markovCluster = nodes.get({
+                    fields: ['id', 'font', 'markov'],
+                    filter: function(item) {
+                        return (item.markov == markovNum);
+                    }
+                });
+                groupNodes = [...new Set(groupNodes.concat(markovCluster))];
+            }
+        } else {
+            groupNodes = additionalGroups[group];
+        };
+        groupIds = groupNodes.map(a => a.id);
+        network.selectNodes(groupIds);
+        addSelected();
+        for (var i = 0; i < groupNodes.length; i++) {
+            groupNodes[i].font.background = "rgb(220,220,220)"
+        }
+        nodes.update(groupNodes);
+        previouslySelected = [...new Set(previouslySelected.concat(groupNodes))]
+    };
+    
+    function addSelected() {
+        var newLine = "\\r\\n";
+        var selectedNodes = nodes.get(network.getSelectedNodes());
+        var selectedLabels = '';
+        for (var i = 0; i < selectedNodes.length; i++) {
+            selectedLabels += selectedNodes[i].label + newLine;
+        }
+        document.getElementById("editNodes").value = selectedLabels.trim();
+    }
+    
+    function hide() {
+        var editLabels = document.getElementById("editNodes").value.split("\\n");
+        var editIds = [];
+        for (var i = 0; i < editLabels.length; i++) {
+            editIds.push(labelIdDict[editLabels[i]]);
+        }
+        editIds = editIds.filter(x => x !== undefined);
+        if (editIds.length > 0) {
+            var options = {
+                fields: ['id', 'hidden', 'physics']
+            };
+            editNodes = nodes.get(editIds, options);
+            for (var i = 0; i < editNodes.length; i++) {
+                editNodes[i].hidden = true;
+                editNodes[i].physics = false;
+            }
+            nodes.update(editNodes);
+            editEdges = edges.get({
+                fields: ['id', 'hidden', 'physics', 'from', 'to'],
+                filter: function(item) {
+                    return ((editIds.includes(item.from)) || (editIds.includes(item.to)));
+                }
+            })
+            for (var i = 0; i < editEdges.length; i++) {
+                editEdges[i].hidden = true;
+                editEdges[i].physics = false;
+            }
+            edges.update(editEdges);
+        }
+    };
+    
+    function reveal() {
+        var editLabels = document.getElementById("editNodes").value.split("\\n");
+        var editIds = [];
+        for (var i = 0; i < editLabels.length; i++) {
+            editIds.push(labelIdDict[editLabels[i]]);
+        }
+        editIds = editIds.filter(x => x !== undefined);
+        if (editIds.length > 0) {
+            var options = {
+                fields: ['id', 'hidden', 'physics']
+            };
+            editNodes = nodes.get(editIds, options);
+            for (var i = 0; i < editNodes.length; i++) {
+                editNodes[i].hidden = false;
+                editNodes[i].physics = true;
+            }
+            nodes.update(editNodes);
+            editEdges = edges.get({
+                fields: ['id', 'hidden', 'physics', 'from', 'to'],
+                filter: function(item) {
+                    return ((editIds.includes(item.from)) || (editIds.includes(item.to)));
+                }
+            })
+            var hiddenNodes = nodes.get({
+                filter: function(item) {
+                    return (item.hidden)
+                }
+            });
+            var hiddenNodesIds = hiddenNodes.map(a => a.id);
+            for (var i = 0; i < editEdges.length; i++) {
+                var hide = false;
+                if (hiddenNodesIds.includes(editEdges[i].from) || hiddenNodesIds.includes(editEdges[i].to)) {
+                    hide = true;
+                }
+                if (!hide) {
+                    editEdges[i].hidden = false;
+                    editEdges[i].physics = true;
+                }
+            }
+            edges.update(editEdges);
+        }
+    };
+
+    function paint() {
+        var editLabels = document.getElementById("editNodes").value.split("\\n");
+        var editIds = [];
+        for (var i = 0; i < editLabels.length; i++) {
+            editIds.push(labelIdDict[editLabels[i]]);
+        }
+        editIds = editIds.filter(x => x !== undefined);
+        if (editIds.length > 0) {
+            var options = {
+                fields: ['id', 'color']
+            };
+            editNodes = nodes.get(editIds, options);
+            var color = document.getElementById("color").value;
+            for (var i = 0; i < editNodes.length; i++) {
+                editNodes[i].color = color
+            }
+            nodes.update(editNodes);
+        }
+    };
+
+    function generateFasta() {
+        var editLabels = document.getElementById("editNodes").value.split("\\n");
+        var fastaString = '';
+        var undefinedFlag = false;
+        for (var i = 0; i < editLabels.length; i++) {
+            fastaString += '>' + editLabels[i] + '\\n';
+            fastaString += fasta[editLabels[i]] + '\\n';
+            if (fasta[editLabels[i]] === undefined) {
+                undefinedFlag = true;
+            }
+        }
+        if (undefinedFlag) {
+            alert("There were undefined fasta sequences! Check your textbox for typos")
+        }
+        return fastaString;
+    }
+
+    function getFasta() {
+        var fastaString = generateFasta();
+        document.getElementById("modalFasta").style.display = "block";
+        document.getElementById("fastaContent").value = fastaString
+    };
+
+    function getDesc() {
+        describe();
+        document.getElementById("modalDesc").style.display = "block";
+    };
+
+    function getMSA() {
+        document.getElementById("modalMSA").style.display = "block";
+    }
+
+    function parseXml(xmlStr) {
+        return new window.DOMParser().parseFromString(xmlStr, "text/xml");
+    }
+
+    async function fetchClustalId(url, bodyString) {
+        const response = await fetch(url, {
+            body: bodyString,
+            headers: {
+                Accept: "text/plain",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            method: "POST"
+        })
+        return response
+    }
+
+    async function getClustalId() {
+        var fastaString = generateFasta();
+        var emailString = document.getElementById("email").value;
+        var bodyString = "email=" \
+          + emailString \
+          + "&outfmt=fa&sequence=" \
+          + fastaString;
+        var url = "https://www.ebi.ac.uk/Tools/services/rest/clustalo/run";
+        clustalId = "";
+        const response = await fetchClustalId(url, bodyString)
+        await response.text().then(r => clustalId = r);
+        return response.ok
+    }
+
+    function checkStatus() {
+        var url = "https://www.ebi.ac.uk/Tools/services/rest/clustalo/status/" \
+          + clustalId
+        fetch(url, {
+          headers: {
+              Accept: "text/plain"
+          }
+        })
+            .then(response => response.text().then(r => status = r))
+        return status
+    }
+
+    function getResults() {
+        var url = "https://www.ebi.ac.uk/Tools/services/rest/clustalo/result/"           + clustalId + "/aln-fasta"
+        fetch(url, {
+            headers: {
+                Accept: "text/plain"
+            }
+        })
+            .then(response => response.text().then(r => result = r))
+        if (typeof result !== 'undefined') {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(result));
+            element.setAttribute('download', 'result.fa');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+            return result
+        }
+    }
+
+    async function runMSA() {
+        document.getElementById("clustalStatus").innerHTML = "Please wait...";
+        const flag = await getClustalId()
+        if (flag) {
+            var timeout = 5000;
+            var status = "";
+            var timerId = setInterval(function(){
+                status = checkStatus();
+                if (status == "FINISHED") {
+                    var result = getResults();
+                    if (typeof result !== 'undefined') {
+                        var resultObj = result.split('\\n');
+                        var msa = {};
+                        var currentP = '';
+                        for (var i = 0; i < resultObj.length; i++) {
+                            if (resultObj[i].charAt(0) == '>') {
+                                currentP = resultObj[i]
+                            } else {
+                                if (!(currentP in msa)) {
+                                    msa[currentP] = '';
+                                }
+                                msa[currentP] += resultObj[i]
+                            }
+                        }
+                        var first = true;
+                        for (var key in msa) {
+                            if (first) {
+                                first = false;
+                                var consensus = {};
+                                for (var i = 0; i < msa[key].length; i++) {
+                                    consensus[i] = {};
+                                    consensus[i][msa[key].charAt(i)] = 1;
+                                }
+                            } else {
+                                for (var i = 0; i < msa[key].length; i++) {
+                                    currentChar = msa[key].charAt(i);
+                                    if (!(currentChar in consensus[i])) {
+                                        consensus[i][currentChar] = 0;
+                                    }
+                                    consensus[i][currentChar] += 1;
+                                }
+                            }
+                        }
+                        console.log(consensus);
+                        document.getElementById("clustalStatus").innerHTML = ""
+                        status = "";
+                        clearInterval(timerId);
+                    }
+                } else if (status == "ERROR" | status == "FAILURE" | status == "NOT_FOUND") {
+                    clearInterval(timerId)
+                }
+                document.getElementById("clustalStatus").innerHTML = "Status: " + status;
+            }, timeout)
+        } else {
+            document.getElementById("clustalStatus").innerHTML = "Status: ERROR";
+        }
+    }
+    
+    function closeModal(elemId) {
+        document.getElementById(elemId).style.display = "none";
+    };
+
+    function assignGroup() {
+        var groupName = document.getElementById("groupName").value;
+        if (groupName in additionalGroups) {
+            alert("This name is already in the drop-down list! Write something else, please");
+        } else {
+            var editLabels = document.getElementById("editNodes").value.split("\\n");
+            var editIds = [];
+            for (var i = 0; i < editLabels.length; i++) {
+                editIds.push(labelIdDict[editLabels[i]]);
+            }
+            editIds = editIds.filter(x => x !== undefined);
+            options = {
+                fields: ['id', 'font'],
+            };
+            if (editIds.length > 0) {
+                var editNodes = nodes.get(editIds, options);
+                additionalGroups[groupName] = editNodes;
+                var dropDown = document.getElementById("selectGroup");
+                var option = document.createElement("option");
+                option.text = groupName;
+                option.value = groupName;
+                dropDown.add(option);
+            } else {
+                alert("No nodes typed in correctly! Group was not created")
+            }
+        }
+    }
+
+    //nodes.on('*', function (event, properties, senderId) {
+    //  console.log('event', event, properties);
+    //});
+
+    // BRC code end
+''')
+            if 'var options, data;' in l:
+                f.write('    var options, data;\n')
+                f.write('    var additionalGroups = {};\n')
+                f.write('    var previouslySelected = [];\n')
+                f.write(nodesString.replace('        ', '    '))
+                f.write(edgesString.replace('        ', '    '))
+                f.write('    ' + fastaJson)
+            if '</body>' in l:
+                f.write('''
+<table cellspacing="20">
+  <tr>
+    <td style="vertical-align:top">
+      <h3>Select</h3>
+      <div>
+        <p>Point and click on desired nodes.<br>Ctrl+click to select multiple nodes.</p>
+        <p>
+        <input id="query" type="search" name="q" placeholder="Type species/gene names">
+        <button id="search" type="button" onclick="return searchGraph()">Select</button>
+        </p>
+        <em>or</em>
+        <p>
+        <select id="selectGroup">
+          <option value="selectAll">All nodes (hidden & shown)</options>
+          <option value="selectHidden">Hidden nodes</options>
+          <option value="selectShown">Shown nodes</options>
+          <option value="selectConnected">Connected nodes</options>
+          <option value="selectMarkov">Markov cluster</options>
+        </select>
+        <button id="selectGroupButton" type="button" onclick="return selectGroup()">Select group</button>
+        </p>
+      </div>
+    <td style="vertical-align:top">
+      <h3>Editing</h3>
+      <div>
+        <p>
+        <h4>Paint nodes by:</h4>
+        <input id="clique" name="colors" type="radio" value="clique" checked>
+        <label for="clique">Largest maximal cliques</label>
+        <br>
+        <input id="markov" name="colors" type="radio" value="markov">
+        <label for="markov">Markov clustering</label>
+        <br>
+        <button id="colorChange" onclick="return changeColors()">Change colors</button>
+        </p>
+      </div>
+    </td>
+    <td style = "vertical-align:top">
+        <h3>Textbox</h4>
+      <div>
+        <p>
+        <textarea id="editNodes" name="editNodes" cols="40" rows="8" placeholder="Lines of node labels" whitespace="pre-wrap"></textarea>
+        </p>
+        <p>
+        <button id="hide" onclick="hide()">Hide</button>
+        <button id="reveal" onclick="reveal()">Reveal</button>
+        <em>&emsp;or&emsp;</em>
+        <input id="color" name="color" placeholder="rgb(r,g,b)" style="float:right">
+        <button id="paint" onclick="paint()" style="float:right">Paint</button>
+        </p>
+        <p>
+        <button id="assign" onclick="assignGroup()">Assign group</button>
+        <input id="groupName" name="groupName" placeholder="Type your group name" style="float:right">
+        </p>
+      </div>
+    </td>
+    <td style="vertical-align:top">
+      <h3>Inspect textbox contents</h3>
+      <div>
+        <p>
+        <button id="getFasta" onclick="getFasta()">Get FASTA</button>
+        <div id="modalFasta" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modalFasta')">&times;</span>
+            <h4>FASTA of nodes from the textbox</h4>
+            <textarea id="fastaContent" class="fasta"></textarea>
+          </div>
+        </div>
+        </p>
+      </div>
+      <div>
+        <p>
+        <button id="getDesc" onclick="getDesc()">Description (visible)</button>
+        <div id="modalDesc" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modalDesc')">&times;</span>
+            <h4>Connections:</h4>
+            <div id="connections"></div>
+            <h4>Markov Clusters:</h4>
+            <div id="markovDesc"></div>
+          </div>
+        </div>
+        </p>
+      </div>
+      <div>
+        <p>
+        <button id="getMSA" onclick="getMSA()">Build MSA</button>
+        <div id="modalMSA" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modalMSA')">&times;</span>
+            <p>E-mail:&nbsp;<input id="email" name="email" placeholder="Type your e-mail"></p>
+            <button id="clustalButton" type="button" onclick="return runMSA()">Build and download MSA</button>
+            <p id="clustalStatus"></p>
+            <p id="clustalResults"></p>
+          </div>
+        </div>
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+    drawGraph();
+    document.getElementById('connections').innerHTML = 'N/A';
+    document.getElementById('markovDesc').innerHTML = 'N/A';
+</script>\n\n''')
+            if (l != nodesString) \
+              and (l != edgesString) \
+              and (l != commentString) \
+              and (not 'var options, data;' in l) \
+              and (not 'drawGraph();' in l):
+                f.write(l)
 
 def goodGeneMakesGoodProtein(proteins, goodGenes):
     '''If any isoform of a gene hypothesized to be orthologous, all
@@ -831,7 +1626,8 @@ def runFinalAnalysis():
         blastDict = pkl['blastDict']
         pkl = checkPreviousPickle(filename, '/Previous_Proteins')
         proteins = pkl
-        transDict, geneDict = createDictsForAnalysis(proteins, blastDict)
+        transDict, geneDict, greatIso = createDictsForAnalysis(proteins, blastDict)
+        createFastasForTrees(proteins, greatIso, filename)
         with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
             mainRefseq = oneStrFile.read().replace('\n', '')
         for k in proteins.keys():
@@ -841,6 +1637,7 @@ def runFinalAnalysis():
         mainGene = proteins[mainRefseq].gene 
         graph, maxCliques = createGraph(mainGene, mainSpecies, proteins, geneDict)
         drawGraph(graph, maxCliques, proteins, filename, mainGene, mainSpecies)
+        changeVisJS(filename)
         maxCliques.sort()
         cliqueCounter = 0
         for maxClique in maxCliques:
