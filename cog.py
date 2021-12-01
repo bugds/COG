@@ -21,23 +21,23 @@ from pyvis.network import Network
 # /Blast_XML            (search results in xml format)
 # /Results              (for output)
 rootFolder = sys.path[0]
-# ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
-path2G2R = '/home/bioinfuser/data/corgi_files/corgi_2021/gene2refseq' 
+# combined feature table
+path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
 # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 path2T2N = '/home/bioinfuser/data/corgi_files/corgi_2021/names.dmp'
 # Name of database with representative taxids
-databaseName = 'diss'
+databaseName = 'busco_refseq'
 # Path to Blastp utility
 path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
 # Path to BlastDBCmd utility
 blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
 
 # E-value is generally 10^-4
-evalueLimit = 0.1
+evalueLimit = 1
 # Query cover: length of a domain of interest divided by query length
 qCoverLimit = 0.1
 # Number of targets in initial Blast search (expected number of homologs)
-initBlastTargets = '1000'
+initBlastTargets = '1500'
 # Number of CPU threads
 numThreads = '48'
 # Technical constant, do not change
@@ -54,7 +54,7 @@ doMainAnalysis = True
 # Forth step: analysis
 finalAnalysis = True
 # Remove all Blast results (to save space)
-removeXml = False
+removeXml = True
 
 class ProteinClass():
     '''Class for proteins
@@ -637,7 +637,8 @@ def drawGraph(
     mainGenes = [p.gene for p in proteins.values() if p.species == mainSpecies]
     paletteDict = dict()
     paletteNum = 0
-    for i in range(0, len(palette)):
+    displayedClustersNum = min(len(palette), len(clusters))
+    for i in range(0, displayedClustersNum):
         for j in clusters[i]:
             if paletteNum < len(palette):
                 paletteDict[nodesDict[j]] = palette[i]
@@ -1629,7 +1630,7 @@ def runFinalAnalysis():
         transDict, geneDict, greatIso = createDictsForAnalysis(proteins, blastDict)
         createFastasForTrees(proteins, greatIso, filename)
         with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
-            mainRefseq = oneStrFile.read().replace('\n', '')
+            mainRefseq = oneStrFile.read().replace('\n', '').strip()
         for k in proteins.keys():
             if k.split('.')[0] == mainRefseq:
                 mainRefseq = k
