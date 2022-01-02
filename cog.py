@@ -24,7 +24,7 @@ rootFolder = sys.path[0]
 # combined feature table
 path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
 # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2T2N = '/home/bioinfuser/data/corgi_files/corgi_2021/names.dmp'
+path2T2N = '/home/bioinfuser/data/busco_refseq_db/names.dmp'
 # Name of database with representative taxids
 databaseName = 'busco_refseq'
 # Path to Blastp utility
@@ -667,7 +667,7 @@ def drawGraph(
                 node['color'] = node['color0'] = commonColor
         node['label'] = '_'.join([\
             [p.species for p in proteins.values() if p.gene == node['label']][0],
-            [p.symbol for p in proteins.values() if p.gene == node['label']][0]
+            [p.symbol if len(p.symbol) > 0 else ('GeneID' + str(p.gene)) for p in proteins.values() if p.gene == node['label']][0]
         ]).replace(' ', '_')
     allNodes = set([n['title'] for n in net.nodes])
     for edge in net.edges:
