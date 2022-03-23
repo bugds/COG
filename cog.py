@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 import sys
 import os
 import json
@@ -5,6 +7,7 @@ import pickle
 import subprocess
 import datetime
 import networkx
+import argparse
 import markov_clustering
 from io import StringIO
 from Bio import SearchIO
@@ -21,40 +24,60 @@ from pyvis.network import Network
 # /Blast_XML            (search results in xml format)
 # /Results              (for output)
 rootFolder = sys.path[0]
-# combined feature table
-path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
-# ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2T2N = '/home/bioinfuser/data/busco_refseq_db/names.dmp'
-# Name of database with representative taxids
-databaseName = 'busco_refseq'
-# Path to Blastp utility
-path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
-# Path to BlastDBCmd utility
-blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
 
-# E-value is generally 10^-4
-evalueLimit = 1
-# Query cover: length of a domain of interest divided by query length
-qCoverLimit = 0.1
-# Number of targets in initial Blast search (expected number of homologs)
-initBlastTargets = '1500'
-# Number of CPU threads
-numThreads = '48'
-# Technical constant, do not change
-blastChunkSize = 100
-# A fraction of isoforms needed to be the closest between two genes,
-# so the genes can be called homologous
-orthologyThreshold = 1.0
-# First step: initial Blast search, creating a dictionary of candidate-proteins
-preInput = True
-# Second step: merging results of Blast search (optional)
-mergeInput = False
-# Third step: perform Blast search, create dictionary of results
-doMainAnalysis = True
-# Forth step: analysis
-finalAnalysis = True
-# Remove all Blast results (to save space)
-removeXml = True
+def parseArguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-e", "--eval", type = 'float', help = "E-value limit", default = 0.0001)
+    parser.add_argument("-q", "--qcov", type = 'float', help = "Query cover limit", default = 0.1)
+    parser.add_argument("-b", "--init", type = 'str', help = "Number of initial BLAST targets", default = '1500')
+    parser.add_argument("-t", "--threadNum", type = 'str', help = "Number of threads", default = '48')
+    parser.add_argument("-o", "--orthology", type = 'float', help = "Orthology threshold", default = 1)
+    parser.add_argument("-p", "--primary", help = "Don't run primary analysis", default = True, action = 'store_false')
+    parser.add_argument("-m", "--merge", help = "Merge BLAST hits from multiple queries", default = False, action = 'store_true')
+    parser.add_argument("-M", "--main", help = "Don't run main analysis", default = True, action = 'store_false')
+    parser.add_argument("-f", "--final", help = "Don't run final analysis", default = True, action = 'store_false')
+    parser.add_argument("-r", "--removeXML", help = "Don't remove XML files", default = True, action = 'store_false')
+    parser.add_argument("-a", "--algorithm", type = 'str', help = "Graph building algorithm", default = 'majority',
+        choices = ["majority", "best"])
+    args = parser.parse_args()
+
+    # combined feature table
+    path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
+    # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+    path2T2N = '/home/bioinfuser/data/busco_refseq_db/names.dmp'
+    # Name of database with representative taxids
+    databaseName = 'busco_refseq'
+    # Path to Blastp utility
+    path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
+    # Path to BlastDBCmd utility
+    blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
+
+    # E-value is generally 10^-4
+    evalueLimit = args.eval
+    # Query cover: length of a domain of interest divided by query length
+    qCoverLimit = args.qcov
+    # Number of targets in initial Blast search (expected number of homologs)
+    initBlastTargets = args.init
+    # Number of CPU threads
+    numThreads = args.threadNum
+    # Technical constant, do not change
+    blastChunkSize = 100
+    # A fraction of isoforms needed to be the closest between two genes,
+    # so the genes can be called homologous
+    orthologyThreshold = args.orthology
+    # First step: initial Blast search, creating a dictionary of candidate-proteins
+    preInput = args.primary
+    # Second step: merging results of Blast search (optional)
+    mergeInput = args.merge
+    # Third step: perform Blast search, create dictionary of results
+    doMainAnalysis = args.main
+    # Forth step: analysis
+    finalAnalysis = args.final
+    # Remove all Blast results (to save space)
+    removeXml = args.removeXML
+
+    # Defines if the best isoform or the majority of isoforms will indicate the orthology
+    algorithm = args.algorithm
 
 class ProteinClass():
     '''Class for proteins
@@ -482,24 +505,6 @@ def createDictsForAnalysis(proteins, blastDict):
                 transDict[q][s] = proteins[transDict[q][s]].gene
             else:
                 transDict[q][s] = 'NA'
-    geneDict = dict()
-    for g in set([p.gene for p in proteins.values()]):
-        geneDict[g] = dict()
-        isoforms = [p.refseq for p in proteins.values() if p.gene == g]
-        for s in set([p.species for p in proteins.values()]):
-            targetGenes = dict()
-            for i in isoforms:
-                if s in transDict[i]:
-                    if not transDict[i][s] in geneDict[g]:
-                        targetGenes[transDict[i][s]] = 1
-                    else:
-                        targetGenes[transDict[i][s]] += 1
-            if len(targetGenes) > 0:
-                if max(targetGenes.values())/sum(targetGenes.values()) >= orthologyThreshold:
-                    maxKeys = [k for k, v in targetGenes.items() if v == max(targetGenes.values())]
-                    if len(maxKeys) != 1:
-                        print('Multiple equally good orthologous genes for ' + g + ': ' + ', '.join(maxKeys) + '. Chosen ' + maxKeys[0])
-                    geneDict[g][s] = maxKeys[0]
     greatIso = dict()
     for q in blastDict.keys():
         for s in blastDict[q].keys():
@@ -521,6 +526,27 @@ def createDictsForAnalysis(proteins, blastDict):
                     currMax = greatIso[s][g][h]
                     currIso = h
             greatIso[s][g] = currIso
+    geneDict = dict()
+    for g in set([p.gene for p in proteins.values()]):
+        geneDict[g] = dict()
+        isoforms = [p.refseq for p in proteins.values() if p.gene == g]
+        if algorithm == 'best':
+            s = [p.species for p in proteins.values() if p.gene == g][0]
+            isoforms = [greatIso[s][g]]
+        for s in set([p.species for p in proteins.values()]):
+            targetGenes = dict()
+            for i in isoforms:
+                if s in transDict[i]:
+                    if not transDict[i][s] in geneDict[g]:
+                        targetGenes[transDict[i][s]] = 1
+                    else:
+                        targetGenes[transDict[i][s]] += 1
+            if len(targetGenes) > 0:
+                if max(targetGenes.values())/sum(targetGenes.values()) >= orthologyThreshold:
+                    maxKeys = [k for k, v in targetGenes.items() if v == max(targetGenes.values())]
+                    if len(maxKeys) != 1:
+                        print('Multiple equally good orthologous genes for ' + g + ': ' + ', '.join(maxKeys) + '. Chosen ' + maxKeys[0])
+                    geneDict[g][s] = maxKeys[0]
     return transDict, geneDict, greatIso
 
 def createFastasForTrees(proteins, greatIso, filename):
@@ -541,7 +567,10 @@ def createFastasForTrees(proteins, greatIso, filename):
         for l in fastaLines:
             if l.startswith('>'):
                 r = l.split()[0][1:]
-                l = '>' + proteins[r].species + '_' + proteins[r].symbol + '\n'
+                if len(proteins[r].symbol) > 0:
+                    l = '>' + proteins[r].species + '_' + proteins[r].symbol + '\n'
+                else:
+                    l = '>' + proteins[r].species + '_' + 'GeneID' + str(proteins[r].gene) + '\n'
                 l = l.replace(' ', '_')
             o.write(l)
 
@@ -1653,6 +1682,7 @@ def runFinalAnalysis():
 def main():
     '''Main function
     '''
+    parseArguments()
     print(str(datetime.datetime.now()) + ': start')
     if preInput:
         runPreInput()
