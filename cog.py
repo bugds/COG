@@ -30,6 +30,7 @@ parser.add_argument("-m", "--merge", help = "Merge BLAST hits from multiple quer
 parser.add_argument("-r", "--removeXML", help = "Don't remove XML files", default = True, action = 'store_false')
 parser.add_argument("-a", "--algorithm", type = str, help = "Graph building algorithm", default = 'strict',
     choices = ["best", "strict"])
+parser.add_argument("-g", "--gravity", type = float, help = "Gravitational constant", default = -30000)
 args = parser.parse_args()
 
 # combined feature table
@@ -60,6 +61,9 @@ blastChunkSize = 100
 # A fraction of isoforms needed to be the closest between two genes,
 # so the genes can be called homologous
 orthologyThreshold = float(args.orthology)
+# Visualization constant
+gravityConstant = float(args.gravity)
+
 if str(args.stage) == "1":
     # First step: initial Blast search, creating a dictionary of candidate-proteins
     preInput = True
@@ -676,8 +680,8 @@ def drawGraph(
     clusters.sort(key = len, reverse = True)
     nodesDict = {i: node for i, node in enumerate(graph.nodes())}
     net.from_nx(graph)
-    net.barnes_hut(spring_length = springLength, gravity = -3000)
-    net.show_buttons(filter_=['physics'])
+    net.barnes_hut(spring_length = springLength, gravity = gravityConstant)
+    #net.show_buttons(filter_=['physics'])
     #net.repulsion(spring_length = springLength)
     moreMaxCliques = [g for c in maxCliques for g in c]
     for G in [p.gene for p in proteins.values() if p.species == mainSpecies]:
@@ -1683,7 +1687,7 @@ def runFinalAnalysis():
         mainSpecies = proteins[mainRefseq].species
         mainGene = proteins[mainRefseq].gene 
         graph, maxCliques = createGraph(mainGene, mainSpecies, proteins, geneDict)
-        drawGraph(graph, maxCliques, proteins, filename, mainGene, mainSpecies)
+        drawGraph(graph, maxCliques, proteins, filename, mainSpecies)
         changeVisJS(filename)
         maxCliques.sort()
         cliqueCounter = 0
