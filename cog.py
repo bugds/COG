@@ -16,68 +16,87 @@ from random import choice
 from networkx.algorithms import clique
 from pyvis.network import Network
 
-# 'rootFolder' is a directory that contains:
-# /preInput             (accession numbers of queried proteins, each in a 
-#                       separate file named accordingly)
-# /Input                (hits of initial Blast search)
-# /Previous_Proteins    (dictionary of candidate proteins with metadata)
-# /Blast_XML            (search results in xml format)
-# /Results              (for output)
-rootFolder = sys.path[0]
+parser = argparse.ArgumentParser()
+parser.add_argument('input', type=str, help = "Input directory (separate files with RefSeq identifier in each)")
+parser.add_argument('output', type=str, help = "Output directory")
+parser.add_argument("-e", "--eval", type = float, help = "E-value limit", default = 0.0001)
+parser.add_argument("-q", "--qcov", type = float, help = "Query cover limit", default = 0.1)
+parser.add_argument("-b", "--init", type = str, help = "Number of initial BLAST targets", default = '1500')
+parser.add_argument("-t", "--threadNum", type = str, help = "Number of threads", default = '48')
+parser.add_argument("-o", "--orthology", type = float, help = "Orthology threshold", default = 1)
+parser.add_argument("-s", "--stage", type = str, help = "Run a particular stage", default = 'all',
+    choices = ["1", "2", "3", "all"])
+parser.add_argument("-m", "--merge", help = "Merge BLAST hits from multiple queries", default = False, action = 'store_true')
+parser.add_argument("-r", "--removeXML", help = "Don't remove XML files", default = True, action = 'store_false')
+parser.add_argument("-a", "--algorithm", type = str, help = "Graph building algorithm", default = 'strict',
+    choices = ["best", "strict"])
+args = parser.parse_args()
 
-def parseArguments():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-e", "--eval", type = 'float', help = "E-value limit", default = 0.0001)
-    parser.add_argument("-q", "--qcov", type = 'float', help = "Query cover limit", default = 0.1)
-    parser.add_argument("-b", "--init", type = 'str', help = "Number of initial BLAST targets", default = '1500')
-    parser.add_argument("-t", "--threadNum", type = 'str', help = "Number of threads", default = '48')
-    parser.add_argument("-o", "--orthology", type = 'float', help = "Orthology threshold", default = 1)
-    parser.add_argument("-p", "--primary", help = "Don't run primary analysis", default = True, action = 'store_false')
-    parser.add_argument("-m", "--merge", help = "Merge BLAST hits from multiple queries", default = False, action = 'store_true')
-    parser.add_argument("-M", "--main", help = "Don't run main analysis", default = True, action = 'store_false')
-    parser.add_argument("-f", "--final", help = "Don't run final analysis", default = True, action = 'store_false')
-    parser.add_argument("-r", "--removeXML", help = "Don't remove XML files", default = True, action = 'store_false')
-    parser.add_argument("-a", "--algorithm", type = 'str', help = "Graph building algorithm", default = 'majority',
-        choices = ["majority", "best"])
-    args = parser.parse_args()
+# combined feature table
+path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
+# ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+path2T2N = '/home/bioinfuser/data/busco_refseq_db/names.dmp'
+# Name of database with representative taxids
+databaseName = 'busco_refseq'
+# Path to Blastp utility
+path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
+# Path to BlastDBCmd utility
+blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
 
-    # combined feature table
-    path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
-    # ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-    path2T2N = '/home/bioinfuser/data/busco_refseq_db/names.dmp'
-    # Name of database with representative taxids
-    databaseName = 'busco_refseq'
-    # Path to Blastp utility
-    path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
-    # Path to BlastDBCmd utility
-    blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
-
-    # E-value is generally 10^-4
-    evalueLimit = args.eval
-    # Query cover: length of a domain of interest divided by query length
-    qCoverLimit = args.qcov
-    # Number of targets in initial Blast search (expected number of homologs)
-    initBlastTargets = args.init
-    # Number of CPU threads
-    numThreads = args.threadNum
-    # Technical constant, do not change
-    blastChunkSize = 100
-    # A fraction of isoforms needed to be the closest between two genes,
-    # so the genes can be called homologous
-    orthologyThreshold = args.orthology
+# Input directory
+inputDir = args.input
+# Output directory
+rootFolder = args.output
+# E-value is generally 10^-4
+evalueLimit = float(args.eval)
+# Query cover: length of a domain of interest divided by query length
+qCoverLimit = float(args.qcov)
+# Number of targets in initial Blast search (expected number of homologs)
+initBlastTargets = str(args.init)
+# Number of CPU threads
+numThreads = str(args.threadNum)
+# Technical constant, do not change
+blastChunkSize = 100
+# A fraction of isoforms needed to be the closest between two genes,
+# so the genes can be called homologous
+orthologyThreshold = float(args.orthology)
+if str(args.stage) == "1":
     # First step: initial Blast search, creating a dictionary of candidate-proteins
-    preInput = args.primary
-    # Second step: merging results of Blast search (optional)
-    mergeInput = args.merge
+    preInput = True
+    doMainAnalysis = False
+    finalAnalysis = False
+elif str(args.stage) == "2":
     # Third step: perform Blast search, create dictionary of results
-    doMainAnalysis = args.main
+    preInput = False
+    doMainAnalysis = True
+    finalAnalysis = False
+elif str(args.stage) == "3":
     # Forth step: analysis
-    finalAnalysis = args.final
-    # Remove all Blast results (to save space)
-    removeXml = args.removeXML
+    preInput = False
+    doMainAnalysis = False
+    finalAnalysis = True
+else:
+    preInput = True
+    doMainAnalysis = True
+    finalAnalysis = True
 
-    # Defines if the best isoform or the majority of isoforms will indicate the orthology
-    algorithm = args.algorithm
+# Merging results of Blast search (optional)
+mergeInput = args.merge
+# Remove all Blast results (to save space)
+removeXml = args.removeXML
+
+# Defines if the best isoform or the majority of isoforms will indicate the orthology
+algorithm = args.algorithm
+
+if (len(os.listdir(rootFolder)) != 0) and (args.stage == "all"):
+    raise Exception('Output directory not empty!')
+elif (args.stage == "all"):
+    os.makedirs(os.path.join(rootFolder, 'Blast_XML'))
+    os.makedirs(os.path.join(rootFolder, 'For_online'))
+    os.makedirs(os.path.join(rootFolder, 'Input'))
+    os.makedirs(os.path.join(rootFolder, 'Previous_Proteins'))
+    os.makedirs(os.path.join(rootFolder, 'Results'))
+    os.makedirs(os.path.join(rootFolder, 'Temp'))
 
 class ProteinClass():
     '''Class for proteins
@@ -148,7 +167,7 @@ def initialBlast(filename, query):
     :return: Blast search results in xml-format
     '''
     query = createInputForBlast(query, filename)
-    xmlPath = rootFolder + '/Blast_XML/' + os.path.splitext(filename)[0] + '.xml'
+    xmlPath = os.path.join(rootFolder, 'Blast_XML', os.path.splitext(filename)[0] + '.xml')
     bashBlast(
         query=query, 
         out=xmlPath,
@@ -183,11 +202,11 @@ def checkPreviousPickle(filename, folder):
     :param folder: Folder in which pickled objects are contained
     :return: Object or "False" if it does not exist
     '''
-    for prevName in os.listdir(rootFolder + folder):
+    for prevName in os.listdir(os.path.join(rootFolder, folder)):
         basePrevName = os.path.splitext(prevName)[0]
         baseFilename = os.path.splitext(filename)[0]
         if baseFilename == basePrevName:
-            path = rootFolder + folder + '/' + prevName
+            path = os.path.join(rootFolder, folder, prevName)
             with open(path, 'rb') as f:
                 return pickle.load(f)
     return False
@@ -198,7 +217,7 @@ def savePickle(shortName, toSave, folder):
     :param toSave: Object to save
     :param folder: Folder in which pickled objects are contained
     '''
-    path = rootFolder + folder + '/' + shortName + '.pkl'
+    path = os.path.join(rootFolder, folder, shortName + '.pkl')
     with open(path, 'wb') as f:
         pickle.dump(toSave, f)
 
@@ -208,7 +227,7 @@ def getSequences(seqFilename, proteins):
     :param proteins: Dictionary for storing information about proteins
     :return: Dictionary supplemented with proteins metadata
     '''
-    path = rootFolder + '/Input/' + seqFilename
+    path = os.path.join(rootFolder, 'Input', seqFilename)
     seqFile = open(path, 'r')
     line = seqFile.readline().replace('\n', '')
     while line:
@@ -319,10 +338,7 @@ def blastSearch(query, speciesList, filename, blastDict):
     :param filename: Name of original fasta file for saving results of Blast
     :return: Contents of xml-file with Blast results in form of a dictionary
     '''
-    xmlPath = rootFolder \
-        + '/Blast_XML/' \
-        + os.path.splitext(filename)[0] \
-        + '.xml'
+    xmlPath = os.path.join(rootFolder, 'Blast_XML', os.path.splitext(filename)[0] + '.xml')
     query = createInputForBlast(query, filename)
     blastNotVoid = bashBlast(
         query=query,
@@ -383,7 +399,7 @@ def createBlastDict(proteins, filename):
             chunkN += 1
             chunksForBlast = dict()
             savePickle('part_' + os.path.splitext(filename)[0], \
-                {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+                {'proteins':proteins, 'blastDict':blastDict}, 'For_online')
     if len(chunksForBlast) > 0:
         blastDict = blastSearch(
             sorted([seq.refseq for seq in chunksForBlast.values()]),
@@ -401,13 +417,13 @@ def createBlastDict(proteins, filename):
             + ')' \
         )
     savePickle(os.path.splitext(filename)[0], \
-        {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+        {'proteins':proteins, 'blastDict':blastDict}, 'For_online')
 
     print('Checking Blast dictionary...') 
     blastDict = checkBlastDict(proteins, filename, blastDict, 0)
     print(str(datetime.datetime.now()) + ': Blast dictionary checked')
     savePickle(os.path.splitext(filename)[0], \
-        {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+        {'proteins':proteins, 'blastDict':blastDict}, 'For_online')
     return blastDict
 
 def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), set()]):
@@ -466,7 +482,7 @@ def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), se
                 chunkN += 1
                 chunksForBlast = dict()
                 savePickle('part_' + os.path.splitext(filename)[0], \
-                    {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+                    {'proteins':proteins, 'blastDict':blastDict}, 'For_online')
         blastDict = blastSearch(
             sorted(list([seq.refseq for seq in chunksForBlast.values()])),
             sorted(list(taxidsForBlast)),
@@ -486,7 +502,7 @@ def checkBlastDict(proteins, filename, blastDict, iteration, previous=[set(), se
             + ')' \
         )
         savePickle(os.path.splitext(filename)[0], \
-            {'proteins':proteins, 'blastDict':blastDict}, '/For_online')
+            {'proteins':proteins, 'blastDict':blastDict}, 'For_online')
         return checkBlastDict(proteins, filename, blastDict, iteration + 1,
         [queriesForBlast, taxidsForBlast])
 
@@ -532,7 +548,10 @@ def createDictsForAnalysis(proteins, blastDict):
         isoforms = [p.refseq for p in proteins.values() if p.gene == g]
         if algorithm == 'best':
             s = [p.species for p in proteins.values() if p.gene == g][0]
-            isoforms = [greatIso[s][g]]
+            if g in greatIso[s]:
+                isoforms = [greatIso[s][g]]
+            else:
+                isoforms = []
         for s in set([p.species for p in proteins.values()]):
             targetGenes = dict()
             for i in isoforms:
@@ -544,26 +563,29 @@ def createDictsForAnalysis(proteins, blastDict):
             if len(targetGenes) > 0:
                 if max(targetGenes.values())/sum(targetGenes.values()) >= orthologyThreshold:
                     maxKeys = [k for k, v in targetGenes.items() if v == max(targetGenes.values())]
-                    if len(maxKeys) != 1:
+                    maxKeys = [k for k in maxKeys if k != 'NA']
+                    if len(maxKeys) > 1:
                         print('Multiple equally good orthologous genes for ' + g + ': ' + ', '.join(maxKeys) + '. Chosen ' + maxKeys[0])
+                    elif len(maxKeys) == 0:
+                        maxKeys = ['NA']
                     geneDict[g][s] = maxKeys[0]
     return transDict, geneDict, greatIso
 
 def createFastasForTrees(proteins, greatIso, filename):
-    with open(rootFolder + '/Temp/bdc.txt', 'w') as f:
+    with open(os.path.join(rootFolder, 'Temp', 'bdc.txt'), 'w') as f:
         for s in greatIso:
             for g in greatIso[s]:
                 f.write(greatIso[s][g] + '\n')
     blastProcess = subprocess.run(
         [blastdbcmd,
         '-db', databaseName,
-        '-entry_batch', rootFolder + '/Temp/bdc.txt',
-        '-out', rootFolder + '/Temp/bdc_out.txt'],
+        '-entry_batch', os.path.join(rootFolder, 'Temp', 'bdc.txt'),
+        '-out', os.path.join(rootFolder, 'Temp', 'bdc_out.txt')],
         stderr = subprocess.PIPE
     )
-    with open(rootFolder + '/Temp/bdc_out.txt', 'r') as f:
+    with open(os.path.join(rootFolder, 'Temp', 'bdc_out.txt'), 'r') as f:
         fastaLines = f.readlines()
-    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '.fasta', 'w') as o:
+    with open(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '.fasta'), 'w') as o:
         for l in fastaLines:
             if l.startswith('>'):
                 r = l.split()[0][1:]
@@ -622,8 +644,7 @@ def drawGraph(
     graph, 
     maxCliques,
     proteins, 
-    filename, 
-    mainGene,
+    filename,
     mainSpecies,
     springLength = 100,
     commonColor = 'rgb(23,70,128)',
@@ -647,7 +668,7 @@ def drawGraph(
     :param graph: Graph representing Blast results
     :param proteins: Dictionary for storing information about proteins
     :param filename: Name of analyzed file
-    :param mainGene: Gene of query
+    :param mainSpecies: Species of query
     '''
     connectionsDict = dict()
     net = Network(height = '65%', width = '100%')
@@ -656,7 +677,7 @@ def drawGraph(
     nodesDict = {i: node for i, node in enumerate(graph.nodes())}
     net.from_nx(graph)
     net.barnes_hut(spring_length = springLength, gravity = -3000)
-    #net.show_buttons()
+    net.show_buttons(filter_=['physics'])
     #net.repulsion(spring_length = springLength)
     moreMaxCliques = [g for c in maxCliques for g in c]
     for G in [p.gene for p in proteins.values() if p.species == mainSpecies]:
@@ -717,12 +738,12 @@ def drawGraph(
         if node['title'] in allNodes:
             if node['color'] != mainColor:
                 node['color'] = voidColor
-    net.save_graph(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html')
+    net.save_graph(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '_pyvis.html'))
 
 def changeVisJS(filename):
-    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html', 'r') as f:
+    with open(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '_pyvis.html'), 'r') as f:
         htmlLines = f.readlines()
-    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '.fasta', 'r') as f:
+    with open(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '.fasta'), 'r') as f:
         fastaLines = f.readlines()
     fastaDict = dict()
     for l in fastaLines:
@@ -736,7 +757,7 @@ def changeVisJS(filename):
     commentString = [htmlL for htmlL in htmlLines if 'from the python' in htmlL][0]
     nodesString = [htmlL for htmlL in htmlLines if 'nodes = new vis.DataSet' in htmlL][0]
     edgesString = [htmlL for htmlL in htmlLines if 'edges = new vis.DataSet' in htmlL][0]
-    with open(rootFolder + '/Results/' + os.path.splitext(filename)[0] + '_pyvis.html', 'w') as f:
+    with open(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '_pyvis.html'), 'w') as f:
         f.write('<meta content="text/html;charset=utf-8" http-equiv="Content-Type">')
         f.write('<meta content="utf-8" http-equiv="encoding">')
         for l in htmlLines:
@@ -1587,11 +1608,7 @@ def reportHtml(filename, maxClique, proteins, html):
     :param proteins: Dictionary for storing information about proteins
     :param html: A string containing the results of an algorithm
     '''
-    with open(
-        rootFolder \
-        + '/Results/' \
-        + os.path.splitext(filename)[0] \
-        + '.html', 
+    with open(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '.html'),
         'w'
     ) as out:
         out.write('Original cluster:<br>')
@@ -1609,13 +1626,13 @@ def runPreInput():
     '''Run the first step -
     query Blast, get orthologs-candidates
     '''
-    for filename in os.listdir(rootFolder + '/preInput'):
+    for filename in os.listdir(inputDir):
         print(filename)
-        with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
+        with open(os.path.join(inputDir, filename), 'r') as oneStrFile:
             mainRefseq = oneStrFile.read().replace('\n', '')
             blast = initialBlast(filename, mainRefseq)
             initBlastList = parseInitialBlast(blast)
-            with open(rootFolder + '/Input/' + filename, 'w') as blastResults:
+            with open(os.path.join(rootFolder, 'Input', filename), 'w') as blastResults:
                 blastResults.write('\n'.join(list(dict.fromkeys(initBlastList))))
 
 def runMergeInput():
@@ -1623,24 +1640,24 @@ def runMergeInput():
     merge all results into one protein database
     '''
     mergedSet = set()
-    for filename in os.listdir(rootFolder + '/Input'):
-        with open(rootFolder + '/Input/' + filename, 'r') as singleFile:
+    for filename in os.listdir(os.path.join(rootFolder, 'Input')):
+        with open(os.path.join(rootFolder, 'Input', filename), 'r') as singleFile:
             singleContent = singleFile.read()
         mergedSet = mergedSet | set(singleContent.split('\n'))
     mergedSet.discard('')
-    with open(rootFolder + '/Input/merged.txt', 'w') as mergedFile:
+    with open(os.path.join(rootFolder, 'Input', 'merged.txt'), 'w') as mergedFile:
         mergedFile.write('\n'.join(mergedSet))
 
 def runMainAnalysis():
     '''Run the third step -
     enrichment of protein database and Blast search
     '''
-    for filename in os.listdir(rootFolder + '/Input'):
+    for filename in os.listdir(os.path.join(rootFolder, 'Input')):
         proteins = getSequences(filename, dict())
         proteins = getIsoforms(proteins)
         proteins = getSpeciesName(proteins)
         proteins = clearProteins(proteins)
-        savePickle(os.path.splitext(filename)[0], proteins, '/Previous_Proteins')
+        savePickle(os.path.splitext(filename)[0], proteins, 'Previous_Proteins')
         print(str(datetime.datetime.now()) + ': "proteins" ready')
         blastDict = createBlastDict(proteins, filename)
 
@@ -1648,17 +1665,17 @@ def runFinalAnalysis():
     '''Run the forth step -
     analysis of Blast results
     '''
-    for filename in os.listdir(rootFolder + '/preInput'):
+    for filename in os.listdir(inputDir):
         print(filename)
         # proteins need to be refreshed each time we do an analysis
         # else good values are not dropped
-        pkl = checkPreviousPickle(filename, '/For_online')
+        pkl = checkPreviousPickle(filename, 'For_online')
         blastDict = pkl['blastDict']
-        pkl = checkPreviousPickle(filename, '/Previous_Proteins')
+        pkl = checkPreviousPickle(filename, 'Previous_Proteins')
         proteins = pkl
         transDict, geneDict, greatIso = createDictsForAnalysis(proteins, blastDict)
         createFastasForTrees(proteins, greatIso, filename)
-        with open(rootFolder + '/preInput/' + filename, 'r') as oneStrFile:
+        with open(os.path.join(inputDir, filename), 'r') as oneStrFile:
             mainRefseq = oneStrFile.read().replace('\n', '').strip()
         for k in proteins.keys():
             if k.split('.')[0] == mainRefseq:
@@ -1679,10 +1696,7 @@ def runFinalAnalysis():
             html = analyzeBlastDict(blastDict, tempProteins)
             reportHtml(os.path.splitext(filename)[0] + '_clique' + str(cliqueCounter), maxClique, proteins, html)
 
-def main():
-    '''Main function
-    '''
-    parseArguments()
+if __name__ == '__main__':
     print(str(datetime.datetime.now()) + ': start')
     if preInput:
         runPreInput()
@@ -1692,5 +1706,3 @@ def main():
         runMainAnalysis()
     if finalAnalysis:
         runFinalAnalysis()
-
-main()
