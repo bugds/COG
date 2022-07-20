@@ -17,20 +17,46 @@ from networkx.algorithms import clique
 from pyvis.network import Network
 
 parser = argparse.ArgumentParser()
-parser.add_argument('input', type=str, help = "Input directory (separate files with RefSeq identifier in each)")
-parser.add_argument('output', type=str, help = "Output directory")
-parser.add_argument("-e", "--eval", type = float, help = "E-value limit", default = 0.0001)
-parser.add_argument("-q", "--qcov", type = float, help = "Query cover limit", default = 0.1)
-parser.add_argument("-b", "--init", type = str, help = "Number of initial BLAST targets", default = '1500')
-parser.add_argument("-t", "--threadNum", type = str, help = "Number of threads", default = '48')
-parser.add_argument("-o", "--orthology", type = float, help = "Orthology threshold", default = 1)
-parser.add_argument("-s", "--stage", type = str, help = "Run a particular stage", default = 'all',
+parser.add_argument(
+    'input', type=str,
+    help = "Input directory (separate files with RefSeq identifier in each)")
+parser.add_argument(
+    'output', type=str,
+    help = "Output directory")
+parser.add_argument(
+    "-e", "--eval", type = float,
+    help = "E-value limit", default = 0.0001)
+parser.add_argument(
+    "-q", "--qcov", type = float,
+    help = "Query cover limit", default = 0.1)
+parser.add_argument(
+    "-b", "--init", type = str,
+    help = "Number of initial BLAST targets", default = '1500')
+parser.add_argument(
+    "-t", "--threadNum", type = str,
+    help = "Number of threads", default = '48')
+parser.add_argument(
+    "-o", "--orthology", type = float,
+    help = "Orthology threshold", default = 1)
+parser.add_argument(
+    "-s", "--stage", type = str,
+    help = "Run a particular stage", default = 'all',
     choices = ["1", "2", "3", "all"])
-parser.add_argument("-m", "--merge", help = "Merge BLAST hits from multiple queries", default = False, action = 'store_true')
-parser.add_argument("-r", "--removeXML", help = "Don't remove XML files", default = True, action = 'store_false')
-parser.add_argument("-a", "--algorithm", type = str, help = "Graph building algorithm", default = 'strict',
+parser.add_argument(
+    "-m", "--merge",
+    help = "Merge BLAST hits from multiple queries",
+    default = False, action = 'store_true')
+parser.add_argument(
+    "-r", "--removeXML",
+    help = "Don't remove XML files",
+    default = True, action = 'store_false')
+parser.add_argument(
+    "-a", "--algorithm", type = str,
+    help = "Graph building algorithm", default = 'strict',
     choices = ["best", "strict"])
-parser.add_argument("-g", "--gravity", type = float, help = "Gravitational constant", default = -30000)
+parser.add_argument(
+    "-g", "--gravity", type = float,
+    help = "Gravitational constant", default = -30000)
 args = parser.parse_args()
 
 # combined feature table
