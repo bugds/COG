@@ -177,7 +177,7 @@ def bashBlast(
         [path2blastp,
         '-db', databaseName,
         '-query', query,
-        '-outfmt', '5',
+        '-outfmt', outfmt,
         '-out', out,
         '-num_threads', num_threads,
         '-max_target_seqs', max_target_seqs],
