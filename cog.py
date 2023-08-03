@@ -34,7 +34,7 @@ parser.add_argument(
     help = "Number of initial BLAST targets", default = '1500')
 parser.add_argument(
     "-t", "--threadNum", type = str,
-    help = "Number of threads", default = '48')
+    help = "Number of threads", default = '40')
 parser.add_argument(
     "-o", "--orthology", type = float,
     help = "Orthology threshold", default = 1)
@@ -57,18 +57,24 @@ parser.add_argument(
 parser.add_argument(
     "-g", "--gravity", type = float,
     help = "Gravitational constant", default = -30000)
+parser.add_argument(
+    "-c", "--config", type = float,
+    help = "Configuration file", default = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "cogconf.txt"))
 args = parser.parse_args()
 
-# combined feature table
-path2G2R = '/home/bioinfuser/data/busco_refseq_db/34_g2r.tsv' 
-# ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2T2N = '/home/bioinfuser/data/busco_refseq_db/names.dmp'
-# Name of database with representative taxids
-databaseName = 'busco_refseq'
-# Path to Blastp utility
-path2blastp = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastp'
-# Path to BlastDBCmd utility
-blastdbcmd = '/home/bioinfuser/applications/ncbi-blast-2.10.1+/bin/blastdbcmd'
+with open(args.config, 'r') as inp:
+    confLines = inp.readlines()
+    for line in confLines:
+        if line.startswith('path2G2R'):
+            path2G2R = line.split(':')[1].strip()
+        elif line.startswith('path2T2N'):
+            path2T2N = line.split(':')[1].strip()
+        elif line.startswith('databaseName'):
+            databaseName = line.split(':')[1].strip()
+        elif line.startswith('path2blastp'):
+            path2blastp = line.split(':')[1].strip()
+        elif line.startswith('blastdbcmd'):
+            blastdbcmd = line.split(':')[1].strip()
 
 # Input directory
 inputDir = args.input
