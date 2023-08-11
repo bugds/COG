@@ -1,7 +1,7 @@
-# If you use refseq, download this file and unzip: ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz
-path2G2R:/home/bioinfuser/applications/COG_diss/refseq_proteomes/gene2refseq
+# Local 'gene2refseq' file
+path2G2R:/home/bioinfuser/applications/COG_diss/refseq_proteomes/g2r.tsv
 # If you use refseq, download this file and unzip, then provide names.dmp file: ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
-path2T2N:/home/bioinfuser/applications/COG_diss/refseq_proteomes/names.dmp
+path2T2N:/home/bioinfuser/applications/COG_diss/refseq_proteomes/taxonomy/names.dmp
 # Name of database with representative taxids
 databaseName:busco_refseq
 # Path to Blastp utility
