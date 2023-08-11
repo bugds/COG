@@ -58,7 +58,7 @@ parser.add_argument(
     "-g", "--gravity", type = float,
     help = "Gravitational constant", default = -30000)
 parser.add_argument(
-    "-c", "--config", type = float,
+    "-c", "--config", type = str,
     help = "Configuration file", default = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), "cogconf.txt"))
 args = parser.parse_args()
 
@@ -76,8 +76,8 @@ with open(args.config, 'r') as inp:
         elif line.startswith('blastdbcmd'):
             blastdbcmd = line.split(':')[1].strip()
 
-# Input directory
-inputDir = args.input
+# Input file
+inputFile = args.input
 # Output directory
 rootFolder = args.output
 # E-value is generally 10^-4
@@ -124,15 +124,36 @@ removeXml = args.removeXML
 # Defines if the best isoform or the majority of isoforms will indicate the orthology
 algorithm = args.algorithm
 
-if (len(os.listdir(rootFolder)) != 0) and (args.stage == "all"):
-    raise Exception('Output directory not empty!')
-elif (args.stage == "all"):
+os.makedirs(rootFolder, exist_ok = True)
+inputDir = os.path.join(rootFolder, 'preInput')
+
+if (len(os.listdir(rootFolder)) != 0):
+    if (args.stage == "all") or (args.stage == "1"):
+        raise Exception('Output directory not empty!')
+elif (args.stage == "all") or (args.stage == "1"):
+    os.makedirs(inputDir)
     os.makedirs(os.path.join(rootFolder, 'Blast_XML'))
     os.makedirs(os.path.join(rootFolder, 'For_online'))
     os.makedirs(os.path.join(rootFolder, 'Input'))
     os.makedirs(os.path.join(rootFolder, 'Previous_Proteins'))
     os.makedirs(os.path.join(rootFolder, 'Results'))
     os.makedirs(os.path.join(rootFolder, 'Temp'))
+
+with open(inputFile, 'r') as inp:
+    line = inp.readline().strip()
+    while line:
+        currPath = os.path.join(inputDir, line)
+        if not(os.path.isfile(currPath)):
+            with open(currPath, 'w') as out:
+                out.write(line)
+        else:
+            with open(currPath, 'r') as prevInp:
+                prevInputLines = prevInp.readlines()
+                if line != prevInputLines[0].strip():
+                    raise Exception('Wrong input file!')
+                if len(prevInputLines) != 1:
+                    raise Exception('Wrong input file!')
+        line = inp.readline().strip()
 
 class ProteinClass():
     '''Class for proteins
@@ -673,7 +694,7 @@ def markovClustering(graph):
     :param graph: Graph representing Blast results
     :return: Clusters
     '''
-    matrix = networkx.to_scipy_sparse_matrix(graph)
+    matrix = networkx.to_scipy_sparse_array(graph)
     return markov_clustering.get_clusters(markov_clustering.run_mcl(matrix))
 
 def drawGraph(
@@ -713,7 +734,7 @@ def drawGraph(
     nodesDict = {i: node for i, node in enumerate(graph.nodes())}
     net.from_nx(graph)
     net.barnes_hut(spring_length = springLength, gravity = gravityConstant)
-    #net.show_buttons(filter_=['physics'])
+    # net.show_buttons(filter_=['physics'])
     #net.repulsion(spring_length = springLength)
     moreMaxCliques = [g for c in maxCliques for g in c]
     for G in [p.gene for p in proteins.values() if p.species == mainSpecies]:
@@ -794,9 +815,17 @@ def changeVisJS(filename):
     nodesString = [htmlL for htmlL in htmlLines if 'nodes = new vis.DataSet' in htmlL][0]
     edgesString = [htmlL for htmlL in htmlLines if 'edges = new vis.DataSet' in htmlL][0]
     with open(os.path.join(rootFolder, 'Results', os.path.splitext(filename)[0] + '_pyvis.html'), 'w') as f:
-        f.write('<meta content="text/html;charset=utf-8" http-equiv="Content-Type">')
-        f.write('<meta content="utf-8" http-equiv="encoding">')
+        f.write('<meta content="text/html;charset=utf-8" http-equiv="Content-Type">\n')
+        f.write('<meta content="utf-8" http-equiv="encoding">\n')
         for l in htmlLines:
+            # if ('<link rel="stylesheet" href=' in l) and ('vis' in l):
+            #     l = l.split('href=')
+            #     l[1] = '"https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />'
+            #     l = 'href='.join(l)
+            # if ('<script type="text/javascript" src=' in l) and ('vis' in l):
+            #     l = l.split('scr=')
+            #     l[1] = '"https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>'
+            #     l = 'scr='.join(l)
             if '#mynetwork {' in l:
                 f.write('''
         /* The Modal (background) */
@@ -1380,7 +1409,7 @@ def changeVisJS(filename):
                 f.write('    var previouslySelected = [];\n')
                 f.write(nodesString.replace('        ', '    '))
                 f.write(edgesString.replace('        ', '    '))
-                f.write('    ' + fastaJson)
+                f.write('       ' + fastaJson + ';\n')
             if '</body>' in l:
                 f.write('''
 <table cellspacing="20">
