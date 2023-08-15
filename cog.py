@@ -1709,6 +1709,7 @@ def runMergeInput():
         with open(os.path.join(rootFolder, 'Input', filename), 'r') as singleFile:
             singleContent = singleFile.read()
         mergedSet = mergedSet | set(singleContent.split('\n'))
+        os.remove(os.path.join(rootFolder, 'Input', filename))
     mergedSet.discard('')
     with open(os.path.join(rootFolder, 'Input', 'merged.txt'), 'w') as mergedFile:
         mergedFile.write('\n'.join(mergedSet))
@@ -1730,7 +1731,12 @@ def runFinalAnalysis():
     '''Run the forth step -
     analysis of Blast results
     '''
-    for filename in os.listdir(inputDir):
+    filenameList = os.listdir(inputDir)
+    if mergeInput:
+        mainFilename = int(input('Choose the main object of the study from the list:' + '\n'.join([str(i) + ':' + v for i, v in enumerate(filenameList)]) + '\n'))
+        mainFilename = filenameList[mainFilename]
+        filenameList = ['merged']
+    for filename in filenameList:
         print(filename)
         # proteins need to be refreshed each time we do an analysis
         # else good values are not dropped
@@ -1739,6 +1745,8 @@ def runFinalAnalysis():
         pkl = checkPreviousPickle(filename, 'Previous_Proteins')
         proteins = pkl
         transDict, geneDict, greatIso = createDictsForAnalysis(proteins, blastDict)
+        if mergeInput:
+            filename = mainFilename
         createFastasForTrees(proteins, greatIso, filename)
         with open(os.path.join(inputDir, filename), 'r') as oneStrFile:
             mainRefseq = oneStrFile.read().replace('\n', '').strip()
