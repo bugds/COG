@@ -1733,7 +1733,7 @@ def runFinalAnalysis():
     '''
     filenameList = os.listdir(inputDir)
     if mergeInput:
-        mainFilename = int(input('Choose the main object of the study from the list:' + '\n'.join([str(i) + ':' + v for i, v in enumerate(filenameList)]) + '\n'))
+        mainFilename = int(input('Choose the main object of the study from the list:\n' + '\n'.join([str(i) + ':' + v for i, v in enumerate(filenameList)]) + '\n'))
         mainFilename = filenameList[mainFilename]
         filenameList = ['merged']
     for filename in filenameList:
