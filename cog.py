@@ -686,6 +686,7 @@ def createGraph(mainGene, mainSpecies, proteins, geneDict):
             if (tSpecies in geneDict[q]) and (qSpecies in geneDict[t]):
                 if (q != t) and (geneDict[q][tSpecies] == t) and (geneDict[t][qSpecies] == q):
                     graph.add_edge(q, t)
+    graph.remove_nodes_from(list(networkx.isolates(graph)))
     maxCliques = findLargestMaxCliques(graph, mainGene)
     return graph, maxCliques
 
