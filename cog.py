@@ -739,7 +739,8 @@ def drawGraph(
     #net.repulsion(spring_length = springLength)
     moreMaxCliques = [g for c in maxCliques for g in c]
     for G in [p.gene for p in proteins.values() if p.species == mainSpecies]:
-        moreMaxCliques.append([g for c in findLargestMaxCliques(graph, G) for g in c])
+        if (G in graph):
+            moreMaxCliques.append([g for c in findLargestMaxCliques(graph, G) for g in c])
     mainGenes = [p.gene for p in proteins.values() if p.species == mainSpecies]
     maxNodes = list(set().union(*moreMaxCliques))
     mainGenes = [p.gene for p in proteins.values() if p.species == mainSpecies]
